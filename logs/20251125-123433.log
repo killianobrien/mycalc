@@ -1,0 +1,57 @@
+INFO    : Building target print
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /home/killian/math/mycalc/output/print.
+INFO    : discovering source file's directory name: /home/killian/math/mycalc/source
+INFO    : verifying and expanding input directory: /home/killian/math/mycalc/source/../generated-assets
+INFO    : input directory expanded to absolute path: /home/killian/math/mycalc/generated-assets
+INFO    : verifying and expanding input directory: /home/killian/math/mycalc/source/../assets
+INFO    : input directory expanded to absolute path: /home/killian/math/mycalc/assets
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /home/killian/math/mycalc/source/main.ptx to LaTeX as /tmp/ptx-dl9z6ye9/main.tex
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/pretext-latex.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking ONLY the last TWO YEARS of element deprecations.
+Rerun with the string parameter "author.deprecations.all" set to "yes" to check your source against all deprecations.
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/pretext-latex.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Removing temporary directory /tmp/ptx-dl9z6ye9
+INFO    : Removing temporary directory /tmp/ptx-usz3bzal
+INFO    : Removing temporary directory /tmp/ptx-pj_39nwx
+INFO    : 
+Success! The output is in /home/killian/math/mycalc/output/print.
+
+INFO    : 

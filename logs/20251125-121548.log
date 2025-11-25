@@ -1,0 +1,65 @@
+INFO    : Building target web
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /home/killian/math/mycalc/output/web.
+WARNING : Node.js must be installed to build CSS files.  Please install node.js and npm.
+ Will try to use prebuilt CSS files instead.
+WARNING : Cannot find npm.  Will try to use prebuilt CSS files instead.
+WARNING : Unable to install npm packages to build css files.  Non-default CSS themes require node.js and npm to be installed.  See https://pretextbook.org/doc/guide/html/node-and-npm.html
+WARNING : 
+INFO    : discovering source file's directory name: /home/killian/math/mycalc/source
+INFO    : verifying and expanding input directory: /home/killian/math/mycalc/source/../generated-assets
+INFO    : input directory expanded to absolute path: /home/killian/math/mycalc/generated-assets
+INFO    : verifying and expanding input directory: /home/killian/math/mycalc/source/../assets
+INFO    : input directory expanded to absolute path: /home/killian/math/mycalc/assets
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 7.10.0
+INFO    : Downloading Runestone Services, version 7.10.0
+INFO    : Extracting Runestone Services from archive file
+INFO    : Node.js not available. Relying on prebuilt default-modern.
+INFO    : Using prebuilt CSS theme: default-modern with options: {'options': {'primary-color': '#195684', 'secondary-color': '#932c1c'}, 'contrast-checks': {'primary-color': '#fff', 'secondary-color': '#fff', 'primary-color-dark': '#23241f'}}
+INFO    : converting /home/killian/math/mycalc/source/main.ptx to HTML in /tmp/ptx-g8bf4wbn
+INFO    : XSL conversion of /home/killian/math/mycalc/source/main.ptx by /home/killian/.ptx/2.20.0/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking ONLY the last TWO YEARS of element deprecations.
+Rerun with the string parameter "author.deprecations.all" set to "yes" to check your source against all deprecations.
+INFO    : successful application of /home/killian/.ptx/2.20.0/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /tmp/ptx-g8bf4wbn
+INFO    : Removing temporary directory /tmp/ptx-ttt3oot7
+INFO    : 
+Success! Run `pretext view web` to see the results.
+
+INFO    : 
