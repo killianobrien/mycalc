@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Introduction</title>
+
+  <introduction>
+    <p> Text before the first section. With some inline mathematics 
+      <m>f(x) = \int_0^x e^{-t^2} dt</m>.
+      That looks nice.
+    </p>
+
+    <p>And some displayed mathematics:
+    <me>f(x) = \int_0^x e^{-t^2} dt</me>.</p>
+  </introduction>
+
+  <!-- include sections -->
+  <!-- <xi:include href="sec-section-name.ptx" /> -->
+
+</chapter>

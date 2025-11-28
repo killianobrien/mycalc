@@ -5,14 +5,15 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+    <title>Calculus</title>
+    <subtitle>Sequences, series, differentiation and integration</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
     <xi:include href="./ch-chapter-title.ptx" />
+        <xi:include href="./ch-intro.ptx" />
 
 
     <!-- Include backmatter -->
