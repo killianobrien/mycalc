@@ -1,1 +1,2 @@
+# secrets in some of the logs were preventing successful pushes
 *.log
