@@ -19,6 +19,15 @@ var ptx_lunr_docs = [
   "body": " Section Title  Text of section.  "
 },
 {
+  "id": "ch-intro",
+  "level": "1",
+  "url": "ch-intro.html",
+  "type": "Chapter",
+  "number": "2",
+  "title": "Introduction",
+  "body": " Introduction   Text before the first section. With some inline mathematics . That looks nice.  And some displayed mathematics: .     "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
