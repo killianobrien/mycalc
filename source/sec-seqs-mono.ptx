@@ -59,7 +59,7 @@
         </output>
     </sage>
     <p>
-        Investigating the first few elements of a sequence like this may provide evidence that a sequence is monotonic. However a more rigourous approach, that addresses <em>all</em> elements of the sequence, is needed if we want to formally prove that the sequence is monotonic. There are, at least, 
+        Investigating the first few elements of a sequence like this may provide evidence that a sequence is monotonic. However a more rigorous approach, that addresses <em>all</em> elements of the sequence, is needed if we want to formally prove that the sequence is monotonic. There are, at least, 
     </p>
 
 
