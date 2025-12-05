@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-seqs-mono" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Monotonic and bounded sequences</title>
+<p>
+    Before considering the <em>convergence</em> of infinite sequences, we consider the possible increasing, decreasing and bounded behaviour of sequences. 
+</p>
+<definition xml:id="def-monotonic">
+    <statement>
+        <p>
+            An increasing sequence <m>\left \{ x_n \right \}</m> is one whose elements satisfy
+            <me>
+                x_1 \leq x_2 \leq x_3 \leq \dots
+            </me>.
+        </p>
+        <p>
+            A decreasing sequence <m>\left \{ y_n \right \}</m> is one whose elements satisfy
+            <me>
+                y_1 \geq y_2 \geq y_3 \geq \dots
+            </me>.
+        </p>
+        <p>
+            If the inequalities are strict inequalities then we would say the sequence is strictly increasing, or strictly decreasing, as appropriate. Or the inequalities might only hold true from some element <m>x_k</m> onwards, in which case we would say the sequence is increasing/decreasing <em>from <m>k</m></em>, as appropriate. 
+        </p>
+        <p>
+            The term <em>monotonic</em>, refers to a sequence that is either increasing or decreasing. Similarly for <em>strictly monotonic</em>.
+        </p>
+    </statement>
+    </definition>
+    <p>
+        If one has a nice formula for a sequence then the quickest way to see of the sequence is monotonic might be to plot some elements of the sequence using a computer. There are many ways to do this. Here is a quick example of how to do this using Python and the Matplotlib library. 
+    </p>
+        <sage language='python'>
+        <input>
+            import matplotlib.pyplot as plt
+            S = [(n**2 + 2)/2**n for n in range(1,50)]
+            plt.plot(range(1,50),S,'o')
+
+            # Add some labels and a title for clarity
+            plt.xlabel("Index")
+            plt.ylabel("Sequence element")
+
+            # Display the plot
+            plt.show()
+        </input>
+        <output>
+            
+        </output>
+    </sage>
+    <p>
+        Here is an alternative way, and somewhat quicker, using the Sage language.
+    </p>
+    <sage>
+        <input>
+            S = [(n^2 + 2)/2^n for n in range(1,50)]
+            list_plot(S)
+        </input>
+        <output>
+        </output>
+    </sage>
+    <p>
+        Investigating the first few elements of a sequence like this may provide evidence that a sequence is monotonic. However a more rigourous approach, that addresses <em>all</em> elements of the sequence, is needed if we want to formally prove that the sequence is monotonic. There are, at least, 
+    </p>
+
+
+</section>

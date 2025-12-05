@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-section-name" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-seqs-defs" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Initial definitions</title>
 
   <definition xml:id="def-seq">
@@ -70,12 +70,77 @@
               2, 3, 5, 7, 11, 13, \dots
             </me>
             denoted by <m>\left \{ p_m \right \}_{m=1}^\infty</m>. 
-            Unfortunately there is no easy to state <em>formula</em> known for the <m>m^{\text{th}}</m> prime. We can specify an algorithm to find it, and various asymptotic results exist that can approximate the value of it. It can be proved that there an infinite number of primes, so the indexing declaration is valid. See more on this in your <em>Number Theory and Abstract Algebra</em> module next year.  
+            Unfortunately there is no easy to state <em>formula</em> known for the <m>m^{\text{th}}</m> prime. We can specify an algorithm to find it, and various asymptotic results exist that can approximate the value of it. It can be proved that there an infinite number of primes, so the indexing declaration is valid. See more on this in your <em>Number Theory and Abstract Algebra</em> module next year. 
           </p>
         </li>
       </ol>
-    </p>
-    
+    </p>   
+  </example>
+
+  <definition xml:id="def-arithmetic">
+    <title>Arithmetic sequences</title>
+    <statement>
+      <p>
+        An arithmetic sequence is one with a constant common difference between successive elements. So we can write such a sequence as 
+        <me>
+          a, a+d, a+2d, a+3d, \dots
+        </me>,
+        or <m>\left \{ a_n \right \}_{n=1}^{\infty}</m>, where <m>a_n = a+ (n-1)d</m>, i.e. <m>a</m> is the initial element and <m>d</m> the common difference.        
+      </p>
+    </statement>
+  </definition>
+
+  <definition xml:id="def-geometric">
+    <title>Geometric sequences</title>    
+    <statement>
+      <p>
+        An geometric sequence is one with a constant common ratio between successive elements. So we can write such a sequence as 
+        <me>
+          a, ar, ar^{2}, ar^{3}, \dots
+        </me>,
+        or <m>\left \{ g_n \right \}_{n=1}^{\infty}</m>, where <m>g_n = ar^{n-1}</m>, i.e. <m>a</m> is the initial element and <m>r</m> the common ratio. 
+      </p>
+    </statement>
+  </definition>
+
+  <example><title>Arithmetic and geometric sequences</title>
+  <p>
+    <ol>
+      <li>
+        <p>
+          The sequence of odd positive integers, <m>1, 3, 5, 7, \dots</m> is arithmetic. It is given by <m>\left \{ a_n \right \}_{n=1}^{\infty}</m> where <m>a_n = 1 + (n-1)2 = 2n -1</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The sequence of powers of <m>1/2</m>, which begins <m>1, 1/2, 1/4, 1/8, \dots </m> is geometric. It is given by 
+          <me>
+            h_n = \left ( \frac{1}{2} \right )^{n-1} = \frac{1}{2^{n-1}},
+          </me>
+          with initial element <m>1</m> and common ratio <m>1/2</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          A negative example. The sequence of reciprocals of the squares, <m>\left \{ s_n \right \}_{n=1}^{\infty}</m>, where <m>s_n = 1/n^2</m> is neither arithmetic nor geometric. 
+        </p>
+      </li>
+      <li>
+        <p>
+          Are there any sequences that are both arithmetic <em>and</em> geometric?
+        </p>
+      </li>
+      <li> 
+        <p>
+          Compound interest awarded on investments, or charged on loans, provide examples of geometric sequences. Suppose a bank overs a savings account with an annualy compounded interest rate of <m>r \%</m> per year on an initial deposit of <m>£P</m>. Then the value, <m>v_n</m>, of the deposit at the beginning of the <m>n^{\text{th}}</m> year is given by
+          <me>
+            v_n = P \left ( 1+ \frac{r}{100} \right )^{n-1}
+          </me>.
+        </p>
+      </li>
+    </ol>
+  </p>
+  
     
   </example>
 

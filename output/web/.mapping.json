@@ -1,1 +1,1 @@
-{"source/main.ptx": ["my-great-book"], "source/frontmatter.ptx": ["frontmatter", "front-colophon"], "source/ch-intro.ptx": ["ch-intro"], "source/ch-seqs.ptx": ["ch-chapter-title"], "source/sec-seqs-defs.ptx": ["sec-section-name"], "source/backmatter.ptx": ["backmatter"]}
+{"source/main.ptx": ["mycalc"], "source/ch-intro.ptx": ["ch-intro"], "source/ch-seqs.ptx": ["ch-chapter-title"], "source/sec-seqs-defs.ptx": ["sec-seqs-defs"], "source/sec-seqs-mono.ptx": ["sec-seqs-mono"]}

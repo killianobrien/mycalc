@@ -4,12 +4,12 @@
   <!-- we first include a file which contains the docinfo element: -->
   <xi:include href="./docinfo.ptx" />
 
-  <book xml:id="my-great-book">
+  <book xml:id="mycalc">
     <title>Calculus</title>
     <subtitle>Sequences, series, differentiation and integration</subtitle>
 
     <!-- Include frontmatter -->
-    <xi:include href="./frontmatter.ptx" />
+    <!-- <xi:include href="./frontmatter.ptx" /> -->
 
     <!-- Include chapters -->
     <!-- <xi:include href="./ch-chapter-title.ptx" /> -->
@@ -18,7 +18,7 @@
 
 
     <!-- Include backmatter -->
-    <xi:include href="./backmatter.ptx" />
+    <!-- <xi:include href="./backmatter.ptx" /> -->
 
   </book>
 </pretext>

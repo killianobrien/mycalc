@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Sequences</title>
+<title>Monotonic and bounded sequences</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -170,7 +170,7 @@ sagecell.makeSagecell({
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="mycalc.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-seqs-defs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-seqs-defs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-title.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -183,22 +183,62 @@ sagecell.makeSagecell({
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-chapter-title.html" class="internal"><span class="codenumber">2</span> <span class="title">Sequences</span></a></div>
-<ul class="structural toc-item-list active">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Initial definitions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-chapter-title"><h2 class="heading">
-<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Sequences</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-seqs-mono"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Monotonic and bounded sequences</span>
 </h2>
-<section class="introduction" id="ch-chapter-title-2"><div class="para" id="ch-chapter-title-2-1">Motivation and context remarks.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter-title-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><nav class="summary-links"><ul>
-<li><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Initial definitions</span></a></li>
-<li><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Monotonic and bounded sequences</span></a></li>
-</ul></nav></section></div>
+<div class="para" id="sec-seqs-mono-2">Before considering the <em class="emphasis">convergence</em> of infinite sequences, we consider the possible increasing, decreasing and bounded behaviour of sequences.<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-monotonic"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="def-monotonic-1-1">
+<div class="para">An increasing sequence <span class="process-math">\(\left \{ x_n \right \}\)</span> is one whose elements satisfy</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_1 \leq x_2 \leq x_3 \leq \dots\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-monotonic-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="def-monotonic-1-2">
+<div class="para">A decreasing sequence <span class="process-math">\(\left \{ y_n \right \}\)</span> is one whose elements satisfy</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_1 \geq y_2 \geq y_3 \geq \dots\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-monotonic-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="def-monotonic-1-3">If the inequalities are strict inequalities then we would say the sequence is strictly increasing, or strictly decreasing, as appropriate. Or the inequalities might only hold true from some element <span class="process-math">\(x_k\)</span> onwards, in which case we would say the sequence is increasing/decreasing <em class="emphasis">from <span class="process-math">\(k\)</span></em>, as appropriate.<div class="autopermalink" data-description="Paragraph"><a href="#def-monotonic-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="def-monotonic-1-4">The term <em class="emphasis">monotonic</em>, refers to a sequence that is either increasing or decreasing. Similarly for <em class="emphasis">strictly monotonic</em>.<div class="autopermalink" data-description="Paragraph"><a href="#def-monotonic-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.2.1"><a href="#def-monotonic" title="Copy heading and permalink for Definition 2.2.1">🔗</a></div></article><div class="para" id="sec-seqs-mono-4">If one has a nice formula for a sequence then the quickest way to see of the sequence is monotonic might be to plot some elements of the sequence using a computer. There are many ways to do this. Here is a quick example of how to do this using Python and the Matplotlib library.<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="sec-seqs-mono-5" class="ptx-sagecell sagecell-python"><script type="text/x-sage">import matplotlib.pyplot as plt
+S = [(n**2 + 2)/2**n for n in range(1,50)]
+plt.plot(range(1,50),S,'o')
+
+# Add some labels and a title for clarity
+plt.xlabel("Index")
+plt.ylabel("Sequence element")
+
+# Display the plot
+plt.show()
+</script></div>
+<div class="para" id="sec-seqs-mono-6">Here is an alternative way, and somewhat quicker, using the Sage language.<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="sec-seqs-mono-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">S = [(n^2 + 2)/2^n for n in range(1,50)]
+list_plot(S)
+</script></div>
+<div class="para" id="sec-seqs-mono-8">Or here using Python and the Matplotlib library.<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 2.2: Monotonic and bounded sequences"><a href="#sec-seqs-mono" title="Copy heading and permalink for Section 2.2: Monotonic and bounded sequences">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="ch-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-seqs-defs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-seqs-defs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
