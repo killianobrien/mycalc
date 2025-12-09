@@ -10,5 +10,5 @@
   <!-- include sections -->
   <xi:include href="sec-seqs-defs.ptx" />
   <xi:include href="sec-seqs-mono.ptx" />
-
+  <xi:include href="sec-seqs-convergence.ptx" />
 </chapter>

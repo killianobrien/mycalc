@@ -70,7 +70,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Monotonic and bounded sequences",
-  "body": " Monotonic and bounded sequences  Before considering the convergence of infinite sequences, we consider the possible increasing, decreasing and bounded behaviour of sequences.    An increasing sequence is one whose elements satisfy .  A decreasing sequence is one whose elements satisfy .  If the inequalities are strict inequalities then we would say the sequence is strictly increasing, or strictly decreasing, as appropriate. Or the inequalities might only hold true from some element onwards, in which case we would say the sequence is increasing\/decreasing from , as appropriate.  The term monotonic , refers to a sequence that is either increasing or decreasing. Similarly for strictly monotonic .    If one has a nice formula for a sequence then the quickest way to see of the sequence is monotonic might be to plot some elements of the sequence using a computer. There are many ways to do this. Here is a quick example of how to do this using Python and the Matplotlib library.   Here is an alternative way, and somewhat quicker, using the Sage language.   Investigating the first few elements of a sequence like this may provide evidence that a sequence is monotonic. However a more rigorous approach, that addresses all elements of the sequence, is needed if we want to formally prove that the sequence is monotonic. There are, at least,  "
+  "body": " Monotonic and bounded sequences  Before considering the convergence of infinite sequences, we consider the possible increasing, decreasing and bounded behaviour of sequences.    An increasing sequence is one whose elements satisfy .  A decreasing sequence is one whose elements satisfy .  If the inequalities are strict inequalities then we would say the sequence is strictly increasing, or strictly decreasing, as appropriate. Or the inequalities might only hold true from some element onwards, in which case we would say the sequence is increasing\/decreasing from , as appropriate.  The term monotonic , refers to a sequence that is either increasing or decreasing. Similarly for strictly monotonic .    If one has a nice formula for a sequence then the quickest way to see of the sequence is monotonic might be to plot some elements of the sequence using a computer. There are many ways to do this. Here is a quick example of how to do this using Python and the Matplotlib library.   Here is an alternative way, and somewhat quicker, using the Sage language.   Investigating the first few elements of a sequence like this may provide evidence that a sequence is monotonic. However a more rigorous approach, that addresses all elements of the sequence, is needed if we want to formally prove that the sequence is monotonic. There are, at least, two approaches we can take to this. Suppose we are given a sequence and we wish to investigate its monotonic nature. By considering the difference or ratio of consecutive terms, and comparing this to or , we can draw conclusions about the monotonic nature of the sequence.   Consider the general difference, , between consecutive terms, and then compare this to , noting that and Of course, strictly increasing\/decreasing versions of these results hold if the inequalities are strict.    Provided the sequence elements are positive and never zero, consider the general ratio, , between consecutive terms, and then compare this to , noting that S = [(n^2 + 2)\/2^n for n in range(1,50)] list_plot(S) and Of course, strictly increasing\/decreasing versions of these results hold if the inequalities are strict.   Which approach to use might be based on personal preference or the particular form of the formula defining the sequence element.  An increasing, then decreasing sequence   Investigate the sequence defined by , and describe its increasing\/decreasing behaviour.    Consider the ratio of consecutive elements. . The quantity can be compared to . It is greater than for and less than for . So the sequence increases at first, but then decreases for all .     In the next section we will be developing the theory of convergence of infinite sequences, that phenomenon whereby the elements of an infinite sequence might get closer and closer to some limiting value, the further out alond the sequence once goes. Before introducing this concept, we define the bounded property of infinite sequences.  Bounded sequence   A sequence is bounded if and only if there exits a number such that for all the sequence elements satisfy . There are also weaker properties of being bounded above , i.e. , or bounded below , i.e. . The number is called the (upper\/lower) bound, as appropriate.    "
 },
 {
   "id": "def-monotonic",
@@ -80,6 +80,33 @@ var ptx_lunr_docs = [
   "number": "2.2.1",
   "title": "",
   "body": "  An increasing sequence is one whose elements satisfy .  A decreasing sequence is one whose elements satisfy .  If the inequalities are strict inequalities then we would say the sequence is strictly increasing, or strictly decreasing, as appropriate. Or the inequalities might only hold true from some element onwards, in which case we would say the sequence is increasing\/decreasing from , as appropriate.  The term monotonic , refers to a sequence that is either increasing or decreasing. Similarly for strictly monotonic .   "
+},
+{
+  "id": "sec-seqs-mono-9",
+  "level": "2",
+  "url": "sec-seqs-mono.html#sec-seqs-mono-9",
+  "type": "Example",
+  "number": "2.2.2",
+  "title": "An increasing, then decreasing sequence.",
+  "body": "An increasing, then decreasing sequence   Investigate the sequence defined by , and describe its increasing\/decreasing behaviour.    Consider the ratio of consecutive elements. . The quantity can be compared to . It is greater than for and less than for . So the sequence increases at first, but then decreases for all .    "
+},
+{
+  "id": "def-bounded",
+  "level": "2",
+  "url": "sec-seqs-mono.html#def-bounded",
+  "type": "Definition",
+  "number": "2.2.3",
+  "title": "Bounded sequence.",
+  "body": "Bounded sequence   A sequence is bounded if and only if there exits a number such that for all the sequence elements satisfy . There are also weaker properties of being bounded above , i.e. , or bounded below , i.e. . The number is called the (upper\/lower) bound, as appropriate.   "
+},
+{
+  "id": "sec-seqs-convergence",
+  "level": "1",
+  "url": "sec-seqs-convergence.html",
+  "type": "Section",
+  "number": "2.3",
+  "title": "Convergence",
+  "body": " Convergence  Text of section.  "
 }
 ]
 

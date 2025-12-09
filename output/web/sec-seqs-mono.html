@@ -170,7 +170,7 @@ sagecell.makeSagecell({
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-seqs-defs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-title.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-seqs-defs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-title.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-seqs-convergence.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -186,6 +186,7 @@ sagecell.makeSagecell({
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Initial definitions</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -234,11 +235,112 @@ plt.show()
 <div id="sec-seqs-mono-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">S = [(n^2 + 2)/2^n for n in range(1,50)]
 list_plot(S)
 </script></div>
-<div class="para" id="sec-seqs-mono-8">Investigating the first few elements of a sequence like this may provide evidence that a sequence is monotonic. However a more rigorous approach, that addresses <em class="emphasis">all</em> elements of the sequence, is needed if we want to formally prove that the sequence is monotonic. There are, at least,<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sec-seqs-mono-8">
+<div class="para">Investigating the first few elements of a sequence like this may provide evidence that a sequence is monotonic. However a more rigorous approach, that addresses <em class="emphasis">all</em> elements of the sequence, is needed if we want to formally prove that the sequence is monotonic. There are, at least, two approaches we can take to this. Suppose we are given a sequence <span class="process-math">\(\left \{ a_n \right \}_{n=1}^\infty\)</span> and we wish to investigate its monotonic nature. By considering the difference or ratio of consecutive terms, and comparing this to <span class="process-math">\(0\)</span> or <span class="process-math">\(1\text{,}\)</span> we can draw conclusions about the monotonic nature of the sequence.</div>
+<ol class="decimal" id="sec-seqs-mono-8-5">
+<li id="sec-seqs-mono-8-5-1">
+<div class="para logical" id="sec-seqs-mono-8-5-1-1">
+<div class="para">Consider the general difference, <span class="process-math">\(a_{n+1} - a_n\text{,}\)</span> between consecutive terms, and then compare this to <span class="process-math">\(0\text{,}\)</span> noting that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left \{ a_n \right \} \text{ is decreasing if and only if for all } n \geq 1 \text{ we have } a_{n+1} - a_n \leq 0,
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Section 2.2: Monotonic and bounded sequences"><a href="#sec-seqs-mono" title="Copy heading and permalink for Section 2.2: Monotonic and bounded sequences">🔗</a></div></section></div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left \{  a_n \right \} \text{ is increasing if and only if for all } n \geq 1 \text{ we have } a_{n+1} - a_n \geq 0.
+\end{equation*}
+</div>
+<div class="para">Of course, strictly increasing/decreasing versions of these results hold if the inequalities are strict.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-8-5-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-seqs-mono-8-5-1" title="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec-seqs-mono-8-5-2">
+<div class="para logical" id="sec-seqs-mono-8-5-2-1">
+<div class="para">Provided the sequence elements are positive and never zero, consider the general ratio, <span class="process-math">\(a_{n+1} / a_n\text{,}\)</span> between consecutive terms, and then compare this to <span class="process-math">\(1\text{,}\)</span> noting that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left \{ a_n \right \} \text{ is decreasing if and only if for all } n \geq 1 \text{ we have } \frac{a_{n+1}}{a_n} \leq 1,
+\end{equation*}
+</div>
+<div class="para">S = [(n^2 + 2)/2^n for n in range(1,50)] list_plot(S) and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left \{ a_n \right \} \text{ is increasing if and only if for all } n \geq 1 \text{ we have } \frac{a_{n+1}}{a_n} \geq 1.
+\end{equation*}
+</div>
+<div class="para">Of course, strictly increasing/decreasing versions of these results hold if the inequalities are strict.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-8-5-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec-seqs-mono-8-5-2" title="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para">Which approach to use might be based on personal preference or the particular form of the formula defining the sequence element.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="sec-seqs-mono-9"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">An increasing, then decreasing sequence.</span>
+</h3>
+<div class="para logical" id="sec-seqs-mono-9-2-1">
+<div class="para">Investigate the sequence <span class="process-math">\(\left \{ a_m \right \}_{m=1}^\infty\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_m = \frac{5^m}{m!}\text{,}
+\end{equation*}
+</div>
+<div class="para">and describe its increasing/decreasing behaviour.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-9-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-seqs-mono-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-seqs-mono-9-3-1">
+<div class="para">Consider the ratio of consecutive elements.</div>
+<div class="displaymath process-math" id="sec-seqs-mono-9-3-1-1">
+\begin{align*}
+\frac{a_{m+1}}{a_m} \amp = \frac{5^{m+1}}{(m+1)!} \frac{n!}{5^m}\\
+\amp = \frac{5}{m+1}\text{.}
+\end{align*}
+</div>
+<div class="para">The quantity <span class="process-math">\(5/(n+1)\)</span> can be compared to <span class="process-math">\(1\text{.}\)</span> It is greater than <span class="process-math">\(1\)</span> for <span class="process-math">\(n \lt 4\)</span> and less than <span class="process-math">\(1\)</span> for <span class="process-math">\(n \geq 5\text{.}\)</span> So the sequence increases at first, but then decreases for all <span class="process-math">\(n \geq 5\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-9-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="sec-seqs-mono-9-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">S = [5^n / factorial(n) for n in range(0,20)]
+list_plot(S)
+</script></div>
+<div class="autopermalink" data-description="Solution 2.2.2.1"><a href="#sec-seqs-mono-9-3" title="Copy heading and permalink for Solution 2.2.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.2.2: An increasing, then decreasing sequence"><a href="#sec-seqs-mono-9" title="Copy heading and permalink for Example 2.2.2: An increasing, then decreasing sequence">🔗</a></div></article><div class="para" id="sec-seqs-mono-10">In the next section we will be developing the theory of <em class="emphasis">convergence</em> of infinite sequences, that phenomenon whereby the elements of an infinite sequence might get closer and closer to some limiting value, the further out alond the sequence once goes. Before introducing this concept, we define the bounded property of infinite sequences.<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-10" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-bounded"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Bounded sequence.</span>
+</h3>
+<div class="para logical" id="def-bounded-2-1">
+<div class="para">A sequence <span class="process-math">\(\left \{ x_n \right \}\)</span> is bounded if and only if there exits a number <span class="process-math">\(M\)</span> such that for all <span class="process-math">\(n\)</span> the sequence elements satisfy</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|x_n| \lt |M|\text{.}
+\end{equation*}
+</div>
+<div class="para">There are also weaker properties of being <em class="emphasis">bounded above</em>, i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_n \lt M\text{,}
+\end{equation*}
+</div>
+<div class="para">or <em class="emphasis">bounded below</em>, i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_n \gt M\text{.}
+\end{equation*}
+</div>
+<div class="para">The number <span class="process-math">\(M\)</span> is called the (upper/lower) bound, as appropriate.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-bounded-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.2.3: Bounded sequence"><a href="#def-bounded" title="Copy heading and permalink for Definition 2.2.3: Bounded sequence">🔗</a></div></article><div class="autopermalink" data-description="Section 2.2: Monotonic and bounded sequences"><a href="#sec-seqs-mono" title="Copy heading and permalink for Section 2.2: Monotonic and bounded sequences">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-seqs-defs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<a class="previous-button button" href="sec-seqs-defs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-seqs-convergence.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

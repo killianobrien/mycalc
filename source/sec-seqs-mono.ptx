@@ -49,7 +49,7 @@
     </sage>
     <p>
         Here is an alternative way, and somewhat quicker, using the Sage language.
-    </p>
+    </p> 
     <sage>
         <input>
             S = [(n^2 + 2)/2^n for n in range(1,50)]
@@ -59,8 +59,94 @@
         </output>
     </sage>
     <p>
-        Investigating the first few elements of a sequence like this may provide evidence that a sequence is monotonic. However a more rigorous approach, that addresses <em>all</em> elements of the sequence, is needed if we want to formally prove that the sequence is monotonic. There are, at least, 
+        Investigating the first few elements of a sequence like this may provide evidence that a sequence is monotonic. However a more rigorous approach, that addresses <em>all</em> elements of the sequence, is needed if we want to formally prove that the sequence is monotonic. There are, at least, two approaches we can take to this. Suppose we are given a sequence <m>\left \{ a_n \right \}_{n=1}^\infty</m> and we wish to investigate its monotonic nature. By considering the difference or ratio of consecutive terms, and comparing this to <m>0</m> or <m>1</m>, we can draw conclusions about the monotonic nature of the sequence. 
+        <ol>
+            <li>
+                <p>
+                    Consider the general difference, <m>a_{n+1} - a_n</m>, between consecutive terms, and then compare this to <m>0</m>, noting that 
+                    <me>
+                        \left \{ a_n \right \} \text{ is decreasing if and only if for all } n \geq 1 \text{ we have } a_{n+1} - a_n \leq 0,
+                    </me>
+                    and 
+                    <me>
+                        \left \{  a_n \right \} \text{ is increasing if and only if for all } n \geq 1 \text{ we have } a_{n+1} - a_n \geq 0.
+                    </me>
+                    Of course, strictly increasing/decreasing versions of these results hold if the inequalities are strict. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Provided the sequence elements are positive and never zero, consider the general ratio, <m>a_{n+1} / a_n</m>, between consecutive terms, and then compare this to <m>1</m>, noting that 
+                    <me>
+                        \left \{ a_n \right \} \text{ is decreasing if and only if for all } n \geq 1 \text{ we have } \frac{a_{n+1}}{a_n} \leq 1,
+                    </me>            S = [(n^2 + 2)/2^n for n in range(1,50)]
+            list_plot(S)
+                    and 
+                    <me>
+                         \left \{ a_n \right \} \text{ is increasing if and only if for all } n \geq 1 \text{ we have } \frac{a_{n+1}}{a_n} \geq 1.
+                    </me>
+                    Of course, strictly increasing/decreasing versions of these results hold if the inequalities are strict. 
+                </p>
+            </li>
+        </ol>
+        Which approach to use might be based on personal preference or the particular form of the formula defining the sequence element. 
     </p>
+    <example><title>An increasing, then decreasing sequence</title>
+    <statement>
+        <p>
+            Investigate the sequence <m>\left \{ a_m \right \}_{m=1}^\infty</m> defined by 
+            <me>
+                a_m = \frac{5^m}{m!}
+            </me>,
+            and describe its increasing/decreasing behaviour.            
+        </p>
+    </statement>
+    <solution>  
+        <p>
+            Consider the ratio of consecutive elements.
+            <md>
+                <mrow>\frac{a_{m+1}}{a_m} \amp = \frac{5^{m+1}}{(m+1)!} \frac{n!}{5^m}</mrow>
+                <mrow> \amp = \frac{5}{m+1}</mrow>
+            </md>.
+            The quantity <m>5/(n+1)</m> can be compared to <m>1</m>. It is greater than <m>1</m> for <m>n \lt 4</m> and less than <m>1</m> for <m>n \geq 5</m>. So the sequence increases at first, but then decreases for all <m>n \geq 5</m>.
+        </p>
+        <sage>
+            <input>
+            S = [5^n / factorial(n) for n in range(0,20)]
+            list_plot(S)
+            </input>
+            <output>
+            </output>
+        </sage>
+    </solution> 
+</example>
+<p>
+    In the next section we will be developing the theory of <em>convergence</em> of infinite sequences, that phenomenon whereby the elements of an infinite sequence might get closer and closer to some limiting value, the further out alond the sequence once goes. Before introducing this concept, we define the bounded property of infinite sequences. 
+</p>
+
+<definition xml:id="def-bounded"><title>Bounded sequence</title>
+    <statement>
+        <p>
+        A sequence <m>\left \{ x_n \right \}</m> is bounded if and only if there exits a number <m>M</m> such that for all <m>n</m> the sequence elements satisfy 
+        <me>
+            |x_n| \lt |M|
+        </me>.
+        There are also weaker properties of being <em>bounded above</em>, i.e. 
+        <me>
+            x_n \lt M
+        </me>,
+or <em>bounded below</em>, i.e.
+        <me>
+            x_n \gt M
+        </me>.
+              The number <m>M</m> is called the (upper/lower) bound, as appropriate.   
+        </p>
+    </statement>
+</definition>
+
+
+
+
 
 
 </section>
