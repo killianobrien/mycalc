@@ -1,0 +1,2548 @@
+%\documentclass[extrafontsizes, twoside, a4paper, 17pt]{memoir}
+\documentclass[extrafontsizes, twoside, a4paper]{memoir}
+
+
+\usepackage[paper=a4paper,twoside,top=3cm, bottom=3cm,left=3cm,right=6cm]{geometry}
+\setlength{\marginparwidth}{4cm}
+%\setlength{\textwidth}{0.8\textwidth}
+\strictpagecheck
+
+\usepackage[fixpdftex]{xcolor}
+\definecolor{nicered}{rgb}{.647,.129,.149}
+\usepackage{calc,graphicx}
+\usepackage{pdfpages}
+%\usepackage{subfiles}
+
+\usepackage[colorlinks=true, linkcolor=nicered]{hyperref}
+
+%%%%%%chapter heading style
+\definecolor{nicered}{rgb}{.647,.129,.149}
+%\chapterstyle{companion}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{pifont}
+\usepackage{centernot}
+\usepackage{listings}
+\usepackage{epstopdf}
+\usepackage{sagetex}
+\usepackage{framed}
+
+%%Theorem styles
+\theoremstyle{plain}% default
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[chapter]
+\newtheorem{conj}{Conjecture}[chapter]
+\newtheorem{exmp}{Example}[chapter]
+\newtheorem{exer}{Exercises}[chapter]
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem{case}{Case}
+\newtheorem*{soln}{Solution}
+%%%%%%%%%My command defs
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\question}[1]{\begin{quote} \itshape #1 \end{quote}}
+\newcommand{\postitemskip}{\vskip 0.2in}
+\newcommand{\solution}[1]{}
+%%%% margin notes #1 = title #2 = body
+\newcommand{\margnote}[2]{\marginpar{{\textit{#1} }\\ \footnotesize{#2}}}
+%%%% align comments
+\newcommand{\eqcomm}[1]{\text{ \small{#1}}}
+
+%%%%% chapter summaries
+\newcommand{\summary}[1]{#1}
+
+%%%%%%%%%%%%%% new marginpar for large type
+%\renewcommand{\marginpar}[1]{\newline \section*{Note:} #1}
+
+
+\title{Analytical Methods}
+\author{Killian O'Brien}
+\begin{document}
+\thispagestyle{empty}
+\newgeometry{top=30pt, left=20pt,right=40pt, bottom = 30pt}
+%\includepdf{titlepagent.pdf}
+\includegraphics[scale=0.28]{mmulogo.png}
+
+\parbox[top]{\textwidth}{\sffamily
+\vspace{-2.5cm}
+\begin{flushright}
+{\bfseries 6G4Z3006 Calculus}\\
+Department of Computing and Mathematics\\
+Faculty of Science and Engineering\\
+2020/21
+\end{flushright}}
+\vfill
+\begin{center}\sffamily
+\HUGE \textbf{Calculus}\\
+Lecture Notes\\
+\large
+Part 1: 
+\end{center}
+
+\begin{center}
+\includegraphics[scale=0.8]{waves.png}\\
+%\includegraphics[scale=0.8]{dots.png}
+\end{center}
+\begin{center}\sffamily
+\Huge
+Dr Killian O'Brien
+\end{center}
+\vfill
+\frontmatter
+\restoregeometry
+%\section*{Acknowledgements}
+%\cleardoublepage
+%\section*{Abstract}
+%\cleardoublepage
+\tableofcontents
+\cleardoublepage
+\mainmatter
+%\subfile{sequences.chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Sequences
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Sequences}
+\subsection{Some motivation and context}
+In this unit we are working towards a study of calculus: the concepts of differentiation and integration of functions of a real variable. In order to do this we need an understanding of the real numbers and the behaviour of various infinite processes (sequences and series) defined on the real numbers and how functions of a real variable behave as that variable undergoes ever smaller changes, or increases without bound etc.
+
+In particular we shall be interested in studying the convergence of infinite sequences of numbers. Sequences converge when their terms get closer and closer to some limiting value. An understanding of how and why sequences converge or do not converge is important for understanding the fundamentals behind many techniques of mathematical modelling. When we model real physical processes our models are only ever approximate to the real situation. The techniques for solving these approximate models themselves only offer approximate solutions. This is fine as long as in principle we can find ever closer and closer approximations (i.e. we can make our approximations converge to the \emph{real} solution). In addition, for time based models (e.g. of the weather) our approximate solution will probably depart further and further from the \emph{real} solution when extended further into the future, i.e. our approximation solution diverges from the \emph{real} solution.
+\section{Basic definitions}
+\begin{defn}[Sequence]
+A \emph{sequence} is a list of elements (usually numbers) indexed by the positive integers.
+\end{defn}
+Sequences can consist of a finite or an infinite number of elements. The elements of a
+sequence could be any type of mathematical object however we shall be considering
+infinite sequences of numbers, unless otherwise stated, and these sequences will often be
+defined by a single rule as in the example above. We use a single letter together with a
+subscript to denote the elements of a sequence, as in
+$$x_1 , x_2 , x_3 , x_4, \dots .$$
+We can represent the sequence $x_1 , x_2 , x_3 , x_4, \dots $ using the compact notation $\left \{ x_n \right \}_{n=1}^\infty$  or just simply $\left \{ x_n \right \}$ if the $n$ indexing is understood.
+
+\subsection*{Adivce on notation}
+Be aware of the differences between a sequence and a set. Unfortunately we use the same brackets $\{ \, \}$ to denote each but remember that the elements of a set are unordered whereas the elements of a sequence are ordered, i.e. there is a first element , a second element and so on. You will need to be aware from the context what kind of object -- a set or a sequence -- is being referred to. Also be aware that the indexing of a sequence need not necessarily begin at 1, but could begin at some other initial value such as 0 etc. When dealing with a particular sequence you should always be aware of what the starting value of the index is.
+
+\begin{exmp}
+The following examples from here to Example \ref{Ex:neither} show some basic sequences and different ways to employ the notation for the sequence terms and indexing variable to emphasise that one should not get wedded to always using $x$ and $n$.
+
+\begin{itemize}
+\item
+The sequence of positive integers $1,2,3, \dots $, or $\left \{ z_m \right \}$, where the rule is
+$$z_m = m . $$
+\item
+The Fibonacci sequence: $1, 1, 2, 3, 5, 8, 13, ...$ or $\left \{f_n \right \}$ , where the rule is
+$$f_1 = 1, f_2 = 1 \text{ and } f_m = f_{m-1}+f_{m-2} \text{ for all } m \geq 2, $$  i.e. each element is the sum of the
+previous two elements. This type of rule for a sequence, where each term is
+defined using the values of some previous terms, is called a recurrence relation.
+\item
+The sequence of odd positive integers: $1, 3, 5, 7, ... $or $\left \{a_n\right \}$, where $$a_n = 2n-1.$$
+\item
+The sequence of prime numbers: $2, 3, 5, 7, 11, 13, ... $ or $\left \{ p_m \right \}$ , where $$p_m = ???.$$
+\end{itemize}
+\end{exmp}
+Two important types of sequences are arithmetic and geometric sequences.
+\begin{defn}[Arithmetic and Geometric sequences]
+An \emph{arithmetic
+sequence} has a common difference between successive elements and a \emph{geometric
+sequence} has a common ratio of successive elements. So we can write an arithmetic
+sequence as
+$$a, a + d , a + 2d , a + 3d ,\dots $$
+ or $\left \{ a_n\right \}$ , where $a_n = a + (n - 1)d$ .
+Here $a$ is the initial element and $d$ is the common difference. A geometric sequence can
+be written as
+$$a, ar , ar^2 , ar^3 ,\dots $$
+ or $\left \{ a_n \right \}$ , where $a_n = ar^{n-1}$.
+Here $a$ is the initial element and $r$ is the common ratio.
+\end{defn}
+
+\begin{exmp}[Sequence of odd integers]
+The sequences of positive integers and odd positive integers above are actually arithmetic
+sequences. The sequence of positive integers can be written as $\left \{ a_n \right \}$ , where
+$$a_n = n = 1 + (n - 1),$$
+so 1 is the initial element and 1 is the common difference. The
+sequence of odd positive integers can be written as $\left \{ a_n \right \}$ , where
+$$a_n = 1 + (n - 1)2 ,$$
+so 1 is the initial element and 2 is the common difference.
+\end{exmp}
+\begin{exmp}[Sequence of powers of $\frac{1}{2}$]
+The sequence,
+$$ 1, \frac{1}{2}, \frac{1}{4} , \frac{1}{8}, \dots $$
+of powers of $\frac{1}{2}$, is geometric as it has the form $\left \{a_n \right \}$ , where
+$$a_n = \left ( \frac{1}{2} \right )^{n-1},$$
+so 1 is the initial element and 2 the common ratio.
+\end{exmp}
+\begin{exmp}[Compound interest rates]
+Compound interest awarded on investments or charged on debts provide examples of geometric sequences. Suppose a bank offers an annual compound interest rate of $r \%$ on an initial deposit of $P$ units. Then the value of the deposit after $n$ years is given by
+$$v_n = P \left ( 1 + \frac{r}{100} \right )^n .$$
+\end{exmp}
+\begin{exmp}[Neither arithmetic nor geometric]
+\label{Ex:neither}
+The sequence $\left \{ x_n \right \}$, where
+$$x_n = \frac{1}{n^2} ,$$
+is neither arithmetic nor geometric, as it is not possible to express it in the required form.
+\end{exmp}
+\section{Monotonic and bounded sequences}
+The following definitions describe the behaviour of certain sequences.
+\begin{defn}
+A sequence $\left \{ x_n \right \}$ is \emph{increasing} if its elements satisfy
+$$ x_1 \leq x_2 \leq x_3 \leq \dots $$
+and \emph{decreasing} if they satisfy
+$$ x_1 \geq x_2 \geq x_3 \geq \dots  .$$
+If the inequalities are all strict then the sequence can be called \emph{strictly increasing} or \emph{strictly decreasing} as appropriate. If the inequalities only hold from some particular term $x_k$ onwards then we can speak of the sequence as increasing/decreasing from $k$ as appropriate.
+
+The term \emph{monotonic} refers to a sequence that is either increasing or decreasing. Similarly for \emph{strictly monotonic}.
+\end{defn}
+
+\subsection{Proving increasing or decreasing behaviour}
+If one has a computable formula for defining a sequence then the quickest way to see if the function is increasing or decreasing might be to plot some terms of the sequence using a computer. There are many ways to do this. Here is a quick example of how to do this with the Matlab software and the SageMath software.
+
+The following Matlab commands show how to plot the first hundred elements of the sequence $\{x_n\}$ defined by $x_n = f(n) = (n^2 + 2)/2^n$. From the resulting plot we can clearly see that the sequence is decreasing after the second element.
+
+\begin{lstlisting}[language = Matlab, frame=single]
+f = @(n) (n^2+2)/2^n ;
+
+N=1:100;
+S=arrayfun(f,N);
+
+plot(S,'.')
+\end{lstlisting}
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{figure_0}
+\end{center}
+
+
+Here is some SageMath\footnote{You can experiment with Sage and Python code using the online open-source computing environment at \url{www.cocalc.com}} code that achieves the same thing.
+\begin{framed}
+\begin{verbatim}
+S=[(n^2+2)/2^n for n in range(1,101)]
+list_plot(S)
+\end{verbatim}
+\end{framed}
+
+\begin{center}
+\includegraphics[width=.75\textwidth]{list.png}
+\end{center}
+
+Investigating the first few terms of a sequence like this may provide evidence that a sequence is increasing or decreasing. However a more rigorous approach is needed if we are to formally prove that a given sequence is increasing or decreasing. There are (at least) two approaches that we can take to this problem. Suppose we are given a sequence $\{ a_n \}$ where the term $a_n$ is defined by some formula depending on $n$. Suppose we want to investigate and prove it is an increasing sequence. We can consider the difference between consecutive terms, i.e. $a_{n+1} - a_n$ and then try to establish that the inequality
+$$ a_{n+1} - a_n \geq 0 $$
+holds for all relevant values of the indexing variable $n$. If we can show that the strict inequality
+$$ a_{n+1} - a_n > 0 ,$$
+holds then that will establish the strictly increasing behaviour of the sequence. If it is decreasing behaviour that has to be proved then the relevant inequalities to tackle are
+$$a_{n+1} - a_n \leq 0 , \text{ or } a_{n+1} - a_n < 0 .$$
+
+Depending on the formula defining the sequence terms it may be more appropriate to consider the quotient of consecutive terms,
+$$ \frac{a_{n+1}}{a_n} ,$$
+and then prove that this is either greater than or less than 1, which will establish increasing or decreasing behaviour. Clearly though, this approach can only be used if the sequence terms are never equal to zero as this would lead to the ratio being undefined.
+
+\begin{exmp}[Increasing sequence]
+Investigate the sequence $\{ a_n \}$ defined by
+$$ a_n = \frac{5^n}{n!},$$
+and describe its increasing / decreasing behaviour.
+\end{exmp}
+\begin{proof}[Solution]
+We will consider the ratio of consecutive terms which is given by
+\begin{align*}
+\frac{a_{n+1}}{a_n} & = \frac{5^{n+1}}{(n+1)!} \, \frac{n!}{5^n} \\
+&= \frac{5}{n+1} .
+\end{align*}
+Now the quantity $\frac{5}{n+1}$ can easily be compared to 1. It is greater than 1 for $n$ less than 4 and less than 1 for $n$ greater than 5. So we can conclude that the sequence $\{ a_n \}$ is increasing for $n$ up to 4 and then decreases for all $n \geq 5$.
+\end{proof}
+Of primary interest in our study of sequences is how an infinite sequence behaves as it develops. Do the terms vary with any apparent pattern? Do they stay within upper and/or lower bounds? Do they get closer and closer to some limiting value? To begin with we introduce the concept of a bounded sequence.
+\begin{defn}
+A sequence $\left \{ x_n \right \}$ is said to be \emph{bounded} if there exists some positive number $M$ such that for all $n$, the elements of the sequence satisfy the condition
+$$ \left | x_n \right | \leq M.$$
+A sequence $\left \{ x_n \right \}$ is said to be \emph{bounded above } if there exists some  number $M$ such that for all $n$, the elements of the sequence satisfy the condition
+$$ x_n  \leq M.$$
+A sequence $\left \{ x_n \right \}$ is said to be \emph{bounded below} if there exists some  number $M$ such that for all $n$, the elements of the sequence satisfy the condition
+$$ x_n  \geq M.$$
+The number $M$ is called the (\emph{upper / lower}) \emph{bound}, as appropriate.
+\end{defn}
+\section{Convergence}
+Now we introduce the very important concept of convergence.
+\begin{defn}[Informal definition of convergence]
+Let L be a number. A sequence $\left \{ x_n \right \}$ \emph{converges} to the \emph{limit} $L$ if as $n$ increases, the
+elements of the sequence get closer and closer to the number $L$, or equivalently, the distance $ \left | x_n - L \right |$ gets closer and closer to $0$.
+\end{defn}
+
+Another way of saying that a sequence $\left \{ x_n \right \}$  converges to the limit $L$ is to say that $x_n$ tends to $L$ as $n$ tends to infinity, or in symbols
+$$ x_n \to L \text{ as } n \to \infty,$$
+or
+$$ \lim_{n\to \infty} x_n = L.$$
+Such sequences are called \emph{convergent} and if a sequence is not convergent then we call it
+\emph{divergent}.
+
+Some sequences are divergent because their terms keep increasing in absolute value without any upper bound, in which case we can write
+$$y_n \to \infty \text{ as } n \to \infty,$$
+or
+$$y_n \to -\infty \text{ as } n \to \infty.$$
+The first of these says that the term $y_n$ increase in positive value without any upper bound, and the second says that the terms $y_n$ get large and negative without any lower bound. However although this notation and phrasing is used quite commonly we should be careful. Such sequences are still divergent, and we should certainly not treat $\infty$ (whatever it is really) as a number like any other.
+
+\begin{exmp}
+It is not too hard to appreciate the convergence of some simple sequences, for instance
+$$ \lim_{m \to \infty} \frac{1}{m} = 0 .$$
+The numbers $\frac{1}{m}$ are getting smaller and smaller and moreover they are getting \textit{arbitrarily small}, i.e. given any small number $\epsilon$, eventually the fractions $\frac{1}{m}$ will get smaller than $\epsilon$.
+\end{exmp}
+
+While the definition given above allows us to understand the idea of convergence, a more
+rigorous formal definition is needed to prove results about the concept of convergence.
+This definition is:
+\begin{defn}[Formal definition of convergence]
+The sequence $\left \{ x_n \right \}$ \emph{converges} to the \emph{limit} $L$ if given any $\epsilon > 0$ we can find a positive integer $N_\epsilon$ such that for all $n \geq N_\epsilon$ the inequality $\left | x_n - L \right | < \epsilon$ holds.
+\end{defn}
+This definition is saying that $\left \{ x_n \right \}$ converges to $L$ if for all small positive distances $\epsilon$, the sequence eventually (for all $n \geq N_\epsilon$ ) lies within a distance $\epsilon$ of the limit $L$.
+\subsection{Properties of convergence}
+Proofs of most of these results will be discussed in lectures. The ideas and techniques you see in these proofs will occur again when proving related properties later in the unit.
+The first property of convergence we will prove is that a sequence could not converge to more than one limit.
+
+\begin{thm}[Uniqueness of limits]
+If a sequence converges then its limit is unique, i.e. if $x_n \to L$ and $x_n \to M$ as $n \to \infty$ then $L=M$.
+\end{thm}
+\begin{proof}
+This argument uses the principle of proof by contradiction. \margnote{Proof by contradiction}{For the technique of proof-by-contradiction we make the assumption that the result we are trying to prove is in fact false. From this assumption we then derive a clear contradiction of something we already know to be true. The only way to resolve this then is to accept that the assumption we made is itself false, i.e that the result we are trying to prove is in fact true!}
+
+Suppose that a sequence $a_n$ converges to limits $L , M \in \mathbb{R}$. If we assume that $L$ and $M$ are distinct, i.e. that $|L - M|>0$, then we can let $\epsilon = |L - M| / 2 > 0$. Since $a_n \to L$ there exists an $N_1$ such that for every $n \geq N_1$ we have $|a_n - L| < \epsilon$. Similarly, since $a_n \to M$ there exists an $N_2$ such that for every $n \geq N_2$ we have $|a_n - M| < \epsilon$.
+
+We wish to make use of both of these inequalities simultaneously. So we set $N = \max(N_1, N_2)$. Now for every $n \geq N$ we can say
+\begin{align*}
+|L - M| &= |L  - a_n + a_n - M| \\
+&\leq |L  - a_n| + |a_n - M|, \text{ by the triangle inequality}\\
+&< \epsilon + \epsilon \\
+&= |L - M| / 2 + |L - M| / 2 \\
+&= |L - M| .
+\end{align*}
+\margnote{Triangle inequality}{The absolute value, $|x|$, of real numbers $x$ satisfies the following property: for all real numbers $x$ and $y$ we have $|x+y| \leq |x| + |y|$.This can be shown by considering the four possibilities for the positivity/negativity of $x$ and $y$. Generalizations of the triangle inequality hold in many other geometric and algebraic settings (e.g. vector spaces).}
+
+
+This chain of relations has established that for all $n \geq N$
+$$|L - M| <  |L - M| .$$
+But this last statement is a clear contradiction as a real number cannot be strictly less than itself.
+
+So we conclude that the assumption that led to this conclusion must itself be false, i.e. that $L$ and $M$ are indeed the same. This proves the result.
+\end{proof}
+
+The convergence and boundedness properties are related, as described by the following two theorems.
+\begin{thm} \label{T:convergentimpliesbounded}
+Every convergent sequence is bounded.
+\end{thm}
+\begin{proof}
+Consider a convergent sequence $\{x_n\}$. Suppose that $x_n \to x$ as $n \to \infty$. We know there exists a positive integer $N$ such that for all $n \geq N$ we have $|x_n - x| < 1$, this implies that for all $n \geq N$ we have $|x_n| < 1 + |x|$.
+\margnote{Why $\epsilon = 1$?}{Nothing special about the choice of $\epsilon = 1$ here, any choice of $\epsilon > 0$ would do, just have to make a choice.}
+This shows that the sequence is eventually bounded, i.e. after element $N$. But this just leaves a finite number of terms to include. So let $M = \max(x_1, x_2, \dots , x_{N-1}, 1+|x|)$.
+\margnote{Maximums and minimums of sets of numbers}
+{Note that the maximum (or minimum) of a finite collection of numbers is unproblematic, it is simply the largest (or smallest) of the numbers. However care must be taken when trying to talk of the maximum (or minimum) of an infinite collection of numbers, as their maximum (or minimum) might not exist!}
+Then we can say that for all $n \geq 1$ we have $|x_n| \leq M$, i.e. that the sequence is bounded.
+\end{proof}
+Knowing that a sequence is bounded and either increasing or decreasing is enough to
+guarantee that it converges.
+\begin{thm}[Monotone convergence theorem]
+Every bounded monotonic sequence is convergent.
+\end{thm}
+\begin{proof}
+We shall not discuss the proof of this is in detail in this course. It essentially follows from the least-upper bound principle of the real numbers.
+\end{proof}
+
+\begin{thm}[Algebra of limits theorem]
+Let $\left \{ a_n \right \}$ and $\left \{ b_n \right \}$ be two convergent sequences with
+$$\lim_{n \to \infty} a_n = a \text{ and } \lim_{n \to \infty} b_n = b .$$
+New sequences can be formed from the elements $a_n$ and $b_n$ in many ways. The following new sequences are all convergent and have the expected limits:
+\begin{itemize}
+\item
+\textbf{Linear Combinations:}
+$$\lim_{n \to \infty} \left (  \alpha a_n + \beta b_n \right )= \alpha a + \beta b,$$
+where $\alpha, \beta \in \mathbb{R}$ are any pair of coefficients,
+\item
+\textbf{Products:}
+$$\lim_{n \to \infty} \left ( a_n b_n \right ) = ab,$$
+\item
+\textbf{Quotients:}  (assuming that $b \neq 0$ and for all $n$, $b_n \neq 0$)
+$$ \lim_{n \to \infty} \left ( \frac{a_n}{b_n} \right ) = \frac{a}{b}.$$
+\end{itemize}
+\end{thm}
+\begin{proof}
+First we prove the linear combinations part.
+
+Assume that we have convergent sequences $\{a_n\}$ and $\{b_n\}$ with $a_n \to a$ and $b_n \to b$. Let $\alpha, \beta \in \mathbb{R}$. Let $\epsilon > 0$ be given. Since both sequences are convergent we can say that there exists $N_1$ and $N_2$ such that for all $n \geq N_1$ we have $|a_n - a| < \frac{\epsilon}{2 |\alpha|}$, and that for all $ n \geq N_2$ we have $| b_n - b| < \frac{\epsilon}{2 |\beta|}$. We wish to make use of both inequalities simultaneously so we let $N = \max(N_1, N_2)$. Then for all $n \geq N$ we have
+
+\begin{align*}
+| (\alpha a_n + \beta b_n)  - (\alpha a + \beta b) |
+& = | \alpha (a_n - a) + \beta (b_n - b) | \\
+&\leq | \alpha| |a_n - a| + |\beta | |b_n - b |, \text{ triangle inequality and factorising}\\
+&< |\alpha| \frac{\epsilon}{2 |\alpha|} + |\beta | \frac{\epsilon}{2 |\beta|}, \text{ from above}\\
+& = \epsilon .
+\end{align*}
+
+From the above relations we can extract the required criterion for convergence, namely
+for all $n \geq N$ we have $| (\alpha a_n + \beta b_n)  - (\alpha a + \beta b) | < \epsilon$. This proves the linearity part of the theorem.
+
+Next we prove the products part.
+
+Suppose that $a_n \to a$ and $b_n \to b$ as before and that $\epsilon >0$ is given.
+\margnote{Understanding this part}
+{There is much to unpick here in order to gain a proper understanding of how this proof operates. Spend some time on it to see how rewriting the absolute value allows us to use our control over the sizes of $|a_n -a|$ and $|b_n - b|$ to achieve the desired inequality for the convergence of $a_n b_n$.}
+
+By convergence there exist positive integers $N_1$ and $N_1$ such that for all $n \geq N_1$ we have $|a_n - a| < \min\left ( \sqrt{\frac{\epsilon}{3}}, \frac{\epsilon}{3|b|} \right )$ and for all $n \geq N_2$ we have $|b_n - b| < \min\left ( \sqrt{\frac{\epsilon}{3}}, \frac{\epsilon}{3|a|} \right )$. We wish to use both ineqaualties so we let $N = \max(N_1, N_2)$ and now for all $n \geq N$ we have
+\begin{align*}
+|a_n b_n - ab | & = | (a_n - a)(b_n - b) + b(a_n - a) + a(b_n - b)|\\
+&\leq | (a_n - a)(b_n - b)| + |b||(a_n - a)| + |a||(b_n - b)|\\
+&< \sqrt{\frac{\epsilon}{3}}\sqrt{\frac{\epsilon}{3}}+ |b|\frac{\epsilon}{3|b|}
++ |a|\frac{\epsilon}{3|a|}\\
+&= \epsilon
+\end{align*}
+From the above relations we can extract the required criterion for convergence, namely
+for all $n \geq N$ we have $| a_n b_n  -  a  b | < \epsilon$. This proves the product part of the theorem.
+
+Next we prove the quotients part. We will simplify matters by first proving a special case that if $b_n \to b$ (with $b_n, b \neq 0$) then $1/b_n \to 1/b$. Then the general quotient case can be derived from this special case and the product case, since we can re-express $a_n / b_n$ as $a_n (1/b_n)$.
+
+The relevant absolute value to examine is
+$$\left | \frac{1}{b_n} - \frac{1}{b} \right | = \left | \frac{b - b_n}{b_n b} \right | = \frac{1}{|b||b_n|} \left | b_n - b \right |.$$
+To ensure that this absolute value is less than $\epsilon$ we will have to arrange a lower bound for the denominator and a suitable upper bound for the numerator.
+\margnote{Understanding this part}
+{Again, you should spend time coming to a good understanding of the argument here. You need to appreciate how we are controlling the size of  $\frac{1}{|b||b_n|} \left | b_n - b \right |$ with a combination of lower and upper-bounds.}
+By convergence there exists a positive integer $N_1$ such that for all $n \geq N_1$ we have $|b_n - b| < |b|/2$, which implies that $|b_n| > |b|/2$. Also by convergence, there exists a positive integer $N_2$ such that for all $n \geq N_2$ we have $|b_n - b| < \epsilon |b|^2 / 2$. So letting $N = \max(N_1, N_2)$ then for all $n \geq N$ we have
+$$\left | \frac{1}{b_n} - \frac{1}{b} \right |= \frac{1}{|b||b_n|} \left | b_n - b \right |
+< \frac{2}{|b||b|} \frac{|b|^2}{2} \epsilon = \epsilon,$$
+which gives us the required inequality to conclude that $1/b_n \to 1/b$ as claimed. Together with the remarks above this proves the quotients part of the theorem.
+\end{proof}
+The algebra of limits theorem can allow us to find the limits of sequences that are formed from sequences with known convergence properties. By referring to the theorem we can provide rigorous arguments to justify the limit of the sequence in question, based on limits of simpler sequences.
+\begin{exmp}[Applying the algebra of limits theorem]
+Consider the sequence $\{ x_n \}_{n=1}^\infty$ where
+$$ x_n = \frac{2}{3}\frac{2n^2 -n}{\left ( -3n^2 +2 \right )}.$$
+By applying the various parts of the algebra of limits theorem we can see how to find the limit of this convergent theorem.
+\begin{align*}
+\lim_{n \to \infty} x_n &= \lim_{n \to \infty} \frac{2}{3}\frac{2n^2 -n}{\left ( -3n^2 +2 \right )} \\
+&= \frac{2}{3} \lim_{n \to \infty} \frac{2 - \frac{1}{n}}{\left ( -3 + \frac{2}{n^2} \right )}, \quad \text{linearity} \\
+&= \frac{2}{3} \frac{\lim\limits_{n \to \infty} \left (2 - \frac{1}{n} \right )}{\lim\limits_{n \to \infty} \left ( -3 + \frac{2}{n^2} \right )}, \quad \text{quotient rule}\\
+&= \frac{2}{3} \left ( \frac{2}{-3} \right ) = \frac{-4}{9}, \quad \text{linearity and known convergence of $\frac{1}{n}$ and $\frac{1}{n^2}$}.
+\end{align*}
+\end{exmp}
+\section{L'H\^{o}pital's rule}
+Another useful tool for working with limits of sequences is L'H\^{o}pital's rule. It can be used to find the limits of quotients of sequences, where the denominator and numerator sequences do not have limits, or both tend to the limit zero. When we consider differentiation next term we shall be able to prove some of the cases of this rule. The rule applies to sequences of the form $\{ a_n \}$, where
+$$a_n = \frac{f(n)}{g(n)},$$
+where $f$ and $g$ are a pair of differentiable functions. If it is the case that
+$$ f(n) \to \pm \infty \text{ and } g(n) \to \pm \infty \text{ as } n \to \infty,$$
+or
+$$f(n) \to 0 \text{ and } g(n) \to 0 \text{ as } n \to \infty ,$$
+then we can work out the limit using
+$$\lim_{n \to \infty} a_n = \frac{\lim\limits_{n \to \infty} f'(n)}{\lim\limits_{n \to \infty} g'(n)},$$
+where $f'$ and $g'$ are the derivatives of $f$ and $g$.
+
+\begin{exer}
+These problems require the application of various concepts and results from this chapter. We shall use these as a basis for discussion in the tutorials.
+\begin{enumerate}
+\item
+Write down the first five terms of the sequence $\{ x_n \}_{n=1}^\infty$ where $x_n$ is given by
+\begin{enumerate}
+\item
+$x_n = 2^{n-1},$
+\item
+$x_n = \frac{2n}{2n-1},$
+\item
+$x_n = (-1)^n \frac{n^2}{n!},$
+\item
+$x_n = \cos{\frac{n\pi}{4}}.$
+\end{enumerate}
+\postitemskip
+\item
+For each of the sequences in question 1 above write down a simplified expression for the term $x_{2m+3}$.
+\postitemskip
+
+\item
+ Determine whether the sequence $\{ x_n \}_{n=1}^\infty$ is
+increasing or decreasing, where $x_n$ is given by
+\begin{enumerate}
+\item
+$x_n = \frac{n}{2n+1}$,
+\item
+$x_n = \frac{10^n}{(2n)!} $,
+\item
+$x_n = \frac{e^n}{(n+1)!} $,
+\item
+$x_n = \frac{n}{2^n} $.
+\end{enumerate}
+\postitemskip
+\item
+ Consider the sequence $\{ x_n \}_{n=1}^\infty$ determined by the
+following rules for $x_n$. Which ones are convergent? Determine the
+limit if one exists. Hint: l'Hospital's rule can be used for the first two.
+\begin{enumerate}
+\item
+$x_n = \frac{\text{ln } n}{2n}$,
+\item
+$x_n = n^2 e^{-n} $,
+\item
+$x_n = \frac{(n+1)(n+2)}{2n^2}$,
+\item
+$x_n = \frac{2n^3}{n^2 - 1}$,
+\item
+$x_n = \left (1 - \frac{1}{2^n} \right ) .$
+\end{enumerate}
+\postitemskip
+\item
+Use the Monotone Convergence Theorem to prove that the sequence $\{ r_n\}$ converges where
+$$r_n = \frac{\prod\limits_{m=0}^{n} (2m+1)}{\prod\limits_{m=0}^n (2m+2)}
+== \frac{1 \cdot 3 \cdot 5 \cdot \dots \cdot (2n+1)}{2 \cdot 4 \cdot 6 \cdot \dots \cdot (2n+2)}.$$
+\postitemskip
+\item
+Prove that the sequence $\{ a_n\}$ is divergent, where
+$$a_n = \frac{n!}{2^n} .$$
+Hint: Show that the sequence is unbounded.
+\postitemskip
+\item
+ Consider the general arithmetic sequence $\{ x_n \}_{n=1}^\infty$
+where $x_n = a + (n-1)d$. Let $S_m$ denote the sum of the first $m$
+elements of the sequence $\{ x_n \}$. Obtain a formula for $S_m$ in
+terms of $a,d,m$. Hint: Consider the quantity $2S_m$ as the sum of
+$S_m$ with itself in the \emph{reverse order}.
+\postitemskip
+\item
+ Consider the general geometric sequence $\{ x_n \}_{n=1}^\infty$
+where $x_n = ar^{n-1}$. Let $S_m$ denote the sum of the first $m$
+elements of the sequence $\{ x_n \}$. Obtain a formula for $S_m$ in
+terms of $a,r,m$. Hint: Consider the quantity $S_m - rS_m$.
+\postitemskip
+\item
+ Using the algebra of sequences theorem find the limit of the following convergent sequences.
+\begin{enumerate}
+\item
+$\{a_n\}$ where $a_n = \frac{(2n + 1) (n-2)}{n^3 + 2},$
+\item
+$\{ b_n \}$ where $b_n = \frac{2}{7n^2} - \frac{3n}{n^2} + \frac{2n}{7n+1}$.
+\end{enumerate}
+Point out carefully the places where the theorem is being used.
+\postitemskip
+\item
+ Consider the function $f$ where
+$$ f(x) = x^3 - 2 .$$
+When Newton's method for root finding is applied to $f$ the sequence $\{ c_n \}$ is produced where $c_n$ is defined by the recurrence relation
+\begin{align*}
+c_1 & = 1 ,\\
+c_{n+1} &= \frac{2}{3} c_n + \frac{2}{3 c_n^2}.
+\end{align*}
+Newton's method claims that $\{ c_n \}$ should converge to $2^{\frac{1}{3}}$, the root of $f$. Use the algebra of sequences theorem to prove that: if $\{ c_n \}$ has a non-zero limit then that limit equals $2^{\frac{1}{3}}$.
+\postitemskip
+\item
+Investigate the long term behavior of the following sequences, i.e. are they increasing or decreasing, do they converge or diverge, are they bounded or unbounded?
+\begin{enumerate}
+\item
+$$\left \{ \frac{1}{\sqrt{n^2 + 1} - \sqrt{n}} \right \}_{n=1}^\infty ,$$
+\item
+$$\left \{ \frac{ \cos{n}}{n} \  \right \}_{n=1}^\infty ,$$
+\item
+$$\left \{ \sqrt[n]{ n } \right \}_{n=1}^\infty ,$$
+\item
+$$\left \{ n \cos{\left ( \frac{\pi}{2n} \right )} \right \}_{n=1}^\infty .$$
+\end{enumerate}
+\end{enumerate}
+\end{exer}
+\cleardoublepage
+%\subfile{series.chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Series
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Series}
+\summary{In this chapter we build on the concepts we developed in the sequences chapter and apply them to series. We will look at the concept of the convergence of an infinite series and results that give various conditions for their convergence or divergence. Two important uses of series are in functions expansions (such as Taylor series) and the definition of the Riemann integral.}
+
+\section{Basic definitions}
+A series is the name given to the process where we take a sequence of terms and add them all together term by term.
+\begin{defn}
+A \emph{series} is the sum of the terms of a sequence.
+\end{defn}
+We can represent series using addition and subtraction signs as in
+$$1 - 2 + 3 - 4 + 5 - 6 + 7 - 8 + 9 - 10 ,$$
+or using the sigma notation ($\Sigma$ is the capital Greek letter sigma) as in
+$$\sum_{k=1}^{10} \left ( -1 \right )^{k-1} \, k.$$
+A series can contain a finite number of terms as in
+$$\sum_{n=1}^N x_n \text{ or equivalently } x_1 + x_2 + \dots + x_N,$$
+or an infinite number of terms as in,
+$$\sum_{n=1}^\infty x_n \text{ or equivalently } x_1 + x_2 + \dots .$$
+If a series contains only a finite number of terms then the series will sum to a finite value
+(assuming, as we are here, that the terms of the series are all finite quantities). If a series
+has an infinite number of terms then the series may or may not sum to a finite value. The
+precise definition of \emph{summing to a finite value} is given by the following. First we define what is meant by the partial sums of an infinite series
+\begin{defn}[Partial sums]
+Consider an infinite series $\sum_{n=1}^\infty x_n$. The \emph{$k^{th}$-partial sum}, $S_k$, of the series is the finite series
+$$S_k = \sum_{n=1}^k x_n = x_1 + x_2 + \dots + x_k .$$
+\end{defn}
+\section{Convergence}
+\begin{defn}[Convergence for series]
+The series $\sum_{n=1}^\infty x_n$ \emph{converges} to the limit (or sum) $L$ if the sequence of its partial sums, $\{ S_k \}_{k=1}^\infty$, is a convergent sequence and
+$$ \lim_{k \to \infty} S_k = L . $$
+If this is the case then we can simply write
+$$ \sum_{n=1}^\infty x_n = L .$$
+
+A series is \emph{divergent} if the sequence of its partial sums is a divergent sequence.
+\end{defn}
+It is not hard to think of examples of divergent series.
+\begin{exmp}[A divergent series]
+Consider the series
+$$\sum_{m=1}^\infty m .$$
+This series is clearly divergent as the partial sums are increasing without any upper bound, and so cannot form a convergent sequence (see theorem \ref{T:convergentimpliesbounded}).
+\end{exmp}
+However it is not so obvious that convergent series exist (beyond the trivial example of a series where the terms are all zero after some point).
+\begin{exmp}[A convergent series]
+Consider the series
+$$\sum_{m=1}^\infty \left ( \frac{1}{2} \right )^m .$$
+The convergence of this series can be appreciated when we interpret the terms as measuring the size of step taken along a line. We see that the partial sums of the series get closer and closer to 1. Indeed the series does converge to 1. This can be proved using the partial sum formula for a geometric series and making use of the algebra of sequences theorem.
+\end{exmp}
+This example shows that it is possible to have an infinite number of terms and yet for them still to sum to a finite value. This happens because the terms are getting smaller and smaller, the terms themselves are converging to zero, when viewed as sequence. However this type of behaviour does not guarantee convergence for a series, as the next example shows.
+\begin{exmp}[A divergent series: The Harmonic Series]
+Consider the series
+$$\sum_{m=1}^\infty \frac{1}{m}.$$
+The terms of this series are indeed converging to zero, but yet the series does not converge. It increases without any upper bound, albeit very slowly. This fact can be proved with the aid of a grouping argument.
+\end{exmp}
+
+Note that changing any finite number of terms of a series will not affect whether a series is convergent or divergent (although it may well change the value of its sum) as convergence for a series depends on its `long term' behaviour.
+
+For series that contain a mixture of positive and negative terms it is helpful to be able to refer to the convergence of the related series of absolute values.
+\begin{defn}
+A series $\sum_{m=1}^\infty a_m$ is \emph{absolutely convergent} if the series of absolute values, $\sum _{m=1}^\infty \left | a_m \right |$, is a convergent series.
+If the series  $\sum_{m=1}^\infty a_m$ is convergent but the series  of absolute values, $\sum _{m=1}^\infty \left | a_m \right |$, is divergent, then the original series is said to be \emph{conditionally convergent}.
+\end{defn}
+
+The importance of conditional convergence is given by the following result which we shall quote without proof.
+\begin{thm}
+If a series is absolutely convergent then it is convergent. Moreover, the terms of an absolutely convergent series can be rearranged in any way and the resulting series will still converge to the same sum. However if a series is conditionally convergent then rearranging its terms can yield a series which sums to a different value.
+\end{thm}
+\begin{proof}
+Omitted.
+\end{proof}
+
+\section{A short section on tails}
+For an infinite series
+$$\sum_{m=1}^\infty a_m = a_1 + a_2 + a_3 + a_4 + \dots$$
+we note that the convergence or divergence of the series is not altered if some finite collection of the terms of the series are changed.
+
+For suppose that we change $a_1$ to $a_1 + \delta_1$ and $a_2$ to $a_2 + \delta_2$.
+If the original series is convergent, say $\sum a_m = A$ then changing these values will mean the new series converges to $A+\delta_1+\delta_2$.
+
+On the other hand if the series is divergent it is because the sequence of partial sums, $S_k = \sum_{m=1}^k a_m$, fails to converge. The partial sums, $S_k'$, of the new series, for $k \geq 3$, will satisfy $S_k' = S_k + \delta_1+\delta_2$, and so these too will still fail to converge.
+
+Both of these arguments extend to any finite collection of terms. By a \emph{tail} of the series $\sum_{m=1}^\infty a_m$ we mean any series of the form $\sum_{m=M}^\infty a_m$, for some positive integer $M$, i.e. the original series less some finite collection of initial terms. If we can prove that some tail of the series is convergent, then so will the original series be convergent. Similarly, if we can show that some tail of the series is divergent, then so will the original series be divergent. These ideas occur in some of the proofs of the series convergence tests later in the chapter.
+
+\section{Some series convergence properties}
+
+\begin{thm}[Linear combinations of convergent series]
+Suppose that we have two convergent series $\sum_{m=1}^\infty  a_m$ and $\sum_{m=1}^\infty b_m$ such that
+$$ \sum_{m=1}^\infty a_m = A , \text{ and } \sum_{m=1}^\infty b_m = B .$$
+Then for any pair $\alpha, \beta \in \mathbb{R}$ we have a new series
+$$ \sum_{m=1}^\infty \left ( \alpha a_m + \beta b_m \right ) ,$$
+which is convergent and satisfies
+$$ \sum_{m=1}^\infty \left ( \alpha a_m + \beta b_m \right ) = \alpha A + \beta B.$$
+\end{thm}
+\begin{proof}
+This can be proved using the linearity property for convergence of sequences. We do not need to descend to $\epsilon, N$ arguments but just use the definition for series convergence in terms of the partial sums.
+
+Letting $A_k$ and $B_k$ denote the partial sums, i.e. $A_k = \sum_{n=1}^k a_n$ and $B_k = \sum_{n=1}^k b_n$ we make the following deductions.
+\margnote{Direction of presentation}
+{Why was the presentation reversed here? In that we started with the claimed limit $\alpha A + \beta B$ and worked our way towards $\sum_{n=1}^\infty \left ( \alpha a_n + \beta b_n \right )$?}
+\begin{align*}
+\alpha A + \beta B & = \alpha \lim_{k\to \infty}A_k + \beta \lim_{k\to \infty}B_k\\
+&= \lim_{k \to \infty} \left ( \alpha A_k + \beta B_k \right ), \text{ by linearity of limits for sequences}\\
+&= \lim_{k \to \infty} \left ( \alpha \sum_{n=1}^k a_n + \beta \sum_{n=1}^k b_n \right )\\
+&= \lim_{k \to \infty} \sum_{n=1}^k \left ( \alpha  a_n + \beta  b_n \right ), \text{ manipulation of sum}\\
+&=\sum_{n=1}^\infty \left ( \alpha a_n + \beta b_n \right ), \text{ by def. of series convergence}.
+\end{align*}
+
+\end{proof}
+
+\section{Convergence tests}
+We will introduce various tests that can be used to assess the convergence / divergence of a series.
+
+\begin{thm}[General term test]
+\margnote{Contrapositive}
+{The contrapositive of a statement $A \Rightarrow B$ is the statement $\neg B \Rightarrow \neg A$. These two statements are \emph{logically equivalent}, i.e. they both have the same truth value. If one is true then so is the other. If the result one is trying to prove take the form of an implication, then sometimes the contrapositive of the result may be easier to prove directly.}
+If a sequence has a non-zero limit (or no limit at all) then the associated series will
+diverge. Equivalently, by forming the contra-positive we can quote this test as: If a series
+converges then the associated sequence of terms converges to zero. Symbolically these two statements are
+\begin{itemize}
+\item
+$$\lim_{m \to \infty} a_m  \neq 0 \, \Rightarrow \, \sum_{m=1}^\infty a_m \text{ diverges,}$$
+\item
+$$ \sum_{m=1}^\infty a_m \text{ converges} \, \Rightarrow \, \lim_{m \to \infty} a_m = 0.$$
+\end{itemize}
+\end{thm}
+\begin{proof}
+Suppose that $\sum_{n=1}^\infty a_n$ converges and let $A_k$ denote the partial sum as before, i.e. $A_k \to a$ as $k \to \infty$. Let $\epsilon >0$ be given. There exists a $K$ such that for all $k \geq K$ we have $\left | A_k - a \right | < \epsilon / 2$. This implies that for all $k \geq K$ we have $|A_k - A_{k+1} | = |a_{k+1}| < \epsilon$, i.e. the sequence can be shown to be eventually arbitrarily close to zero. This is equivalent to the definition for $a_n \to 0$ as $n \to \infty$. So this proves the second form of the theorem.
+\end{proof}
+
+But note that a series can still diverge even if the sequence of terms converges to zero. For example the \emph{harmonic series},
+$$ \sum_{m=1}^\infty \frac{1}{m} ,$$
+diverges even though $\frac{1}{m} \to 0$ as $m \to \infty$. The divergence of the harmonic series can be shown by using the integral test (see later) as well as the earlier term-grouping argument.
+
+A \emph{geometric series} is, as the name suggests, the sum of the terms of a geometric sequence. The convergence of a geometric series can be determined using the following test.
+
+\begin{thm}[Geometric series test]
+The geometric series $\sum_{n=1}^\infty a r^{n-1}$ converges trivially if $a=0$. If $a \neq 0$ then it converges if and only if $|r| < 1$, in which case
+$$ \sum_{n=1}^\infty a r^{n-1} = \frac{a}{1-r} .$$
+\end{thm}
+\begin{proof}
+The convergent case $a=0$ is clear. So we assume that $a \neq 0$. If $r=1$ then divergence is clear as the series is just $a+a+a+a+ \dots $. So assume $r \neq 1$ and let $A_k$ denote the partial sum, i.e. $A_k = \sum_{n=1}^k a_n$. Most of the terms in the difference $A_k - rA_k$ will cancel leaving the closed form equation
+$$A_k = \frac{a(1 - r^k)}{1-r}.$$
+Then by the definition of an infinite series and the algebra of limits theorem we have
+$$ \sum_{n=1}^\infty a r^{n-1} = \lim_{k \to \infty} A_k = \lim_{k \to \infty} \frac{a(1 - r^k)}{1-r} = \frac{a(1 - \lim_{k \to \infty} r^k)}{1-r}.$$
+If $r = -1$ or $|r| > 1$ then $r^k$ diverges, and hence so does the series. If $|r| < 1$ then $r^k \to 0$ as $k \to \infty$, in which case the sum of the series is $a/(1-r)$, as required.
+\end{proof}
+
+\begin{thm}[Integral test]
+Consider a series $\sum_{m=1}^\infty a_m$ and suppose that there exists a continuous function $f$ which has positive decreasing values and that $a_m = f(m)$ for all $m \geq 1$. If the improper integral
+$$ \int_1^\infty f(t) \, dt = \lim_{T \to \infty} \, \int_1^T f(t) \, dt $$
+exists and is finite, then the original series converges. If the improper integral above does not have a finite value then the original series diverges.
+\end{thm}
+\begin{proof}
+We sketch the main idea of the proof here based on the typical situation depicted in figure \ref{F:integraltest}. To make the argument rigourous we should rephrase it in terms of the partial sums and partial integrals and use a careful limiting argument.
+\begin{figure}
+\centering
+\includegraphics[scale=0.6]{integraltest.png}
+\caption{The integral test}
+\label{F:integraltest}
+\end{figure}
+There we see the graph of decreasing function $f$ shown in black. The grey rectangles all have width 1 and the $i^{th}$ rectangle has height $a_i = f(i)$. Interpreting the integral and series in terms of area we see that $\int_1^\infty \, f(t) \, dt$ is the area between the graph and the $x$-axis from $1$ to $\infty$ and that the series $\sum_{m=1}^\infty a_m$ is the total area of all the rectangles. Due to the decreasing nature of the function $f$, each rectangle protrudes a bit above the graph of $f$. If we let $\gamma$ denote the sum of the areas of all these protrusions then we have
+\margnote{Euler-Mascheroni constant}
+{In the case where the function $f$ is the reciprocal function $f(t) = 1/t$, the quantity $\gamma$ is known as the Euler-Mascheroni constant, an important quantity in analysis and number theory where it occurs in many settings.  It is still not known whether $\gamma$ is irrational or not, though most would bet that it is.}
+$$\sum_{m=1}^\infty a_m = \int_1^\infty \, f(t) \, dt + \gamma.$$
+Note that $\gamma$ is a well defined finite quantity as the sum of the areas of the protrusions constitute an increasing sequence of partial sums that is bounded above (for they would all fit inside the first rectangle without overlaps) and hence by the Monotone Convergence Theorem this series is convergent.
+
+So if the original series and integral differ by a finite quantity $\gamma$ then each converges if and only if the other does.
+\end{proof}
+
+There now follow two types of \emph{comparison} test which assess the convergence of a given series by comparing its terms to the terms of a known convergent or divergent series.
+\begin{thm}[Standard comparison test]
+Suppose that $\sum_{m=1}^\infty a_m$ is a series consisting of non-negative terms, i.e. for all $m$, $a_m \geq 0$, and that $\sum_{m=1}^\infty c_m$ is a known convergent series of non-negative terms and $\sum_{m=1}^\infty d_m$ is a known divergent series of non-negative terms. Then
+\begin{itemize}
+\item
+if for all $m \geq 1$, $a_m \leq c_m$, then $\sum_{m=1}^\infty a_m$ is convergent,
+\item
+if for all $m \geq 1$, $a_m \geq d_m$, then $\sum_{m=1}^\infty a_m$ is divergent.
+\end{itemize}
+\end{thm}
+\begin{proof}
+\margnote{Good and bad behaviour}
+{A nice way to think about/remember this result is in terms of the good and bad behaviour shown by a series. A convergent series $\sum c_m$ of positive terms converges because the terms $c_m$ behave well (i.e. are small enough). If $a_m \leq c_m$ then the terms $a_m$ are behaving better and so $\sum a_m$ also converges.
+
+Similarly a divergent series $\sum d_m$ diverges because its terms behave badly (i.e. they're too large), so if $a_m \geq d_m$ then the terms $a_m$ are behaving worse, and so $\sum a_m$ also diverges.}
+We sketch the main idea of the proofs. Let $c$ denote the sum of the convergent comparator series, i.e. $\sum_{m=1}^\infty c_m = c$. Then the partial sums $\sum_{m=1}^k c_m$ of the series constitute an increasing sequence converging to $c$. Suppose that for all $m\geq 1$ we have $a_m \leq c_m$. Since each partial sum $\sum_{m=1}^k a_m$ is bounded above by $c$ (as $c$ is an upper-bound for the partial sum $\sum_{m=1}^k c_m$), these partial sums consitute an increasing sequence which is bounded above. Therefore the sequence of partial sums $\sum_{m=1}^k a_m$ is convergent as $k \to \infty$, and converges to a limit $a$ which also satisfies $a \leq c$.
+
+The partial sums, $\sum_{m=1}^k d_m$, of a divergent series of positive terms will constitute an unbounded increasing sequence. Suppose that for all $m \geq 1$ we have $a_m \geq d_m$. Then the partial sums satisfy
+$$\sum_{m=1}^k a_m \geq \sum_{m=1}^k d_m,$$
+and hence the partial sums $\sum_{m=1}^k a_m$ also form an increasing unbounded sequence, hence divergent.
+\end{proof}
+
+\begin{thm}[Limit comparison test]
+Suppose that $\sum_{m=1}^\infty a_m$ is a series consisting of non-negative terms, i.e. for all $m$, $a_m \geq 0$, and that $\sum_{m=1}^\infty c_m$ is a known convergent series of strictly positive  terms (i.e. for all $m$, $c_m > 0$) and $\sum_{m=1}^\infty d_m$ is a known divergent series of strictly positive terms. Then
+\begin{itemize}
+\item
+if $\lim_{m \to \infty} \frac{a_m}{c_m} = L$ and $0 \leq L < \infty$ then $\sum_{m=1}^\infty a_m$ is convergent,
+\item
+if $\lim_{m \to \infty} \frac{a_m}{d_m} = L$ and $0 < L \leq \infty$ , then $\sum_{m=1}^\infty a_m$ is divergent.
+\end{itemize}
+\end{thm}
+\begin{proof}
+\margnote{Good/bad behaviour}
+{Again this result can be boiled down to good/bad behaviour. If $\lim_{m \to \infty} a_m/x_m = L$ then \emph{eventually} $a_m$ acts like a scalar multiple of $x_m$. So if $\sum x_m$ behaves well (or badly), so does $\sum a_m$.}
+This limit comparison test can be proved with the aid of the standard comparison test applied to a suitable tail of the series. First we prove the convergent case. By the convergence of the ratios $a_m/c_m$ there exists a positive integer $M$ such that for all $m \geq M$ we have $|a_m/c_m - L|<1$, hence $a_m/c_m < L+1$ and hence $a_m < (L+1)c_m$. Therefore the standard comparison test says that the tail series $\sum_{m=M}^\infty a_m$ converges and hence so does the original series $\sum_{m=1}^\infty a_m$.
+
+The divergent case is handled in a similar manner. By the convergence of the ratios $a_m/d_m$ there exists a positive integer $M$ such that for all $m \geq M$ we have $|a_m/d_m - L| < L/2$, hence $a_m/d_m > L/2$ and hence $a_m > (L/2)d_m$. Therefore the standard comparison test says that the tail series $\sum_{m=M}^\infty a_m$ diverges and hence so does the original series $\sum_{m=1}^\infty a_m$.
+\end{proof}
+
+The choice for the comparison series is often a geometric series or a \emph{hyper-harmonic} series
+ $$\sum_{m=1}^\infty \frac{1}{m^p}$$
+ for some $p$. Using the integral test we can show that the hypermonic series converges when $p>1$ and diverges otherwise. The \emph{alternating hyper-harmonic} series
+$$\sum_{m=1}^\infty \frac{(-1)^n}{m^p}$$
+converges absolutely when $p > 1$, converges conditionally when $0 < p \leq 1$ and diverges otherwise.
+
+\begin{thm}[Alternating series test]
+Consider the alternating series
+$$\sum_{m=1}^\infty (-1)^m a_m , $$
+where the $a_m$ are all positive and decreasing, i.e. for all $m\geq 1$, $a_{m} \geq a_{m+1} \geq 0$. If $\lim_{m \to \infty} a_m = 0$ then the original alternating series is convergent. But if $\lim_{m \to \infty} a_m \neq 0$ then the alternating series is divergent.
+\end{thm}
+\begin{proof}
+We give a sketch of the main idea here. Consider a typical alternating series satisfying the conditions of the theorem. The partial sums, $A_k$, of such a series are shown plotted in figure \ref{F:alternatingseries}
+\begin{figure}
+\centering
+\includegraphics[scale=0.6]{alternatingseries}
+\caption{The partial sums, $A_k$, of a convergent alternating series}
+\label{F:alternatingseries}
+\end{figure}
+The partial sums are split into two subsequences, those of odd index, $A_1, A_3, A_5, \dots$, shown in grey, and those of even index, $A_2, A_4, A_6, \dots$, shown in black.
+
+Due to the alternating nature of the series and the decreasing absolute value of the \emph{step size}, i.e. the difference between each partial sum and the next, the odd subsequence of partial sums constitutes an increasing sequence which is bounded above. Similarly the even subsequence constitutes a decreasing sequence which is bounded below. By the Monotone Convergence Theorem each subsequence is convergent, i.e. $A_{2k} \to L_{\text{even}}$ and $A_{2k + 1} \to L_{\text{odd}}$ as $k \to \infty$. But since the \emph{step size}, $|a_m|$, converges to zero, the difference between $L_{\text{even}}$ and $L_{\text{odd}}$ must be arbitrarily small, i.e. zero and hence $L_{\text{even}} = L_{\text{odd}}$ and the complete sequence of partial sums is convergent to this limit, i.e. the series is convergent.
+\end{proof}
+
+
+\begin{thm}[Ratio test]
+Consider the series $\sum_{m=1}^\infty a_m$ of positive terms, i.e. for all $m$, $a_m > 0$. Suppose that the sequence of the ratios of consectutive terms is convergent and that
+$$\lim_{m \to \infty} \frac{a_{m+1}}{a_m} =L .$$
+If $0 \leq L < 1$ then the series is convergent. If $L>1$ then the series is divergent. For the remaining case $L=1$ we can not draw a conclusion about the series' convergence.
+\end{thm}
+\begin{proof}
+The proof of the ratio test involves a combination of a limiting argument, the application of the standard comparison test and the use of the geometric series test.
+\margnote{Learning this result}
+{This result boils down to the key idea: if $\lim a_{m+1}/a_m = L$ then $\sum a_m$ is similar (compares to) to a geometric series with common ratio $L$. Hence $\sum a_m$ converges or diverges accordingly as $L<1$ or $L>1$.}
+
+Suppose $\sum a_m$ satisfies the conditions of the theorem and that
+$$\lim_{m \to \infty} \frac{a_{m+1}}{a_m} =L < 1.$$
+Choose a suitable $\epsilon$, say $\epsilon = (1-L)/2$. Then there exists a positive integer $M$ such that for all $m \geq M$ we have $|a_{m+1}/a_m - L|< (1-L)/2$, i.e. $a_{m+1}/a_m < (L+1)/2 < 1$. Hence, for all $m \geq M$ we have
+$$a_{m+1} < \frac{L+1}{2} a_m.$$
+Repeatedly applying this inequality allows us to say that for all $n \geq 1$ we have
+$$a_{M+n} < \left ( \frac{L+1}{2} \right )^n a_M.$$
+Note that the series $\sum_{n=1}^\infty \left ( \frac{L+1}{2} \right )^n a_M$ is a convergent geometric series, since $\frac{L+1}{2} < 1$. So by the standard comparison test the series $\sum_{n=1}^\infty a_{M+n}$ is also convergent. Therefore our original series $\sum_{m=1}^\infty a_m$ has a convergent tail, and hence is convergent as required.
+
+On the other hand is we suppose that
+$$\lim_{m \to \infty} \frac{a_{m+1}}{a_m} =L > 1,$$
+then we follow a similar argument that this time compares a tail of our series to a divergent geometric series $\sum_{n=1}^\infty \left ( \frac{L+1}{2} \right )^n a_M$, for some $M$ (remember this time $(L+1)/2 > 1$). This implies that our series has a divergent tail and hence is itself divergent, as required.
+
+In the remaining case where
+$$\lim_{m \to \infty} \frac{a_{m+1}}{a_m} =1,$$
+then trying the above ideas will only allow us to say that $\sum a_m$ has worse behaviour than a known convergent series and better behaviour than a known divergent series. But neither of these allow us to draw a conclusion about the behaviour of $\sum a_m$.
+\end{proof}
+
+\begin{thm}[Root test]
+Consider the series $\sum_{m=1}^\infty a_m$ of non-negative terms, i.e. for all $m$, $a_m \geq 0$. Suppose that
+$$\lim_{m \to \infty} \left ( a_m \right )^{\frac{1}{m}} = L .$$
+If $0 \leq L < 1$ then the original series is convergent, if $1 < L \leq \infty $ then the series diverges.  For the remaining case $L=1$ we can not draw a conclusion about the series' convergence.
+\end{thm}
+\begin{proof}
+We can prove this by comparing $\sum a_m$ to a geometric series with common ratio $L$. Hence the re-appearance of the $L<1$ and $L>1$ criteria. The details are left as an exercise.
+\end{proof}
+\begin{exmp}
+We shall consider examples of the applications of these tests in the lectures.
+\end{exmp}
+\section{Power series}
+Using series we can define a class of functions called \emph{power series}. We shall look at some basic examples here and return to this topic later when we are discussing the differential calculus.
+\begin{defn}
+A sequence of terms $\{ a_m \}_{m=1}^\infty$ defines a \emph{power series} function $A$ by the formula
+$$ A(x) = \sum_{m=1}^\infty a_m x^m .$$
+\end{defn}
+
+Of course this formula for $A(x)$ may only make sense for certain values of the argument $x$. For some values of $x$ the series may converge but for some values it may diverge. We can investigate this matter using the ratio test.
+
+According to the ratio test the series formula for $A(x)$ will converge when
+$$ \lim_{m \to \infty} \left | \frac{a_{m+1} x^{m+1}}{a_m x^m} \right | < 1,$$
+which is equivalent, after simplifying, to
+$$ |x| < \lim_{m \to \infty} \left | \frac{a_m}{a_{m+1}} \right |.$$
+
+\begin{defn}
+The quantity $R$ defined by
+$$ R = \lim_{m \to \infty} \left | \frac{a_m}{a_{m+1}} \right | ,$$
+is known as the \emph{radius of convergence} of the series $\sum_{m=1}^\infty a_m x^m$. The series converges if $|x| < R$ and diverges if $|x| > R$.
+\end{defn}
+
+Note that the ratio test does not tell us about the convergence of the series when $|x| =R$. That will have to be determined by other methods.
+
+An important source of Power series comes from applying Taylor's theorem.
+
+\begin{thm}[Taylor's theorem]
+Suppose that on an interval $[a,x]$ the function $f$ can be differentiated $n+1$ times, for some $n\geq 0$. Then there exists a number $c \in (a,x)$ such that
+$$ f(x)=f(a) + f'(a) (x-a) + \frac{f''(a)}{2!} (x-a)^2 + \dots + \frac{f^{(n)}(a)}{n!} (x-a)^n + R_n ,$$
+where $R_n$ is the \emph{Lagrange remainder} and is given by
+$$ R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!} (x-a)^{n+1}.$$
+\end{thm}
+
+Taylor's theorem provides us with a way of generating power series approximations to function values. By writing $a+x$ for $x$ in the above equation we get an equivalent form referred to as the \emph{Taylor polynomial expansion of $f$ about the point $a$}:
+$$ f(a+x)=f(a) + f'(a) x + \frac{f''(a)}{2!} x^2 + \dots + \frac{f^{(n)}(a)}{n!} x^n + R_n .$$
+It is often the case that $R_n(x) \to 0$ as $n \to \infty$ and then we may represent the function $f$ using its \emph{Taylor series expansion about the point $a$}:
+$$ f(a+x) = \sum_{n=0}^\infty \frac{f^{(n)} (a)}{n!} x^n \, . $$
+
+Two important things to note are that for all $x \in \mathbb{R}$ we have
+$$\lim_{n \to \infty} \frac{x^n}{n!} = 0$$
+and thatn if $-1<x<1$ then
+$$\lim_{n \to \infty} x^n = 0 .$$
+
+The special case where we expand a function about the point $a=0$ gives rise to what is called a \emph{Maclaurin series}.
+\begin{defn}
+The Taylor series expansion of a function $f$ about the point $0$ is called the \emph{Maclaurin series} of $f$,
+$$ f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} x^n .$$
+\end{defn}
+We shall return to the topic of Taylor series after we have studied differentiation in more detail.
+
+In table \ref{T:Mac} you will see Maclaurin series of some standard functions.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lr}
+\hline
+Maclarin series \quad & \quad Interval of convergence \\
+\hline \\
+$e^x  = \displaystyle \sum_{k=0}^\infty \frac{x^k}{k!}$ & $(-\infty, \infty)$ \\ \\
+$\sin{x}=\displaystyle\sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{(2k+1)!}$
+& $ (-\infty, \infty)$ \\ \\
+$\cos{x}=\displaystyle\sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!} $
+& $(-\infty, \infty)$ \\ \\
+$\frac{1}{1-x}=\displaystyle\sum_{k=0}^\infty x^k$
+& $(-1,1) $ \\ \\
+$\ln (1+x) =\displaystyle \sum_{k=1}^\infty \frac{(-1)^{k+1} x^k}{n}$
+& $(-1,1)$ \\ \\
+\hline
+\end{tabular}
+\caption{Some standard Maclaurin series}
+\label{T:Mac}
+\end{table}
+\strictpagecheck
+\newpage
+\begin{exer}
+These problems require the application of various concepts and results from this chapter. We shall use these as a basis for discussion in the tutorials.
+\begin{enumerate}
+\item
+ Investigate the convergence of the following series,
+\begin{enumerate}
+\item
+$$\sum_{n=1}^\infty (2n - 1) \, = \, 1 + 3 + 5 + 7 + 9 + \dots  ,$$\\
+\item
+$$\sum_{n=1}^\infty \dfrac{1}{2^{n-1}} \, = \, 1 + \dfrac{1}{2} +
+\dfrac{1}{4} + \dfrac{1}{8} + \dfrac{1}{16} + \dots ,$$\\
+\item
+$$\sum_{n=1}^\infty \dfrac{1}{n(n+1)} \, = \, \dfrac{1}{2} +
+\dfrac{1}{6} + \dfrac{1}{12} + \frac{1}{20} + \dots.$$
+\end{enumerate}
+\postitemskip
+\item
+ Using a diagram of the number line investigate the convergence of
+the following series,
+$$\text{(a)  } \sum_{n=1}^\infty (-1)^n, \quad \text{(b)  }
+\sum_{n=1}^\infty (-1)^n \left ( \dfrac{n+1}{n+2} \right ) .$$
+\postitemskip
+\item
+ The geometric series $\sum_{n=1}^\infty ar^{n-1}$ has partial sums $S_k$ given by
+$$S_k=\sum_{n=1}^k ar^{n-1} =  \dfrac{a(1-r^k)}{1-r}.$$
+
+Use this result to investigate the convergence of the series
+$\sum_{n=1}^\infty n a r^{n-1}$. Hint: \textit{Let $T_k$ denote
+$k^{th}$ partial sum of this series. Consider the quantity
+$(1-r)T_k$....}
+\postitemskip
+\item
+ Recall from the lecture that the geometric series $\sum_{n=1}^\infty ar^{n-1}$ has partial sums $S_k$ given by
+$$S_k=\sum_{n=1}^k ar^{n-1} =  \dfrac{a(1-r^k)}{1-r}.$$ Therefore the series is convergent only when $|r|<1$, in which case the infinite series sums to $\tfrac{a}{1-r}$.
+
+For the following definitions of $x_n$ determine whether the series $\sum_{n=1}^\infty x_n$ converges and if so find the sum of the series.
+\begin{enumerate}
+ \item
+$x_n = \tfrac{2}{3} \left ( \tfrac{1}{2} \right )^n \tfrac{1}{4} \left ( \tfrac{2}{3} \right )^n$.
+\item
+$x_n =\left ( \tfrac{3}{2} \right )^{2n} \tfrac{1}{2} \left ( \tfrac{2}{3} \right )^{n+1}$
+\end{enumerate}
+\postitemskip
+\item
+ Consider the series
+$$ \sum_{n=1}^\infty \dfrac{2}{n^2 + 2n} .$$
+Show that this is a convergent series by finding the partial fraction expansion of $\tfrac{2}{n^2 + 2n}$ and examining the $k^{th}$ partial sum $S_k$.
+\postitemskip
+\item
+ Consider the infinite decimal expansion
+$$2.104104104104 \dots.$$
+By expressing this as a suitable geometric series find the rational number represented by the decimal expansion.
+\postitemskip
+\item
+Determine whether the following series is convergent or divergent
+$$ \sum_{n=1}^\infty \frac{2n+1}{n(n+1)} .$$
+\postitemskip
+\item
+Determine whether the following series are convergent or divergent
+\begin{enumerate}
+\item
+$$ \sum_{n=1}^\infty \frac{2}{n!} ,$$
+\item
+$$ \sum_{n=1}^\infty \frac{n!}{n^n},$$
+\item
+$$ \sum_{n=1}^\infty \left ( \frac{2n-1}{3+4n} \right )^n ,$$
+\item
+$$ \sum_{n=1}^\infty \frac{(n!)^2}{(2n)!} .$$
+\end{enumerate}
+\postitemskip
+\item
+Determine whether the following series converges or diverges:
+$$\sum_{n=1}^\infty a_n , \quad \mbox{ where } a_n =\frac{2n^2 + 4}{3n^3 -2n}.$$
+
+\solution{Use standard comparison test. Observe that
+$$\frac{2n^2 + 4}{3n^3 -2n} > \frac{2n^2}{3n^3}= \frac{2}{3}\frac{1}{n},$$
+and hence $\sum a_n$ diverges as $\sum \frac{1}{n}$ is divergent.}
+
+\item
+Determine whether the following series converges or diverges:
+$$\sum_{n=1}^\infty b_n \mbox{ where } b_n =  \frac{2n+5}{\sqrt{n^6 +n}}.$$
+\solution{Square roots can be awkward to deal with in inequalities. Often better to use the limit comparison tests. Examining the ration of highest powers int he numerator and denominator suggests using the comparison series $\sum \frac{n}{n^3} = \sum \frac{1}{n^2}$.
+\begin{align*}
+\lim_{n \to \infty}  \frac{2n+5}{\sqrt{n^6 +n}} \frac{1}{\frac{1}{n^2}}
+& = \lim_{n \to \infty} \frac{2n^3+5n^2}{\sqrt{n^6 +n}} \\
+&= \lim_{n \to \infty} \frac{2 + \frac{5}{n}}{\frac{1}{n^3} \sqrt{n^6 +n}} \\
+&=  \lim_{n \to \infty}  \frac{2 + \frac{5}{n}}{\sqrt{1 +\frac{1}{n^5}}} \\
+&=2
+\end{align*}
+So since the limit of the ratios exists we conclude by the limit comparison test that $\sum b_n$ converges as $\sum \frac{1}{n^2}$ converges.}
+
+\item
+Determine whether the following series converges or diverges:
+$$\sum_{n=1}^\infty c_n  \mbox{ where } c_n =  \frac{n!}{5^{n+2}}.$$
+\solution{Use the ratio test.
+$$ \lim_{n \to \infty} \frac{c_{n+1}}{c_n} =
+\lim_{n \to \infty} \frac{(n+1)!}{5^{n+3}} \frac{5^{n+2}}{n!}
+= \lim_{n \to \infty} \frac{n+1}{5},$$
+which is clearly divergent as it increases without upper-bound. So by the ratio test the series $\sum c_n$ is divergent.}
+
+\item
+Determine whether the following series converges or diverges:
+$$\sum_{n=1}^\infty d_n \mbox{ where } d_n=  \frac{n^2 2^{n+5}}{2^{2n}}.$$
+
+\solution{Use the ratio test.
+\begin{align*}
+\lim_{n \to \infty} \frac{d_{n+1}}{d_n} &=
+\lim_{n \to \infty} \frac{(n+1)^2 2^{n+6}}{2^{2n+2}}\frac{2^{2n}}{n^2 2^{n+5}} \\
+&= \lim_{n \to \infty} \frac{1}{2} \frac{(n+1)^2}{n^2} \\
+&= \lim_{n \to \infty} \frac{1}{2} \left ( 1 + \frac{1}{n} \right )^2 \\
+&= \frac{1}{2}.
+\end{align*}
+Since the limit is strictly less than 1 we conclude by the ratio test that $\sum d_n$ is convergent.}
+
+\item
+Determine whether the following series converges or diverges:
+$$ \sum_{n=1}^\infty e_n \mbox{ where } e_n=  \frac{\sin^2{(n)}}{n(n+3)}.$$
+
+\solution{Use the standard comparison test.
+$$ \frac{\sin^2{(n)}}{n(n+3)} \leq \frac{1}{n(n+3)} < \frac{1}{n^2} .$$
+$\sum \frac{1}{n^2}$ is convergent and so by the comparison test so is $\sum e_n$.}
+
+\item
+Determine whether the following series converges or diverges:
+$$\sum_{n=1}^\infty f_n \mbox{ where } f_n =  \frac{\sqrt{n+1}}{n \sqrt{n+4}}.$$
+
+\solution{Use the limit comparison test with the comparison series $\sum \frac{1}{n}$.
+$$\lim_{n \to \infty} \frac{\sqrt{n+1}}{n \sqrt{n+4}} \frac{1}{\frac{1}{n}}
+= \lim_{n \to \infty} \frac{\sqrt{n+1}}{\sqrt{n+4}}
+= \lim_{n \to \infty} \frac{\sqrt{1+\frac{1}{n}}}{\sqrt{1+\frac{4}{n}}} = 1.$$
+The limit of the ratios is 1 and hence by the limit comparison test the series $\sum f_n$ diverges as $\sum \frac{1}{n}$ is divergent.}
+
+\item
+Determine whether the following series converges or diverges:
+$$ \sum_{n=1}^\infty  g_n \mbox{ where } g_n =\frac{n 2^n}{n!}.$$
+\solution{Use the ratio test.
+$$\lim_{n \to \infty} \frac{(n+1) 2^{n+1}}{(n+1)!}\frac{n!}{n 2^n}
+=\lim_{n \to \infty} \frac{2}{n} = 0.$$
+The limit of the ratios is $0$ and so the series $\sum g_n$ converges by the ratio test.
+}
+
+
+\item
+ Write down the MacLaurin series (i.e. Taylor series about $x=0$) for the exponential function, $e^x$.
+
+\noindent
+Hence find the decimal expansion of $e$ correct to four decimal places.
+\postitemskip
+\item
+ Find the maximum error in the approximation
+$$\sin{x} \approx x - \frac{x^3}{6},$$
+given that $|x| < \frac{1}{2}$.
+\postitemskip
+\item
+ Approximate $\sin{\frac{\pi}{5}}$ to four decimal places using an appropriate Taylor series.
+\postitemskip
+\end{enumerate}
+\end{exer}
+\cleardoublepage
+%\subfile{functions.chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Functions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Functions}
+\summary{You will be familiar with the notion of a function in mathematics and have used them many times up to now. But in this chapter we just wish to formalise the definition of a function and introduce various properties of functions. Throughout this we wish to emphasize the treatment of functions as mathematical objects \textit{in themselves}.}
+\begin{defn}[Function]
+A \emph{function} $f$ from a set $X$ to a set $Y$ is a rule which assigns elements of the set $Y$ to elements of $X$. It must do this in such a way that to each element of $X$ there is one and only one element of $Y$ associated to it.
+\end{defn}
+
+This condition is sometimes referred to as saying that functions are \textit{single-valued}.
+
+\begin{defn}[Function terminology and notation]
+We can write
+$$f \, : \, X \to Y $$
+to denote that $f$ is a function from the set $X$ to the set $Y$. The set $X$ is called the \emph{domain} of $f$ and $Y$ is called the \emph{co-domain} of $f$. An element $x \in X$ is called an \emph{argument} of the function $f$ and we use $f(x)$ to denote the associated element of $Y$, called the \emph{value} of the function $f$ at the argument $x$.
+\end{defn}
+Note that there is no requirement that \textit{all} the elements of the co-domain occur as values of the function but there \textit{is} a requirement that a value $f(x)$ is defined for every element/argument $x$ from the domain of $f$.
+
+\begin{exmp}
+As mentioned above you will be familiar with these concepts from your study of mathematics up to now.
+\begin{enumerate}
+\item
+The square root function $s: \mathbb{R}^+ \to \mathbb{R}$ is the function from the domain $\mathbb{R}^+$ of positive real numbers to the co-domain $\mathbb{R}$, defined by the formula
+$$ \text{ for all } x \in \mathbb{R}^+ , \, \, s(x) = \sqrt{x} .$$
+\item
+The trigonometric sine function, $\sin: \mathbb{R} \to [-1,1]$. This can be defined in many ways. One way is to define $\sin(\theta)$ as the $y$-coordinate of the point on the unit circle in the plane which makes an angle of $\theta$ radians with the positive direction of the $x$-axis, see figure \ref{F:definitionofsin}.
+
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}[scale=2,cap=round]
+  % Local definitions
+  \def\costhirty{0.8660256}
+
+  % Colors
+  \colorlet{anglecolor}{green!50!black}
+  \colorlet{sincolor}{red}
+  \colorlet{tancolor}{orange!80!black}
+  \colorlet{coscolor}{blue}
+
+  % Styles
+  \tikzstyle{axes}=[]
+  \tikzstyle{important line}=[very thick]
+  \tikzstyle{information text}=[rounded corners,fill=red!10,inner sep=1ex]
+
+  % The graphic
+  %\draw[style=help lines,step=0.5cm] (-1.4,-1.4) grid (1.4,1.4);
+
+  \draw (0,0) circle (1cm);
+
+  \begin{scope}[style=axes]
+    \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+    \draw[->] (0,-1.5) -- (0,1.5) node[above] {$y$};
+
+    \foreach \x/\xtext in {-1,  1}
+      \draw[xshift=\x cm] (0pt,1pt) -- (0pt,-1pt) node[below,fill=white]
+            {$\xtext$};
+
+    \foreach \y/\ytext in {-1, 1}
+      \draw[yshift=\y cm] (1pt,0pt) -- (-1pt,0pt) node[left,fill=white]
+            {$\ytext$};
+  \end{scope}
+
+  \draw[] (0,0) -- (3mm,0pt) arc(0:30:3mm);
+  \draw (15:4mm) node {$\theta$};
+
+  \draw[style=important line,sincolor]
+    (30:1cm) -- node[right=1pt,fill=white] {$\sin (\theta)$} +(0,-.5);
+
+   \draw (0,0) --(intersection of 0,0--30:1cm and 1,0--1,1);
+
+\end{tikzpicture}
+\end{center}
+\caption{A definition of $\sin (\theta)$. \label{F:definitionofsin}}
+
+\end{figure}
+\end{enumerate}
+\end{exmp}
+
+\begin{defn}[Range / image]
+The \emph{range} or \emph{image} of a function $g: V \to W$ is the subset of the co-domain $W$ consisting of the values of $g$, i.e.
+$$\text{im}(g) = \{ \, g(v) \, : \, v \in V \, \} .$$
+\end{defn}
+
+%\begin{figure}[h]
+
+%\begin{center}
+%\begin{tikzpicture}
+%[auto, place/.style={circle,draw=black,fill=white,thick,
+%inner sep=0pt,minimum size=1cm}]
+%\node[place] (domain) {};
+%\node[place] (codomain) [right=of domain] {};
+%\node[auto, above] at (domain.west) {$X$};
+%\node[above] at (codomain.east) {$Y$};
+%\draw[->] (domain) to node {$f$} (codomain);
+%\end{tikzpicture}
+%\end{center}
+%\caption{\label{F:functionvenn} The function $f$ as a mapping process}
+%\end{figure}
+When discussing particular functions it is often the case that the domain and co-domain will not be explicitly mentioned. The domain for the function should be clear from the context, i.e. to what set of arguments is the function intended to apply. The precise description of the co-domain is a bit trickier as the choice of the co-domain is somewhat arbitrary as long as it contains the image of the function. However for some properties and operation such as \textit{surjectivity} and \textit{composition} some consideration will need to be given to the appropriate co-domain of the function.
+
+\begin{defn}[Injective / one-to-one]
+A function $g \, : \, U \to V$ is \emph{injective} if and only if no two elements from the domain $U$ get mapped to the same value in the co-domain $V$. This condition can be expressed formally as:
+$$ \forall \, u_1, u_2 \in U \, \, g(u_1) = g(u_2) \, \Rightarrow \, u_1 = u_2 .$$
+A more informal, but descriptive, term for this property is to say that such a function $g$ is \emph{one-to-one}.
+\end{defn}
+
+\begin{defn}[Surjective / onto]
+A function $g \, : \, U \to V$ is \emph{surjective} if and only if every element of the domain occurs as a value of $g$. Put more formally this condition is:
+$$ \forall \, v \in V \, \, \exists \, u \in U \, \text{ such that } g(u)=v .$$
+A more informal, but descriptive, term for this property is to say that such a function $g$ is \emph{onto}.
+\end{defn}
+
+These properties can often depend on the exact choice of the domain and co-domain, as the following examples show.
+\begin{exmp}
+The function $f_1 \, : \, \left ( 0,\frac{\pi}{2} \right ) \to (0,1)$ defined by
+$$f_1(t) = \sin t ,$$
+is both injective and surjective, i.e. bijective.
+
+However the function $f_2 \, : \, (0,\pi) \to (0,2)$ defined by
+$$f_2 (t) = \sin t ,$$
+is neither injective nor surjective. Since $\sin \left ( \frac{\pi}{4} \right ) = \sin \left ( \frac{3 \pi}{4}  \right ) = \frac{1}{\sqrt{2}}$, $f_2$ is not injective and the fact that for all $t$, $|\sin t | \leq 1$ means that there is no $t$ for which $\sin t = 1.5 $, and so $f_2$ is not surjective.
+\end{exmp}
+
+\begin{defn}[Bijective]
+A function is \emph{bijective} if and only if it is both injective and surjective.
+\end{defn}
+
+\section{Real-valued functions}
+A lot of the time the functions we encounter in mathematics are \emph{real-valued}, i.e. functions whose domain and co-domain are subsets of the real numbers $\mathbb{R}$.
+
+\subsection{Algebra of real-valued functions}
+Using the familiar operations of the real numbers we can define associated operations amongst real-valued functions. We want to stress here the consideration of functions as mathematical objects in their own right with operations defined on them.
+
+\begin{defn}[Addition]
+Given two real-valued functions $f$ and $g$ with the same domain we can defined a new function $f+g$, called the \emph{sum} of $f$ and $g$, on this domain using the formula
+$$ \left ( f + g \right ) (x) = f(x) + g(x) .$$
+\end{defn}
+
+\begin{defn}[Scalar multiplication]
+Let $f$ be a real-valued function and $\lambda \in \mathbb{R}$. Then we can form a new function $\lambda f$, which has the same domain as $f$, and is defined by the formula
+$$ \left ( \lambda f \right ) (x) = \lambda \left ( f(x) \right ).$$
+\end{defn}
+
+\begin{defn}[Multiplication]
+Let $f$ and $g$ be two real-valued functions with the same domain. Then we can form a new function $fg$, on the same domain, defined by the formula
+$$ \left ( fg \right ) (x) = f(x) g(x).$$
+\end{defn}
+
+\begin{defn}[Reciprocal]
+Let $f$ be a real-valued function that never takes the value zero. Then we can form a new function $\frac{1}{f}$, on the same domain as $f$, defined by the formula
+$$ \left ( \frac{1}{f} \right ) (x) = \frac{1}{f(x)}.$$
+\end{defn}
+
+Note that we do not like to use the notation $f^{-1}$ for the reciprocal function as this is normally reserved for the \textit{inverse} function of $f$, see later.
+
+\section{Composition and inverse}
+Composing functions is the process of applying functions in sequence, one after the other. You will see it occurring in all areas of mathematics. It is a fundamental mathematical concept and we can study it even before admitting any notion of number or measurement etc. It will play an important role in our study of groups in the next chapter.
+
+\begin{defn}
+Let $f:X \to Y$ and $g:Y \to Z$ be two functions (note that the co-domain of $f$ is also the domain of $g$). Then we can form a new function
+$$ g \circ f \, : \, X \to Z ,$$
+defined by the formula
+$$ \left ( g \circ f \right ) (x) = g(f(x)) .$$
+\end{defn}
+We can refer to $g \circ f$ as $g$ \textit{composed with } $f$, or more informally, $g$ \textit{after} $f$.
+
+\begin{exmp}
+Consider the real-valued functions $f$ and $g$ defined by the formulas
+$$f(x) = x^2 - 3 \text{ and } g(x)=2x+3 .$$
+Then we can find formulas defining the compositions as follows
+$$\left ( f \circ g \right )(x) = f(g(x)) = \left ( 2x+3 \right)^2 -3 = 4x^2 +12x +6,$$
+and
+$$\left ( g \circ f \right )(x) = g(f(x)) = 2 \left (x^2 - 3 \right ) + 3 = 2x^2 - 3.$$
+\end{exmp}
+Note that these formulas are different. In general, even when both compositions are defined, composition is not commutative, i.e.
+$$ f \circ g \neq g \circ f ,$$
+although in special cases they may be equal.
+\begin{exmp}
+Consider the real-valued functions $g,h,r$ defined by the formulas
+$$g(x) = 2x - 7, \quad h(x)=x^2 -1 \text{ and } r(x) = e^{2x} .$$
+Obtain formulas for each of the following compositions,
+\begin{enumerate}
+\item
+$g \circ h$,
+\item
+$h \circ r$,
+\item
+$g \circ h \circ r$,
+\item
+$g \circ g$,
+\item
+$ g \circ  g \circ g$,
+\item
+$r \circ r$.
+\end{enumerate}
+\end{exmp}
+
+\begin{defn}[Identity function]
+The identity function $\text{id}$ on the domain $X$ is the function
+$$\text{id} \, : \, X \to X ,$$
+defined by the formula
+$$ \forall x \in X \quad \text{id}(x)=x.$$
+\end{defn}
+
+We shall speak of \textit{the} identity function in different contexts without necessarily specifying the domain. The domain can always be determined from the specific context. The identity function has the property that when composed with another function, it leaves the other function unchanged, i.e.
+$$ f \circ \text{id} = \text{id} \circ f = f.$$
+
+Sometimes the effect of a function can be reversed, as in the following definition.
+
+\begin{defn}[Inverse function]
+Let $f:X \to Y$ be a function that is bijective, i.e. is injective and surjective. Then there exits a function
+$$ f^{-1} \, : \, Y \to X,$$
+called the \emph{inverse of $f$}, which has the property that
+$$ f^{-1} \circ f = f \circ f^{-1} = \text{id}.$$
+Or in other words,
+$$ \forall x \in X \quad f^{-1} ( f(x)) = x ,$$
+and
+$$ \forall y \in Y \quad f(f^{-1}(y)) = y .$$
+\end{defn}
+
+\begin{exmp}
+Given a function defined by a formula it is often possible to obtain the formula for the inverse function (if it exists). Suppose that the real-valued function $f$ is defined by the formula
+$$f(x) = 2x - 5.$$
+We form the equation $y = 2x-5$ and adjust it so that $x$ becomes the subject of the equation, which is
+$$x=\frac{y+5}{2}.$$
+This now gives us the correct formula for the inverse function, $f^{-1}$, which is defined by
+$$ f^{-1} (y) = \frac{y+5}{2} .$$
+\end{exmp}
+
+In terms of graphs, there is a nice relationship between the graph of a real-valued function and that of its inverse. The graph of the inverse function can be obtained by reflecting the graph of the original function in the diagonal line in the $xy$-plane defined by $y=x$. This has the effect of inverting the relationship between the domain and co-domain.
+
+\begin{exmp}
+Figure \ref{F:inverse} shows the graphs of the square function $s: \mathbb{R}^+ \to \mathbb{R}^+$ defined by $s(x)=x^2$ and square root function $r:\mathbb{R}^+ \to \mathbb{R}^+$ defined by $r(x)=\sqrt{x}$, along with the dotted line showing the axis of reflection $y=x$.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.7]{gfx/inverse.png}
+\end{center}
+\caption{The square function and its inverse \label{F:inverse}}
+\end{figure}
+\end{exmp}
+
+The next result relates the inverse of the composition of two functions to the compositions of their inverses. It should remind you of a similar result about matrix inverses.
+
+\begin{thm}
+Suppose that $f: X \to Y$ and $g:Y \to Z$ are two bijective functions. Then the composition $g \circ f$ is also bijective and
+$$ \left ( g \circ f \right )^{-1} = f^{-1} \circ g^{-1} .$$
+\end{thm}
+
+
+
+\section{Rational functions and their partial fraction expansions}
+Rational functions are those functions that are quotients of
+polynomial functions. So a rational function $r$, is a real-valued
+function of the form
+$$r = \dfrac{p}{q},$$
+where the functions $p$ and $q$ are polynomials.
+
+The treatment of rational functions (for instance when integrating
+them) is often made
+easier by re-expressing them in terms of partial fractions. This is
+a technique for expressing a rational function as a sum of rational
+functions of a very simple type. An example of a partial fraction
+expansion of a rational function is:
+\begin{align*}
+\dfrac{x}{x^3 + x^2 +2x -4} &= \dfrac{x}{(x+2)^2 (x-1)} \\
+&= \dfrac{-1/9}{x+2} + \dfrac{2/3}{(x+2)^2} + \dfrac{1/9}{x-1},
+\end{align*}
+where the final form is called the partial fraction expansion of the
+original rational function. The partial fractions technique relies
+on the following fact about polynomials with real coefficients.
+
+\begin{thm}[Polynomial Factorisation]
+\textit{Let $p$ be a polynomial with real coefficients and leading
+coefficient 1, i.e.
+$$p(x) = x^n + a_{n-1} x^{n-1} + a_{n-2} x^{n-2} + \dots a_2 x^2 +
+a_1 x + a_0.$$ Then $p(x)$  factorizes into a product of polynomial
+factors with real coefficients, each of which is either a linear
+factor of the form $(x-a)^m$, where $a \in \mathbb{R}$ and $m \in
+\mathbb{N}$ or a quadratic factor of the form $(x^2 + ax + b)^m$,
+where $a,b \in \mathbb{R}$ and $m \in \mathbb{N}$. A factor
+$(x-a)^m$ corresponds to a real root $a$ of $p$ of multiplicity $m$
+and a quadratic type factor $(x^2 + ax + b)^m$ corresponds to a pair
+of complex conjugate roots of $p$ of multiplicity $m$.}
+\end{thm}
+\begin{proof}
+Omitted.
+\end{proof}
+
+Below is a complete description of the method of finding the partial
+fraction expansion of a rational function. Following that we give
+some examples. You may find it easier to follow the examples first,
+referring back to the general description of the method as needed.
+
+\subsection{The General Method}
+So suppose that
+$r=\tfrac{p}{q}$ is a rational function. To find the partial
+fraction expansion we first factorize $q(x)$ in the way described by
+the above theorem. For each factor of the form $(x^2 + ax + b)^m$ of
+$q(x)$ we include the terms
+$$\dfrac{\alpha_1 x + \beta_1}{x^2 + ax + b} + \dfrac{\alpha_2 x + \beta_2}{(x^2 + ax +
+b)^2} + \dots + \dfrac{\alpha_m x + \beta_m}{(x^2 + ax + b)^m},$$
+in
+the partial fraction expansion. The real numbers $\alpha_i, \beta_i$
+will be determined later.
+
+For each factor of the form $(x-a)^m$  of $q(x)$  we include the
+terms
+$$\dfrac{\alpha_1  }{x - a} + \dfrac{\alpha_2}{(x -a)^2} + \dots + \dfrac{\alpha_m }{(x-a)^m},$$
+in the partial fraction expansion. The real  numbers $\alpha_i$ will
+be determined later.
+
+If the degree of the numerator polynomial $p(x)$ equals or exceeds
+the degree of the denominator polynomial $q(x)$ by $m$, where $m
+\geq 0$ then we include the terms
+$$\lambda_0 + \lambda_1 x + \dots + \lambda_m x^m,$$
+in the partial fraction expansion, the numbers $\lambda_i$ to be
+determined.
+
+Following these steps will give you the partial fraction expansion
+for $r(x)$. To determine the values of the unknown coefficients we
+multiply both sides of the partial fraction expansion by $q(x)$
+which will have the effect of removing all denominators from the
+expression (remember that each of the denominators of the partial
+fraction expansion is a factor of the polynomial $q(x)$ ). This will
+leave us with an equation of polynomials involving the undetermined
+coefficients. We can determine the values of these coefficients now
+by equating coefficients of equal powers of $x$ from both sides of
+the equation. (Remember that two polynomials are equal if and only
+if their corresponding coefficients are equal).
+
+\begin{exmp}
+Here are two examples that show the method working \footnote{\texttt{www.wolframalpha.com} will provide the partial fraction expansion of any rational function that is submitted to it. In addition by clicking the \textit{show steps} link in the output it will display a step-by-step derivation of the expansion}.
+
+\begin{enumerate}
+\item
+An example with only simple factors in the denominator
+\begin{align*}
+\dfrac{3x + 1}{x^3 - 3x + 2} &= \dfrac{3x+1}{(x-1)^2(x+2)} \\
+&= \dfrac{\alpha_1}{x-1} + \dfrac{\alpha_2}{(x-1)^2} +
+\dfrac{\beta}{x+2}. \end{align*} Here we have factorized the
+denominator and formed the partial fraction expansion. To determine
+the partial fraction expansion we multiply both sides by
+$(x-1)^2(x+2)$ to get
+\begin{align*} 3x + 1 &= \alpha_1 (x-1)(x+2) + \alpha_2(x+2) + \beta
+(x-1)^2 \\
+&= (\alpha_1 + \beta )x^2 + (\alpha_1 + \alpha_2 - 2\beta)x + (-2
+\alpha_1 +2 \alpha_2 + \beta).
+\end{align*}
+Equating coefficients from both sides of the polynomial gives us the
+simultaneous equations
+\begin{align*}
+\alpha_1 + \beta &=0, \\
+\alpha_1 + \alpha_2 - 2\beta &= 3, \\
+-2 \alpha_1 +2 \alpha_2 + \beta &= 1.
+\end{align*}
+Solving these equations leads to the solution
+$$ \alpha_1 = \tfrac{5}{9} , \, \, \alpha_2 = \tfrac{4}{3} , \, \,
+\beta=\tfrac{-5}{9} .$$ So the partial fraction expansion of our
+original rational function is
+$$\dfrac{3x + 1}{x^3 - 3x + 2} =\dfrac{5/9}{x-1} + \dfrac{4/3}{(x-1)^2}
+- \dfrac{5/9}{x+2}.$$
+\item
+An example with a quadratic type factor.
+\begin{align*}
+\dfrac{5x}{x^3 - x^2 - x - 2} &= \dfrac{5x}{(x^2 + x + 1)(x-2)} \\
+&= \dfrac{\alpha_1 + \beta x}{x^2 + x + 1} + \dfrac{\alpha_2}{x-2}
+\end{align*}
+Multiplying across by $(x^2 + x + 1)(x-2)$ gives
+$$ 5x = (\alpha_1 + \beta x)(x-2) + \alpha_2 (x^2 + x + 1).$$
+Multiplying out the right hand side and then equating coefficients
+of the two polynomials leads to the values
+$$\alpha_1 = \tfrac{5}{7} , \, \, \beta=\tfrac{-10}{7} , \, \, \alpha_2 =
+\tfrac{10}{7}.$$ And so the partial fraction expansion is
+$$\dfrac{5x}{x^3 - x^2 - x - 2} =\dfrac{\tfrac{5}{7} - \tfrac{10}{7} x}{x^2 + x + 1} +
+\dfrac{\tfrac{10}{7}}{x-2}.$$
+\end{enumerate}
+\end{exmp}
+
+\begin{exer}
+These problems require the application of various concepts and results from this chapter. We can use these as a basis for further discussion in the tutorials.
+\begin{enumerate}
+\item
+ Consider the functions $u,v,w$ defined by $u(x)=x+1$, $v(x)=x^2 + 1$ and $w(x)=\sin{x}$. Give a defining formula for the following functions
+\begin{enumerate}
+\item
+$u \circ v$
+\item
+$v \circ w$
+\item
+$v \circ u \circ w$
+\end{enumerate}
+\item
+ Let $S$, $R$, Exp and One denote the functions defined by $S(x)=x^2$, $R(x)=\sqrt{x}$, $\text{Exp}(x)=e^x$ and $\text{One}(x)=1$. Consider the functions $f$ and $g$ defined by
+$$f(x) = \left( 3 e^{2x^2} \right )^{\frac{1}{2}} \text{ and }
+g(x) = 2e^{\left ( 1 + \sqrt{x} \right )^2}.$$
+Express $f$ and $g$ as suitable compositions of combinations of the functions $S$, $R$ and Exp.
+
+\item
+ Consider the function $f, g, h$ defined by the following formulae:
+$$f(x) = 3x +1 , \quad g(x) = \frac{x}{x-3} , \quad h(x)=\frac{x+1}{x-1} .$$
+What are appropriate domains and co-domains for these functions? Find formulae for their inverses and state the domains and co-domains of these new functions.
+
+\item
+ Let the functions $\lambda \, : \, \mathbb{R} \to (-1, \infty)$ be defined by
+$$ \lambda (t) = e^{\frac{t}{2}} - 1 .$$
+Find the formula for the function $\lambda^{-1}$, stating its domain and co-domain.
+
+\item
+ Let the functions $\phi \, : \, (0, \infty) \to (-1, \infty) $ and $ \psi \, : \, \mathbb{R} \to (0, \infty)$ be defined by
+$$ \phi(x) = x^2 - 1 , \quad \psi(x) = e^{2x} .$$
+Find the definitions of the functions $\phi \circ \psi$ and $(\phi \circ \psi)^{-1}$ and confirm that
+$$(\phi \circ \psi)^{-1} = \psi^{-1} \circ \phi^{-1}$$
+in this case.
+\item
+Obtain partial fraction expansions of the following rational functions
+\begin{enumerate}
+\item
+$$ \frac{2s+2}{s^2 - 2s -8} ,$$
+\item
+$$  \frac{s^2 + s-3}{s^2 + s} , $$
+\item
+$$ \frac{s^2+3}{s^3-5 s^2+s-5}.$$
+\end{enumerate}
+\end{enumerate}
+\end{exer}
+
+\section{Infinite sets and cardinality}
+We include here a short section that introduces some important concepts that are connected to deep issues in set theory,
+ logic and the foundations and philosophy of mathematics. The main question is how to speak precisely about the size of a set. We shall see how the answer to this question uses the concepts of injectivity and surjectivity of maps between sets.
+
+\subsection*{The number of elements in a set}
+Intuitively, to work out the size of a set we should simply count the number of elements that it has. So some trivial examples are
+\begin{itemize}
+\item
+the set $\{ a, b, c \}$ has size 3, (assuming $a,b,c$ are distinct objects),
+\item
+the set of integers $\{ 10, 11, 12, 13, 14 \}$ has size 5,
+\item
+the set $\{ 7\}$ has size 1,
+\item
+the empty set $\{  \}$ has size 0.
+\end{itemize}
+So surely, given any set, we can simply count the number of elements that it has, and then we know its size and can compare sets in this way. This approach is perfectly correct and would be the whole story if one was only considering \emph{finite} sets. But in mathematics we soon encounter many interesting \emph{infinite} sets and would like to speak precisely about their sizes and be able to compare them.
+
+The generalization of the concept of size to infinite sets was developed by the 19th Century German mathematician Georg Cantor. The technical term of \emph{cardinality} is used.
+
+\begin{defn}[Cardinality]
+We say that two sets $A$ and $B$ have the same cardinality if there exits a bijection $\phi : A \to B$.
+\end{defn}
+Notice that this definition does not explicitly tell you what the cardinality (or size) of a set is, rather it supplies a criterion (the existence of a bijection) for when you regard two sets as having the \emph{same cardinality}.
+
+To understand this definition think of the process of counting the elements of a finite set with. To count the elements of a set is really to set up a pairing (or bijection) of the elements of the set with the counting numbers $1, 2, 3, \dots , n$, for some appropriate value $n$. Or in other words, when we count the elements in a finite set $X$ we are really constructing a bijection
+$$ X \to \left \{ 1, 2, 3, \dots , n \right \}.$$
+The beauty of Cantor's definition is that it simply extends this idea to all sets, both finite and infinite.
+
+We will write $|A|=|B|$ when $A$ and $B$ have the same cardinality. The existence of injections between sets also has implications for cardinality. If there exists an injection $\psi: A \to B$ then we can say that the cardinality of $A$ is no bigger than $B$ and write $|A|\leq |B|$. Similarly if there exists a surjection $\rho : A \to B$ we can say that the cardinality of $A$ is no less than $B$ and write $|A| \geq |B|$.
+
+\begin{exmp}
+We can see this definition operating when we assess the cardinalities of the familiar basic number systems.
+\begin{itemize}
+\item
+the natural numbers $\mathbb{N} = \{ 1, 2, 3, 4, \dots \}$
+\item
+the integers $\mathbb{Z} = \{ \dots, -3, -2, -1, 0, 1, 2, 3, \dots \}$
+\item
+the rationals $\mathbb{Q} = \{ \frac{p}{q} \, : \, p,q \in \mathbb{Z}, q \neq 0 \}$
+\item
+the real numbers $\mathbb{R}$, the set of points on the number line (or \emph{contiuum}).
+\end{itemize}
+See the lectures for details of these examples.
+\end{exmp}
+
+The basic definition of cardinality allows one to give an interesting criterion for an infinite set.
+\begin{defn}[Infinite set]
+A set $A$ is \emph{infinite} if there exits a bijection
+    $$\phi : A \to C \subsetneq A,$$
+from $A$ to a proper subset of itself.
+\end{defn}
+
+\subsection{The Continuum Hypothesis}
+Sets having the same cardinality as $\mathbb{N}$ are called \emph{countable}. Having proved that $\mathbb{R}$ is uncountable the question arises, are there sets with intermediate size? That is, does there exists a set $X$ satisfying
+$$ |\mathbb{N}| < |X| < |\mathbb{R}| ?$$
+
+The Continuum Hypothesis (CH) is that there is no such set $X$.
+
+This may seem like a straightforward enough question, at first. But it has turned out to be extremely elusive and has deep connections to the foundations and philosophy of mathematics.
+
+\subsection*{Status of CH compared with the rest of set theory}
+
+Zermelo-Fraenkel set theory and the Axiom of Choice (ZFC) is the commonly used axiomatic basis for set-theory (and hence most mathematics).
+\begin{itemize}
+\item
+Kurt G\"odel proved in 1940 that CH cannot be disproved within ZFC.
+\item
+Paul Cohen proved in 1963 that CH cannot be proved within ZFC.
+\end{itemize}
+These results show that CH is independent of ZFC, or relatively consistent with ZFC, meaning that assuming CH (or its converse $\neg$CH) will not introduce any contradictions into set theory that were not there to begin with.
+
+Attitudes to the question "Does there exists a set $X$ with $|\mathbb{N}| < |X| < |\mathbb{R}|$?" reflect different positions in the philosophy of mathematics.
+
+\subsection*{Resources}
+
+Here are some links to further resources on these and related topics.
+\begin{itemize}
+\item
+Hotel Hilbert (\url{https://www.youtube.com/watch?v=revY6cmX5m8}), an atmospheric BBC/Open University drama investigating infinity set in a hotel with an infinite number of rooms.
+\item
+To Infinity and Beyond (\url{http://www.bbc.co.uk/programmes/b00qszch}) a BBC Horizon documentary on infinity.
+\item
+Read more about these matters in the Stanford Encyclopedia of Philosophy entries on set theory (\url{http://plato.stanford.edu/entries/set-theory/}) and philosophy of mathematics (\url{http://plato.stanford.edu/entries/philosophy-mathematics/}).
+\end{itemize}
+\cleardoublepage
+%\subfile{differentiation.chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Differentiation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter[Continuity \& differentiation]{Continuity and differentiation}
+\section{Reference Books}
+There are many introductory calculus books that you could use for this part of the course. The Schaums Outline of Calculus book is an excellent one. It contains many worked examples and has lots of exercises for you to practice with and contains solutions to a large number of these.
+\begin{itemize}
+\item
+\textit{Schaum's Outline of Calculus}, by Frank Ayres and Elliott Mendelson.
+\end{itemize}
+The Schaum's books are all reasonably priced and would be a good investment for you as it also contains lots of material that will be useful in subsequent years of your course. You can also access the full text of this book through MMU's library. Follow the links in the \textit{Library} block on the unit's \textit{Moodle} page to access the full text of the Schaum book and also to find the library catalogue entries for others.
+
+Two other textbooks that I recommend you consult are:
+\begin{itemize}
+\item
+\textit{Modern Engineering Mathematics}, by Glyn James
+\item
+\textit{Engineering Mathematics}, by K. A. Stroud
+\end{itemize}
+In these books you will find detailed explanations of the topics we will look at in the lectures as well as plenty of examples and exercises to practice with. It is a good idea to become familiar with both or either of these books as they (and their \textit{Advanced} sequels) will be useful for the other mathematics units that you study.
+
+\section{Introduction}
+In this chapter we shall be studying functions whose co-domain is the set of real numbers $\mathbb{R}$. Usually the domain will be $\mathbb{R}$ as well although not always, as for instance with the function $y = \frac{1}{x}$ which has domain $\mathbb{R} \backslash \{ 0 \}$. So we will not normally spell out the domain and co-domain of the functions we talk about. In any particular case the domain can be figured out by considering where the formula defining the function makes sense.
+
+\section{Limiting values of functions}
+We have met the concept of a limit in the context of sequences and series. The concept is also useful when discussing real-valued functions. Let $a$ and $l$ be two real numbers. Informally we say that the function $f$ tends to the limit $l$ as $x$ tends to $a$ if the value $f(x)$ gets closer and closer to $l$ as $x$ gets closer and closer to $a$. We can represent this symbolically as
+$$ \lim_{x \to a} f(x) = l ,$$
+which we read as \textit{`the limit, as $x$ tends to $a$, of $f(x)$ is equal to $l$'}.
+\margnote{A rigorous definition?}
+{Just as in the case of the convergence for sequences, convergence and limiting values of functions also require a detailed $\epsilon$-type definition. We shall postpone this for now in our discussion but we will meet the full detail when we discuss continuity later on.}
+Alternatively we can write
+$$ f(x) \to l \text{ as } x \to a,$$
+which we read as \textit{`$f(x)$ tends to $l$ as $x$ tends to $a$'}.
+
+Notice that this description makes no reference to the actual value (if any) of the function $f$ at $a$. The concept of limit only refers to the behaviour of $f$ as it \emph{approaches} some limiting point $a$.
+
+This definition is not sufficiently rigorous though. For instance, as the diagram in figure \ref{F:discon} illustrates, a function may have different limits depending on the direction from which $x$ approaches $a$.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.7]{discon.png}
+\end{center}
+\caption{Discontinuous behaviour at of a function at $x=1$.}
+\label{F:discon}
+\end{figure}
+If this situation arises then we can refer separately to the two different limits as follows. The limit of $f$ as $x$ tends to $a$ from the left is written as
+$$\lim_{x \to a^-} f(x),$$
+and the limit of $f$ as $x$ tends to $a$ from the right is written as
+$$\lim_{x \to a^+} f(x).$$
+
+Although it is \emph{not} an element of the real numbers $\mathbb{R}$ we can admit the concept of infinity ($\infty$) into this definition as it will allow us to describe the behavior of functions in the following way. If a function $f$ grows without bound as $x$ approaches $a$ then we can write
+$$\lim_{x \to a} f(x) = \infty.$$
+For example
+$$\lim_{x \to 0^-} \frac{1}{x} = -\infty,$$
+and
+$$\lim_{x \to 0^+} \frac{1}{x} = \infty,$$
+If the values of a function $f$ approach some limit $l$ as the argument $x$ gets larger and larger then we could write
+$$ \lim_{x \to \infty} f(x) = l.$$
+For example
+$$\lim_{x \to +\infty} \frac{1}{x} = 0,$$
+and
+$$\lim_{x \to -\infty} \frac{1}{x} = 0.$$
+
+These limiting values of the function $y=\frac{1}{x}$ can be appreciated from its graph shown in figure \ref{F:oneoverx}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{oneoverx}
+\caption{The function $g(x) = 1/x$.}
+\label{F:oneoverx}
+\end{center}
+\end{figure}
+To calculate and work with limiting values of functions we can use the standard techniques that we introduced when dealing with limits of sequences and series. We have the following theorem
+\begin{thm}[algebra of limits]
+Let $l,m \in \mathbb{R} $ and suppose that $\lim_{x \to a} f(x) = l$ and $\lim_{x \to a} g(x) = m$, then
+\begin{align*}
+\lim_{x \to a} (\alpha f(x) + \beta g(x)) &= \alpha l + \beta m , \\
+\lim_{x \to a} \left ( f(x)g(x) \right )&= lm , \\
+\lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{l}{m} , \text{ providing } m \neq 0 .
+\end{align*}
+\end{thm}
+
+Of particular use is l'Hopital's rule. This is used to evaluate the limit, $\lim_{x \to a} \frac{f(x)}{g(x)}$, of a quotient of functions $f$ and $g$. Sometimes these limits can not be evaluated because it works out to some indeterminant form, i.e $\frac{0}{0}, \frac{\infty}{\infty}$. In these cases we can differentiate both functions and then look at the limit of the resulting quotient. If this new limit exists then the rule says that it is equal to the original limit.
+
+\begin{thm}[l'Hopital's rule]
+If $\lim_{x \to a} f(x) = \lim_{x \to a} g(x) = 0$ or
+$\lim_{x \to a} f(x) = \lim_{x \to a} g(x) = \infty$ then providing the limit exists
+$$ \lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} ,$$
+where $f'$ and $g'$ are the derivatives of $f$ and $g$.
+\end{thm}
+It may be necessary to apply l'Hopital's rule a number of times (i.e. taking second or third derivatives etc) in order to convert the original indeterminate limit into a determinate one.
+
+\begin{exmp}
+The following examples illustrate the use of these techniques.
+\begin{enumerate}
+\item
+$$\lim_{x \to \infty} \frac{3x + 1}{2x} = \lim_{x \to \infty} \frac{3 + \frac{1}{x}}{2} = \frac{3}{2}.$$
+\item
+$$\lim_{x \to 0} \frac{\sin{x}}{x} = \lim_{x \to 0} \frac{\cos{x}}{1}=1.$$
+\item
+$$\lim_{x \to \infty} \frac{x +1}{x} = \lim_{x \to \infty} \frac{1 + \frac{1}{x}}{1} = 1.$$
+\item
+$$\lim_{x \to 0} \frac{\sin{2x}}{3x} = \lim_{x \to 0} \frac{2\cos{2x}}{3} = \frac{2}{3}.$$
+\item
+$$\lim_{x \to 0} \frac{e^x - e^{-x}}{x} = \lim_{x \to 0} \frac{e^x + e^{-x}}{1} = 2.$$
+\item
+$$\lim_{x \to 0} \frac{\sin{x} - x}{x^3} = \lim_{x \to 0} \frac{\cos{x} - 1}{3x^2} = \lim_{x \to 0} \frac{-\sin{x}}{6x} = \lim_{x \to 0} \frac{-\cos{x}}{6} = \frac{-1}{6}.$$
+\end{enumerate}
+\end{exmp}
+
+\section{Continuity}
+In the previous section we made the point that the limiting value, $\lim_{x \to a} f(x)$, of the function $f$ does not depend on the actual value, $f(a)$, of $f$ at the limiting point $a$. However it is an important feature (continuity) of a function when the limiting value actually equals the value at the limiting point. We give the following informal definition for continuity.
+
+\begin{defn}[Continuity]
+The function $f: \mathbb{R} \to \mathbb{R}$ is \emph{continuous} at the point $x=a$ if
+$$\lim_{x \to a} f(x) = f(a).$$
+\end{defn}
+ If $f$ is continuous at \emph{all} points of its domain then we say that $f$ is a \emph{continuous function}. A function that is not continuous is called \emph{non-continuous}.
+
+If this definition is not satisfied at a point $x=a$ then we say that the function $f$ has a \emph{discontinuity} at $x=a$.
+
+Functions can be discontinuous in a number of different ways. For instance the left and right hand limits may differ at a point as we saw earlier. Another type of discontinuity is the rapidly oscillating behaviour near $x=0$ of the function $y= \sin{(\frac{1}{x})}$ seen in figure \ref{F:sin1overx}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{sin1overx}
+\end{center}
+\caption{The graph of $\sin(1/x)$ near $x=0$.}
+\label{F:sin1overx}
+\end{figure}
+
+Note that the plotting program struggles to represent the behavior accurately at $x=0$ here. The point is that the limit $\lim_{x \to 0} \sin{(\frac{1}{x})}$ does not exist so even if the function were to be given a definition at $x=0$ it could never be continuous there.
+
+The continuity property is preserved by the usual operations on functions, as described in the following theorems.
+
+\begin{thm}[Continuity of sums, products and quotients]
+Suppose that functions $f$ and $g$ are both continuous at a point $x=a$, then for any $\alpha, \beta \in \mathbb{R}$ the linear combination function $\alpha f + \beta g$ is also continuous at $x=a$. Also the product function $fg$ will be continuous at $x=a$ as well as the quotient function $\frac{f}{g}$ provided that $g$ is non-zero in some surrounding interval of $x=a$.
+\end{thm}
+
+\begin{thm}[Continuity of composition]
+Suppose that $f$ and $g$ are two functions whose domains and co-domains are such that the composition function $g \circ f$ can be defined. If $f$ is continuous at a point $x=a$ and $g$ is continuous at the point $x=f(a)$ then the composition function $g \circ f$ is continuous at $x=a$.
+\end{thm}
+
+The definition of continuity (and limiting values of functions) that we have given do lack rigor in that they rely on the notion of `\textit{getting closer and closer to ..... }' which we have not given a complete description of. A fully detailed rigorous treatment of continuity is the subject of \emph{mathematical analysis} and is not possible within the scope of this unit. However we can give a taste of it by looking at the formal definition of continuity and how it is used to prove one of the cases of the above theorem.
+
+\begin{defn}[Formal definition of Continuity]
+The function $f:\mathbb{R} \to \mathbb{R}$ is \emph{continuous} at the point $x=a$ if and only if for all $\epsilon > 0$ there exists $\delta > 0$ such that if $|x-a| < \delta$ then $|f(x)-f(a)|< \epsilon$. In formal symbolic terms this becomes: $f$ is continuous at $a$ if and only if the following statement holds
+$$ \forall \, \epsilon > 0 \, \, \exists \, \delta > 0 \, \, |x-a|< \delta \Rightarrow |f(x)-f(a)|<\epsilon .$$
+\end{defn}
+The following diagram is useful for picturing the role of the variables $\epsilon$ and $\delta$ in the definition of continuity.
+
+\begin{center}
+\includegraphics[scale=0.56]{gfx/epsilon_delta}
+\end{center}
+
+Using this definition we can give rigorous proofs of the continuity theorems above. You will see a lot of similarity in the arguments here and the proofs of the similar properties of convergence of sequences. Those previous arguments are adapted to the new context and where $\delta$-arguments take the place of the $N$-arguments.
+\vspace{\baselineskip}
+
+\noindent
+\textbf{Theorem 4.3} (Continuity of sums, products and quotients)
+\textit{Suppose that functions $f$ and $g$ are both continuous at a point $x=a$, then for any $\alpha, \beta \in \mathbb{R}$ the linear combination function $\alpha f + \beta g$ is also continuous at $x=a$. Also the product function $fg$ will be continuous at $x=a$ as well as the quotient function $\frac{f}{g}$ provided that $g$ is non-zero in some surrounding interval of $x=a$.}
+\begin{proof}First we prove that continuity is preserved by linear combinations.
+Let $\epsilon>0$ be given.
+There exists $\delta_1, \delta_2 > 0$ such that for all $|x-a|<\delta_1$ we have $|f(x) - f(a)|<\epsilon/(2|\alpha|)$, and for all $x - a|<\delta_2$ we have $|g(x)-g(a)|<\epsilon/(2|\beta|)$.
+
+Let $\delta = \min(\delta_1, \delta_2)$ and then for all $|x-a|<\delta$ we have
+\begin{align*}
+|\left ( \alpha f + \beta g \right )(x) - \left ( \alpha f + \beta g \right )(a)|
+&\leq |\alpha||f(x) - f(a)| + |\beta||g(x) - g(a)|\\
+&< |\alpha|\epsilon/(2|\alpha|) +  |\beta|\epsilon/(2|\beta|)\\
+&= \epsilon .
+\end{align*}
+Therefore the definition is satisfied and the linear combination $\alpha f + \beta g$ is continuous at $x=a$ as required.
+
+Next we prove that continuity is preserved by products. Let $\epsilon >0$ be given. By continuity there exist $\delta_1, \delta_2 > 0$ such that for all $|x-a|<\delta_1$ we have $|f(x)-f(a)| < \min\left (\sqrt{\epsilon}/\sqrt{3}, \epsilon/(3|g(a)|)\right )$ and $|x-a|<\delta_2$ we have $|g(x)-g(a)| < \min\left (\sqrt{\epsilon}/\sqrt{3}, \epsilon/(3|f(a)|)\right )$.
+
+Letting $\delta = \min(\delta_1, \delta_2)$ and then for all $|x-a|<\delta$ we have
+\begin{align*}
+&|\left ( fg \right )(x) - \left ( fg\right )(a)|\\
+&\leq |f(x) - f(a)||g(x) - g(a)| + |g(a)||f(x) - f(a)| + |f(a)||g(x) - g(a)|\\
+&< \sqrt{\frac{\epsilon}{3}}\sqrt{\frac{\epsilon}{3}} + |g(a)|\frac{\epsilon}{3|g(a)|} + |f(a)|\frac{\epsilon}{3|f(a)|}  \\
+&= \epsilon .
+\end{align*}
+Therefore the definition is satisfied and the product $fg$ is continuous at $x=a$ as required.
+
+The proof that quotients preserve continuity is again similar to the case for convergence of sequences. The details are left as an exercise for the reader.
+\end{proof}
+\vspace{\baselineskip}
+
+\noindent
+\textbf{Theorem 4.4} (Continuity of composition)
+\textit{Suppose that $f$ and $g$ are two functions whose domains and co-domains are such that the composition function $g \circ f$ can be defined. If $f$ is continuous at a point $x=a$ and $g$ is continuous at the point $x=f(a)$ then the composition function $g \circ f$ is continuous at $x=a$.}
+\begin{proof}
+The conditions of the theorem are illustrated in figure \ref{F:compcont}. There we see illustrated three copies of the real number line with the action of the functions from left to right with $f$ going first and then $g$ applied to the result of $f$.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.65]{compcont}
+\end{center}
+\caption{The composition function $g \circ f$}
+\label{F:compcont}
+\end{figure}
+
+Let $\epsilon_0 > 0$ be given. As $g$ is continuous at $f(a)$ there exists a radius $\epsilon_1$ such that for all $|y - f(a)|<\epsilon_1$ we have $|g(y) - g(f(a))|<\epsilon_0$. But since $f$ is continuous at $a$ there exists a radius $\epsilon_2$ such that for all $|x-a|<\epsilon_2$ we have $|f(x) - f(a)|<\epsilon_1$.
+
+Combining these two gives us the required result, namely that for all $|x-a|<\epsilon_2$ we have $|g(f(x)) - g(f(a))|<\epsilon_0$, i.e. the composition $g\circ f$ is continuous at $x=a$.
+\end{proof}
+
+\subsection{Importance of continuity}
+Mathematicians sometimes talk of a concept like continuity as describing the \emph{well-behaved} nature of certain functions $\mathbb{R} \to \mathbb{R}$. So a well-behaved function is one that has nice reasonable properties, properties usually enjoyed by the real physical properties of the processes that we are using the functions to model for instance. A badly-behaved function $\mathbb{R} \to \mathbb{R}$ might be one that has no discernable reasonable properties or interpretation, such as some kind of random association of real numbers to other real numbers (though such things and their properties might still be of great mathematical interest!).
+
+The concept of continuity generalizes to functions between lots of other kinds of mathematical space, such as say functions from $\mathbb{R}^n \to \mathbb{R}^m$, where $n,m$ are positive integers. These are functions between different dimensional Euclidean geometric Euclidean spaces. Or perhaps functions between different Riemannian manifolds. A Riemannian manifold generalization of Euclidean space, i.e. a space which has a different kind of \emph{curved} geometry rather than the \emph{flat} geometry of Euclidean spaces. We can even study the concept of continuity for functions, and distance like measures, on spaces that have no kind of immediate intuitive geometric interpretation for us. Such topics are explored in the subject areas of \emph{general topology} and \emph{metric spaces}.
+
+An example of continuity embodying the notion of \emph{well-behaved} function we can consider the Intermediate Value Theorem which is illustrated in figure \ref{F:intervalthm}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{intervalthm.png}
+\end{center}
+\caption{The Intermediate Value Theorem.}
+\label{F:intervalthm}
+\end{figure}
+\begin{thm}[Intermediate Value Theorem]
+Let $f$ be a function defined on and continuous at all points in the closed interval $[a,b]$. Suppose that $f(a) \neq f(b)$. Then for any number $C$ between $f(a)$ and $f(b)$, there exists a number $c \in [a,b]$ such that $f(c)=C$.
+\end{thm}
+
+The proof of this theorem makes use of the completeness or least upper-bound property of the real numbers (see appendix \ref{A:numbers}) and can be viewed as an embodiment of that property
+
+\section{Differentiation}
+The derivative of a function is a quantity that measures the instantaneous rate of change of a function. It is defined using the notion of the limiting value of a certain quotient involving the function under consideration. This definition is motivated and explained by the following diagrams.
+\begin{center}
+\includegraphics[scale=0.4]{gfx/derivative.png}
+\end{center}
+
+Change in value of a function $f$ is measured by the gradient of the line joining two points on the graph of $f$.
+$$\text{gradient} = \tan{\theta} = \frac{\text{opposite}}{\text{adjacent}} = \frac{ f(x) - f(a)}{x-a}$$
+\begin{center}
+\includegraphics[scale=0.4]{gfx/derivative2.png}
+\end{center}
+As $x \to a$ the gradient describes the rate of change of $f$ at the point $x=a$ more accurately.
+\begin{center}
+\includegraphics[scale=0.4]{gfx/tangent.png}
+\end{center}
+In the limit as $x \to a$ the gradient line approaches the \textit{tangent line} to the graph of $f$ at the point $x=a$. The tangent line to a point on the graph is a line that, in a small neighborhood of the point, only intersects the graph at that point. The slope of the tangent line is the same as the slope of the graph at that point.
+
+\begin{defn}[Differentiable]
+A function $f$ is \emph{differentiable} at $x=a$ if $f$ is continuous at $x=a$ and the following limit exists
+$$ \lim_{x \to a} \frac{f(x)-f(a)}{x-a} .$$
+\end{defn}
+If $f$ is differentiable at $x=a$ then the value of the limit above is called the \emph{derivative of $f$ at $x=a$} and can be written symbolically as
+$$ f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a} ,$$
+or
+$$ \left. \frac{df}{dx} \right |_{x=a} = \lim_{x \to a} \frac{f(x)-f(a)}{x-a} .$$
+
+\begin{exmp}
+Consider the functions $f$ and $g$ defined by $f(x)=kx$ and $g(x)=kx^2$ where $k$ is some constant. Find the derivatives of $f$ and $g$ at $x=a$ from first principles. (`\textit{from first principles}' means working with the above definition of the derivative in terms of limits)
+\begin{align*}
+\left. \frac{df}{dx} \right |_{x=a} &= \lim_{x \to a} \frac{f(x)-f(a)}{x-a} \\
+&= \lim_{x \to a} \frac{kx - ka}{x-a} \\
+&= \lim_{x \to a} \frac{k(x-a)}{x-a} = k.
+\end{align*}
+The function $g$ can be handled in a similar way.
+\begin{align*}
+\left. \frac{dg}{dx} \right |_{x=a} &= \lim_{x \to a} \frac{g(x)-g(a)}{x-a} \\
+&= \lim_{x \to a} \frac{kx^2 - ka^2}{x-a} \\
+&= \lim_{x \to a} \frac{k(x^2-a^2)}{x-a} \\
+&= \lim_{x \to a} \frac{k(x-a)(x+a)}{x-a} = 2ka.
+\end{align*}
+\end{exmp}
+
+As is usually the case for us, a function $f$ will be defined by a single formula in a variable $x$ say and so the derivative of $f$ at all points in its domain can be worked out in one go to give a formula in $x$ which defines the \emph{derivative} function of $f$. So given a function $f$ we can speak of its derivative (function) $\frac{df}{dx}$ which when evaluated at a point $x=a$ give the \emph{derivative of $f$ at $x=a$} as defined by our earlier definition.
+
+\subsection{Higher derivatives}
+Once a function $f$ has been differentiated to give the derivative $\frac{df}{dx}$ it can be differentiated again to give higher derivatives
+$$\frac{d^2f}{dx^2} = \frac{d}{dx} \left ( \frac{df}{dx} \right ),$$
+$$\frac{d^3f}{dx^3} = \frac{d}{dx} \left ( \frac{d^2f}{dx^2} \right ), \text{ etc....}$$
+
+\subsubsection{Standard derivatives}
+On the following two pages you will find tables showing the derivatives of some standard functions. These tables are taken from the Formula Handbook that you will have available in your summer exam.
+
+\includepdf[pages=-, frame=true, scale=0.9]{gfx/derivativetable.pdf}
+
+We can find derivatives of more complex functions which are built out of standard functions by using these known derivatives along with some properties of the derivative, which we now describe.
+
+\section{Properties of the derivative}
+\begin{thm}[Linearity]
+Consider the linear combination $f = \alpha g + \beta h$ of functions $g$ and $h$, where $\alpha, \beta \in \mathbb{R}$. The derivative of $f$ satisfies
+$$ \frac{df}{dx} = \alpha \frac{dg}{dx} + \beta \frac{dh}{dx} .$$
+\end{thm}
+\begin{proof}
+This is a straightforward application of properties of the limiting process for functions. Suppose that $g$ and $h$ are both differentiable at a point $x=a$.
+\begin{align*}
+\alpha g'(a) + \beta h'(a)
+&=\alpha \lim_{x \to a} \frac{g(x)-g(a)}{x-a}
++\beta \lim_{x \to a} \frac{h(x)-h(a)}{x-a}, \text{ by defn.}\\
+&= \lim_{x \to a} \left ( \alpha \frac{g(x)-g(a)}{x-a} + \beta \frac{h(x) - h(a)}{x-a} \right ), \text{ by algebra of limits}\\
+& = \lim_{x \to a} \left ( \frac{(\alpha g+ \beta h)(x) - (\alpha g + \beta h)(a)}{x-a}\right ), \text{ rearranging fractions}\\
+&= (\alpha g + \beta h)'(a), \text{ by definition}
+\end{align*}
+The above equations demonstrate the linearity of the derivative.
+\end{proof}
+
+\begin{thm}[Product rule]
+Consider the function $f=gh$ which is a product of the two functions $g$ and $h$. The derivative of $f$ satisfies
+$$ \frac{df}{dx} = g \frac{dh}{dx} + h \frac{dg}{dx} .$$
+\end{thm}
+\begin{proof}
+Suppose that $g$ and $h$ are both differentiable at a point $x=a$.
+\margnote{Which direction?}
+{Strictly speaking we should read this chain of equations from the bottom up -- for we shouldn't really speak of $f'(a)$ as being equal to anything before we've shown that it does indeed exist! Do you agree?}
+\begin{align*}
+f'(a) & = \lim_{x \to a} \frac{g(x)h(x) - g(a)h(a)}{x-a}, \text{\small{ def. of derivative and $f$}}\\ \\
+&= \lim_{x \to a} \frac{g(x) (h(x) - h(a)) + h(a)(g(x)-g(a))}{x-a}, \text{\small{ preparatory manipulation}}\\
+&=\left (\lim_{x \to a} g(x) \right )
+\left ( \lim_{x \to a} \frac{h(x) - h(a)}{x-a} \right )
++ h(a) \left ( \lim_{x \to a} \frac{g(x) - g(a)}{x-a} \right ), \text{\small{ alg. of limits}}\\
+&= g(a)h'(a) + h(a)g'(a), \text{\small{ known derivs.}}\\
+\end{align*}
+This is the required result.
+\end{proof}
+\begin{exmp}
+\begin{enumerate}
+\item
+Find the derivative of $y = (x^2 - 1) \sin{x}$. This is the product of the two functions
+$$ u(x) = x^2 -1 \text{  and  } v(x)= \sin{x}, $$
+whose derivatives are
+$$ \frac{du}{dx} = 2x \text{ and } \frac{dv}{dx} = \cos{x}, $$
+and so the required derivative is
+\begin{align*}
+\frac{dy}{dx} &= u \frac{dv}{dx} + v \frac{du}{dx} \\
+&= (x^2 - 1) \cos{x} + 2x \sin{x}.
+\end{align*}
+\item
+Find the derivative of $y=xe^x$....
+\end{enumerate}
+\end{exmp}
+
+\subsection{Linear approximations and associated errors}
+Before moving on to consider other properties of differentiation we introduce another viewpoint on the derivative that will be needed for future proof arguments. Consider again the definition of the derivative of a function $f$ at a point $a$ in its domain.
+$$f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x-a}.$$
+We reformulate this slightly by writing $x$ as $x = a+k$ and having the limiting process be as $k \to 0$, as follows
+$$f'(a) = \lim_{k \to 0} \frac{f(a+k) - f(a)}{k}.$$
+This suggests the existence of a function $\epsilon$ that measures the discrepancy between $f'(a)$ and the relative change quotient $(f(a+k) - f(a))/k$, defined as follows
+$$\epsilon(k) = \frac{f(a+k) - f(a)}{k} - f'(a),$$
+and this new function $\epsilon$ has the important convergence property
+$$\lim_{k \to 0} \epsilon(k) = 0.$$
+We can now rearrange the definition of $\epsilon$ to give the interesting expression
+$$f(a+k) = f(a) + f'(a) k + k \, \epsilon(k).$$
+This equation shows the \emph{linear approximation}, $f(a) + k f'(a)$, to the value, $f(a+k)$ of the function at a point close to $a$, with the associated \emph{error term} $k \epsilon(k)$. The linear approximation is the linear function (i.e. line) that best approximates the function in the region around the point $x=a$. Not only does the error-term approach zero as $k \to 0$ (as we would expect) but the error term divided by $k$, i.e. $\epsilon(k)$, converges to 0 as $k \to 0$.
+
+Picturing these various quantities with the aid of figure \ref{F:linapprox} may help. It's important to appreciate how the linear approximation gives the equation of the tangent line to the graph of $f(x)$ at $x=a$ in the form of $y(k) = f(a) + k f'(a)$, where $k = x-a$.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{linapprox}
+\caption{The linear approximation to $f(x)$ at $x=a$.}
+\label{F:linapprox}
+\end{center}
+\end{figure}
+
+This allows us to interpret the above to give an alternative definition of the derivative as follows:
+
+\noindent
+\begin{defn}[The derivative]
+\label{D:altderiv}
+The derivative, $f'(a)$, is the unique number that provides the linear approximation $f(a) + f'(a) k $ for the value $f(a+k)$ with the property that the error term $k \epsilon(k)$ has the convergence property that $\epsilon(k) \to 0$ as $k \to 0$.
+\end{defn}
+
+This view of the derivative will allow us to give a rigorous proof of the chain rule. But it is also a useful to have such slightly different views of the same concept. This notion of linear approximations (and other higher-order approximations) and the behaviour of their associated error terms is important in the subject of \emph{numerical analysis}.
+
+\begin{thm}[Chain rule]
+Consider the composition $y=f \circ g$ of two functions $f$ and $g$. Let $u=g(x)$ so that $y=f(u)$. Then the derivative of $y$ satisfies
+$$ \frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx},$$
+or in the alternative notation, at a point $x=a$ we have
+$$y'(a) = f'(g(a))g'(a).$$
+\end{thm}
+\begin{proof}
+We suppose that the function $g$ is differentiable at the point $a$ and that $f$ is differentiable at the point $g(a)$. In the linear approximations view this means we have derivative quantities $g'(a)$ and $f'(g(a))$ and error functions $\epsilon$ and $\mu$ satisfying
+\begin{align*}
+g(a+k) &= g(a) + k g'(a) + k \epsilon(k) \\
+f(g(a) + l) &= f(g(a)) + l f'(g(a)) + l \mu(l),
+\end{align*}
+with convergence properties $\epsilon(k) \to 0$ as $k \to 0$ and $\mu(l) \to 0$ as $l \to 0$.
+
+Our task now is to prove the chain rule according to definition \ref{D:altderiv}, i.e. to examine the quantity $y(a+k)$ and discover the linear approximation to it, showing that the derivative $y'(a)$ has the form described by the chain rule and that the error term has the necessary convergence property.
+%%% continue from here
+\begin{align*}
+y(a+k) &= f(g(a+k)), \eqcomm{defn. of composition}\\
+&= f\big (g(a) + k g'(a) + k \epsilon(k) \big ), \eqcomm{from above for $g(a+k)$}\\
+&= f(g(a)) + l f'(g(a)) + l \mu (l), \eqcomm{from above with $l=k g'(a) + k \epsilon(k)$}\\
+&= f(g(a)) + k \big ( g'(a) f'(g(a)) \big ) + \lambda(k),
+\end{align*}
+where the error term $\lambda(k)$ is defined by
+$$ \lambda(k) = k \epsilon(k) f'(g(a)) + \big [ k g'(a) + k \epsilon(k) \big ] \mu (k g'(a) + k \epsilon(k)).$$
+So we have established the required form for $y(a+k)$ which shows the expected derivative $y'(a)$ as asserted by the chain rule. To complete the proof we have just to prove that $\lambda(k) / k \to 0$ as $ k \to 0$. This can be seen by considering the equation
+$$ \frac{\lambda(k)}{k} = \epsilon(k) f'(g(a)) + \big [g'(a) + \epsilon(k) \big ] \mu (k g'(a) + k \epsilon(k)).$$
+\margnote{Check the details}{Do take the time to confirm for yourself that $\lambda(k)/k$ has the required convergence property.}
+We can prove that $\lambda(k) / k \to 0$ by applying the algebra of limits theorem to the above, noting that $k g'(a) + k \epsilon(k) \to 0$ as $k \to 0$.
+\end{proof}
+
+\begin{exmp}
+The following examples illustrate the use of the chain rule.
+\begin{enumerate}
+\item
+Differentiate $y=(x^2 -1)^5$.
+
+Let $u = x^2 -1$ so that $y=u^5$. Then $\frac{du}{dx} = 2x$ and $\frac{dy}{du} = 5u^4$ and so
+$$\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx} = 5u^4 2x = 5(x^2 - 1)^4 2x = 10x (x^2 -1)^4.$$
+\item
+Differentiate $y= \sin{(2x^2 - x)}$.
+
+Let $u=2x^2 - x$ so that $y=\sin{u}$. Then $\frac{du}{dx} = 4x - 1$ and $\frac{dy}{du} = \cos{u}$ and so
+$$ \frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx} = \cos{(u)} (4x -1) = (4x-1) \cos{(2x^2 - x)}.$$
+\end{enumerate}
+\end{exmp}
+To complete the collection of basic properties of the derivative we need to know how to differentiate functions that are defined as quotients of other functions, i.e. how the derivative of the qutient depends on the derivatives of the numerator and denominator of the quotient. This is provided by the well-known quotient rule.
+\begin{thm}[Quotient rule]
+If $y$ is the quotient of two functions $y=\frac{u}{v}$ then
+$$ \frac{dy}{dx} = \frac{v \frac{du}{dx} - u \frac{dv}{dx}}{v^2}.$$
+Or in the alternative notation
+$$y'(a) = \frac{v(a)u'(a) - u(a)v'(a)}{v(a)^2}.$$
+\end{thm}
+The details of the proof of the quotient rule are left as an exercise. One way to prove it is to make use of the chain rule and product rule properties that we have already established together with the following lemma.
+\begin{lem}
+Consider the reciprocal function $r$ defined on the non-zero reals, $\mathbb{R} \backslash \{0\}$, by $r(x) = 1/x$. The derivative of $r$ at a point $a \neq 0$ is given by
+$$r'(a) = \frac{-1}{a^2}.$$
+\end{lem}
+\begin{proof}
+Exercise.
+\end{proof}
+
+\begin{exmp}
+These examples illustrate the use of the quotient rule.
+\begin{enumerate}
+\item
+Differentiate $y = \frac{x^2 - 1}{\sin{x}}$.
+
+Let $u=x^2 -1$ and $v= \sin{x}$ then $\frac{du}{dx}= 2x$ and $\frac{dv}{dx} = \cos{x}$. Then
+$$ \frac{dy}{dx} = \frac{v \frac{du}{dx} - u \frac{dv}{dx}}{v^2} = \frac{2x \sin{x} - (x^2 -1)\cos{x}}{\sin^2 x}.$$
+\item
+Differentiate $y=\frac{2x-1}{3x^2 + x}$.
+
+Let $u=2x -1$ and $v= 3x^2 +x$ then $\frac{du}{dx}= 2$ and $\frac{dv}{dx} = 6x+1$. Then
+$$ \frac{dy}{dx} = \frac{v \frac{du}{dx} - u \frac{dv}{dx}}{v^2} = \frac{2(3x^2 +x) - (2x-1)(6x+1)}{(3x^2+x)^2} = \frac{-6x^2 + 6x + 1}{(3x^2 + x)^2}.$$
+\end{enumerate}
+\end{exmp}
+
+\subsection{Derivatives of inverse functions}
+There is a nice relationship between the derivative of a function and its inverse which we can appreciate from the diagram below. Shown below is the graph of the function $y=f(x)$ and also the graph of the inverse function $x=g(y)$. These two graphs are related by a reflection in the line given by $y=x$.
+
+\begin{center}
+\includegraphics[scale=0.7]{gfx/derivative_inverse}
+\end{center}
+
+This leads to the following relationship for the derivative of a function and its inverse
+$$ \frac{dx}{dy} = \frac{1}{\frac{dy}{dx}}.$$
+
+\subsection{Parametric differentiation}
+Curves that are not graphs of functions can often be specified by a pair of equations
+$$ x = x(t) , \, y = y(t),$$
+which describe how the coordinates $(x,y)$ of a point on the curve relate to a variable $t$. These equations are called the \emph{parametric} equations for the curve and the variable $t$ is called the \emph{parameter}. As the value of $t$ changes the point $(x(t), y(t))$ traces out the curve.
+
+\begin{exmp}
+These examples illustrate the technique of parametric differentiation.
+\begin{enumerate}
+\item
+The parametric curve $x=t^2$, $y=2t-1$ with $t \in [-1,1]$ is shown in figure \ref{F:param1}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{param1}
+\end{center}
+\caption{The parametric curve $(t^2, 2t-1)$.}
+\label{F:param1}
+\end{figure}
+
+\item
+The parametric curve
+$$x=\cos{t} - \cos{(2t)} , \, \, y=\sin{t} - \sin{(2t)} , \, \, t \in [-\pi,\pi] $$
+is shown in figure \ref{F:param2}.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{param2}
+\end{center}
+\caption{The parametric curve $\big (\cos{(t)} - \cos(2t), \sin(t) - sin(2t) \big )$.}
+\label{F:param2}
+\end{figure}
+\end{enumerate}
+\end{exmp}
+
+We can still talk of the tangent lines to these curves and using the chain rule we can work out the derivative $\frac{dy}{dx}$ for a parametric curve. We think of $y$ as being a function of $x$, $y=y(x)$ as well as being a function of $t$, $y=y(t)$. Applying the chain rule in the former case gives
+$$\frac{dy}{dt} = \frac{dy}{dx} \frac{dx}{dt},$$
+and so
+$$\frac{dy}{dx} = \frac{dy}{dt} \frac{1}{\frac{dx}{dt}},$$
+which using the inverse function rule we can also write as
+$$ \frac{dy}{dx} = \frac{dy}{dt} \frac{dt}{dx}.$$
+
+By carefully applying the chain and inverse function rule again we can show that
+$$\frac{d^2y}{dx^2} = \frac{d}{dx} \left ( \frac{dy}{dx} \right ) = \frac{d}{dt} \left ( \frac{dy}{dx} \right ) \frac{1}{\frac{dx}{dt}}.$$
+
+\begin{exmp}
+More parametric examples.
+\begin{enumerate}
+\item
+For the last example above we have
+$$\frac{dy}{dx} = \frac{dy}{dt} \frac{1}{\frac{dx}{dt}} = \frac{\cos{t} - 2 \cos{(2t)}}{-\sin{t} + 2 \sin{(2t)}} .$$
+\item
+If a parametric curve is described by $x=te^t$ and $y=e^t$ determine $\frac{dy}{dx}$ and $\frac{d^2 y}{dx^2}$ in terms of $t$.
+
+$$\frac{dy}{dx} = \frac{dy}{dt} \frac{1}{\frac{dx}{dt}} = \frac{e^t}{te^t + e^t} = \frac{1}{t+1},$$
+and
+$$\frac{d^2y}{dx^2} = \frac{d}{dt} \left ( \frac{dy}{dx} \right ) \frac{1}{\frac{dx}{dt}} = \frac{-1}{(t+1)^2} \frac{1}{te^t + e^t} = \frac{-1}{e^t(t+1)^3}.$$
+\end{enumerate}
+\end{exmp}
+
+\subsection{Implicit differentiation}
+Suppose that a variable $y$ is a function of $x$, i.e. $y=y(x)$, but that we are not given this functional relationship \emph{directly} in the form of a formula for $y$ in terms of $x$, but rather the function is described \emph{indirectly} or \emph{implicitly} by an equation involving $y$ and $x$, such as
+$$x^2 + y^2 = 1, \text{ or } x^2 - y^2 = 1, \text{ or } \sin{(xy)}=1 .$$
+We can use the rules (chain, product , etc) developed so far to find an expression for the derivative $\frac{dy}{dx}$ in such cases. When the equation describing the relationship between $y$ and $x$ is non-trivial we would expect the resulting expression for $\frac{dy}{dx}$ to depend on the the value of the function $y$ as well as on the variable $x$.
+
+\begin{exmp}
+Find $\frac{dy}{dx}$ for the function $y=y(x)$ defined implicitly by the equation
+$$ x^2 + 2y^2 - xy + 2x =4.$$
+
+We proceed by differentiating both sides of the equation with respect to $x$ and carefully using the chain rule and product rule.
+\begin{align*}
+& x^2 + 2y^2 - xy + 2x =4 \\
+\Rightarrow & \frac{d}{dx} (x^2 + 2y^2 - xy + 2x) = \frac{d}{dx} (4) \\
+\Rightarrow & 2x + 4y \frac{dy}{dx} -x\frac{dy}{dx} - y + 2 = 0 \\
+\Rightarrow & \frac{dy}{dx} ( 4y - x) = y - 2 - 2x \\
+\Rightarrow & \frac{dy}{dx} = \frac{y - 2 - 2x}{4y-x}.
+\end{align*}
+\end{exmp}
+
+\subsection{Logarithmic differentiation}
+This refers to the technique we use to differentiate a function $y=y(x)$ say where the variable $x$ appears in the power position in the formula for $y$.
+
+\begin{exmp}
+Differentiate $y=x^x$.
+
+To begin with we take the logarithm of both sides of the defining equation and then use the technique of implicit differentiation.
+\begin{align*}
+& y= x^x \\
+\Rightarrow & \ln{y} = \ln{(x^x)} \\
+\Rightarrow & \ln{y} = x \ln{x} \\
+\Rightarrow & \frac{d}{dx} ( \ln{y})=\frac{d}{dx} (x \ln{x}) \\
+\Rightarrow & \frac{1}{y} \frac{dy}{dx} = x \frac{1}{x} + \ln{x} = 1 + \ln{x} \\
+\Rightarrow & \frac{dy}{dx} = y(1+\ln{x}) = x^x (1 + \ln{x})
+\end{align*}
+\end{exmp}
+
+\subsection{Applications of differentiation}
+We shall consider four main applications of the technique of differentiation. They are
+\begin{itemize}
+\item
+finding and classifying stationary points of functions,
+\item
+rate of change problems,
+\item
+curve sketching,
+\item
+kinematics
+\end{itemize}
+But first we might briefly revisit the Taylor / Maclaurin series that we met in term 1 now that we have a fuller picture of differentiation and integration.
+
+\section{Taylor series and Maclaurin series}
+We saw earlier that under certain conditions Taylor's theorem provides for the existence of a \textit{Taylor series} expansion of a function $f$. The Taylor series is the power series expansion of $f(x)$ about the point $x=a$ of the form
+$$f(a+x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!} x^n .$$
+
+The Taylor series expansion of a function $f$ about the point $0$ is call the \textit{Maclaurin series} expansion,
+$$f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} x^n .$$
+
+\noindent
+\hrulefill
+
+\begin{center}
+\textbf{Maclaurin series of some standard functions}
+\end{center}
+
+\begin{align*}
+(1+x)^r &= 1 + rx + \frac{r(r-1)}{2!}x^2 + \frac{r(r-1)(r-2)}{3!}x^3 + \dots + \frac{(r(r-1)\dots (r-n+1)}{n!}x^n + \dots \\
+& (\text{where }-1 < x < 1, \, r \in \mathbb{R}) \\
+\\
+e^x &= 1 + x + \frac{1}{2!}x^2 + \frac{1}{3!}x^3 + \dots + \frac{1}{n!} x^n + \dots , \quad (x \in \mathbb{R}) \\
+\\
+\sin{x} &= x - \frac{1}{3!} x^3 + \frac{1}{5!} x^5 - \dots + \frac{(-1)^n}{(2n+1)!} x^{2n+1} + \dots , \quad (x \in \mathbb{R}) \\
+\\
+\cos{x} &= 1 - \frac{1}{2!} x^2 + \frac{1}{4!} x^4 - \dots + \frac{(-1)^n}{(2n)!} x^{2n}  + \dots , \quad (x \in \mathbb{R}) \\
+\\
+\text{ln} (1+x) & = x - \frac{1}{2} x^2 + \frac{1}{3} x^3 - \frac{1}{4} x^4 + \dots + \frac{(-1)^n}{n+1} x^{n+1} + \dots , \quad (-1 < x \leq 1) \\
+\\
+\tan{x} &= x + \frac{1}{3} x^3 + \frac{2}{15} x^5 + \frac{17}{315} x^7 + \dots , \quad (-\frac{\pi}{2} < x < \frac{\pi}{2} )
+\end{align*}
+
+\noindent
+\hrulefill
+\begin{exer}
+Here are some exercises that explore Maclaurin series further.
+\begin{enumerate}
+\item
+Find the Maclaurin series expansion of $f(x)=e^x \sin{x}$ in terms of derivatives above.
+\item
+Confirm your answer to 1) using the Maclaurin series for $e^x$ and $\sin{x}$.
+\item
+Obtain the expansion of $(1-x^2)^{-1/2}$ and deduce a power series expansion for $\sin^{-1} (x)$.
+\end{enumerate}
+\end{exer}
+\section{Stationary points of functions}
+\begin{defn}[Stationary point]
+A \emph{stationary point} (or \emph{critical point}) of a function $f(x)$ is point on the graph $y=f(x)$ where the tangent to the graph has slope zero. That is, a stationary point is a solution $a$ to the equation
+$$ \frac{dy}{dx} = 0 .$$
+\end{defn}
+
+Stationary points of functions of one variable can be of three types: a local maximum, local minimum or inflection point. See the diagrams in figures \ref{F:localmin}, \ref{F:localmax} and \ref{F:inflection} for illustrations of these different types.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{localmin}
+\end{center}
+\caption{A local minimum}
+\label{F:localmin}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{localmax}
+\end{center}
+\caption{A local maximum}
+\label{F:localmax}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{inflection}
+\end{center}
+\caption{A point of inflection.}
+\label{F:inflection}
+\end{figure}
+Maximums and minimums are also sometimes called \emph{turning points} of the function.
+
+\subsection{Classification of stationary points using derivatives}
+As we said a stationary point $x=a$ of the function $y=f(x)$ is a point satisfying
+$$\left. \frac{dy}{dx} \right |_{x=a} = 0.$$
+The point $x=a$ is a
+\begin{itemize}
+\item
+a \textbf{maximum} if
+$$\left. \frac{dy}{dx} \right |_{x < a} > 0 \text{ and }
+\left. \frac{dy}{dx} \right |_{x > a} < 0,$$  or equivalently ,
+$$\left. \frac{d^2y}{dx^2} \right |_{x=a} < 0.$$
+\item
+a \textbf{minimum} if
+$$\left. \frac{dy}{dx} \right |_{x < a} < 0 \text{ and }
+\left. \frac{dy}{dx} \right |_{x > a} > 0,$$
+or equivalently ,
+$$\left. \frac{d^2y}{dx^2} \right |_{x=a} > 0.$$
+\item
+a \textbf{point of inflection} if either
+$$ \left. \frac{dy}{dx} \right |_{x < a} < 0 \text{ and } \left. \frac{dy}{dx} \right |_{x > a} < 0 ,$$
+or ,
+$$ \left. \frac{dy}{dx} \right |_{x < a} > 0 \text{ and } \left. \frac{dy}{dx} \right |_{x > a} > 0 .$$
+\end{itemize}
+
+\begin{exmp}
+These examples illustrate the finding and classifying of stationary points.
+\begin{enumerate}
+\item
+Determine the turning points of the function $y=x^3 - x$.
+
+The turning points are found by solving the equation
+$$\frac{dy}{dx} = 3x^2 - 1 =0.$$
+This has solutions
+$$x_1 = + \sqrt{\frac{1}{3}} \text{ and } x_2 = - \sqrt{\frac{1}{3}} .$$
+Using the second derivative test to determine the type of each turning point we see that
+$$\frac{d^2 y}{dx^2} = 6x ,$$
+and so
+$$\left. \frac{d^2 y}{dx^2} \right |_{x=x_1} = 6x_1 \approx 3.462 > 0$$
+and
+$$\left. \frac{d^2 y}{dx^2} \right |_{x=x_2} = 6x_2 \approx -3.462 < 0.$$
+So we conclude that $x_1$ is a local minimum turning point and $x_2$ a local maximum turning point of the function $y=x^3 - x$.
+\item
+Classify the stationary points of the function $y=3x^4 - 4x^3$.
+
+The equation
+$$\frac{dy}{dx} = 12x^2 (x-1) =0$$
+has solutions $x_1=0$ and $x_2=1$. Now for points close to 0 we have
+$$ \left. \frac{dy}{dx} \right |_{x < 0} < 0 \text{ and } \left. \frac{dy}{dx} \right |_{x > 0} < 0$$
+and therefore $x_1$ is a point of inflection. Check the second derivative $\left. \frac{d^2y}{dx^2} \right |_{x=x_2}$ to see that $x_2$ is a local minimum of the original function.
+\end{enumerate}
+\end{exmp}
+\section{Curve Sketching}
+
+Recall that a \textit{rational function} is a function $f$ that is defined as a quotient of polynomials in $x$. For example the functions $f$ defined by
+$$ f(x) = \frac{3x^2 - 7}{2x+1} .$$
+We considered these types of functions last term when we looked at their expansions by partial fractions. This technique was important for integrating such functions. What we want to be able to do now is to compose rough sketches of these functions which show the important features of their graphs. Admittedly these days we often turn to computers to produce accurate graphs. Nevertheless being able to do this ourselves with pen and paper gives us a good understanding of the behavior of such functions and how the techniques of differentiation etc are used to produce these sketches.
+
+To compose a sketch of such a function we consider various properties. The important ones are
+\begin{itemize}
+\item
+The domain of the function, i.e. are there any values of $x$ for which $f(x)$ is undefined?
+\item
+The behaviour of $f(x)$ near these undefined points. Typically we will observe that $f(x)$ tends to $\pm \infty$ as $x$ tends to one of these undefined points.
+\item
+The locations where the graph of $f$ cuts the coordinate axes, i.e. the value $f(0)$ and the solution $x$ to $f(x)=0$.
+\item
+\textit{Asymptotes} of $f$. These are lines (or other curves) that $f(x)$ approaches as $x$ tends to $\pm \infty$.
+\item
+Stationary points of $f$. We identify any local/global minimum or maximum points and any points of inflections.
+\item
+Whether $f(x)$ is positive or negative on various parts of the domain. Whether $f(x)$ lies above or below any asymptotic lines/curves at various parts of the domain.
+\end{itemize}
+\begin{exmp}
+Let us apply these considerations to the function $f$ defined above by
+$$ f(x) = \frac{3x^2 - 7}{2x+1} .$$
+
+\begin{itemize}
+\item
+$f$ will be undefined when the denominator is zero, i.e. when $x=\frac{-1}{2}$. At all other points $f(x)$ is defined. So the domain of this function is $\mathbb{R} \backslash \{ \frac{-1}{2} \}$.
+\item
+If $x$ is close to $\frac{-1}{2}$ and less than $\frac{-1}{2}$ then the denominator is negative and the numerator is negative so $f(x)$ will be positive and as $x$ tends to $\frac{-1}{2}$ then $f(x)$ tends to $+ \infty$. On the other hand if $x$ is close to $\frac{-1}{2}$ and greater than $\frac{-1}{2}$ then the denominator is positive and the numerator is negative so $f(x)$ will be negative and as $x$ tends to $\frac{-1}{2}$ then $f(x)$ tends to $- \infty$.
+\item
+$f(0)= -7$ and $f(x)=0$ when $x=\pm \sqrt{\frac{7}{3}} \approx \pm 1.53$.
+\item
+Consider the definition of $f$,
+$$ f(x) = \frac{3x^2 - 7}{2x+1} .$$
+Dividing the numerator by the denominator as much as possible leads to the expression
+$$ f(x) = \frac{3}{2}x - \frac{3}{4} - \frac{ \frac{25}{4}}{2x+1}.$$
+So we see that the line $y=\frac{3}{2} x - \frac{3}{4}$ is an asymptote of $f$. As $x$ tends to $\pm \infty$ the term $\frac{ \frac{25}{4}}{2x+1}$ tends to zero and so the points $y=f(x)$ move closer and closer to this line. As $x$ tends to $+\infty$, $f(x)$ will tend to the line from below and as $x$ tends to $- \infty$, $f(x)$ will tend to the line from above.
+\item
+To find the stationary points of $f$ we solve the equation $\frac{df}{dx} = 0$. The derivative is (using the quotient rule)
+$$ \frac{df}{dx}= \frac{(2x+1)(6x) - (3x^2 - 7)(2)}{(2x+1)^2} = \frac{6x^2 + 6x +14}{(2x+1)^2}.$$
+So we need to solve $6x^2 + 6x +14=0$. But the discriminant $b^2 - 4ac$ of this equation is negative and so this equation has no real roots. Therefore $f$ has no turning points.
+\end{itemize}
+Finally we can put all this information together to produce a sketch of the function
+\begin{center}
+\includegraphics[scale=0.5]{gfx/sketch}
+\end{center}
+\end{exmp}
+
+\begin{exer}
+Here are some more examples to investigate.
+\begin{enumerate}
+\item
+$$y = \frac{x^2 + 1}{x^2 - 3x + 2}.$$
+\item
+$$y=\frac{x}{1+x^2}.$$
+\item
+$$y=\frac{x^3}{2x-1}.$$
+\item
+\textit{This last curve is not the graph of a rational function. But it illustrates some more sketching techniques.}
+Consider the curve defined by the equation
+$$x^2 + xy + y^2 = 1.$$
+Show that the maximum and minimum values taken by $y$ are $\frac{\pm 2}{\sqrt{3}}$. By changing to polar coordinates sketch the curve. Polar coordinates are the pair of coordinates $(r,\theta)$ which describe the location of a point in the plane by specifying the points \textit{radius} $r$, i.e. the distance from the point to the origin, and the angle $\theta$ that the radius line makes with the positive direction of the $x$-axis. The equations relating the Cartesian coordinates $(x,y)$ and the polar coordinates $(r, \theta)$ are
+$$x=r \cos{\theta} , \quad y = r \sin{\theta} .$$
+\end{enumerate}
+\end{exer}
+
+\section{Kinematics}
+
+Kinematics is the study of the \textit{motion} of a body without reference to the forces acting on the body. We study the motion of a body in 1-dimension using the three functions: $x$ displacement, $v$ velocity and $a$ acceleration.
+
+\begin{itemize}
+\item
+$x(t)$ is the position of the body at time $t$,
+\item
+$v(t)$ is the velocity of the body at time $t$,
+\item
+$a(t)$ is the acceleration of the body at time $t$.
+\end{itemize}
+
+These quantities are related by
+$$ v(t) = \frac{dx}{dt} \text{ and } a(t)=\frac{dv}{dt}.$$
+
+Various equations relating the $x(t)$, $v(t)$, $a(t)$ and $t$ can be found by integrating the above relations.
+
+The simplest types of problem to study are \textit{constant acceleration problems}. Here the acceleration is constant, e.g. due to the influence of gravity ($9.8\text{ms}^{-2}$ downwards), or a car accelerating at a constant rate, etc.
+
+\begin{exmp}
+These simple kinematics problems can be solved by applying the relationships between position, velocity and acceleration.
+\begin{enumerate}
+\item
+A car waits at a traffic light. When the light turns green the car accelerates at a constant rate of $6\text{ms}^{-2}$ for 4 seconds. What velocity will the car have reached after 4 seconds and how far will it have traveled.
+\item
+A student, who is running to catch his bus, sees the bus start to pull away from the stop.  He is 20 m away from the stop and running at his top speed of $5\text{ms}^{-1}$.  If the bus accelerates at $2\text{ms}^{-2}$, can he catch the bus?
+\item
+Suppose you are at a window 18m above the ground and you want to throw a stone out the window so that it will be in the air for exactly 3 seconds. How should you throw it?
+\end{enumerate}
+\end{exmp}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Exercises%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{exer}
+These exercises involve the definitions, properties and applications of differentiation.
+\begin{enumerate}
+\item
+Decide if the following limits exist and if so evaluate them.
+\begin{enumerate}
+\item
+$$\lim_{x \to 3} \frac{2x-1}{3x+2}$$
+\item
+$$\lim_{x \to 2} \frac{3x-6}{2x}$$
+\item
+$$\lim_{x \to 0} \frac{2 \sinh{x} -2 \sin{x}}{\cosh{x} - 1}$$
+\item
+$$\lim_{x \to 0} \frac{e^x + e^{-x} - 2}{1 - \cos{(2x)}}$$
+\item
+$$\lim_{x \to 0} \frac{\sin{(4x)}}{\sin{(6x)}}$$
+\item
+$$\lim_{x \to 0} \frac{x - \sin{x}}{x^3}$$
+
+\item
+$$\lim_{x \to \infty} \frac{3x^3 - 6x}{3x+2x^3}$$
+\item
+$$\lim_{x \to 0} \frac{5x-6}{2x^3}$$
+\item
+$$\lim_{x \to 0} (1+x)^{\frac{1}{x}}$$
+\end{enumerate}
+\item
+Using the formal definition of continuity prove that if two functions $f$ and $g$ are both continuous at the point $x=a$ then so is the function $f+g$.
+\item
+Prove from first principles that $\frac{d}{dx} (x^3) = 3x^2$.
+\item
+Find $\frac{dy}{dx}$ for each of the following functions
+\begin{enumerate}
+\item
+$y=5\cos{(2x)} + 3e^{2x} - 1$
+\item
+$y= e^{4x} \cos{(2x)}$
+\item
+$y= \frac{\sin{(2x)}}{x e^x}$
+\item
+$y= e^{\cos{(3x)}} $
+\item
+$y=(2x)^{3x} + \sin{(2x^2 - 7e^x)}$
+\item
+$y=\cos^{-1}{x}$
+\end{enumerate}
+\item
+Find the gradients of the following implicitly defined functions $y$ at the points indicated
+\begin{enumerate}
+\item
+$3x^2 + y^2 + 2xy - 6=0$ at the point $(1,1)$
+\item
+$x^2 + y^2 - 6xy +4x + 4 =0$ at the point $(1,3)$
+\end{enumerate}
+\item
+Given that
+\begin{enumerate}
+\item
+$x=5 \cosh{t}$ and $y=4 \sinh{t}$
+\item
+$x=2 \cos{t}$ and $y=\sin^2{t}$
+\item
+$x=t^2-4$ and $y=t^3 - 4t $ for $-3 \leq t \leq 3$
+\end{enumerate}
+determine $\frac{dy}{dx}$ and $\frac{d^2y}{dx^2}$ in terms of $t$ for each parametric curve. Sketch these curves using MATLAB.
+\item
+Find $\frac{dy}{dx}$ where $y=(x+3)^{x^2 - 3}$.
+\item
+Find $\frac{d}{dx} (\frac{uvw}{z})$ where $u,v,w$ and $z$ are functions of $x$.
+\item
+Suppose that an athletics field consists of a rectangle with semi-circular ends as shown. Determine the maximum possible area of the rectangular part of the field if the running track around the perimeter of the whole field is to have a length of exactly 400m.
+\begin{center}
+\includegraphics[scale=0.5]{gfx/field}
+\end{center}
+\item
+Determine the dimensions of a cylindrical food tin of volume 330ml that has minimum surface area.
+\item
+Sketch graphs of the following functions,
+\begin{enumerate}
+\item
+$$y= \frac{2+x}{1+x},$$
+\item
+$$ y= \frac{1}{2} \left ( x + \frac{2}{x} \right ),$$
+\item
+$$y = \frac{3x^4 + 12x^2 - 4}{8x^3},$$
+\item
+$$y = \frac{(x-1)(x-2)}{(x+1)(x-3)}.$$
+\end{enumerate}
+\item
+By locating their turning points and asymptotes sketch graphs of the following functions,
+\begin{enumerate}
+\item
+$$y = \frac{x^2 - 8x + 15}{x} ,$$
+\item
+$$ y = \frac{x+1}{x-1},$$
+\item
+$$y= \frac{x^2 + 5x -14}{x+5} .$$
+\end{enumerate}
+\item
+Consider the function $f$ defined by
+$$f(x)=e^{\cos{x}}.$$
+Show that $f'(x) = -f(x) \sin{x}$ and hence obtain a formula for $f''(x)$ in terms of $f(x)$ and $f'(x)$. Differentiate again to find a formula for $f^{(3)}(x)$. Use these to find the first few terms of the Maclaurin series for $f$.
+
+Confirm that your answer is correct by obtaining the Maclaurin series for $f$ using the series for $e^x$ and $\cos{x}$.
+\item
+Show that the binomial expansion of $(1+x)^{-1}$ is
+$$(1+x)^{-1} = 1 - x +x^2 - x^3 + x^4 - \dots , \quad (-1 < x < 1) .$$
+Use this to obtain the Maclaurin series for $\tan^{-1} x$ which has can be defined by
+$$\tan^{-1} x = \int_0^x \frac{1}{1+z^2} \, dz .$$
+\item
+Use the Maclaurin series for $\sin{x}$ and $\cos{x}$ to obtain the series for $\tan{x}$.
+\item
+Deduce the series for $\text{ln} (\cos{x})$ using the series for $\text{ln} \, x$ and $\cos{x}$.
+\item
+Use the series for $e^x$ and $\cos{x}$ to show that
+$$ \lim_{x \to 0} \left ( \frac{e^x + e^{-x} -2}{2 \cos{2x} - 2} \right ) = \frac{-1}{4}.$$
+\item
+Use the series for $e^{-x^2}$ to show that
+$$ \int_{0}^{1/2} e^{-x^2} \, dx \approx 0.461 .$$
+
+\vspace{ 0.5cm}
+
+\textit{For these kinematics problems assume that the effects of air resistance can be ignored and that acceleration due to gravity is 9.8 ms$^{-2}$}.
+\item
+A stone is dropped from a height of 5m above the ground. How long will it take to drop to the ground? What is it's speed upon impact?
+\item
+A car starts from rest and accelerates in a straight line with constant acceleration. If it reaches a speed of 20ms$^{-1}$ after 5s what is its acceleration and how far will it have travelled?
+\item
+A projectile is fired straight up into the air. If the projectile takes 2.4s to reach its highest point what was its initial speed and how high did it reach?
+
+\vspace{ 0.5cm}
+
+\textit{Finding optimal solutions to problems by finding appropriate stationary points of functions is an important application of the technique of differentiation. Here are some further exercises for you to try.}
+\item
+Of all the rectangles having a particular area, which one has the smallest perimeter?
+\item
+Of all the rectangles having a particular perimeter, which one has the greatest area?
+\item
+A box with a square base and no top is to have a volume of 3$\text{m}^3$. Find the dimensions of the box which uses the least amount of material in its construction.
+\item
+Suppose that a rectangle has two corners lying on the $x$-axis and the other two lying on the parabola $y=8-x^2$. Find such a rectangle with maximal area.
+\item
+What is the largest rectangle one can inscribe in a circle? That is, find the rectangle of largest area that can fit inside the circle of radius $r$.
+\item
+Consider a river that is 0.5 miles wide and runs in a straight line for the purposes of this problem. A pipeline is to be laid across this river and run to a point 3 miles downstream on the opposite bank. Laying pipe under the water is expensive, in fact $25\%$ more expensive per mile than laying pipe on dry land. How should the pipeline be lain across the river in order to minimize the total cost.
+\end{enumerate}
+\end{exer}
+\cleardoublepage
+
+\appendix
+\appendixpage
+%\subfile{numbersystems.chapter}
+\chapter{A (very) brief look at number systems}
+\label{A:numbers}
+A precise and rigorous description and construction of the various number systems would require a whole course in itself. We shall not be examining these technical issues in detail in these notes but we may come across some of them from time to time. For the time being we shall introduce and agree on some basic terminology for the number systems we shall use, and indicate some of the technical detail that distinguishes the real numbers from the rational numbers.
+
+\begin{itemize}
+\item
+The \emph{Natural numbers}, $\mathbb{N}= \left \{ 1,2,3, \dots \right \}$. These are the basic counting numbers\footnote{Some authors regard $0$ as a natural number}.
+\item
+The \emph{Integers}, $\mathbb{Z} = \left \{ \dots, -3, -2, -1, 0, 1, 2, 3, \dots \right \}$. These consist of the natural numbers and their negatives, together with $0$.
+\item
+The \emph{Rational numbers}, $\mathbb{Q} = \left \{ \frac{m}{n} \, : \, m,n \in \mathbb{Z}, \, m \neq 0 \right \}$. These consist of all the fractions formed from integral numerators and denominators.
+\item
+The \emph{Real numbers}, $\mathbb{R}$. A real number corresponds to a point on the number line (or continuum). They can be represented in many ways, for instance as infinite decimal expansions (or infinite digit expansions to any number base), as limits of infinite sequences of rational numbers, as infinite continued fractions,...
+\item
+The \emph{Complex numbers}, $\mathbb{C} = \left \{ a+bi \, : \, a,b \in \mathbb{R} \right \}$, where $i=\sqrt{-1}$.
+\end{itemize}
+
+If we disregard some technical details we can regard these number systems as being \emph{nested}, i.e. the natural numbers are contained within the integers, which in turn are contained within the rational numbers, which in turn are contained within the real numbers. This is indicated symbolically as
+$$ \mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}
+\subset \mathbb{C} \subset \dots $$
+
+Examples of real numbers which are not rational numbers (so called irrational numbers) are $\sqrt{2}$, $\sqrt{3}$, $\pi$, etc. The rationals and reals are pervasive (or dense) everywhere on the number line. In any interval on the number line, there are an infinite number of rational and irrational numbers.
+
+Describing precisely what the difference is between the rational numbers and the real numbers is quite a technical matter. It comes down to a principle called the \emph{least upper-bound principle}.
+
+\begin{quote}
+\textbf{Least upper-bound principle}
+
+\noindent
+A system of numbers $S$ has the least upper-bound principle if for every subset $A \subset S$ which is bounded above, there exists in $S$ a \emph{least} upper-bound for $A$.
+\end{quote}
+
+That the rational numbers do not have this property can be seen from examples such as
+$$ A = \left \{ x \in \mathbb{Q} \, : \, x^2 < 2 \right \}.$$
+The set $A$ is clearly bounded above (by $3$ for instance). But there is no least-upper bound for $A$ in the rational numbers. There is a least upper-bound for $A$ in the \emph{real} numbers, namely $\sqrt{2}$. But this is not a rational number. The real numbers though do satisfy the least upper-bound principle.
+
+\newpage
+\thispagestyle{empty}
+\phantom{a}
+\cleardoublepage
+\end{document}
