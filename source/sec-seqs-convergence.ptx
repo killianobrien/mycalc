@@ -3,6 +3,31 @@
 <section xml:id="sec-seqs-convergence" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Convergence</title>
 
-  <p> Text of section. </p>
+  <p>Introductory and motivational remarks.</p>
+
+  <definition xml:id="def-convergence-informal">
+    <title>Convergence (informal)</title>
+    <statement>
+      <p>
+        Let <m>L \in \R</m>. A sequence <m>\left \{ x_n \right \}_{n=1}^\infty</m> converges to the limit <m>L</m> if and only if as <m>n</m> increases, the elements of the sequence get closer and closer to <m>L</m>, or equivalently, the distance <m>| x_n - L |</m> gets closer and closer to <m>0</m>.
+      </p>
+
+
+  <p>
+    Other notation and language used to say that the sequence <m>\left \{ x_n \right \}</m> <em>converges</em> to the limit <m>L</m> is to say that <m>x_n</m> tends to <m>L</m> as <m>n</m> tends to <m>\infty</m>, or in symbolic form 
+    <me>
+      x_n \to L \text{ as } n \to \infty
+    </me>,
+    or 
+    <me>
+      \lim_{n \to \infty} x_n = L
+    </me>,
+    where the latter expression is read as <em>"the limit, as <m>n</m> tends to <m>\infty</m>, is <m>L</m>"</em>.
+  </p>
+
+  <p>
+    If a sequence is not convergent then we say that it is <em>divergent</em>.
+  </p>
+  </statement></definition>
 
 </section>
