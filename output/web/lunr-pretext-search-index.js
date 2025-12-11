@@ -106,7 +106,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Convergence",
-  "body": " Convergence  Introductory and motivational remarks.   Convergence (informal)   Let . A sequence converges to the limit if and only if as increases, the elements of the sequence get closer and closer to , or equivalently, the distance gets closer and closer to .    Other notation and language used to say that the sequence  converges to the limit is to say that tends to as tends to , or in symbolic form , or , where the latter expression is read as \"the limit, as tends to , is \" .  "
+  "body": " Convergence  Introductory and motivational remarks.   Convergence (informal)   Let . A sequence converges to the limit if and only if as increases, the elements of the sequence get closer and closer to , or equivalently, the distance gets closer and closer to .  Other notation and language used to say that the sequence  converges to the limit is to say that tends to as tends to , or in symbolic form , or , where the latter expression is read as \"the limit, as tends to , is \" .  If a sequence is not convergent then we say that it is divergent .   "
 },
 {
   "id": "def-convergence-informal",
@@ -115,7 +115,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "2.3.1",
   "title": "Convergence (informal).",
-  "body": " Convergence (informal)   Let . A sequence converges to the limit if and only if as increases, the elements of the sequence get closer and closer to , or equivalently, the distance gets closer and closer to .   "
+  "body": " Convergence (informal)   Let . A sequence converges to the limit if and only if as increases, the elements of the sequence get closer and closer to , or equivalently, the distance gets closer and closer to .  Other notation and language used to say that the sequence  converges to the limit is to say that tends to as tends to , or in symbolic form , or , where the latter expression is read as \"the limit, as tends to , is \" .  If a sequence is not convergent then we say that it is divergent .  "
 }
 ]
 
