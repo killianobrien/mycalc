@@ -30,4 +30,12 @@
   </p>
   </statement></definition>
 
+  <p>
+    Some sequences are divergent because their terms keep increasing in absolute value without any upper bound, in which case we can write
+    <me>y_n \to \infty \text{ as } n \to \infty</me>
+or
+    <me>y_n \to -\infty \text{ as } n \to \infty</me>.
+
+The first of these says that the term $y_n$ increase in positive value without any upper bound, and the second says that the terms $y_n$ get large and negative without any lower bound. However although this notation and phrasing is used quite commonly we should be careful. Such sequences are still divergent, and we should certainly not treat <m>\infty</m> (whatever it is really) as a number like any other.
+  </p>
 </section>

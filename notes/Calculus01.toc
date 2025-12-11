@@ -1,0 +1,47 @@
+\contentsline {chapter}{Contents}{i}{section*.1}%
+\contentsline {chapter}{\chapternumberline {1}Sequences}{1}{chapter.1}%
+\contentsline {subsection}{Some motivation and context}{1}{section*.2}%
+\contentsline {section}{\numberline {1.1}Basic definitions}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Monotonic and bounded sequences}{3}{section.1.2}%
+\contentsline {subsection}{Proving increasing or decreasing behaviour}{3}{section*.4}%
+\contentsline {section}{\numberline {1.3}Convergence}{6}{section.1.3}%
+\contentsline {subsection}{Properties of convergence}{6}{section*.5}%
+\contentsline {section}{\numberline {1.4}L'H\^{o}pital's rule}{9}{section.1.4}%
+\contentsline {chapter}{\chapternumberline {2}Series}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Basic definitions}{13}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Convergence}{14}{section.2.2}%
+\contentsline {section}{\numberline {2.3}A short section on tails}{15}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Some series convergence properties}{15}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Convergence tests}{16}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Power series}{21}{section.2.6}%
+\contentsline {chapter}{\chapternumberline {3}Functions}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Real-valued functions}{29}{section.3.1}%
+\contentsline {subsection}{Algebra of real-valued functions}{29}{section*.6}%
+\contentsline {section}{\numberline {3.2}Composition and inverse}{29}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Rational functions and their partial fraction expansions}{32}{section.3.3}%
+\contentsline {subsection}{The General Method}{32}{section*.7}%
+\contentsline {section}{\numberline {3.4}Infinite sets and cardinality}{35}{section.3.4}%
+\contentsline {subsection}{The Continuum Hypothesis}{36}{section*.9}%
+\contentsline {chapter}{\chapternumberline {4}Continuity \& differentiation}{39}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Reference Books}{39}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Introduction}{39}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Limiting values of functions}{39}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Continuity}{42}{section.4.4}%
+\contentsline {subsection}{Importance of continuity}{45}{section*.12}%
+\contentsline {section}{\numberline {4.5}Differentiation}{46}{section.4.5}%
+\contentsline {subsection}{Higher derivatives}{47}{section*.13}%
+\contentsline {subsubsection}{Standard derivatives}{48}{section*.14}%
+\contentsline {section}{\numberline {4.6}Properties of the derivative}{51}{section.4.6}%
+\contentsline {subsection}{Linear approximations and associated errors}{52}{section*.15}%
+\contentsline {subsection}{Derivatives of inverse functions}{54}{section*.16}%
+\contentsline {subsection}{Parametric differentiation}{55}{section*.17}%
+\contentsline {subsection}{Implicit differentiation}{57}{section*.18}%
+\contentsline {subsection}{Logarithmic differentiation}{57}{section*.19}%
+\contentsline {subsection}{Applications of differentiation}{57}{section*.20}%
+\contentsline {section}{\numberline {4.7}Taylor series and Maclaurin series}{58}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Stationary points of functions}{59}{section.4.8}%
+\contentsline {subsection}{Classification of stationary points using derivatives}{59}{section*.21}%
+\contentsline {section}{\numberline {4.9}Curve Sketching}{61}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Kinematics}{63}{section.4.10}%
+\contentsline {chapter}{Appendices}{69}{section*.22}%
+\contentsline {appendix}{\chapternumberline {A}A (very) brief look at number systems}{71}{appendix.A}%

@@ -1,0 +1,1 @@
+{"key":"build_command","value":["latexmk","-pdf","-f","-deps","-g","-bibtex","-synctex=1","-output-directory=/tmp/6e2c987d45f6f4717ea24509b20642220d03d2b1","-interaction=nonstopmode","MathematicsFundamentals.tex"]}
