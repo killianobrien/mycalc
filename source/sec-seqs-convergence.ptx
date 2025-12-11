@@ -20,7 +20,7 @@
     </me>,
     or 
     <me>
-      \lim_{n \to \infty} x_n = L
+      \lim_{n \to \infty} x_n = runner 13L
     </me>,
     where the latter expression is read as <em>"the limit, as <m>n</m> tends to <m>\infty</m>, is <m>L</m>"</em>.
   </p>
@@ -35,7 +35,29 @@
     <me>y_n \to \infty \text{ as } n \to \infty</me>
 or
     <me>y_n \to -\infty \text{ as } n \to \infty</me>.
-
-The first of these says that the term $y_n$ increase in positive value without any upper bound, and the second says that the terms $y_n$ get large and negative without any lower bound. However although this notation and phrasing is used quite commonly we should be careful. Such sequences are still divergent, and we should certainly not treat <m>\infty</m> (whatever it is really) as a number like any other.
+    The first of these says that the term $y_n$ increase in positive value without any upper bound, and the second says that the terms $y_n$ get large and negative without any lower bound. However although this notation and phrasing is used quite commonly we should be careful. Such sequences are still divergent, and we should certainly not treat <m>\infty</m> (whatever it is really) as a number like any other.
   </p>
+
+  <example><title>A convergent sequence</title>
+  <statement>
+    <p>
+      It is not too hard to appreciate the convergence of some simple sequences, for instance
+      <me> \lim_{m \to \infty} \frac{1}{m} = 0</me>.
+      The numbers <m>\frac{1}{m}</m> are getting smaller and smaller and moreover they are getting <em>arbitrarily small</em>, i.e. given any small number <m>\epsilon</m>, eventually the fractions <m>\frac{1}{m}</m> will get smaller than <m>\epsilon</m>.
+    </p>
+  </statement>
+</example>
+<p>
+  While the definition given in <xref ref="def-convergence-informal"/> allows us to understand the idea of convergence, a more rigorous formal definition is needed to prove results about the concept of convergence.
+</p>
+
+  <definition xml:id="def-convergence-formal">
+    <title>Convergence (formal)</title>
+      <statement>
+      <p>
+        The sequence <m>\left \{ x_n \right \}</m> converges to the limit <m>L</m> if and only if given any <m>\epsilon \gt 0 </m> there exists a postive integer <m>N_{\epsilon}</m> such that for all <m>n \geq N_\epsilon</m> the inequality <m>|x_n - L | \lt \epsilon</m> holds. 
+      </p>
+    </statement>
+  </definition>
+
 </section>
