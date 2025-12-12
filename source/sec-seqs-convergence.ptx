@@ -59,5 +59,35 @@ or
       </p>
     </statement>
   </definition>
+  <p>
+    This definition is important, and forms the basis of much of the following material on the theory of sequences. We shall be using the definition in two main ways.
+    <ol>
+      <li>
+        <p>
+          To prove that certain given sequences either do or do not converge to a given limit. 
+        </p>
+      </li>
+      <li>
+        <p>
+          To prove theorems about the convergence of sequences. 
+        </p>
+      </li>
+    </ol>
+    We will only do a few examples of type 1 work, and a lot more of type 2 work.
+  </p>
+
+  <p>
+    You should spend enough time thinking about this definition, and examining the way it is used in this chapter, to really get a feel for what it is saying and how it works. 
+  </p>
+
+  <p>
+    It is worth considering the compact form of the definition expressed in logical symbols, i.e. 
+    <me>\lim_{n \to \infty} x_n = L
+      \Leftrightarrow \forall \epsilon \gt 0 \,\,  \exists N \quad 
+      n \geq N \Rightarrow |x_n - L | \lt \epsilon
+      </me>.
+    
+  </p>
+
 
 </section>
