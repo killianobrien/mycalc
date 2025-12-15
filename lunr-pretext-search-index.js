@@ -1,15 +1,6 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "front-colophon",
-  "level": "1",
-  "url": "front-colophon.html",
-  "type": "Colophon",
-  "number": "",
-  "title": "Colophon",
-  "body": "  "
-},
-{
   "id": "ch-intro",
   "level": "1",
   "url": "ch-intro.html",
@@ -19,40 +10,139 @@ var ptx_lunr_docs = [
   "body": " Introduction   Text before the first section. With some inline mathematics . That looks nice.  And some displayed mathematics: .     "
 },
 {
-  "id": "sec-section-name",
+  "id": "sec-seqs-defs",
   "level": "1",
-  "url": "sec-section-name.html",
+  "url": "sec-seqs-defs.html",
   "type": "Section",
   "number": "2.1",
   "title": "Initial definitions",
-  "body": " Initial definitions   Sequence   A sequence is a list of elements, indexed by the positive integers.  In these notes we will almost exclusively be considering sequences of real numbers. But mathematicians could talk of sequences of any sort of mathematical object.  We can use a single letter, say, decorated with an index subscript, to denote the elements of a sequence, as in . This sequence could be denoted as a whole by the notation or just simply , if the indexing is understood.  Variations might be to use the non-negative integers for the indexing, so the first element of the sequence would be rather than . Or perhaps start the indexing at some other integer.    This definition will be sufficient for our purposes, but more formal versions are possible. Some authors would define a sequence of real numbers as a function , i.e. is the function from the index values to the corresponding sequence elements. So then the list\/sequence of elements would be . An advantage of this would be to integrate our definitions with the already existing concept of a mathematical function, and not have to rely on introducing a new concept of list .   Some example sequences  These examples and the other ones in this section show some basic sequences and different ways to use the notation for the sequence element and index.     The sequence of positive integers themselves, . We could denote this as , where the defining rule is simply, for  .    The Fibonacci sequence denoted , where the rule is , i.e. each element is the sum of the previous two elements. This type of definition for a sequence, where each element is defined in terms of previous elements, is called a recurrence relation.     The sequence of odd positive integers , denoted by , defined by the rule .    The sequence of prime numbers denoted by . Unfortunately there is no easy to state formula known for the prime. We can specify an algorithm to find it, and various asymptotic results exist that can approximate the value of it. It can be proved that there an infinite number of primes, so the indexing declaration is valid. See more on this in your Number Theory and Abstract Algebra module next year.      "
+  "body": " Initial definitions   Sequence   A sequence is a list of elements, indexed by the positive integers.  In these notes we will almost exclusively be considering sequences of real numbers. But mathematicians could talk of sequences of any sort of mathematical object.  We can use a single letter, say, decorated with an index subscript, to denote the elements of a sequence, as in . This sequence could be denoted as a whole by the notation or just simply , if the indexing is understood.  Variations might be to use the non-negative integers for the indexing, so the first element of the sequence would be rather than . Or perhaps start the indexing at some other integer.    This definition will be sufficient for our purposes, but more formal versions are possible. Some authors would define a sequence of real numbers as a function , i.e. is the function from the index values to the corresponding sequence elements. So then the list\/sequence of elements would be . An advantage of this would be to integrate our definitions with the already existing concept of a mathematical function, and not have to rely on introducing a new concept of list .   Some example sequences  These examples and the other ones in this section show some basic sequences and different ways to use the notation for the sequence element and index.     The sequence of positive integers themselves, . We could denote this as , where the defining rule is simply, for  .    The Fibonacci sequence denoted , where the rule is , i.e. each element is the sum of the previous two elements. This type of definition for a sequence, where each element is defined in terms of previous elements, is called a recurrence relation.     The sequence of odd positive integers , denoted by , defined by the rule .    The sequence of prime numbers denoted by . Unfortunately there is no easy to state formula known for the prime. We can specify an algorithm to find it, and various asymptotic results exist that can approximate the value of it. It can be proved that there an infinite number of primes, so the indexing declaration is valid. See more on this in your Number Theory and Abstract Algebra module next year.       Arithmetic sequences   An arithmetic sequence is one with a constant common difference between successive elements. So we can write such a sequence as , or , where , i.e. is the initial element and the common difference.     Geometric sequences   An geometric sequence is one with a constant common ratio between successive elements. So we can write such a sequence as , or , where , i.e. is the initial element and the common ratio.    Arithmetic and geometric sequences     The sequence of odd positive integers, is arithmetic. It is given by where .    The sequence of powers of , which begins is geometric. It is given by with initial element and common ratio .    A negative example. The sequence of reciprocals of the squares, , where is neither arithmetic nor geometric.    Are there any sequences that are both arithmetic and geometric?    Compound interest awarded on investments, or charged on loans, provide examples of geometric sequences. Suppose a bank overs a savings account with an annualy compounded interest rate of per year on an initial deposit of . Then the value, , of the deposit at the beginning of the year is given by .      "
 },
 {
   "id": "def-seq",
   "level": "2",
-  "url": "sec-section-name.html#def-seq",
+  "url": "sec-seqs-defs.html#def-seq",
   "type": "Definition",
   "number": "2.1.1",
   "title": "Sequence.",
   "body": " Sequence   A sequence is a list of elements, indexed by the positive integers.  In these notes we will almost exclusively be considering sequences of real numbers. But mathematicians could talk of sequences of any sort of mathematical object.  We can use a single letter, say, decorated with an index subscript, to denote the elements of a sequence, as in . This sequence could be denoted as a whole by the notation or just simply , if the indexing is understood.  Variations might be to use the non-negative integers for the indexing, so the first element of the sequence would be rather than . Or perhaps start the indexing at some other integer.   "
 },
 {
-  "id": "sec-section-name-4",
+  "id": "sec-seqs-defs-4",
   "level": "2",
-  "url": "sec-section-name.html#sec-section-name-4",
+  "url": "sec-seqs-defs.html#sec-seqs-defs-4",
   "type": "Example",
   "number": "2.1.2",
   "title": "Some example sequences.",
   "body": " Some example sequences  These examples and the other ones in this section show some basic sequences and different ways to use the notation for the sequence element and index.     The sequence of positive integers themselves, . We could denote this as , where the defining rule is simply, for  .    The Fibonacci sequence denoted , where the rule is , i.e. each element is the sum of the previous two elements. This type of definition for a sequence, where each element is defined in terms of previous elements, is called a recurrence relation.     The sequence of odd positive integers , denoted by , defined by the rule .    The sequence of prime numbers denoted by . Unfortunately there is no easy to state formula known for the prime. We can specify an algorithm to find it, and various asymptotic results exist that can approximate the value of it. It can be proved that there an infinite number of primes, so the indexing declaration is valid. See more on this in your Number Theory and Abstract Algebra module next year.     "
 },
 {
-  "id": "backmatter-2",
+  "id": "def-arithmetic",
+  "level": "2",
+  "url": "sec-seqs-defs.html#def-arithmetic",
+  "type": "Definition",
+  "number": "2.1.3",
+  "title": "Arithmetic sequences.",
+  "body": " Arithmetic sequences   An arithmetic sequence is one with a constant common difference between successive elements. So we can write such a sequence as , or , where , i.e. is the initial element and the common difference.   "
+},
+{
+  "id": "def-geometric",
+  "level": "2",
+  "url": "sec-seqs-defs.html#def-geometric",
+  "type": "Definition",
+  "number": "2.1.4",
+  "title": "Geometric sequences.",
+  "body": " Geometric sequences   An geometric sequence is one with a constant common ratio between successive elements. So we can write such a sequence as , or , where , i.e. is the initial element and the common ratio.   "
+},
+{
+  "id": "sec-seqs-defs-7",
+  "level": "2",
+  "url": "sec-seqs-defs.html#sec-seqs-defs-7",
+  "type": "Example",
+  "number": "2.1.5",
+  "title": "Arithmetic and geometric sequences.",
+  "body": "Arithmetic and geometric sequences     The sequence of odd positive integers, is arithmetic. It is given by where .    The sequence of powers of , which begins is geometric. It is given by with initial element and common ratio .    A negative example. The sequence of reciprocals of the squares, , where is neither arithmetic nor geometric.    Are there any sequences that are both arithmetic and geometric?    Compound interest awarded on investments, or charged on loans, provide examples of geometric sequences. Suppose a bank overs a savings account with an annualy compounded interest rate of per year on an initial deposit of . Then the value, , of the deposit at the beginning of the year is given by .     "
+},
+{
+  "id": "sec-seqs-mono",
   "level": "1",
-  "url": "backmatter-2.html",
-  "type": "Colophon",
-  "number": "",
-  "title": "Colophon",
-  "body": " This book was authored in PreTeXt .  "
+  "url": "sec-seqs-mono.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Monotonic and bounded sequences",
+  "body": " Monotonic and bounded sequences  Before considering the convergence of infinite sequences, we consider the possible increasing, decreasing and bounded behaviour of sequences.    An increasing sequence is one whose elements satisfy .  A decreasing sequence is one whose elements satisfy .  If the inequalities are strict inequalities then we would say the sequence is strictly increasing, or strictly decreasing, as appropriate. Or the inequalities might only hold true from some element onwards, in which case we would say the sequence is increasing\/decreasing from , as appropriate.  The term monotonic , refers to a sequence that is either increasing or decreasing. Similarly for strictly monotonic .    If one has a nice formula for a sequence then the quickest way to see of the sequence is monotonic might be to plot some elements of the sequence using a computer. There are many ways to do this. Here is a quick example of how to do this using Python and the Matplotlib library.   Here is an alternative way, and somewhat quicker, using the Sage language.   Investigating the first few elements of a sequence like this may provide evidence that a sequence is monotonic. However a more rigorous approach, that addresses all elements of the sequence, is needed if we want to formally prove that the sequence is monotonic. There are, at least, two approaches we can take to this. Suppose we are given a sequence and we wish to investigate its monotonic nature. By considering the difference or ratio of consecutive terms, and comparing this to or , we can draw conclusions about the monotonic nature of the sequence.   Consider the general difference, , between consecutive terms, and then compare this to , noting that and Of course, strictly increasing\/decreasing versions of these results hold if the inequalities are strict.    Provided the sequence elements are positive and never zero, consider the general ratio, , between consecutive terms, and then compare this to , noting that and Of course, strictly increasing\/decreasing versions of these results hold if the inequalities are strict.   Which approach to use might be based on personal preference or the particular form of the formula defining the sequence element.  An increasing, then decreasing sequence   Investigate the sequence defined by , and describe its increasing\/decreasing behaviour.    Consider the ratio of consecutive elements. . The quantity can be compared to . It is greater than for and less than for . So the sequence increases at first, but then decreases for all .     In the next section we will be developing the theory of convergence of infinite sequences, that phenomenon whereby the elements of an infinite sequence might get closer and closer to some limiting value, the further out alond the sequence once goes. Before introducing this concept, we define the bounded property of infinite sequences.  Bounded sequence   A sequence is bounded if and only if there exits a number such that for all the sequence elements satisfy . There are also weaker properties of being bounded above , i.e. , or bounded below , i.e. . The number is called the (upper\/lower) bound, as appropriate.    "
+},
+{
+  "id": "def-monotonic",
+  "level": "2",
+  "url": "sec-seqs-mono.html#def-monotonic",
+  "type": "Definition",
+  "number": "2.2.1",
+  "title": "",
+  "body": "  An increasing sequence is one whose elements satisfy .  A decreasing sequence is one whose elements satisfy .  If the inequalities are strict inequalities then we would say the sequence is strictly increasing, or strictly decreasing, as appropriate. Or the inequalities might only hold true from some element onwards, in which case we would say the sequence is increasing\/decreasing from , as appropriate.  The term monotonic , refers to a sequence that is either increasing or decreasing. Similarly for strictly monotonic .   "
+},
+{
+  "id": "sec-seqs-mono-9",
+  "level": "2",
+  "url": "sec-seqs-mono.html#sec-seqs-mono-9",
+  "type": "Example",
+  "number": "2.2.2",
+  "title": "An increasing, then decreasing sequence.",
+  "body": "An increasing, then decreasing sequence   Investigate the sequence defined by , and describe its increasing\/decreasing behaviour.    Consider the ratio of consecutive elements. . The quantity can be compared to . It is greater than for and less than for . So the sequence increases at first, but then decreases for all .    "
+},
+{
+  "id": "def-bounded",
+  "level": "2",
+  "url": "sec-seqs-mono.html#def-bounded",
+  "type": "Definition",
+  "number": "2.2.3",
+  "title": "Bounded sequence.",
+  "body": "Bounded sequence   A sequence is bounded if and only if there exits a number such that for all the sequence elements satisfy . There are also weaker properties of being bounded above , i.e. , or bounded below , i.e. . The number is called the (upper\/lower) bound, as appropriate.   "
+},
+{
+  "id": "sec-seqs-convergence",
+  "level": "1",
+  "url": "sec-seqs-convergence.html",
+  "type": "Section",
+  "number": "2.3",
+  "title": "Convergence",
+  "body": " Convergence  Introductory and motivational remarks.   Convergence (informal)   Let . A sequence converges to the limit if and only if as increases, the elements of the sequence get closer and closer to , or equivalently, the distance gets closer and closer to .  Other notation and language used to say that the sequence  converges to the limit is to say that tends to as tends to , or in symbolic form , or , where the latter expression is read as \"the limit, as tends to , is \" .  If a sequence is not convergent then we say that it is divergent .   Some sequences are divergent because their terms keep increasing in absolute value without any upper bound, in which case we can write or . The first of these says that the term $y_n$ increase in positive value without any upper bound, and the second says that the terms $y_n$ get large and negative without any lower bound. However although this notation and phrasing is used quite commonly we should be careful. Such sequences are still divergent, and we should certainly not treat (whatever it is really) as a number like any other.  A convergent sequence   It is not too hard to appreciate the convergence of some simple sequences, for instance . The numbers are getting smaller and smaller and moreover they are getting arbitrarily small , i.e. given any small number , eventually the fractions will get smaller than .    While the definition given in allows us to understand the idea of convergence, a more rigorous formal definition is needed to prove results about the concept of convergence.   Convergence (formal)   The sequence converges to the limit if and only if given any there exists a postive integer such that for all the inequality holds.    This definition is important, and forms the basis of much of the following material on the theory of sequences. We shall be using the definition in two main ways.   To prove that certain given sequences either do or do not converge to a given limit.    To prove theorems about the convergence of sequences.   We will only do a few examples of type 1 work, and a lot more of type 2 work.  You should spend enough time thinking about this definition, and examining the way it is used in this chapter, to really get a feel for what it is saying and how it works.  It is worth considering the compact form of the definition expressed in logical symbols, i.e. .  Think of ways to turn this into more colloquial English, while still retaining the mathematical precision needed. Something along the lines of:    For every given measure of closeness, , to the limit, , a point, , can be found so that the ALL the sequence elements after this point ( ) are within a distance of , i.e. .         Illustrating the formal definition of sequence convergence   "
+},
+{
+  "id": "def-convergence-informal",
+  "level": "2",
+  "url": "sec-seqs-convergence.html#def-convergence-informal",
+  "type": "Definition",
+  "number": "2.3.1",
+  "title": "Convergence (informal).",
+  "body": " Convergence (informal)   Let . A sequence converges to the limit if and only if as increases, the elements of the sequence get closer and closer to , or equivalently, the distance gets closer and closer to .  Other notation and language used to say that the sequence  converges to the limit is to say that tends to as tends to , or in symbolic form , or , where the latter expression is read as \"the limit, as tends to , is \" .  If a sequence is not convergent then we say that it is divergent .  "
+},
+{
+  "id": "sec-seqs-convergence-5",
+  "level": "2",
+  "url": "sec-seqs-convergence.html#sec-seqs-convergence-5",
+  "type": "Example",
+  "number": "2.3.2",
+  "title": "A convergent sequence.",
+  "body": "A convergent sequence   It is not too hard to appreciate the convergence of some simple sequences, for instance . The numbers are getting smaller and smaller and moreover they are getting arbitrarily small , i.e. given any small number , eventually the fractions will get smaller than .   "
+},
+{
+  "id": "def-convergence-formal",
+  "level": "2",
+  "url": "sec-seqs-convergence.html#def-convergence-formal",
+  "type": "Definition",
+  "number": "2.3.3",
+  "title": "Convergence (formal).",
+  "body": " Convergence (formal)   The sequence converges to the limit if and only if given any there exists a postive integer such that for all the inequality holds.   "
+},
+{
+  "id": "epsilonN",
+  "level": "2",
+  "url": "sec-seqs-convergence.html#epsilonN",
+  "type": "Figure",
+  "number": "2.3.4",
+  "title": "",
+  "body": "     Illustrating the formal definition of sequence convergence  "
 }
 ]
 
