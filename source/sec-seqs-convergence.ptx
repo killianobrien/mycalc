@@ -86,8 +86,27 @@ or
       \Leftrightarrow \forall \epsilon \gt 0 \,\,  \exists N \quad 
       n \geq N \Rightarrow |x_n - L | \lt \epsilon
       </me>.
-    
   </p>
 
+  <p>
+    Think of ways to turn this into more colloquial English, while still retaining the mathematical precision needed. Something along the lines of:
+  </p>
+  <blockquote>
+    <p>
+      <em>For every given measure of closeness, <m>\epsilon</m>, to the limit, <m>L</m>, a point, <m>N</m>, can be found so that the ALL the sequence elements after this point (<m> n \geq N</m>) are within a distance <m>\epsilon</m> of <m>L</m>, i.e. <m>|x_n - L | \lt \epsilon</m>.</em>
+    </p>
+  </blockquote>
+
+  <figure xml:id="epsilonN">
+    <image>
+      <shortdescription></shortdescription>
+      <sageplot>
+      L = [1/n for n in range(1,100)]
+      P = list_plot(L)
+      P
+      </sageplot>
+    </image>
+    <caption>Illustrating the formal definition of sequence convergence</caption>
+  </figure>
 
 </section>

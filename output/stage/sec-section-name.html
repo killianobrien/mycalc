@@ -79,7 +79,6 @@ window.MathJax = {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus">
-<meta property="book:author" content="Killian O'Brien">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -116,8 +115,8 @@ eBookConfig.enable_chatcodes =  false;
 </head>
 <body id="changeme" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Calculus</span> <span class="subtitle">Sequences, series, differentiation and integration</span></a></h1>
-<p class="byline">Killian O’Brien</p>
+<h1 class="heading"><a href="mycalc.html"><span class="title">Calculus</span> <span class="subtitle">Sequences, series, differentiation and integration</span></a></h1>
+<p class="byline"></p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
@@ -130,7 +129,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-chapter-title.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-title.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-chapter-title.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-title.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -140,13 +139,11 @@ eBookConfig.enable_chatcodes =  false;
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-chapter-title.html" class="internal"><span class="codenumber">2</span> <span class="title">Sequences</span></a></div>
 <ul class="structural toc-item-list contains-active"><li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-section-name.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Initial definitions</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-section-name"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Initial definitions</span>
@@ -245,9 +242,84 @@ a_j = 2j - 1\text{.}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-section-name-4-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 2.1.2: Some example sequences"><a href="#sec-section-name-4" title="Copy heading and permalink for Example 2.1.2: Some example sequences">🔗</a></div></article><div class="autopermalink" data-description="Section 2.1: Initial definitions"><a href="#sec-section-name" title="Copy heading and permalink for Section 2.1: Initial definitions">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 2.1.2: Some example sequences"><a href="#sec-section-name-4" title="Copy heading and permalink for Example 2.1.2: Some example sequences">🔗</a></div></article><article class="definition definition-like" id="def-arithmetic"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Arithmetic sequences.</span>
+</h3>
+<div class="para logical" id="def-arithmetic-2-1">
+<div class="para">An arithmetic sequence is one with a constant common difference between successive elements. So we can write such a sequence as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a, a+d, a+2d, a+3d, \dots\text{,}
+\end{equation*}
+</div>
+<div class="para">or <span class="process-math">\(\left \{ a_n \right \}_{n=1}^{\infty}\text{,}\)</span> where <span class="process-math">\(a_n = a+ (n-1)d\text{,}\)</span> i.e. <span class="process-math">\(a\)</span> is the initial element and <span class="process-math">\(d\)</span> the common difference.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-arithmetic-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.1.3: Arithmetic sequences"><a href="#def-arithmetic" title="Copy heading and permalink for Definition 2.1.3: Arithmetic sequences">🔗</a></div></article><article class="definition definition-like" id="def-geometric"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Geometric sequences.</span>
+</h3>
+<div class="para logical" id="def-geometric-2-1">
+<div class="para">An geometric sequence is one with a constant common ratio between successive elements. So we can write such a sequence as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a, ar, ar^{2}, ar^{3}, \dots\text{,}
+\end{equation*}
+</div>
+<div class="para">or <span class="process-math">\(\left \{ g_n \right \}_{n=1}^{\infty}\text{,}\)</span> where <span class="process-math">\(g_n = ar^{n-1}\text{,}\)</span> i.e. <span class="process-math">\(a\)</span> is the initial element and <span class="process-math">\(r\)</span> the common ratio.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-geometric-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.1.4: Geometric sequences"><a href="#def-geometric" title="Copy heading and permalink for Definition 2.1.4: Geometric sequences">🔗</a></div></article><article class="example example-like" id="sec-section-name-7"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Arithmetic and geometric sequences.</span>
+</h3>
+<div class="para logical" id="sec-section-name-7-2">
+<ol class="decimal" id="sec-section-name-7-2-1">
+<li id="sec-section-name-7-2-1-1">
+<div class="para" id="sec-section-name-7-2-1-1-1">The sequence of odd positive integers, <span class="process-math">\(1, 3, 5, 7, \dots\)</span> is arithmetic. It is given by <span class="process-math">\(\left \{ a_n \right \}_{n=1}^{\infty}\)</span> where <span class="process-math">\(a_n = 1 + (n-1)2 = 2n -1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-section-name-7-2-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-section-name-7-2-1-1" title="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec-section-name-7-2-1-2">
+<div class="para logical" id="sec-section-name-7-2-1-2-1">
+<div class="para">The sequence of powers of <span class="process-math">\(1/2\text{,}\)</span> which begins <span class="process-math">\(1, 1/2, 1/4, 1/8, \dots \)</span> is geometric. It is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h_n = \left ( \frac{1}{2} \right )^{n-1} = \frac{1}{2^{n-1}},
+\end{equation*}
+</div>
+<div class="para">with initial element <span class="process-math">\(1\)</span> and common ratio <span class="process-math">\(1/2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-section-name-7-2-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec-section-name-7-2-1-2" title="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec-section-name-7-2-1-3">
+<div class="para" id="sec-section-name-7-2-1-3-1">A negative example. The sequence of reciprocals of the squares, <span class="process-math">\(\left \{ s_n \right \}_{n=1}^{\infty}\text{,}\)</span> where <span class="process-math">\(s_n = 1/n^2\)</span> is neither arithmetic nor geometric.<div class="autopermalink" data-description="Paragraph"><a href="#sec-section-name-7-2-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec-section-name-7-2-1-3" title="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec-section-name-7-2-1-4">
+<div class="para" id="sec-section-name-7-2-1-4-1">Are there any sequences that are both arithmetic <em class="emphasis">and</em> geometric?<div class="autopermalink" data-description="Paragraph"><a href="#sec-section-name-7-2-1-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec-section-name-7-2-1-4" title="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="sec-section-name-7-2-1-5">
+<div class="para logical" id="sec-section-name-7-2-1-5-1">
+<div class="para">Compound interest awarded on investments, or charged on loans, provide examples of geometric sequences. Suppose a bank overs a savings account with an annualy compounded interest rate of <span class="process-math">\(r \%\)</span> per year on an initial deposit of <span class="process-math">\(£P\text{.}\)</span> Then the value, <span class="process-math">\(v_n\text{,}\)</span> of the deposit at the beginning of the <span class="process-math">\(n^{\text{th}}\)</span> year is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+v_n = P \left ( 1+ \frac{r}{100} \right )^{n-1}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-section-name-7-2-1-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#sec-section-name-7-2-1-5" title="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-section-name-7-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.1.5: Arithmetic and geometric sequences"><a href="#sec-section-name-7" title="Copy heading and permalink for Example 2.1.5: Arithmetic and geometric sequences">🔗</a></div></article><div class="autopermalink" data-description="Section 2.1: Initial definitions"><a href="#sec-section-name" title="Copy heading and permalink for Section 2.1: Initial definitions">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="ch-chapter-title.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-chapter-title.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
