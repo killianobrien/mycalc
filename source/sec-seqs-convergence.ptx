@@ -87,26 +87,105 @@ or
       n \geq N \Rightarrow |x_n - L | \lt \epsilon
       </me>.
   </p>
+  <exercise><title>Recalling the formal definition</title>
+  
+  
+    <statement>
+      <p>
+        Think of ways to turn this into more colloquial English, while still retaining the mathematical precision needed. One version is given in the answer below.
+      </p>
+    </statement>
+    <answer>
 
-  <p>
-    Think of ways to turn this into more colloquial English, while still retaining the mathematical precision needed. Something along the lines of:
-  </p>
-  <blockquote>
+          <blockquote>
     <p>
       <em>For every given measure of closeness, <m>\epsilon</m>, to the limit, <m>L</m>, a point, <m>N</m>, can be found so that the ALL the sequence elements after this point (<m> n \geq N</m>) are within a distance <m>\epsilon</m> of <m>L</m>, i.e. <m>|x_n - L | \lt \epsilon</m>.</em>
     </p>
   </blockquote>
 
-  <figure xml:id="epsilonN">
+    </answer>
+  </exercise>
+
+
+  <p>
+    The definition and the roles of the parameters in the definition can make more sense when one pictures a graphical plot of the sequence elements decorated with the definition parameters, as in <xref ref="fig-epsilonN"/>.
+  </p>
+  <figure xml:id="fig-epsilonN">
+     <caption>Illustrating the roles of <m>L</m>, <m>\epsilon</m> and <m>N</m> in the formal definition of sequence convergence</caption>
     <image>
       <shortdescription></shortdescription>
       <sageplot>
-      L = [1/n for n in range(1,100)]
-      P = list_plot(L)
+      xmax = 80
+      L = [(sin(0.7*n)*1/n+0.3) for n in range(1,xmax+1)]
+      LL = [x for x in zip(range(1,xmax+1),L)]
+      P = list_plot(LL, color='black', size = 5)
+      ep = 0.05
+      Bx = [0, xmax, xmax, 0]
+      By = [ep+0.3,ep+0.3,-ep+0.3,-ep+0.3]
+      B = [(x,y) for (x,y) in zip(Bx,By)]
+      P += polygon2d(B,color='pink', alpha=0.7)
+      P += text('$L$',(-6,0.3), color='black')
+      P += text('$L + \\epsilon$',(-4,ep+0.3), color='red')
+      P += text('$L - \\epsilon$',(-4,-ep+0.3), color='red')
+      P += line([(0,0.3),(xmax,0.3)], color='black', linestyle='--')
+      P += line([(26,0),(26,sin(0.5)+0.3)] ,color='green', linestyle='--')
+      P +=text('$N$',(26,-0.05), color='green')
+      #show(P, ymax=1, ymin = -0.3, aspect_ratio = xmax)
+      P.set_aspect_ratio(xmax)
       P
       </sageplot>
     </image>
-    <caption>Illustrating the formal definition of sequence convergence</caption>
+   
   </figure>
+  <p>
+    Think about the effect of varying the value of <m>\epsilon</m> in <xref ref="fig-epsilonN"/>. Decreasing <m>\epsilon</m> will narrow the band around the limit, while increasing <m>\epsilon</m> will widen the band around the limit. As the band narrows we will probably have to choose larger and larger values of <m>N</m> to satisfy the convergence definition. 
+  </p>
+  <p>
+    Let's return to the previous example to see the formal definition working. 
+    </p>
+  <example><title>A convergent sequence</title>
+  <statement>
+    <p>
+      <me> \lim_{n \to \infty} \frac{1}{n} = 0</me>.
+    </p>
+    <solution>
+      <p>
+        As this is our first example working with the formal definition we shall provide a lot of discussion and explanation in this solution. 
+      </p>
+      <p>
+        In the notation given in the formal definition, <xref ref="def-convergence-formal"/>, we have <m>x_n = 1/n</m> and <m>L=0</m> here. Since we have to demonstrate that, given <em>any</em> <m>\epsilon \gt 0</m>, there exits a value <m>N</m>, we should work with a general <m>\epsilon</m>, not any specific value. It is customary to do this by starting our argument with the following phrase.
+        </p>
+
+        <p>
+          Let <m>\epsilon \gt 0</m> be given. 
+        </p>
+
+        <p>
+          The <m>N</m> that we have to find is such that, if <m>n \geq N</m>, then <m>|x_n - L | \lt \epsilon </m>. So let us examine this inequality in more detail. 
+          <md>
+            <mrow> \amp  |x_n - L | \lt \epsilon ,</mrow>
+            <mrow>\Leftrightarrow \, \, \amp  \frac{1}{n} \lt \epsilon, </mrow>
+            <mrow>\Leftrightarrow \, \, \amp  n \gt \frac{1}{\epsilon}.</mrow>
+          </md>
+          </p>
+
+          <p>
+            So let us choose <m>N</m> to be any natural number satisfying <m>N \gt 1/\epsilon</m>. That such a number exists is due to the <em>Archimedean property</em> of the natural and real numbers, i.e. that there is no largest natural or real number.
+          </p>
+
+          <p>
+            Having chosen such a value for <m>N</m> we note that it now satisfies the property
+            <me>
+              n \geq N \Rightarrow n \gt \frac{1}{\epsilon} 
+              \Leftrightarrow  |x_n - L | \lt \epsilon 
+              </me>.
+          </p>
+          <p>
+            This shows that the formal definition of convergence is satisfied, and so we have proved that <m>1/n \to 0</m> as <m>n \to \infty</m>, as claimed. 
+          </p>
+
+    </solution>
+  </statement>
+</example>
 
 </section>
