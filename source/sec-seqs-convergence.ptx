@@ -20,7 +20,7 @@
     </me>,
     or 
     <me>
-      \lim_{n \to \infty} x_n = runner 13L
+      \lim_{n \to \infty} x_n = L
     </me>,
     where the latter expression is read as <em>"the limit, as <m>n</m> tends to <m>\infty</m>, is <m>L</m>"</em>.
   </p>
