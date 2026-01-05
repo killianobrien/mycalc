@@ -169,7 +169,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "Convergence properties",
-  "body": " Convergence properties  Introductory and motivational remarks.  "
+  "body": " Convergence properties  In this section we shall establish and discuss several properties of sequence convergence, i.e. common or general ways that convergent sequences behave, and how they interact with the operations of addition and multiplication that we can apply to sequences. Many of the ideas behind these properties will re-occur later in the context of the convergence of series, function values and properties of differentiation and integration.   Uniqueness of limits   If a sequence converges then its limit is unique, i.e. if and as , then .    Suppose that a sequence converges to limits . If we assume that and are distinct, i.e. that , then we can let . Since there exists an such that for every we have . Similarly, since there exists an such that for every we have .  We wish to make use of both of these inequalities simultaneously. So we set . Now for every we can say   This chain of relations has established that for all  But this last statement is a clear contradiction as a real number cannot be strictly less than itself.  So we conclude that the assumption that led to this conclusion must itself be false, i.e. that and are indeed the same. This proves the result. ◻    "
+},
+{
+  "id": "thm-seq-unique-limit",
+  "level": "2",
+  "url": "sec-seqs-convergence-properties.html#thm-seq-unique-limit",
+  "type": "Theorem",
+  "number": "2.4.1",
+  "title": "Uniqueness of limits.",
+  "body": " Uniqueness of limits   If a sequence converges then its limit is unique, i.e. if and as , then .    Suppose that a sequence converges to limits . If we assume that and are distinct, i.e. that , then we can let . Since there exists an such that for every we have . Similarly, since there exists an such that for every we have .  We wish to make use of both of these inequalities simultaneously. So we set . Now for every we can say   This chain of relations has established that for all  But this last statement is a clear contradiction as a real number cannot be strictly less than itself.  So we conclude that the assumption that led to this conclusion must itself be false, i.e. that and are indeed the same. This proves the result. ◻   "
 }
 ]
 
