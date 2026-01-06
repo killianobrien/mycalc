@@ -6,9 +6,11 @@
   <p>In this section we shall establish and discuss several properties of sequence convergence, i.e. common or general ways that convergent sequences behave, and how they interact with the operations of addition and multiplication that we can apply to sequences. Many of the ideas behind these properties will re-occur later in the context of the convergence of series, function values and properties of differentiation and integration.</p>
 
   <p>
-    The first result, <xref ref="thm-seq-unique-limit"/>,about the uniqueness of limits may seem obvious at first. But what if two different numbers were <em>extremely</em> close together on the number line - could a single sequence be getting closer and closer to both of them? The proof shows that this can not happen. It's a good first example of how the formal definition can be used to prove things about convergence itself.
+    The first result, <xref ref="thm-seq-unique-limit"/>, about the uniqueness of limits may seem obvious at first. But what if two different numbers were <em>extremely</em> close together on the number line - could a single sequence be getting closer and closer to both of them? The proof shows that this can not happen. It's a good first example of how the formal definition can be used to prove things about convergence itself.
     </p>
-    <note>
+    <note> <title>Proof by contradiction</title>
+    
+    
           <p>The proof is also a good demonstration of the logical principle of <term>proof by contradiction</term>. For the technique of proof-by-contradiction we make the assumption that the result we are trying to prove is in fact false. From this assumption we then derive a clear contradiction of something we already know to be true. The only way to resolve this then is to accept that the assumption we made is itself false, i.e that the result we are trying to prove is in fact true!
   </p>
 </note>
@@ -47,12 +49,32 @@
     </proof>
   </theorem>
   
- <note>
+ <note><title>Triangle inequality</title>
+ 
+ 
   <p>
-    The uniqueness proof used the <term>triangle inequality</term> The absolute value, |x|, of real numbers x satisfies the following property: for all real numbers x and y we have
+    The uniqueness proof used the <term>triangle inequality</term> The absolute value, <m>|x|</m>, of real numbers <m>x</m> satisfies the following property: for all real numbers <m>x</m> and <m>y</m> we have
     <me>| x + y | \leq |x| + |y|</me>.
-    This can be shown by considering the four possibilities for the positivity/negativity of x and y. Generalizations of the triangle inequality hold in many other geometric and algebraic settings (e.g. vector spaces).
+    This can be shown by considering the four possibilities for the positivity/negativity of x and y. Generalizations of the triangle inequality hold in many other geometric and algebraic settings (e.g. vector spaces). The name <em>triangle inequality</em> comes from the context of vector geometry where this property expresses the fact that a side length of a triangle is always less than (or equal to in the case of a triangle degenerated to a straight line) the sum of the lengths of the other two sides. 
   </p>
  </note>
+
+ <p>
+  The next result, <xref ref="thm-seq-convergent-bounded"/>, says that every convergent sequence is bounded. Again this is something that seems quite plausible at first perhaps, but whose proof requires careful handling of the maximum principle. 
+ </p>
+ <theorem xml:id="thm-seq-convergent-bounded">
+  <title>Convergent implies bounded</title>
+    <statement>
+    <p>
+      Every convergent sequence is bounded.
+    </p>
+  </statement>
+  <proof>
+    <p>
+      Consider a convergent sequence <m>\{x_n\}</m>. Suppose that <m>x_n \to x</m> as <m>n \to \infty</m>. We know there exists a positive integer <m>N</m> such that for all <m>n \geq N</m> we have <m>|x_n - x| &lt; 1</m>, this implies that for all <m>n \geq N</m> we have <m>|x_n| &lt; 1 + |x|</m>. This shows that the sequence is eventually bounded, i.e. after element <m>N</m>. But this just leaves a finite number of terms at the beginning to consider. So let <m>M = \max(|x_1|, |x_2|, \dots , |x_{N-1}|, 1+|x|)</m>. Then we can say that for all <m>n \geq 1</m> we have <m>|x_n| \leq M</m>, i.e. that the sequence is bounded.
+    </p>
+  </proof>
+ </theorem>
+ 
 
 </section>
