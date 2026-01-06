@@ -169,16 +169,34 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "Convergence properties",
-  "body": " Convergence properties  In this section we shall establish and discuss several properties of sequence convergence, i.e. common or general ways that convergent sequences behave, and how they interact with the operations of addition and multiplication that we can apply to sequences. Many of the ideas behind these properties will re-occur later in the context of the convergence of series, function values and properties of differentiation and integration.   Uniqueness of limits   If a sequence converges then its limit is unique, i.e. if and as , then .    Suppose that a sequence converges to limits . If we assume that and are distinct, i.e. that , then we can let . Since there exists an such that for every we have . Similarly, since there exists an such that for every we have .  We wish to make use of both of these inequalities simultaneously. So we set . Now for every we can say   This chain of relations has established that for all  But this last statement is a clear contradiction as a real number cannot be strictly less than itself.  So we conclude that the assumption that led to this conclusion must itself be false, i.e. that and are indeed the same. This proves the result. ◻    "
+  "body": " Convergence properties  In this section we shall establish and discuss several properties of sequence convergence, i.e. common or general ways that convergent sequences behave, and how they interact with the operations of addition and multiplication that we can apply to sequences. Many of the ideas behind these properties will re-occur later in the context of the convergence of series, function values and properties of differentiation and integration.  The first result, ,about the uniqueness of limits may seem obvious at first. But what if two different numbers were extremely close together on the number line - could a single sequence be getting closer and closer to both of them? The proof shows that this can not happen. It's a good first example of how the formal definition can be used to prove things about convergence itself.   The proof is also a good demonstration of the logical principle of proof by contradiction . For the technique of proof-by-contradiction we make the assumption that the result we are trying to prove is in fact false. From this assumption we then derive a clear contradiction of something we already know to be true. The only way to resolve this then is to accept that the assumption we made is itself false, i.e that the result we are trying to prove is in fact true!    Uniqueness of limits   If a sequence converges then its limit is unique, i.e. if and as , then .    Suppose that a sequence converges to limits . We use the technique of proof by contradiction. If we assume that and are distinct, i.e. that , then we can let . Since there exists an such that for every we have . Similarly, since there exists an such that for every we have .  We wish to make use of both of these inequalities simultaneously. So we set . Now for every we can say .  This chain of relations has established that for all  But this last statement is a clear contradiction as a real number cannot be strictly less than itself.  So we conclude that the assumption that led to this conclusion must itself be false, i.e. that and are indeed the same. This proves the result. ◻     The uniqueness proof used the triangle inequality The absolute value, |x|, of real numbers x satisfies the following property: for all real numbers x and y we have . This can be shown by considering the four possibilities for the positivity\/negativity of x and y. Generalizations of the triangle inequality hold in many other geometric and algebraic settings (e.g. vector spaces).   "
+},
+{
+  "id": "sec-seqs-convergence-properties-4",
+  "level": "2",
+  "url": "sec-seqs-convergence-properties.html#sec-seqs-convergence-properties-4",
+  "type": "Note",
+  "number": "2.4.1",
+  "title": "",
+  "body": " The proof is also a good demonstration of the logical principle of proof by contradiction . For the technique of proof-by-contradiction we make the assumption that the result we are trying to prove is in fact false. From this assumption we then derive a clear contradiction of something we already know to be true. The only way to resolve this then is to accept that the assumption we made is itself false, i.e that the result we are trying to prove is in fact true!  "
 },
 {
   "id": "thm-seq-unique-limit",
   "level": "2",
   "url": "sec-seqs-convergence-properties.html#thm-seq-unique-limit",
   "type": "Theorem",
-  "number": "2.4.1",
+  "number": "2.4.2",
   "title": "Uniqueness of limits.",
-  "body": " Uniqueness of limits   If a sequence converges then its limit is unique, i.e. if and as , then .    Suppose that a sequence converges to limits . If we assume that and are distinct, i.e. that , then we can let . Since there exists an such that for every we have . Similarly, since there exists an such that for every we have .  We wish to make use of both of these inequalities simultaneously. So we set . Now for every we can say   This chain of relations has established that for all  But this last statement is a clear contradiction as a real number cannot be strictly less than itself.  So we conclude that the assumption that led to this conclusion must itself be false, i.e. that and are indeed the same. This proves the result. ◻   "
+  "body": " Uniqueness of limits   If a sequence converges then its limit is unique, i.e. if and as , then .    Suppose that a sequence converges to limits . We use the technique of proof by contradiction. If we assume that and are distinct, i.e. that , then we can let . Since there exists an such that for every we have . Similarly, since there exists an such that for every we have .  We wish to make use of both of these inequalities simultaneously. So we set . Now for every we can say .  This chain of relations has established that for all  But this last statement is a clear contradiction as a real number cannot be strictly less than itself.  So we conclude that the assumption that led to this conclusion must itself be false, i.e. that and are indeed the same. This proves the result. ◻   "
+},
+{
+  "id": "sec-seqs-convergence-properties-6",
+  "level": "2",
+  "url": "sec-seqs-convergence-properties.html#sec-seqs-convergence-properties-6",
+  "type": "Note",
+  "number": "2.4.3",
+  "title": "",
+  "body": " The uniqueness proof used the triangle inequality The absolute value, |x|, of real numbers x satisfies the following property: for all real numbers x and y we have . This can be shown by considering the four possibilities for the positivity\/negativity of x and y. Generalizations of the triangle inequality hold in many other geometric and algebraic settings (e.g. vector spaces).  "
 }
 ]
 
