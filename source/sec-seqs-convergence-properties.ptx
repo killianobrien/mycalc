@@ -75,6 +75,20 @@
     </p>
   </proof>
  </theorem>
+
+ <note>
+  <title>Maximums (or minimums) of infinite sets</title>
+  <p>
+    Could we not have proved this theorem in one line? By setting the bound <m></m> to be the maximum absolute value of the sequence elements? Well actually it is not that simple. The maximum (or minimum) of a finite set of numbers is unproblematic - it is simply the largest (or smallest) of the numbers in the set. However care must be taken when considering the maximum (or minimum) of an infinite set, as the max or min may not exist. Consider the sequence <m>\left \{ a_n \right \}_{n=1}^\infty</m> where <m>a_n = 2^n</m>. This sequence has no maximum value!
+  </p>
+  
+ </note>
+ <note>
+  <title>Why <m>\epsilon =1?</m></title>
+<p>
+  There is nothing special about the use of <m>\epsilon = 1</m> in this proof that a convergent sequence is bounded. We could have used any strictly positive value. All that was needed was to separate the sequence elements into two sets, a finite set of sequence elements at the beginning of the sequence (that we can then take the maximum absolute value of), and then the infinite <em>tail</em> of the sequence that is bounded within the interval of radius <m>\epsilon</m> around the limit <m>x</m>.
+</p>  
+   </note>
  
 
 </section>
