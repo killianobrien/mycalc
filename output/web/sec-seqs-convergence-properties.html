@@ -244,7 +244,133 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="sec-seqs-convergence-properties-10-2">There is nothing special about the use of <span class="process-math">\(\epsilon = 1\)</span> in this proof that a convergent sequence is bounded. We could have used any strictly positive value. All that was needed was to separate the sequence elements into two sets, a finite set of sequence elements at the beginning of the sequence (that we can then take the maximum absolute value of), and then the infinite <em class="emphasis">tail</em> of the sequence that is bounded within the interval of radius <span class="process-math">\(\epsilon\)</span> around the limit <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-convergence-properties-10-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Note 2.4.6: Why \epsilon =1?"><a href="#sec-seqs-convergence-properties-10" title="Copy heading and permalink for Note 2.4.6: Why \epsilon =1?">🔗</a></div></article><div class="autopermalink" data-description="Section 2.4: Convergence properties"><a href="#sec-seqs-convergence-properties" title="Copy heading and permalink for Section 2.4: Convergence properties">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Note 2.4.6: Why \epsilon =1?"><a href="#sec-seqs-convergence-properties-10" title="Copy heading and permalink for Note 2.4.6: Why \epsilon =1?">🔗</a></div></article><div class="para" id="sec-seqs-convergence-properties-11">Knowing that a sequence is bounded and either increasing or decreasing is enough to guarantee that it converges.<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-convergence-properties-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-seq-monotone-convergence"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Monotone Convergence Theorem.</span>
+</h3>
+<div class="para" id="thm-seq-monotone-convergence-2-1">Every bounded monotonic sequence is convergent.<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-monotone-convergence-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.4.7: Monotone Convergence Theorem"><a href="#thm-seq-monotone-convergence" title="Copy heading and permalink for Theorem 2.4.7: Monotone Convergence Theorem">🔗</a></div></article><details id="thm-seq-monotone-convergence-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-seq-monotone-convergence-3-1">We shall not discuss the proof of this is in detail in this course. It essentially follows from the least-upper bound principle of the real numbers.<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-monotone-convergence-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.4.7.1"><a href="#thm-seq-monotone-convergence-3" title="Copy heading and permalink for Proof 2.4.7.1">🔗</a></div></article></details><div class="para" id="sec-seqs-convergence-properties-13">The next theorem describes how convergence interacts with the arithmetic operations of addition and multiplication that we can extend to sequences.<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-convergence-properties-13" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-seq-algebra"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Algebra of limits theorem.</span>
+</h3>
+<div class="para logical" id="thm-seq-algebra-2-1">
+<div class="para">Let <span class="process-math">\(\left \{ a_n \right \}\)</span> and <span class="process-math">\(\left \{ b_n \right \}\)</span> be two convergent sequences with</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{n \to \infty} a_n = a \text{ and } \lim_{n \to \infty} b_n = b .
+\end{equation*}
+</div>
+<div class="para">New sequences can be formed from the elements <span class="process-math">\(a_n\)</span> and <span class="process-math">\(b_n\)</span> using addition and multiplication. The following new sequences are all convergent and have the expected limits:</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="thm-seq-algebra-2-2">
+<ul class="disc" id="thm-seq-algebra-2-2-1">
+<li id="thm-seq-algebra-2-2-1-1">
+<div class="para logical" id="thm-seq-algebra-2-2-1-1-1">
+<div class="para"><dfn class="terminology">Linear Combinations:</dfn></div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{n \to \infty} \left (  \alpha a_n + \beta b_n \right )= \alpha a + \beta b,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\alpha, \beta \in \mathbb{R}, \, \alpha,\beta \neq 0\)</span> are any pair of non-zero coefficients,</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-2-2-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-seq-algebra-2-2-1-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="thm-seq-algebra-2-2-1-2">
+<div class="para logical" id="thm-seq-algebra-2-2-1-2-1">
+<div class="para"><dfn class="terminology">Products:</dfn></div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{n \to \infty} \left ( a_n b_n \right ) = ab,
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-2-2-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-seq-algebra-2-2-1-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="thm-seq-algebra-2-2-1-3">
+<div class="para logical" id="thm-seq-algebra-2-2-1-3-1">
+<div class="para">
+<dfn class="terminology">Quotients:</dfn> (assuming that <span class="process-math">\(b \neq 0\)</span> and for all <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(b_n \neq 0\)</span>)</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{n \to \infty} \left ( \frac{a_n}{b_n} \right ) = \frac{a}{b}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-2-2-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-seq-algebra-2-2-1-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.4.8: Algebra of limits theorem"><a href="#thm-seq-algebra" title="Copy heading and permalink for Theorem 2.4.8: Algebra of limits theorem">🔗</a></div></article><details id="thm-seq-algebra-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-seq-algebra-3-1">First we prove the linear combinations part.<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-seq-algebra-3-2">Assume that we have convergent sequences <span class="process-math">\(\{a_n\}\)</span> and <span class="process-math">\(\{b_n\}\)</span> with <span class="process-math">\(a_n \to a\)</span> and <span class="process-math">\(b_n \to b\text{.}\)</span> Let <span class="process-math">\(\alpha, \beta \in \mathbb{R}\text{.}\)</span> Let <span class="process-math">\(\epsilon &gt; 0\)</span> be given. Since both sequences are convergent we can say that there exists <span class="process-math">\(N_1\)</span> and <span class="process-math">\(N_2\)</span> such that for all <span class="process-math">\(n \geq N_1\)</span> we have <span class="process-math">\(|a_n - a| &lt; \frac{\epsilon}{2 |\alpha|}\text{,}\)</span> and that for all <span class="process-math">\(n \geq N_2\)</span> we have <span class="process-math">\(| b_n - b| &lt; \frac{\epsilon}{2 |\beta|}\text{.}\)</span> We wish to make use of both inequalities simultaneously so we let <span class="process-math">\(N = \max(N_1, N_2)\text{.}\)</span> Then for all <span class="process-math">\(n \geq N\)</span> we have<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-seq-algebra-3-3">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+| (\alpha a_n + \beta b_n)  - (\alpha a + \beta b) |
+&amp; = | \alpha (a_n - a) + \beta (b_n - b) | \\
+&amp;\leq | \alpha| |a_n - a| + |\beta | |b_n - b |, \\
+\hfill &amp; \text{ triangle inequality and factorising}\\
+&amp;&lt; |\alpha| \frac{\epsilon}{2 |\alpha|} + |\beta | \frac{\epsilon}{2 |\beta|}, \text{ from above}\\
+&amp; = \epsilon .
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-3-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-seq-algebra-3-4">From the above relations we can extract the required criterion for convergence, namely for all <span class="process-math">\(n \geq N\)</span> we have <span class="process-math">\(| (\alpha a_n + \beta b_n)  - (\alpha a + \beta b) | &lt; \epsilon\text{.}\)</span> This proves the linearity part of the theorem.<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-3-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-seq-algebra-3-5">Next we prove the products part.<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-3-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-seq-algebra-3-6">Suppose that <span class="process-math">\(a_n \to a\)</span> and <span class="process-math">\(b_n \to b\)</span> as before and that <span class="process-math">\(\epsilon &gt;0\)</span> is given.<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-3-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-seq-algebra-3-7">
+<div class="para">By convergence there exist positive integers <span class="process-math">\(N_1\)</span> and <span class="process-math">\(N_1\)</span> such that for all <span class="process-math">\(n \geq N_1\)</span> we have <span class="process-math">\(|a_n - a| &lt; \min\left ( \sqrt{\frac{\epsilon}{3}}, \frac{\epsilon}{3|b|} \right )\)</span> and for all <span class="process-math">\(n \geq N_2\)</span> we have <span class="process-math">\(|b_n - b| &lt; \min\left ( \sqrt{\frac{\epsilon}{3}}, \frac{\epsilon}{3|a|} \right )\text{.}\)</span> We wish to use both ineqaualties so we let <span class="process-math">\(N = \max(N_1, N_2)\)</span> and now for all <span class="process-math">\(n \geq N\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+|a_n b_n - ab | &amp; = | (a_n - a)(b_n - b) + b(a_n - a) + a(b_n - b)|\\
+&amp;\leq | (a_n - a)(b_n - b)| + |b||(a_n - a)| + |a||(b_n - b)|\\
+&amp;&lt; \sqrt{\frac{\epsilon}{3}}\sqrt{\frac{\epsilon}{3}}+ |b|\frac{\epsilon}{3|b|}
++ |a|\frac{\epsilon}{3|a|}\\
+&amp;= \epsilon
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">From the above relations we can extract the required criterion for convergence, namely for all <span class="process-math">\(n \geq N\)</span> we have <span class="process-math">\(| a_n b_n  -  a  b | &lt; \epsilon\text{.}\)</span> This proves the product part of the theorem.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-3-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-seq-algebra-3-8">Next we prove the quotients part. We will simplify matters by first proving a special case that if <span class="process-math">\(b_n \to b\)</span> (with <span class="process-math">\(b_n, b \neq 0\)</span>) then <span class="process-math">\(1/b_n \to 1/b\text{.}\)</span> Then the general quotient case can be derived from this special case and the product case, since we can re-express <span class="process-math">\(a_n / b_n\)</span> as <span class="process-math">\(a_n (1/b_n)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-3-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-seq-algebra-3-9">
+<div class="para">The relevant absolute value to examine is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left | \frac{1}{b_n} - \frac{1}{b} \right | = \left | \frac{b - b_n}{b_n b} \right | = \frac{1}{|b||b_n|} \left | b_n - b \right |.
+\end{equation*}
+</div>
+<div class="para">To ensure that this absolute value is less than <span class="process-math">\(\epsilon\)</span> we will have to arrange a lower bound for the denominator and a suitable upper bound for the numerator. By convergence there exists a positive integer <span class="process-math">\(N_1\)</span> such that for all <span class="process-math">\(n \geq N_1\)</span> we have <span class="process-math">\(|b_n - b| &lt; |b|/2\text{,}\)</span> which implies that <span class="process-math">\(|b_n| &gt; |b|/2\text{.}\)</span> Also by convergence, there exists a positive integer <span class="process-math">\(N_2\)</span> such that for all <span class="process-math">\(n \geq N_2\)</span> we have <span class="process-math">\(|b_n - b| &lt; \epsilon |b|^2 / 2\text{.}\)</span> So letting <span class="process-math">\(N = \max(N_1, N_2)\)</span> then for all <span class="process-math">\(n \geq N\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left | \frac{1}{b_n} - \frac{1}{b} \right |= \frac{1}{|b||b_n|} \left | b_n - b \right |
+&lt; \frac{2}{|b||b|} \frac{|b|^2}{2} \epsilon = \epsilon,
+\end{equation*}
+</div>
+<div class="para">which gives us the required inequality to conclude that <span class="process-math">\(1/b_n \to 1/b\)</span> as claimed. Together with the remarks above this proves the quotients part of the theorem.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-seq-algebra-3-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.4.8.1"><a href="#thm-seq-algebra-3" title="Copy heading and permalink for Proof 2.4.8.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 2.4: Convergence properties"><a href="#sec-seqs-convergence-properties" title="Copy heading and permalink for Section 2.4: Convergence properties">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-seqs-convergence.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>

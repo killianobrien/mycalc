@@ -89,6 +89,107 @@
   There is nothing special about the use of <m>\epsilon = 1</m> in this proof that a convergent sequence is bounded. We could have used any strictly positive value. All that was needed was to separate the sequence elements into two sets, a finite set of sequence elements at the beginning of the sequence (that we can then take the maximum absolute value of), and then the infinite <em>tail</em> of the sequence that is bounded within the interval of radius <m>\epsilon</m> around the limit <m>x</m>.
 </p>  
    </note>
+
+
+	<p>
+	Knowing that a sequence is bounded and either increasing or decreasing is enough to guarantee that it converges.
+	</p>
+
+  <theorem xml:id="thm-seq-monotone-convergence">
+    <title>Monotone Convergence Theorem</title>
+    <statement>
+      <p>
+        Every bounded monotonic sequence is convergent.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        We shall not discuss the proof of this is in detail in this course. It essentially follows from the least-upper bound principle of the real numbers.
+      </p>
+    </proof>
+  </theorem>
+  
+ <p>
+  The next theorem describes how convergence interacts with the arithmetic operations of addition and multiplication that we can extend to sequences. 
+ </p>
+
+ <theorem xml:id="thm-seq-algebra"><title>Algebra of limits theorem</title>
+   <statement>
+    <p>
+      Let <m>\left \{ a_n \right \}</m> and <m>\left \{ b_n \right \}</m> be two convergent sequences with <me>\lim_{n \to \infty} a_n = a \text{ and } \lim_{n \to \infty} b_n = b .</me> New sequences can be formed from the elements <m>a_n</m> and <m>b_n</m> using addition and multiplication. The following new sequences are all convergent and have the expected limits:
+    </p>
+    <p><ul>
+					<li>
+									<p>
+										<term>Linear Combinations:</term> <me>\lim_{n \to \infty} \left (  \alpha a_n + \beta b_n \right )= \alpha a + \beta b,</me> where <m>\alpha, \beta \in \mathbb{R}, \, \alpha,\beta \neq 0</m> are any pair of non-zero coefficients,
+									</p>
+					</li>
+
+					<li>
+									<p>
+										<term>Products:</term> <me>\lim_{n \to \infty} \left ( a_n b_n \right ) = ab,</me>
+									</p>
+					</li>
+
+					<li>
+									<p>
+										<term>Quotients:</term> (assuming that <m>b \neq 0</m> and for all <m>n</m>, <m>b_n \neq 0</m>) <me>\lim_{n \to \infty} \left ( \frac{a_n}{b_n} \right ) = \frac{a}{b}.</me>
+									</p>
+					</li>
+
+				</ul></p>
+  </statement>
+  <proof>
+    <p>
+      First we prove the linear combinations part.
+    </p>
+<p>
+					Assume that we have convergent sequences <m>\{a_n\}</m> and <m>\{b_n\}</m> with <m>a_n \to a</m> and <m>b_n \to b</m>. Let <m>\alpha, \beta \in \mathbb{R}</m>. Let <m>\epsilon &gt; 0</m> be given. Since both sequences are convergent we can say that there exists <m>N_1</m> and <m>N_2</m> such that for all <m>n \geq N_1</m> we have <m>|a_n - a| &lt; \frac{\epsilon}{2 |\alpha|}</m>, and that for all <m>n \geq N_2</m> we have <m>| b_n - b| &lt; \frac{\epsilon}{2 |\beta|}</m>. We wish to make use of both inequalities simultaneously so we let <m>N = \max(N_1, N_2)</m>. Then for all <m>n \geq N</m> we have
+				</p>
+
+				<p>
+					<me>\begin{aligned}
+| (\alpha a_n + \beta b_n)  - (\alpha a + \beta b) |
+&amp; = | \alpha (a_n - a) + \beta (b_n - b) | \\
+&amp;\leq | \alpha| |a_n - a| + |\beta | |b_n - b |, \\
+\hfill &amp; \text{ triangle inequality and factorising}\\
+&amp;&lt; |\alpha| \frac{\epsilon}{2 |\alpha|} + |\beta | \frac{\epsilon}{2 |\beta|}, \text{ from above}\\
+&amp; = \epsilon .
+\end{aligned}</me>
+				</p>
+
+				<p>
+					From the above relations we can extract the required criterion for convergence, namely for all <m>n \geq N</m> we have <m>| (\alpha a_n + \beta b_n)  - (\alpha a + \beta b) | &lt; \epsilon</m>. This proves the linearity part of the theorem.
+				</p>
+
+				<p>
+					Next we prove the products part.
+				</p>
+
+				<p>
+					Suppose that <m>a_n \to a</m> and <m>b_n \to b</m> as before and that <m>\epsilon &gt;0</m> is given.
+				</p>
+
+				<p>
+					By convergence there exist positive integers <m>N_1</m> and <m>N_1</m> such that for all <m>n \geq N_1</m> we have <m>|a_n - a| &lt; \min\left ( \sqrt{\frac{\epsilon}{3}}, \frac{\epsilon}{3|b|} \right )</m> and for all <m>n \geq N_2</m> we have <m>|b_n - b| &lt; \min\left ( \sqrt{\frac{\epsilon}{3}}, \frac{\epsilon}{3|a|} \right )</m>. We wish to use both ineqaualties so we let <m>N = \max(N_1, N_2)</m> and now for all <m>n \geq N</m> we have <me>\begin{aligned}
+|a_n b_n - ab | &amp; = | (a_n - a)(b_n - b) + b(a_n - a) + a(b_n - b)|\\
+&amp;\leq | (a_n - a)(b_n - b)| + |b||(a_n - a)| + |a||(b_n - b)|\\
+&amp;&lt; \sqrt{\frac{\epsilon}{3}}\sqrt{\frac{\epsilon}{3}}+ |b|\frac{\epsilon}{3|b|}
++ |a|\frac{\epsilon}{3|a|}\\
+&amp;= \epsilon
+\end{aligned}</me> From the above relations we can extract the required criterion for convergence, namely for all <m>n \geq N</m> we have <m>| a_n b_n  -  a  b | &lt; \epsilon</m>. This proves the product part of the theorem.
+				</p>
+
+				<p>
+					Next we prove the quotients part. We will simplify matters by first proving a special case that if <m>b_n \to b</m> (with <m>b_n, b \neq 0</m>) then <m>1/b_n \to 1/b</m>. Then the general quotient case can be derived from this special case and the product case, since we can re-express <m>a_n / b_n</m> as <m>a_n (1/b_n)</m>.
+				</p>
+
+				<p>
+					The relevant absolute value to examine is <me>\left | \frac{1}{b_n} - \frac{1}{b} \right | = \left | \frac{b - b_n}{b_n b} \right | = \frac{1}{|b||b_n|} \left | b_n - b \right |.</me> To ensure that this absolute value is less than <m>\epsilon</m> we will have to arrange a lower bound for the denominator and a suitable upper bound for the numerator. By convergence there exists a positive integer <m>N_1</m> such that for all <m>n \geq N_1</m> we have <m>|b_n - b| &lt; |b|/2</m>, which implies that <m>|b_n| &gt; |b|/2</m>. Also by convergence, there exists a positive integer <m>N_2</m> such that for all <m>n \geq N_2</m> we have <m>|b_n - b| &lt; \epsilon |b|^2 / 2</m>. So letting <m>N = \max(N_1, N_2)</m> then for all <m>n \geq N</m> we have <me>\left | \frac{1}{b_n} - \frac{1}{b} \right |= \frac{1}{|b||b_n|} \left | b_n - b \right |
+&lt; \frac{2}{|b||b|} \frac{|b|^2}{2} \epsilon = \epsilon,</me> which gives us the required inequality to conclude that <m>1/b_n \to 1/b</m> as claimed. Together with the remarks above this proves the quotients part of the theorem.
+				</p>
+  </proof>
+ </theorem>
  
 
 </section>
