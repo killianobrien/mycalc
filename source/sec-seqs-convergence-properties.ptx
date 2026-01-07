@@ -191,5 +191,35 @@
   </proof>
  </theorem>
  
+ <note>
+  <p>The proof of the algebra of limits theorem exploits the formal definition of convergence in various ways depending on the context. In each case, what guides the particular choice of <m>\epsilon</m> value for the known convergence of <m>a_n</m> or <m>b_n</m> is the desire to achieve the appropriate inequality in the end of the form 
+  <me> \left | \text{sequence element} - \text{limit} \right |
+    \lt \epsilon </me>.
+    Study the three cases carefully and work to an understanding of why the various values of <m>\epsilon</m> were chosen. </p>
+ </note>
+
+ 				<p>
+					The algebra of limits theorem can allow us to find the limits of sequences that are formed from sequences with known convergence properties. By referring to the theorem we can provide rigorous arguments to justify the limit of the sequence in question, based on limits of simpler sequences.
+				</p>
+
+  <example>
+    <title>Applying the algebra of limits theorem</title>
+    <statement>
+      <p>
+        Consider the sequence <m>\{ x_n \}_{n=1}^\infty</m> where <me>x_n = \frac{2}{3}\frac{2n^2 -n}{\left ( -3n^2 +2 \right )}.</me> By applying the various parts of the algebra of limits theorem we can see how to find the limit of this convergent sequence.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <me>\begin{aligned}
+\lim_{n \to \infty} x_n &amp;= \lim_{n \to \infty} \frac{2}{3}\frac{2n^2 -n}{\left ( -3n^2 +2 \right )} \\
+&amp;= \frac{2}{3} \lim_{n \to \infty} \frac{2 - \frac{1}{n}}{\left ( -3 + \frac{2}{n^2} \right )}, \quad \text{linearity} \\
+&amp;= \frac{2}{3} \frac{\lim\limits_{n \to \infty} \left (2 - \frac{1}{n} \right )}{\lim\limits_{n \to \infty} \left ( -3 + \frac{2}{n^2} \right )}, \quad \text{quotient rule}\\
+&amp;= \frac{2}{3} \left ( \frac{2}{-3} \right ), \quad \text{linearity and known convergence of $\frac{1}{n}$ and $\frac{1}{n^2}$} \\
+&amp; = \frac{-4}{9}
+\end{aligned}</me>.
+      </p>
+    </solution>
+  </example>
 
 </section>
