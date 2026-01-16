@@ -260,6 +260,15 @@ var ptx_lunr_docs = [
   "number": "1.5",
   "title": "Sequence exercises",
   "body": " Sequence exercises    Write down the first five terms of the sequence where is given by                          For each of the sequences in question 1 above write down a simplified expression for the term .    Determine whether the sequence is increasing or decreasing, where is given by     ,     ,     ,     .      Consider the sequence determined by the following rules for . Which ones are convergent? Determine the limit if one exists. Hint: l’Hospital’s rule can be used for the first two.     ,     ,     ,     ,           Use the Monotone Convergence Theorem to prove that the sequence converges where     Prove that the sequence is divergent, where Hint: Show that the sequence is unbounded.    Consider the general arithmetic sequence where . Let denote the sum of the first elements of the sequence . Obtain a formula for in terms of . Hint: Consider the quantity as the sum of with itself in the reverse order .    Consider the general geometric sequence where . Let denote the sum of the first elements of the sequence . Obtain a formula for in terms of . Hint: Consider the quantity .    Using the algebra of sequences theorem find the limit of the following convergent sequences.     where      where .    Point out carefully the places where the theorem is being used.    Consider the function where When Newton’s method for root finding is applied to the sequence is produced where is defined by the recurrence relation Newton’s method claims that should converge to , the root of . Use the algebra of sequences theorem to prove that: if has a non-zero limit then that limit equals .    Investigate the long term behavior of the following sequences, i.e. are they increasing or decreasing, do they converge or diverge, are they bounded or unbounded?                          "
+},
+{
+  "id": "ch-series",
+  "level": "1",
+  "url": "ch-series.html",
+  "type": "Chapter",
+  "number": "2",
+  "title": "Series",
+  "body": " Series   In this chapter we build on the concepts we developed in the sequences chapter and apply them to series. We will look at the concept of the convergence of an infinite series and results that give various conditions for their convergence or divergence. Two important uses of series are in functions expansions (such as Taylor series) and the definition of the Riemann integral.     "
 }
 ]
 

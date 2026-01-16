@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-series" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Series</title>
+
+  <introduction>
+
+		<p>
+			In this chapter we build on the concepts we developed in the sequences chapter and apply them to series. We will look at the concept of the convergence of an infinite series and results that give various conditions for their convergence or divergence. Two important uses of series are in functions expansions (such as Taylor series) and the definition of the Riemann integral.
+		</p>
+  </introduction>
+
+  <!-- include sections -->
+  <!-- <xi:include href="sec-series-definitions" /> -->
+</chapter>
