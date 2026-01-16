@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-seqs-exercises">
+  <title>Sequence exercises</title>
+  <p><ol>
+				<li>
+							<p>
+								Write down the first five terms of the sequence <m>\{ x_n \}_{n=1}^\infty</m> where <m>x_n</m> is given by
+							</p>
+				
+							<p><ol>
+								<li>
+											<p>
+												<m>x_n = 2^{n-1},</m>
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<m>x_n = \frac{2n}{2n-1},</m>
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<m>x_n = (-1)^n \frac{n^2}{n!},</m>
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<m>x_n = \cos{\frac{n\pi}{4}}.</m>
+											</p>
+								</li>
+				
+							</ol></p>
+				</li>
+
+				<li>
+							<p>
+								For each of the sequences in question 1 above write down a simplified expression for the term <m>x_{2m+3}</m>.
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Determine whether the sequence <m>\{ x_n \}_{n=1}^\infty</m> is increasing or decreasing, where <m>x_n</m> is given by
+							</p>
+				
+							<p><ol>
+								<li>
+											<p>
+												<m>x_n = \frac{n}{2n+1}</m>,
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<m>x_n = \frac{10^n}{(2n)!}</m>,
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<m>x_n = \frac{e^n}{(n+1)!}</m>,
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<m>x_n = \frac{n}{2^n}</m>.
+											</p>
+								</li>
+				
+							</ol></p>
+				</li>
+
+				<li>
+							<p>
+								Consider the sequence <m>\{ x_n \}_{n=1}^\infty</m> determined by the following rules for <m>x_n</m>. Which ones are convergent? Determine the limit if one exists. Hint: l’Hospital’s rule can be used for the first two.
+							</p>
+				
+							<p><ol>
+								<li>
+											<p>
+												<m>x_n = \frac{\text{ln } n}{2n}</m>,
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<m>x_n = n^2 e^{-n}</m>,
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<m>x_n = \frac{(n+1)(n+2)}{2n^2}</m>,
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<m>x_n = \frac{2n^3}{n^2 - 1}</m>,
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<m>x_n = \left (1 - \frac{1}{2^n} \right ) .</m>
+											</p>
+								</li>
+				
+							</ol></p>
+				</li>
+
+				<li>
+							<p>
+								Use the Monotone Convergence Theorem to prove that the sequence <m>\{ r_n\}</m> converges where <me>r_n = \frac{\prod\limits_{m=0}^{n} (2m+1)}{\prod\limits_{m=0}^n (2m+2)}
+				= \frac{1 \cdot 3 \cdot 5 \cdot \dots \cdot (2n+1)}{2 \cdot 4 \cdot 6 \cdot \dots \cdot (2n+2)}.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Prove that the sequence <m>\{ a_n\}</m> is divergent, where <me>a_n = \frac{n!}{2^n} .</me> Hint: Show that the sequence is unbounded.
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Consider the general arithmetic sequence <m>\{ x_n \}_{n=1}^\infty</m> where <m>x_n = a + (n-1)d</m>. Let <m>S_m</m> denote the sum of the first <m>m</m> elements of the sequence <m>\{ x_n \}</m>. Obtain a formula for <m>S_m</m> in terms of <m>a,d,m</m>. Hint: Consider the quantity <m>2S_m</m> as the sum of <m>S_m</m> with itself in the <em>reverse order</em>.
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Consider the general geometric sequence <m>\{ x_n \}_{n=1}^\infty</m> where <m>x_n = ar^{n-1}</m>. Let <m>S_m</m> denote the sum of the first <m>m</m> elements of the sequence <m>\{ x_n \}</m>. Obtain a formula for <m>S_m</m> in terms of <m>a,r,m</m>. Hint: Consider the quantity <m>S_m - rS_m</m>.
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Using the algebra of sequences theorem find the limit of the following convergent sequences.
+							</p>
+				
+							<p><ol>
+								<li>
+											<p>
+												<m>\{a_n\}</m> where <m>a_n = \frac{(2n + 1) (n-2)}{n^3 + 2},</m>
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<m>\{ b_n \}</m> where <m>b_n = \frac{2}{7n^2} - \frac{3n}{n^2} + \frac{2n}{7n+1}</m>.
+											</p>
+								</li>
+				
+							</ol></p>
+				
+							<p>
+								Point out carefully the places where the theorem is being used.
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Consider the function <m>f</m> where <me>f(x) = x^3 - 2 .</me> When Newton’s method for root finding is applied to <m>f</m> the sequence <m>\{ c_n \}</m> is produced where <m>c_n</m> is defined by the recurrence relation <me>\begin{aligned}
+				c_1 &amp; = 1 ,\\
+				c_{n+1} &amp;= \frac{2}{3} c_n + \frac{2}{3 c_n^2}.
+				\end{aligned}</me> Newton’s method claims that <m>\{ c_n \}</m> should converge to <m>2^{\frac{1}{3}}</m>, the root of <m>f</m>. Use the algebra of sequences theorem to prove that: if <m>\{ c_n \}</m> has a non-zero limit then that limit equals <m>2^{\frac{1}{3}}</m>.
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Investigate the long term behavior of the following sequences, i.e. are they increasing or decreasing, do they converge or diverge, are they bounded or unbounded?
+							</p>
+				
+							<p><ol>
+								<li>
+											<p>
+												<me>\left \{ \frac{1}{\sqrt{n^2 + 1} - \sqrt{n}} \right \}_{n=1}^\infty ,</me>
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<me>\left \{ \frac{ \cos{n}}{n} \  \right \}_{n=1}^\infty ,</me>
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<me>\left \{ \sqrt[n]{ n } \right \}_{n=1}^\infty ,</me>
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<me>\left \{ n \cos{\left ( \frac{\pi}{2n} \right )} \right \}_{n=1}^\infty .</me>
+											</p>
+								</li>
+				
+							</ol></p>
+				</li>
+
+			</ol></p>
+</section>

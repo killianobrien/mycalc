@@ -116,7 +116,7 @@
  <theorem xml:id="thm-seq-algebra"><title>Algebra of limits theorem</title>
    <statement>
     <p>
-      Let <m>\left \{ a_n \right \}</m> and <m>\left \{ b_n \right \}</m> be two convergent sequences with <me>\lim_{n \to \infty} a_n = a \text{ and } \lim_{n \to \infty} b_n = b .</me> New sequences can be formed from the elements <m>a_n</m> and <m>b_n</m> using addition and multiplication. The following new sequences are all convergent and have the expected limits:
+      Let <m>\left \{ a_n \right \}</m> and <m>\left \{ b_n \right \}</m> be two convergent sequences with <me>\lim_{n \to \infty} a_n = a \text{ and } \lim_{n \to \infty} b_n = b </me>, where <m>a,b \in \R</m> and <m>a,b \neq 0</m>. New sequences can be formed from the elements <m>a_n</m> and <m>b_n</m> using addition and multiplication. The following new sequences are all convergent and have the expected limits:
     </p>
     <p><ul>
 					<li>
