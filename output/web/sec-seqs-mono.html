@@ -179,26 +179,23 @@ sagecell.makeSagecell({
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-chapter-title.html" class="internal"><span class="codenumber">2</span> <span class="title">Sequences</span></a></div>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active"><li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Sequences</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Initial definitions</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence-properties.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Convergence properties</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-exercises.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Sequence exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Initial definitions</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence-properties.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Convergence properties</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-exercises.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Sequence exercises</span></a></div></li>
 </ul>
-</li>
-</ul></nav></div>
+</li></ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-seqs-mono"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Monotonic and bounded sequences</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Monotonic and bounded sequences</span>
 </h2>
 <div class="para" id="sec-seqs-mono-2">Before considering the <em class="emphasis">convergence</em> of infinite sequences, we consider the possible increasing, decreasing and bounded behaviour of sequences.<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-monotonic"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="def-monotonic-1-1">
 <div class="para">An increasing sequence <span class="process-math">\(\left \{ x_n \right \}\)</span> is one whose elements satisfy</div>
@@ -219,7 +216,7 @@ y_1 \geq y_2 \geq y_3 \geq \dots\text{.}
 </div> <div class="para" id="def-monotonic-1-3">If the inequalities are strict inequalities then we would say the sequence is strictly increasing, or strictly decreasing, as appropriate. Or the inequalities might only hold true from some element <span class="process-math">\(x_k\)</span> onwards, in which case we would say the sequence is increasing/decreasing <em class="emphasis">from <span class="process-math">\(k\)</span></em>, as appropriate.<div class="autopermalink" data-description="Paragraph"><a href="#def-monotonic-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="def-monotonic-1-4">The term <em class="emphasis">monotonic</em>, refers to a sequence that is either increasing or decreasing. Similarly for <em class="emphasis">strictly monotonic</em>.<div class="autopermalink" data-description="Paragraph"><a href="#def-monotonic-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.2.1"><a href="#def-monotonic" title="Copy heading and permalink for Definition 2.2.1">🔗</a></div></article><div class="para" id="sec-seqs-mono-4">If one has a nice formula for a sequence then the quickest way to see of the sequence is monotonic might be to plot some elements of the sequence using a computer. There are many ways to do this. Here is a quick example of how to do this using Python and the Matplotlib library.<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 1.2.1"><a href="#def-monotonic" title="Copy heading and permalink for Definition 1.2.1">🔗</a></div></article><div class="para" id="sec-seqs-mono-4">If one has a nice formula for a sequence then the quickest way to see of the sequence is monotonic might be to plot some elements of the sequence using a computer. There are many ways to do this. Here is a quick example of how to do this using Python and the Matplotlib library.<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div id="sec-seqs-mono-5" class="ptx-sagecell sagecell-python"><script type="text/x-sage">import matplotlib.pyplot as plt
 S = [(n**2 + 2)/2**n for n in range(1,50)]
@@ -283,7 +280,7 @@ list_plot(S)
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="sec-seqs-mono-9"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">An increasing, then decreasing sequence.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">An increasing, then decreasing sequence.</span>
 </h3>
 <div class="para logical" id="sec-seqs-mono-9-2-1">
 <div class="para">Investigate the sequence <span class="process-math">\(\left \{ a_m \right \}_{m=1}^\infty\)</span> defined by</div>
@@ -311,12 +308,12 @@ a_m = \frac{5^m}{m!}\text{,}
 <div id="sec-seqs-mono-9-3-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">S = [5^n / factorial(n) for n in range(0,20)]
 list_plot(S)
 </script></div>
-<div class="autopermalink" data-description="Solution 2.2.2.1"><a href="#sec-seqs-mono-9-3" title="Copy heading and permalink for Solution 2.2.2.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 1.2.2.1"><a href="#sec-seqs-mono-9-3" title="Copy heading and permalink for Solution 1.2.2.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 2.2.2: An increasing, then decreasing sequence"><a href="#sec-seqs-mono-9" title="Copy heading and permalink for Example 2.2.2: An increasing, then decreasing sequence">🔗</a></div></article><div class="para" id="sec-seqs-mono-10">In the next section we will be developing the theory of <em class="emphasis">convergence</em> of infinite sequences, that phenomenon whereby the elements of an infinite sequence might get closer and closer to some limiting value, the further out alond the sequence once goes. Before introducing this concept, we define the bounded property of infinite sequences.<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-10" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 1.2.2: An increasing, then decreasing sequence"><a href="#sec-seqs-mono-9" title="Copy heading and permalink for Example 1.2.2: An increasing, then decreasing sequence">🔗</a></div></article><div class="para" id="sec-seqs-mono-10">In the next section we will be developing the theory of <em class="emphasis">convergence</em> of infinite sequences, that phenomenon whereby the elements of an infinite sequence might get closer and closer to some limiting value, the further out alond the sequence once goes. Before introducing this concept, we define the bounded property of infinite sequences.<div class="autopermalink" data-description="Paragraph"><a href="#sec-seqs-mono-10" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-bounded"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Bounded sequence.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Bounded sequence.</span>
 </h3>
 <div class="para logical" id="def-bounded-2-1">
 <div class="para">A sequence <span class="process-math">\(\left \{ x_n \right \}\)</span> is bounded if and only if there exits a number <span class="process-math">\(M\)</span> such that for all <span class="process-math">\(n\)</span> the sequence elements satisfy</div>
@@ -340,7 +337,7 @@ x_n \gt M\text{.}
 <div class="para">The number <span class="process-math">\(M\)</span> is called the (upper/lower) bound, as appropriate.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-bounded-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.2.3: Bounded sequence"><a href="#def-bounded" title="Copy heading and permalink for Definition 2.2.3: Bounded sequence">🔗</a></div></article><div class="autopermalink" data-description="Section 2.2: Monotonic and bounded sequences"><a href="#sec-seqs-mono" title="Copy heading and permalink for Section 2.2: Monotonic and bounded sequences">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Definition 1.2.3: Bounded sequence"><a href="#def-bounded" title="Copy heading and permalink for Definition 1.2.3: Bounded sequence">🔗</a></div></article><div class="autopermalink" data-description="Section 1.2: Monotonic and bounded sequences"><a href="#sec-seqs-mono" title="Copy heading and permalink for Section 1.2: Monotonic and bounded sequences">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-seqs-defs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-seqs-convergence.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
