@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-series-definitions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Basic definitions</title>
+
+	<p>
+		A series is the name given to the concept/object where we take a sequence of terms and add them all together term by term.
+	</p>
+
+  <definition xml:id="def-series"><title>Series</title>
+    <statement>
+      <p>
+        A series is the sum of the terms of a sequence.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+				We can represent series using addition and subtraction signs as in <me>1 - 2 + 3 - 4 + 5 - 6 + 7 - 8 + 9 - 10 ,</me> or using the sigma notation (<m>\Sigma</m> is the capital Greek letter sigma) as in <me>\sum_{k=1}^{10} \left ( -1 \right )^{k-1} \, k.</me> A series can contain a finite number of terms as in <me>\sum_{n=1}^N x_n \text{ or equivalently } x_1 + x_2 + \dots + x_N,</me> or an infinite number of terms as in, <me>\sum_{n=1}^\infty x_n \text{ or equivalently } x_1 + x_2 + \dots .</me> If a series contains only a finite number of terms then the series will sum to a finite value (assuming, as we are here, that the terms of the series are all finite quantities). If a series has an infinite number of terms then the series may or may not sum to a finite value. The precise definition of <em>summing to a finite value</em> is given by the following. First we define what is meant by the partial sums of an infinite series
+			</p>
+
+  <definition xml:id="def-partial-sums"><title>Partial sums</title>
+    <statement>
+      <p>
+        Consider an infinite series <m>\sum_{n=1}^\infty x_n</m>. The <m>k^{\text{th}}</m>-partial sum, <m>S_k</m>, of the series is the finite series <me>S_k = \sum_{n=1}^k x_n = x_1 + x_2 + \dots + x_k .</me>
+      </p>
+    </statement>
+  </definition>
+</section>

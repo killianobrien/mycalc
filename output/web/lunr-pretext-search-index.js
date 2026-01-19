@@ -262,13 +262,94 @@ var ptx_lunr_docs = [
   "body": " Sequence exercises    Write down the first five terms of the sequence where is given by                          For each of the sequences in question 1 above write down a simplified expression for the term .    Determine whether the sequence is increasing or decreasing, where is given by     ,     ,     ,     .      Consider the sequence determined by the following rules for . Which ones are convergent? Determine the limit if one exists. Hint: l’Hospital’s rule can be used for the first two.     ,     ,     ,     ,           Use the Monotone Convergence Theorem to prove that the sequence converges where     Prove that the sequence is divergent, where Hint: Show that the sequence is unbounded.    Consider the general arithmetic sequence where . Let denote the sum of the first elements of the sequence . Obtain a formula for in terms of . Hint: Consider the quantity as the sum of with itself in the reverse order .    Consider the general geometric sequence where . Let denote the sum of the first elements of the sequence . Obtain a formula for in terms of . Hint: Consider the quantity .    Using the algebra of sequences theorem find the limit of the following convergent sequences.     where      where .    Point out carefully the places where the theorem is being used.    Consider the function where When Newton’s method for root finding is applied to the sequence is produced where is defined by the recurrence relation Newton’s method claims that should converge to , the root of . Use the algebra of sequences theorem to prove that: if has a non-zero limit then that limit equals .    Investigate the long term behavior of the following sequences, i.e. are they increasing or decreasing, do they converge or diverge, are they bounded or unbounded?                          "
 },
 {
-  "id": "ch-series",
+  "id": "sec-series-definitions",
   "level": "1",
-  "url": "ch-series.html",
-  "type": "Chapter",
-  "number": "2",
-  "title": "Series",
-  "body": " Series   In this chapter we build on the concepts we developed in the sequences chapter and apply them to series. We will look at the concept of the convergence of an infinite series and results that give various conditions for their convergence or divergence. Two important uses of series are in functions expansions (such as Taylor series) and the definition of the Riemann integral.     "
+  "url": "sec-series-definitions.html",
+  "type": "Section",
+  "number": "2.1",
+  "title": "Basic definitions",
+  "body": " Basic definitions  A series is the name given to the concept\/object where we take a sequence of terms and add them all together term by term.  Series   A series is the sum of the terms of a sequence.    We can represent series using addition and subtraction signs as in or using the sigma notation ( is the capital Greek letter sigma) as in A series can contain a finite number of terms as in or an infinite number of terms as in, If a series contains only a finite number of terms then the series will sum to a finite value (assuming, as we are here, that the terms of the series are all finite quantities). If a series has an infinite number of terms then the series may or may not sum to a finite value. The precise definition of summing to a finite value is given by the following. First we define what is meant by the partial sums of an infinite series  Partial sums   Consider an infinite series . The -partial sum, , of the series is the finite series     "
+},
+{
+  "id": "def-series",
+  "level": "2",
+  "url": "sec-series-definitions.html#def-series",
+  "type": "Definition",
+  "number": "2.1.1",
+  "title": "Series.",
+  "body": "Series   A series is the sum of the terms of a sequence.   "
+},
+{
+  "id": "def-partial-sums",
+  "level": "2",
+  "url": "sec-series-definitions.html#def-partial-sums",
+  "type": "Definition",
+  "number": "2.1.2",
+  "title": "Partial sums.",
+  "body": "Partial sums   Consider an infinite series . The -partial sum, , of the series is the finite series    "
+},
+{
+  "id": "sec-series-convergence",
+  "level": "1",
+  "url": "sec-series-convergence.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Convergence",
+  "body": " Convergence  Convergence for series   The series converges to the limit (or sum) if the sequence of its partial sums, , is a convergent sequence and If this is the case then we can simply write   A series is divergent if the sequence of its partial sums is a divergent sequence.    It is not hard to think of examples of divergent series.  A divergent series   Consider the series This series is clearly divergent as the partial sums are increasing without any upper bound, and so cannot form a convergent sequence (see theorem ).    However it is not so obvious that convergent series exist (beyond the trivial example of a series where the terms are all zero after some point).  A convergent series   Consider the series The convergence of this series can be appreciated when we interpret the terms as measuring the size of step taken along a line. We see that the partial sums of the series get closer and closer to 1, but never go beyond 1. Indeed the series does converge to 1. This can be proved using the partial sum formula for a geometric series and making use of the algebra of sequences theorem.    This example shows that it is possible to have an infinite number of terms and yet for them still to sum to a finite value. This happens because the terms are getting smaller and smaller, the terms themselves are converging to zero, when viewed as sequence. However this type of behaviour does not guarantee convergence for a series, as the next example shows.   The harmonic series   Consider the series The terms of this series are indeed converging to zero, but yet the series does not converge. It increases without any upper bound, albeit very slowly. This fact can be proved with the aid of a grouping argument.    For series that contain a mixture of positive and negative terms it is helpful to be able to refer to the convergence of the related series of absolute values.   Absolute convergence   A series is absolutely convergent if the series of absolute values, , is a convergent series. If the series is convergent but the series of absolute values, , is divergent, then the original series is said to be conditionally convergent.    The importance of conditional convergence is given by the following result which we shall quote without proof.    If a series is absolutely convergent then it is convergent. Moreover, the terms of an absolutely convergent series can be rearranged in any way and the resulting series will still converge to the same sum. However if a series is conditionally convergent then rearranging its terms can yield a series which sums to a different value.    Omitted.    "
+},
+{
+  "id": "def-series-convergence",
+  "level": "2",
+  "url": "sec-series-convergence.html#def-series-convergence",
+  "type": "Definition",
+  "number": "2.2.1",
+  "title": "Convergence for series.",
+  "body": "Convergence for series   The series converges to the limit (or sum) if the sequence of its partial sums, , is a convergent sequence and If this is the case then we can simply write   A series is divergent if the sequence of its partial sums is a divergent sequence.   "
+},
+{
+  "id": "sec-series-convergence-4",
+  "level": "2",
+  "url": "sec-series-convergence.html#sec-series-convergence-4",
+  "type": "Example",
+  "number": "2.2.2",
+  "title": "A divergent series.",
+  "body": "A divergent series   Consider the series This series is clearly divergent as the partial sums are increasing without any upper bound, and so cannot form a convergent sequence (see theorem ).   "
+},
+{
+  "id": "sec-series-convergence-6",
+  "level": "2",
+  "url": "sec-series-convergence.html#sec-series-convergence-6",
+  "type": "Example",
+  "number": "2.2.3",
+  "title": "A convergent series.",
+  "body": "A convergent series   Consider the series The convergence of this series can be appreciated when we interpret the terms as measuring the size of step taken along a line. We see that the partial sums of the series get closer and closer to 1, but never go beyond 1. Indeed the series does converge to 1. This can be proved using the partial sum formula for a geometric series and making use of the algebra of sequences theorem.   "
+},
+{
+  "id": "sec-series-convergence-8",
+  "level": "2",
+  "url": "sec-series-convergence.html#sec-series-convergence-8",
+  "type": "Example",
+  "number": "2.2.4",
+  "title": "The harmonic series.",
+  "body": " The harmonic series   Consider the series The terms of this series are indeed converging to zero, but yet the series does not converge. It increases without any upper bound, albeit very slowly. This fact can be proved with the aid of a grouping argument.   "
+},
+{
+  "id": "def-series-absolute-convergence",
+  "level": "2",
+  "url": "sec-series-convergence.html#def-series-absolute-convergence",
+  "type": "Definition",
+  "number": "2.2.5",
+  "title": "Absolute convergence.",
+  "body": " Absolute convergence   A series is absolutely convergent if the series of absolute values, , is a convergent series. If the series is convergent but the series of absolute values, , is divergent, then the original series is said to be conditionally convergent.   "
+},
+{
+  "id": "thm-series-absolute-convergence",
+  "level": "2",
+  "url": "sec-series-convergence.html#thm-series-absolute-convergence",
+  "type": "Theorem",
+  "number": "2.2.6",
+  "title": "",
+  "body": "  If a series is absolutely convergent then it is convergent. Moreover, the terms of an absolutely convergent series can be rearranged in any way and the resulting series will still converge to the same sum. However if a series is conditionally convergent then rearranging its terms can yield a series which sums to a different value.    Omitted.   "
 }
 ]
 

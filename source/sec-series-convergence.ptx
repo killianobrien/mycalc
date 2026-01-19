@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-series-convergence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Convergence</title>
+
+  <definition xml:id="def-series-convergence"><title>Convergence for series</title>  
+    <statement>
+      <p>
+        The series <m>\sum_{n=1}^\infty x_n</m> converges to the limit (or sum) <m>L</m> if the sequence of its partial sums, <m>\{ S_k \}_{k=1}^\infty</m>, is a convergent sequence and <me>\lim_{k \to \infty} S_k = L .</me> If this is the case then we can simply write <me>\sum_{n=1}^\infty x_n = L .</me>
+      </p>
+      <p>
+				A series is divergent if the sequence of its partial sums is a divergent sequence.
+			</p>
+    </statement>
+  </definition>
+  <p>
+				It is not hard to think of examples of divergent series.
+			</p>
+  <example><title>A divergent series</title>
+      <statement>
+      <p>
+        Consider the series <me>\sum_{m=1}^\infty m .</me> This series is clearly divergent as the partial sums are increasing without any upper bound, and so cannot form a convergent sequence (see theorem <xref ref="thm-seq-convergent-bounded" />).
+			</p>
+    </statement>
+  </example>
+  <p>
+				However it is not so obvious that convergent series exist (beyond the trivial example of a series where the terms are all zero after some point).
+			</p>
+      <example><title>A convergent series</title>
+        <statement>
+          <p>
+            Consider the series <me>\sum_{m=1}^\infty \left ( \frac{1}{2} \right )^m .</me> The convergence of this series can be appreciated when we interpret the terms as measuring the size of step taken along a line. We see that the partial sums of the series get closer and closer to 1, but never go beyond 1. Indeed the series does converge to 1. This can be proved using the partial sum formula for a geometric series and making use of the algebra of sequences theorem.
+          </p>
+        </statement>
+      </example>
+
+      <p>
+				This example shows that it is possible to have an infinite number of terms and yet for them still to sum to a finite value. This happens because the terms are getting smaller and smaller, the terms themselves are converging to zero, when viewed as sequence. However this type of behaviour does not guarantee convergence for a series, as the next example shows.
+			</p>
+
+      <example>
+        <title>The harmonic series</title>
+        <statement>
+          <p>
+            Consider the series <me>\sum_{m=1}^\infty \frac{1}{m}.</me> The terms of this series are indeed converging to zero, but yet the series does not converge. It increases without any upper bound, albeit very slowly. This fact can be proved with the aid of a grouping argument.
+          </p>
+        </statement>
+        
+      </example>
+
+      <p>
+				For series that contain a mixture of positive and negative terms it is helpful to be able to refer to the convergence of the related series of absolute values.
+			</p>
+
+      <definition xml:id="def-series-absolute-convergence">
+        <title>Absolute convergence</title>
+        <statement>
+          <p>
+            A series <m>\sum_{m=1}^\infty a_m</m> is absolutely convergent if the series of absolute values, <m>\sum _{m=1}^\infty \left | a_m \right |</m>, is a convergent series. If the series <m>\sum_{m=1}^\infty a_m</m> is convergent but the series of absolute values, <m>\sum _{m=1}^\infty \left | a_m \right |</m>, is divergent, then the original series is said to be conditionally convergent.
+          </p>
+        </statement>
+      </definition>
+      <p>
+				The importance of conditional convergence is given by the following result which we shall quote without proof.
+			</p>
+      <theorem xml:id="thm-series-absolute-convergence">
+        <statement>
+          <p>
+            If a series is absolutely convergent then it is convergent. Moreover, the terms of an absolutely convergent series can be rearranged in any way and the resulting series will still converge to the same sum. However if a series is conditionally convergent then rearranging its terms can yield a series which sums to a different value.
+          </p>
+        </statement>
+        <proof>
+          <p>
+            Omitted.
+          </p>
+        </proof>
+      </theorem>
+      
+</section>
