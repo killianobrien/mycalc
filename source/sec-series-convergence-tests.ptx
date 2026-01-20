@@ -96,6 +96,14 @@
 				So if the original series and integral differ by a finite quantity <m>\gamma</m> then each converges if and only if the other does.</p>
         </proof>
       </theorem>
+
+      <remark>
+        <title>Euler-Mascheroni constant</title>
+        <p>
+          In the case where the function <m>f</m> is the reciprocal function <m>f(t) = 1/t</m>, the quantity <m>\gamma</m> is known as the Euler-Mascheroni constant, an important quantity in analysis and number theory where it occurs in many settings.  It is still not known whether $\gamma$ is irrational or not, though most would bet that it is.
+        </p>
+        
+      </remark>
       
 
 
