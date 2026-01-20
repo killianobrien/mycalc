@@ -75,5 +75,22 @@
           </p>
         </proof>
       </theorem>
-      
+        <paragraphs>
+    <title>Tails</title>
+    <p>
+				For an infinite series <me>\sum_{m=1}^\infty a_m = a_1 + a_2 + a_3 + a_4 + \dots</me> we note that the convergence or divergence of the series is not altered if some finite collection of the terms of the series are changed.
+			</p>
+
+			<p>
+				For suppose that we change <m>a_1</m> to <m>a_1 + \delta_1</m> and <m>a_2</m> to <m>a_2 + \delta_2</m>. If the original series is convergent, say <m>\sum a_m = A</m> then changing these values will mean the new series converges to <m>A+\delta_1+\delta_2</m>.
+			</p>
+
+			<p>
+				On the other hand if the series is divergent it is because the sequence of partial sums, <m>S_k = \sum_{m=1}^k a_m</m>, fails to converge. The partial sums, <m>S_k'</m>, of the new series, for <m>k \geq 3</m>, will satisfy <m>S_k' = S_k + \delta_1+\delta_2</m>, and so these too will still fail to converge.
+			</p>
+
+			<p>
+				Both of these arguments extend to any finite collection of terms. By a <em>tail</em> of the series <m>\sum_{m=1}^\infty a_m</m> we mean any series of the form <m>\sum_{m=M}^\infty a_m</m>, for some positive integer <m>M</m>, i.e. the original series less some finite collection of initial terms. If we can prove that some tail of the series is convergent, then so will the original series be convergent. Similarly, if we can show that some tail of the series is divergent, then so will the original series be divergent. These ideas occur in some of the proofs of the series convergence tests later in the chapter.
+			</p>
+</paragraphs>
 </section>
