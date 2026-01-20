@@ -45,7 +45,7 @@
 			<p>
 				A <em>geometric series</em> is, as the name suggests, the sum of the terms of a geometric sequence. The convergence of a geometric series can be determined using the following test.
 			</p>
-      <theorem xml:id="thm-geometric-series-test"><title>Geometric series test</title>
+      <theorem xml:id="thm-geometric-series-test"><title>Geometric Series Test</title>
         <statement>
           <p>
             The geometric series <m>\sum_{n=1}^\infty a r^{n-1}</m> converges trivially if <m>a=0</m>. If <m>a \neq 0</m> then it converges if and only if <m>|r| \lt 1</m>, in which case <me>\sum_{n=1}^\infty a r^{n-1} = \frac{a}{1-r} .</me>
@@ -75,7 +75,7 @@
         
       </figure>
       <theorem xml:id="thm-integral-test">
-        <title>Integral test</title>
+        <title>Integral Test</title>
         <statement>
           <p>
             Consider a series <m>\sum_{m=1}^\infty a_m</m> and suppose that there exists a continuous function <m>f</m> which has positive decreasing values and that <m>a_m = f(m)</m> for all <m>m \geq 1</m>. If the improper integral <me>\int_1^\infty f(t) \, dt = \lim_{T \to \infty} \, \int_1^T f(t) \, dt</me> exists and is finite, then the original series converges. If the improper integral above does not have a finite value then the original series diverges.
@@ -100,11 +100,94 @@
       <remark>
         <title>Euler-Mascheroni constant</title>
         <p>
-          In the case where the function <m>f</m> is the reciprocal function <m>f(t) = 1/t</m>, the quantity <m>\gamma</m> is known as the Euler-Mascheroni constant, an important quantity in analysis and number theory where it occurs in many settings.  It is still not known whether $\gamma$ is irrational or not, though most would bet that it is.
+          In the case where the function <m>f</m> is the reciprocal function <m>f(t) = 1/t</m>, the quantity <m>\gamma</m> is known as the Euler-Mascheroni constant, an important quantity in analysis and number theory where it occurs in many settings.  It is still not known whether the Euler-Mscheroni constant <m>\gamma</m> is irrational or not, though most would bet that it is.
         </p>
         
       </remark>
-      
+      <p>
+				There now follow two types of <em>comparison</em> test which assess the convergence of a given series by comparing its terms to the terms of a known convergent or divergent series.
+			</p>
+
+      <theorem xml:id="thm-comparison-standard">
+        <title>Standard Comparison Test</title>
+        <statement>
+          <p>
+            Suppose that <m>\sum_{m=1}^\infty a_m</m> is a series consisting of non-negative terms, i.e. for all <m>m</m>, <m>a_m \geq 0</m>, and that <m>\sum_{m=1}^\infty c_m</m> is a known convergent series of non-negative terms and <m>\sum_{m=1}^\infty d_m</m> is a known divergent series of non-negative terms. Then
+            <ul>
+				<li>
+							<p>
+								if for all <m>m \geq 1</m>, <m>a_m \leq c_m</m>, then <m>\sum_{m=1}^\infty a_m</m> is convergent,
+							</p>
+				</li>
+
+				<li>
+							<p>
+								if for all <m>m \geq 1</m>, <m>a_m \geq d_m</m>, then <m>\sum_{m=1}^\infty a_m</m> is divergent.
+							</p>
+				</li>
+
+			</ul>
+          </p>
+        </statement>
+        <proof>
+          <p>
+				We sketch the main idea of the proofs. Let <m>c</m> denote the sum of the convergent comparator series, i.e. <m>\sum_{m=1}^\infty c_m = c</m>. Then the partial sums <m>\sum_{m=1}^k c_m</m> of the series constitute an increasing sequence converging to <m>c</m>. Suppose that for all <m>m\geq 1</m> we have <m>a_m \leq c_m</m>. Since each partial sum <m>\sum_{m=1}^k a_m</m> is bounded above by <m>c</m> (as <m>c</m> is an upper-bound for the partial sum <m>\sum_{m=1}^k c_m</m>), these partial sums consitute an increasing sequence which is bounded above. Therefore, by the Monotone Convergence theorem <xref ref="thm-seq-monotone-convergence"/>, the sequence of partial sums <m>\sum_{m=1}^k a_m</m> is convergent as <m>k \to \infty</m>, and converges to a limit <m>a</m> which also satisfies <m>a \leq c</m>.
+			</p>
+
+			<p>
+				The partial sums, <m>\sum_{m=1}^k d_m</m>, of a divergent series of positive terms will constitute an unbounded increasing sequence. Suppose that for all <m>m \geq 1</m> we have <m>a_m \geq d_m</m>. Then the partial sums satisfy <me>\sum_{m=1}^k a_m \geq \sum_{m=1}^k d_m,</me> and hence the partial sums <m>\sum_{m=1}^k a_m</m> also form an increasing unbounded sequence, hence divergent.
+			</p>
+        </proof>
+      </theorem>
+
+      <remark>
+        <title>Good and bad behaviour</title>
+        <p>
+          A nice way to think about/remember this result is in terms of the good and bad behaviour shown by a series. A convergent series <m>\sum c_m</m> of positive terms converges because the terms <m>c_m</m> behave well (i.e. are small enough). If <m>a_m \leq c_m</m> then the terms <m>a_m</m> are behaving better and so <m>\sum a_m</m> also converges.
+        </p>
+        <p>
+          Similarly a divergent series <m>\sum d_m</m> diverges because its terms behave badly (i.e. they're too large), so if <m>a_m \geq d_m</m> then the terms <m>a_m</m> are behaving worse, and so <m>\sum a_m</m> also diverges.
+        </p>
+        
+      </remark>
+
+      <theorem xml:id="thm-comparison-limit">
+        <title>Limit Comparison Test</title>
+        <statement>
+          <p>
+            Suppose that <m>\sum_{m=1}^\infty a_m</m> is a series consisting of non-negative terms, i.e. for all <m>m</m>, <m>a_m \geq 0</m>, and that <m>\sum_{m=1}^\infty c_m</m> is a known convergent series of strictly positive terms (i.e. for all <m>m</m>, <m>c_m &gt; 0</m>) and <m>\sum_{m=1}^\infty d_m</m> is a known divergent series of strictly positive terms. Then
+            <ul>
+				<li>
+							<p>
+								if <m>\lim_{m \to \infty} \frac{a_m}{c_m} = L</m> and <m>0 \leq L &lt; \infty</m> then <m>\sum_{m=1}^\infty a_m</m> is convergent,
+							</p>
+				</li>
+
+				<li>
+							<p>
+								if <m>\lim_{m \to \infty} \frac{a_m}{d_m} = L</m> and <m>0 &lt; L \leq \infty</m> , then <m>\sum_{m=1}^\infty a_m</m> is divergent.
+							</p>
+				</li>
+			</ul>
+          </p>
+        </statement>
+        <proof>
+          <p>
+				This limit comparison test can be proved with the aid of the standard comparison test applied to a suitable tail of the series. First we prove the convergent case. By the convergence of the ratio <m>a_m/c_m</m> there exists a positive integer <m>M</m> such that for all <m>m \geq M</m> we have <m>|a_m/c_m - L|&lt;1</m>, hence <m>a_m/c_m &lt; L+1</m> and hence <m>a_m &lt; (L+1)c_m</m>. Therefore the standard comparison test says that the tail series <m>\sum_{m=M}^\infty a_m</m> converges and hence so does the original series <m>\sum_{m=1}^\infty a_m</m>.
+			</p>
+
+			<p>
+				The divergent case is handled in a similar manner. By the convergence of the ratio <m>a_m/d_m</m> there exists a positive integer <m>M</m> such that for all <m>m \geq M</m> we have <m>|a_m/d_m - L| &lt; L/2</m>, hence <m>a_m/d_m &gt; L/2</m> and hence <m>a_m &gt; (L/2)d_m</m>. Therefore the standard comparison test says that the tail series <m>\sum_{m=M}^\infty a_m</m> diverges and hence so does the original series <m>\sum_{m=1}^\infty a_m</m>.
+			</p>
+        </proof>
+      </theorem>
+      <remark>
+        <title>More good and bad behaviour</title>
+        <p>
+          Again this result can be boiled down to good/bad behaviour. If <m>\lim_{m \to \infty} a_m/x_m = L</m> then <em>eventually</em> <m>a_m</m> acts like a scalar multiple of <m>x_m</m>. So if <m>\sum x_m</m> behaves well (or badly), so does <m>\sum a_m$</m>
+        </p>
+        
+      </remark>
 
 
 
