@@ -93,4 +93,34 @@
 				Both of these arguments extend to any finite collection of terms. By a <em>tail</em> of the series <m>\sum_{m=1}^\infty a_m</m> we mean any series of the form <m>\sum_{m=M}^\infty a_m</m>, for some positive integer <m>M</m>, i.e. the original series less some finite collection of initial terms. If we can prove that some tail of the series is convergent, then so will the original series be convergent. Similarly, if we can show that some tail of the series is divergent, then so will the original series be divergent. These ideas occur in some of the proofs of the series convergence tests later in the chapter.
 			</p>
 </paragraphs>
+
+<theorem xml:id="thm-series-lin-combs">
+  <title>Linear combinations of series</title>  
+  <statement>
+    <p>
+      Suppose that we have two convergent series <m>\sum_{m=1}^\infty  a_m</m> and <m>\sum_{m=1}^\infty b_m</m> such that <me>\sum_{m=1}^\infty a_m = A , \text{ and } \sum_{m=1}^\infty b_m = B .</me> Then for any pair <m>\alpha, \beta \in \mathbb{R}</m> we have a new series <me>\sum_{m=1}^\infty \left ( \alpha a_m + \beta b_m \right ) ,</me> which is convergent and satisfies <me>\sum_{m=1}^\infty \left ( \alpha a_m + \beta b_m \right ) = \alpha A + \beta B.</me>
+    </p>
+  </statement>
+  <proof>
+<p>
+				This can be proved using the linearity property for convergence of sequences. We do not need to descend to <m>\epsilon, N</m> arguments but just use the definition for series convergence in terms of the partial sums.
+			</p>
+
+			<p>
+				Letting <m>A_k</m> and <m>B_k</m> denote the partial sums, i.e. <m>A_k = \sum_{n=1}^k a_n</m> and <m>B_k = \sum_{n=1}^k b_n</m> we make the following deductions. <me>\begin{aligned}
+\alpha A + \beta B &amp; = \alpha \lim_{k\to \infty}A_k + \beta \lim_{k\to \infty}B_k\\
+&amp;= \lim_{k \to \infty} \left ( \alpha A_k + \beta B_k \right ), \text{ by linearity of limits for sequences}\\
+&amp;= \lim_{k \to \infty} \left ( \alpha \sum_{n=1}^k a_n + \beta \sum_{n=1}^k b_n \right )\\
+&amp;= \lim_{k \to \infty} \sum_{n=1}^k \left ( \alpha  a_n + \beta  b_n \right ), \text{ manipulation of sum}\\
+&amp;=\sum_{n=1}^\infty \left ( \alpha a_n + \beta b_n \right ), \text{ by def. of series convergence}.
+\end{aligned}</me>
+			</p>
+  </proof>
+</theorem>
+<question>
+  <p>
+    Why was the presentation reversed here? In that we started with the claimed limit <m>\alpha A + \beta B</m> and worked our way towards <m>\sum_{n=1}^\infty \left ( \alpha a_n + \beta b_n \right )</m>?
+  </p>
+</question>
+
 </section>

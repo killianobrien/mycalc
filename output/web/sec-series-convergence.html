@@ -274,7 +274,53 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="sec-series-convergence-13-5">Both of these arguments extend to any finite collection of terms. By a <em class="emphasis">tail</em> of the series <span class="process-math">\(\sum_{m=1}^\infty a_m\)</span> we mean any series of the form <span class="process-math">\(\sum_{m=M}^\infty a_m\text{,}\)</span> for some positive integer <span class="process-math">\(M\text{,}\)</span> i.e. the original series less some finite collection of initial terms. If we can prove that some tail of the series is convergent, then so will the original series be convergent. Similarly, if we can show that some tail of the series is divergent, then so will the original series be divergent. These ideas occur in some of the proofs of the series convergence tests later in the chapter.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-13-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraphs: Tails"><a href="#sec-series-convergence-13" title="Copy heading and permalink for Paragraphs: Tails">🔗</a></div></section><div class="autopermalink" data-description="Section 2.2: Convergence"><a href="#sec-series-convergence" title="Copy heading and permalink for Section 2.2: Convergence">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Paragraphs: Tails"><a href="#sec-series-convergence-13" title="Copy heading and permalink for Paragraphs: Tails">🔗</a></div></section><article class="theorem theorem-like" id="thm-series-lin-combs"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Linear combinations of series.</span>
+</h3>
+<div class="para logical" id="thm-series-lin-combs-2-1">
+<div class="para">Suppose that we have two convergent series <span class="process-math">\(\sum_{m=1}^\infty  a_m\)</span> and <span class="process-math">\(\sum_{m=1}^\infty b_m\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{m=1}^\infty a_m = A , \text{ and } \sum_{m=1}^\infty b_m = B .
+\end{equation*}
+</div>
+<div class="para">Then for any pair <span class="process-math">\(\alpha, \beta \in \mathbb{R}\)</span> we have a new series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{m=1}^\infty \left ( \alpha a_m + \beta b_m \right ) ,
+\end{equation*}
+</div>
+<div class="para">which is convergent and satisfies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{m=1}^\infty \left ( \alpha a_m + \beta b_m \right ) = \alpha A + \beta B.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-series-lin-combs-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.2.7: Linear combinations of series"><a href="#thm-series-lin-combs" title="Copy heading and permalink for Theorem 2.2.7: Linear combinations of series">🔗</a></div></article><details id="thm-series-lin-combs-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-series-lin-combs-3-1">This can be proved using the linearity property for convergence of sequences. We do not need to descend to <span class="process-math">\(\epsilon, N\)</span> arguments but just use the definition for series convergence in terms of the partial sums.<div class="autopermalink" data-description="Paragraph"><a href="#thm-series-lin-combs-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-series-lin-combs-3-2">
+<div class="para">Letting <span class="process-math">\(A_k\)</span> and <span class="process-math">\(B_k\)</span> denote the partial sums, i.e. <span class="process-math">\(A_k = \sum_{n=1}^k a_n\)</span> and <span class="process-math">\(B_k = \sum_{n=1}^k b_n\)</span> we make the following deductions.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\alpha A + \beta B &amp; = \alpha \lim_{k\to \infty}A_k + \beta \lim_{k\to \infty}B_k\\
+&amp;= \lim_{k \to \infty} \left ( \alpha A_k + \beta B_k \right ), \text{ by linearity of limits for sequences}\\
+&amp;= \lim_{k \to \infty} \left ( \alpha \sum_{n=1}^k a_n + \beta \sum_{n=1}^k b_n \right )\\
+&amp;= \lim_{k \to \infty} \sum_{n=1}^k \left ( \alpha  a_n + \beta  b_n \right ), \text{ manipulation of sum}\\
+&amp;=\sum_{n=1}^\infty \left ( \alpha a_n + \beta b_n \right ), \text{ by def. of series convergence}.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-series-lin-combs-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.2.7.1"><a href="#thm-series-lin-combs-3" title="Copy heading and permalink for Proof 2.2.7.1">🔗</a></div></article></details><article class="question example-like" id="sec-series-convergence-15"><h3 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-series-convergence-15-1">Why was the presentation reversed here? In that we started with the claimed limit <span class="process-math">\(\alpha A + \beta B\)</span> and worked our way towards <span class="process-math">\(\sum_{n=1}^\infty \left ( \alpha a_n + \beta b_n \right )\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-15-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 2.2.8"><a href="#sec-series-convergence-15" title="Copy heading and permalink for Question 2.2.8">🔗</a></div></article><div class="autopermalink" data-description="Section 2.2: Convergence"><a href="#sec-series-convergence" title="Copy heading and permalink for Section 2.2: Convergence">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-series-definitions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
