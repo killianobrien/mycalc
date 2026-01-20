@@ -184,11 +184,13 @@
       <remark>
         <title>More good and bad behaviour</title>
         <p>
-          Again this result can be boiled down to good/bad behaviour. If <m>\lim_{m \to \infty} a_m/x_m = L</m> then <em>eventually</em> <m>a_m</m> acts like a scalar multiple of <m>x_m</m>. So if <m>\sum x_m</m> behaves well (or badly), so does <m>\sum a_m$</m>
+          Again this result can be boiled down to good/bad behaviour. If <m>\lim_{m \to \infty} a_m/x_m = L</m> then <em>eventually</em> <m>a_m</m> acts like a scalar multiple of <m>x_m</m>. So if <m>\sum x_m</m> behaves well (or badly), so does <m>\sum a_m</m>.
         </p>
         
       </remark>
-
+      <p>
+				The choice for the comparison series is often a geometric series or a <em>hyper-harmonic</em> series <me>\sum_{m=1}^\infty \frac{1}{m^p}</me> for some <m>p</m>. Using the integral test we can show that the hypermonic series converges when <m>p&gt;1</m> and diverges otherwise. The <em>alternating hyper-harmonic</em> series <me>\sum_{m=1}^\infty \frac{(-1)^n}{m^p}</me> converges absolutely when <m>p &gt; 1</m>, converges conditionally when <m>0 &lt; p \leq 1</m> and diverges otherwise.
+			</p>
 
 
 </section>
