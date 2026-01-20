@@ -192,5 +192,50 @@
 				The choice for the comparison series is often a geometric series or a <em>hyper-harmonic</em> series <me>\sum_{m=1}^\infty \frac{1}{m^p}</me> for some <m>p</m>. Using the integral test we can show that the hypermonic series converges when <m>p&gt;1</m> and diverges otherwise. The <em>alternating hyper-harmonic</em> series <me>\sum_{m=1}^\infty \frac{(-1)^n}{m^p}</me> converges absolutely when <m>p &gt; 1</m>, converges conditionally when <m>0 &lt; p \leq 1</m> and diverges otherwise.
 			</p>
 
+      <figure xml:id="fig-alternating-series">
+        <caption>The Alternating Series Test</caption>
+        <image>
+          <shortdescription></shortdescription>
+          <sageplot>
+        Q = Graphics()
+        var('m')
+        pointsize=30
+        extent = 80
+        a = [1/j for j in range(1,extent)]
+        A = [-1*a[0]]
+        for k in range(1,extent-1):
+            A.append(A[-1]+(-1)^k*a[k])
+        Q += point(((k,A[k]) for k in range(2,extent-1,2)),color='black')
+        Q += point(((k,A[k]) for k in range(1,extent-2,2)),color='gray')
+        Q
+        </sageplot> 
+        </image>
+        
+      </figure>
+      <theorem xml:id="thm-alternating-series">
+        <title>Alternating Series Test</title>
+        <statement>
+          <p>
+            Consider the alternating series <me>\sum_{m=1}^\infty (-1)^m a_m ,</me> where the <m>a_m</m> are all positive and decreasing, i.e. for all <m>m\geq 1</m>, <m>a_{m} \geq a_{m+1} \geq 0</m>. If <m>\lim_{m \to \infty} a_m = 0</m> then the original alternating series is convergent. But if <m>\lim_{m \to \infty} a_m \neq 0</m> then the alternating series is divergent.
+          </p>
+        </statement>
+        <proof>
+          <p>
+				We give a sketch of the main idea here. Consider a typical alternating series satisfying the conditions of the theorem. The partial sums, <m>A_k</m>, of such a series are shown plotted in figure <xref ref="fig-alternating-series" />
+			</p>
+
+
+
+			<p>
+				The partial sums are split into two subsequences, those of odd index, <m>A_1, A_3, A_5, \dots</m>, shown in grey, and those of even index, <m>A_2, A_4, A_6, \dots</m>, shown in black.
+			</p>
+
+			<p>
+				Due to the alternating nature of the series and the decreasing absolute value of the <em>step size</em>, i.e. the difference between each partial sum and the next, the odd subsequence of partial sums constitutes an increasing sequence which is bounded above. Similarly the even subsequence constitutes a decreasing sequence which is bounded below. By the Monotone Convergence Theorem each subsequence is convergent, i.e. <m>A_{2k} \to L_{\text{even}}</m> and <m>A_{2k + 1} \to L_{\text{odd}}</m> as <m>k \to \infty</m>. But since the <em>step size</em>, <m>|a_m|</m>, converges to zero, the difference between <m>L_{\text{even}}</m> and <m>L_{\text{odd}}</m> must be arbitrarily small, i.e. zero and hence <m>L_{\text{even}} = L_{\text{odd}}</m> and the complete sequence of partial sums is convergent to this limit, i.e. the series is convergent.
+			</p>
+        </proof>
+      </theorem>
+      
+
 
 </section>
