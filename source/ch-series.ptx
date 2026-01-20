@@ -13,5 +13,6 @@
   <!-- include sections -->
   <xi:include href="sec-series-definitions.ptx" />
   <xi:include href="sec-series-convergence.ptx" />
+  <xi:include href="sec-series-convergence-tests.ptx" />
 
 </chapter>

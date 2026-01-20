@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-series-convergence-tests" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Convergence tests</title>
+
+			<p>
+				We will introduce various tests that can be used to assess the convergence / divergence of a series.
+			</p>
+
+      <theorem xml:id="thm-general-term-test"><title>General Term Test</title>      
+        <statement>
+          <p>
+            If a sequence has a non-zero limit (or no limit at all) then the associated series will diverge. Equivalently, by forming the contra-positive we can quote this test as: If a series converges then the associated sequence of terms converges to zero. Symbolically these two statements are
+          <ul>
+				<li>
+							<p>
+								<em><me>\lim_{m \to \infty} a_m  \neq 0 \, \Rightarrow \, \sum_{m=1}^\infty a_m \text{ diverges,}</me></em>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								<em><me>\sum_{m=1}^\infty a_m \text{ converges} \, \Rightarrow \, \lim_{m \to \infty} a_m = 0.</me></em>
+							</p>
+				</li>
+
+			</ul></p>
+        </statement>
+        <proof>
+          <p>
+            Suppose that <m>\sum_{n=1}^\infty a_n</m> converges and let <m>A_k</m> denote the partial sum as before, i.e. <m>A_k \to a</m> as <m>k \to \infty</m>. Let <m>\epsilon &gt;0</m> be given. There exists a <m>K</m> such that for all <m>k \geq K</m> we have <m>\left | A_k - a \right | &lt; \epsilon / 2</m>. This implies that for all <m>k \geq K</m> we have <m>|A_k - A_{k+1} | = |a_{k+1}| &lt; \epsilon</m>, i.e. the sequence can be shown to be eventually arbitrarily close to zero. This is equivalent to the definition for <m>a_n \to 0</m> as <m>n \to \infty</m>. So this proves the second form of the theorem.
+          </p>
+        </proof>
+      </theorem>
+      <remark><title>Contrapositive</title>
+        <p>
+          We note the use of the contrapositive in the statement of the General Term Test.
+        The contrapositive of a statement <m>A \Rightarrow B</m> is the statement <m>\neg B \Rightarrow \neg A</m>. These two statements are <em>logically equivalent</em>, i.e. they both have the same truth value. If one is true then so is the other. If the result one is trying to prove take the form of an implication, then sometimes the contrapositive of the result may be easier to prove directly.
+        </p>
+      </remark>
+      <p>
+				But note that a series can still diverge even if the sequence of terms converges to zero. For example the <em>harmonic series</em>, <me>\sum_{m=1}^\infty \frac{1}{m} ,</me> diverges even though <m>\frac{1}{m} \to 0</m> as <m>m \to \infty</m>. The General Term Test gives no information about the behaviour of the harmonic series. The divergence of the harmonic series can be shown by using the integral test (see later) as well as the earlier term-grouping argument.
+			</p>
+
+			<p>
+				A <em>geometric series</em> is, as the name suggests, the sum of the terms of a geometric sequence. The convergence of a geometric series can be determined using the following test.
+			</p>
+      <theorem xml:id="thm-geometric-series-test"><title>Geometric series test</title>
+        <statement>
+          <p>
+            The geometric series <m>\sum_{n=1}^\infty a r^{n-1}</m> converges trivially if <m>a=0</m>. If <m>a \neq 0</m> then it converges if and only if <m>|r| \lt 1</m>, in which case <me>\sum_{n=1}^\infty a r^{n-1} = \frac{a}{1-r} .</me>
+          </p>
+        </statement>
+        <proof>
+          <p>
+            The convergent case <m>a=0</m> is clear. So we assume that <m>a \neq 0</m>. If <m>r=1</m> then divergence is clear as the series is just <m>a+a+a+a+ \dots</m>. So assume <m>r \neq 1</m> and let <m>A_k</m> denote the partial sum, i.e. <m>A_k = \sum_{n=1}^k a_n</m>. Most of the terms in the difference <m>A_k - rA_k</m> will cancel leaving the closed form equation <me>A_k = \frac{a(1 - r^k)}{1-r}.</me> Then by the definition of convergence foran infinite series and the algebra of limits theorem we have <me>\sum_{n=1}^\infty a r^{n-1} = \lim_{k \to \infty} A_k = \lim_{k \to \infty} \frac{a(1 - r^k)}{1-r} = \frac{a(1 - \lim_{k \to \infty} r^k)}{1-r}.</me> If <m>r = -1</m> or <m>|r| &gt; 1</m> then <m>r^k</m> diverges, and hence so does the series. If <m>|r| &lt; 1</m> then <m>r^k \to 0</m> as <m>k \to \infty</m>, in which case the sum of the series is <m>a/(1-r)</m>, as required.
+          </p>
+        </proof>
+      </theorem>
+      
+      <figure xml:id="fig-integral-test">
+        <caption>The integral test</caption>
+        <image>
+          <shortdescription></shortdescription>
+          <sageplot>
+        P = Graphics()
+        P += plot(1/x,(x,0.8,11), color='black', thickness=1.5)
+        for n in range(1,11):
+          points = [(n,0),(n,1/n),(n+1,1/n),(n+1,0)]
+          P += polygon2d(points,fill = False, color='gray')
+        P.set_aspect_ratio(5)
+        P
+        </sageplot> 
+        </image>
+        
+      </figure>
+      <theorem xml:id="thm-integral-test">
+        <title>Integral test</title>
+        <statement>
+          <p>
+            Consider a series <m>\sum_{m=1}^\infty a_m</m> and suppose that there exists a continuous function <m>f</m> which has positive decreasing values and that <m>a_m = f(m)</m> for all <m>m \geq 1</m>. If the improper integral <me>\int_1^\infty f(t) \, dt = \lim_{T \to \infty} \, \int_1^T f(t) \, dt</me> exists and is finite, then the original series converges. If the improper integral above does not have a finite value then the original series diverges.
+          </p>
+        </statement>
+        <proof>
+          <p>
+			 We sketch the main idea of the proof here based on the typical situation depicted in figure <xref ref="fig-integral-test"/>. To make the argument rigourous we should rephrase it in terms of the partial sums and partial integrals and use a careful limiting argument.
+			</p>
+
+
+
+			<p>
+				There we see the graph of decreasing function <m>f</m> shown in black. The grey rectangles all have width 1 and the <m>i^{th}</m> rectangle has height <m>a_i = f(i)</m>. Interpreting the integral and series in terms of area we see that <m>\int_1^\infty \, f(t) \, dt</m> is the area between the graph and the <m>x</m>-axis from <m>1</m> to <m>\infty</m> and that the series <m>\sum_{m=1}^\infty a_m</m> is the total area of all the rectangles. Due to the decreasing nature of the function <m>f</m>, each rectangle protrudes a bit above the graph of <m>f</m>. If we let <m>\gamma</m> denote the sum of the areas of all these protrusions then we have <me>\sum_{m=1}^\infty a_m = \int_1^\infty \, f(t) \, dt + \gamma.</me> Note that <m>\gamma</m> is a well defined finite quantity as the sum of the areas of the protrusions constitute an increasing sequence of partial sums that is bounded above (for they would all fit inside the first rectangle without overlaps) and hence by the Monotone Convergence Theorem this series is convergent.
+			</p>
+
+			<p>
+				So if the original series and integral differ by a finite quantity <m>\gamma</m> then each converges if and only if the other does.</p>
+        </proof>
+      </theorem>
+      
+
+
+
+</section>
