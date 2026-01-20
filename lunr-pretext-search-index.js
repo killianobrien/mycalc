@@ -260,6 +260,168 @@ var ptx_lunr_docs = [
   "number": "1.5",
   "title": "Sequence exercises",
   "body": " Sequence exercises    Write down the first five terms of the sequence where is given by                          For each of the sequences in question 1 above write down a simplified expression for the term .    Determine whether the sequence is increasing or decreasing, where is given by     ,     ,     ,     .      Consider the sequence determined by the following rules for . Which ones are convergent? Determine the limit if one exists. Hint: l’Hospital’s rule can be used for the first two.     ,     ,     ,     ,           Use the Monotone Convergence Theorem to prove that the sequence converges where     Prove that the sequence is divergent, where Hint: Show that the sequence is unbounded.    Consider the general arithmetic sequence where . Let denote the sum of the first elements of the sequence . Obtain a formula for in terms of . Hint: Consider the quantity as the sum of with itself in the reverse order .    Consider the general geometric sequence where . Let denote the sum of the first elements of the sequence . Obtain a formula for in terms of . Hint: Consider the quantity .    Using the algebra of sequences theorem find the limit of the following convergent sequences.     where      where .    Point out carefully the places where the theorem is being used.    Consider the function where When Newton’s method for root finding is applied to the sequence is produced where is defined by the recurrence relation Newton’s method claims that should converge to , the root of . Use the algebra of sequences theorem to prove that: if has a non-zero limit then that limit equals .    Investigate the long term behavior of the following sequences, i.e. are they increasing or decreasing, do they converge or diverge, are they bounded or unbounded?                          "
+},
+{
+  "id": "sec-series-definitions",
+  "level": "1",
+  "url": "sec-series-definitions.html",
+  "type": "Section",
+  "number": "2.1",
+  "title": "Basic definitions",
+  "body": " Basic definitions  A series is the name given to the concept\/object where we take a sequence of terms and add them all together term by term.  Series   A series is the sum of the terms of a sequence.    We can represent series using addition and subtraction signs as in or using the sigma notation ( is the capital Greek letter sigma) as in A series can contain a finite number of terms as in or an infinite number of terms as in, If a series contains only a finite number of terms then the series will sum to a finite value (assuming, as we are here, that the terms of the series are all finite quantities). If a series has an infinite number of terms then the series may or may not sum to a finite value. The precise definition of summing to a finite value is given by the following. First we define what is meant by the partial sums of an infinite series  Partial sums   Consider an infinite series . The -partial sum, , of the series is the finite series     "
+},
+{
+  "id": "def-series",
+  "level": "2",
+  "url": "sec-series-definitions.html#def-series",
+  "type": "Definition",
+  "number": "2.1.1",
+  "title": "Series.",
+  "body": "Series   A series is the sum of the terms of a sequence.   "
+},
+{
+  "id": "def-partial-sums",
+  "level": "2",
+  "url": "sec-series-definitions.html#def-partial-sums",
+  "type": "Definition",
+  "number": "2.1.2",
+  "title": "Partial sums.",
+  "body": "Partial sums   Consider an infinite series . The -partial sum, , of the series is the finite series    "
+},
+{
+  "id": "sec-series-convergence",
+  "level": "1",
+  "url": "sec-series-convergence.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Convergence",
+  "body": " Convergence  Convergence for series   The series converges to the limit (or sum) if the sequence of its partial sums, , is a convergent sequence and If this is the case then we can simply write   A series is divergent if the sequence of its partial sums is a divergent sequence.    It is not hard to think of examples of divergent series.  A divergent series   Consider the series This series is clearly divergent as the partial sums are increasing without any upper bound, and so cannot form a convergent sequence (see theorem ).    However it is not so obvious that convergent series exist (beyond the trivial example of a series where the terms are all zero after some point).  A convergent series   Consider the series The convergence of this series can be appreciated when we interpret the terms as measuring the size of step taken along a line. We see that the partial sums of the series get closer and closer to 1, but never go beyond 1. Indeed the series does converge to 1. This can be proved using the partial sum formula for a geometric series and making use of the algebra of sequences theorem.    This example shows that it is possible to have an infinite number of terms and yet for them still to sum to a finite value. This happens because the terms are getting smaller and smaller, the terms themselves are converging to zero, when viewed as sequence. However this type of behaviour does not guarantee convergence for a series, as the next example shows.   The harmonic series   Consider the series The terms of this series are indeed converging to zero, but yet the series does not converge. It increases without any upper bound, albeit very slowly. This fact can be proved with the aid of a grouping argument.    For series that contain a mixture of positive and negative terms it is helpful to be able to refer to the convergence of the related series of absolute values.   Absolute convergence   A series is absolutely convergent if the series of absolute values, , is a convergent series. If the series is convergent but the series of absolute values, , is divergent, then the original series is said to be conditionally convergent.    The importance of conditional convergence is given by the following result which we shall quote without proof.    If a series is absolutely convergent then it is convergent. Moreover, the terms of an absolutely convergent series can be rearranged in any way and the resulting series will still converge to the same sum. However if a series is conditionally convergent then rearranging its terms can yield a series which sums to a different value.    Omitted.     Tails  For an infinite series we note that the convergence or divergence of the series is not altered if some finite collection of the terms of the series are changed.  For suppose that we change to and to . If the original series is convergent, say then changing these values will mean the new series converges to .  On the other hand if the series is divergent it is because the sequence of partial sums, , fails to converge. The partial sums, , of the new series, for , will satisfy , and so these too will still fail to converge.  Both of these arguments extend to any finite collection of terms. By a tail of the series we mean any series of the form , for some positive integer , i.e. the original series less some finite collection of initial terms. If we can prove that some tail of the series is convergent, then so will the original series be convergent. Similarly, if we can show that some tail of the series is divergent, then so will the original series be divergent. These ideas occur in some of the proofs of the series convergence tests later in the chapter.    Linear combinations of series   Suppose that we have two convergent series and such that Then for any pair we have a new series which is convergent and satisfies     This can be proved using the linearity property for convergence of sequences. We do not need to descend to arguments but just use the definition for series convergence in terms of the partial sums.  Letting and denote the partial sums, i.e. and we make the following deductions.      Why was the presentation reversed here? In that we started with the claimed limit and worked our way towards ?   "
+},
+{
+  "id": "def-series-convergence",
+  "level": "2",
+  "url": "sec-series-convergence.html#def-series-convergence",
+  "type": "Definition",
+  "number": "2.2.1",
+  "title": "Convergence for series.",
+  "body": "Convergence for series   The series converges to the limit (or sum) if the sequence of its partial sums, , is a convergent sequence and If this is the case then we can simply write   A series is divergent if the sequence of its partial sums is a divergent sequence.   "
+},
+{
+  "id": "sec-series-convergence-4",
+  "level": "2",
+  "url": "sec-series-convergence.html#sec-series-convergence-4",
+  "type": "Example",
+  "number": "2.2.2",
+  "title": "A divergent series.",
+  "body": "A divergent series   Consider the series This series is clearly divergent as the partial sums are increasing without any upper bound, and so cannot form a convergent sequence (see theorem ).   "
+},
+{
+  "id": "sec-series-convergence-6",
+  "level": "2",
+  "url": "sec-series-convergence.html#sec-series-convergence-6",
+  "type": "Example",
+  "number": "2.2.3",
+  "title": "A convergent series.",
+  "body": "A convergent series   Consider the series The convergence of this series can be appreciated when we interpret the terms as measuring the size of step taken along a line. We see that the partial sums of the series get closer and closer to 1, but never go beyond 1. Indeed the series does converge to 1. This can be proved using the partial sum formula for a geometric series and making use of the algebra of sequences theorem.   "
+},
+{
+  "id": "sec-series-convergence-8",
+  "level": "2",
+  "url": "sec-series-convergence.html#sec-series-convergence-8",
+  "type": "Example",
+  "number": "2.2.4",
+  "title": "The harmonic series.",
+  "body": " The harmonic series   Consider the series The terms of this series are indeed converging to zero, but yet the series does not converge. It increases without any upper bound, albeit very slowly. This fact can be proved with the aid of a grouping argument.   "
+},
+{
+  "id": "def-series-absolute-convergence",
+  "level": "2",
+  "url": "sec-series-convergence.html#def-series-absolute-convergence",
+  "type": "Definition",
+  "number": "2.2.5",
+  "title": "Absolute convergence.",
+  "body": " Absolute convergence   A series is absolutely convergent if the series of absolute values, , is a convergent series. If the series is convergent but the series of absolute values, , is divergent, then the original series is said to be conditionally convergent.   "
+},
+{
+  "id": "thm-series-absolute-convergence",
+  "level": "2",
+  "url": "sec-series-convergence.html#thm-series-absolute-convergence",
+  "type": "Theorem",
+  "number": "2.2.6",
+  "title": "",
+  "body": "  If a series is absolutely convergent then it is convergent. Moreover, the terms of an absolutely convergent series can be rearranged in any way and the resulting series will still converge to the same sum. However if a series is conditionally convergent then rearranging its terms can yield a series which sums to a different value.    Omitted.   "
+},
+{
+  "id": "thm-series-lin-combs",
+  "level": "2",
+  "url": "sec-series-convergence.html#thm-series-lin-combs",
+  "type": "Theorem",
+  "number": "2.2.7",
+  "title": "Linear combinations of series.",
+  "body": " Linear combinations of series   Suppose that we have two convergent series and such that Then for any pair we have a new series which is convergent and satisfies     This can be proved using the linearity property for convergence of sequences. We do not need to descend to arguments but just use the definition for series convergence in terms of the partial sums.  Letting and denote the partial sums, i.e. and we make the following deductions.    "
+},
+{
+  "id": "sec-series-convergence-15",
+  "level": "2",
+  "url": "sec-series-convergence.html#sec-series-convergence-15",
+  "type": "Question",
+  "number": "2.2.8",
+  "title": "",
+  "body": " Why was the presentation reversed here? In that we started with the claimed limit and worked our way towards ?  "
+},
+{
+  "id": "sec-series-convergence-tests",
+  "level": "1",
+  "url": "sec-series-convergence-tests.html",
+  "type": "Section",
+  "number": "2.3",
+  "title": "Convergence tests",
+  "body": " Convergence tests  We will introduce various tests that can be used to assess the convergence \/ divergence of a series.  General Term Test   If a sequence has a non-zero limit (or no limit at all) then the associated series will diverge. Equivalently, by forming the contra-positive we can quote this test as: If a series converges then the associated sequence of terms converges to zero. Symbolically these two statements are               Suppose that converges and let denote the partial sum as before, i.e. as . Let be given. There exists a such that for all we have . This implies that for all we have , i.e. the sequence can be shown to be eventually arbitrarily close to zero. This is equivalent to the definition for as . So this proves the second form of the theorem.    Contrapositive  We note the use of the contrapositive in the statement of the General Term Test. The contrapositive of a statement is the statement . These two statements are logically equivalent , i.e. they both have the same truth value. If one is true then so is the other. If the result one is trying to prove take the form of an implication, then sometimes the contrapositive of the result may be easier to prove directly.   But note that a series can still diverge even if the sequence of terms converges to zero. For example the harmonic series , diverges even though as . The General Term Test gives no information about the behaviour of the harmonic series. The divergence of the harmonic series can be shown by using the integral test (see later) as well as the earlier term-grouping argument.  A geometric series is, as the name suggests, the sum of the terms of a geometric sequence. The convergence of a geometric series can be determined using the following test.  Geometric series test   The geometric series converges trivially if . If then it converges if and only if , in which case     The convergent case is clear. So we assume that . If then divergence is clear as the series is just . So assume and let denote the partial sum, i.e. . Most of the terms in the difference will cancel leaving the closed form equation Then by the definition of convergence foran infinite series and the algebra of limits theorem we have If or then diverges, and hence so does the series. If then as , in which case the sum of the series is , as required.     The integral test        Integral test   Consider a series and suppose that there exists a continuous function which has positive decreasing values and that for all . If the improper integral exists and is finite, then the original series converges. If the improper integral above does not have a finite value then the original series diverges.    We sketch the main idea of the proof here based on the typical situation depicted in figure . To make the argument rigourous we should rephrase it in terms of the partial sums and partial integrals and use a careful limiting argument.  There we see the graph of decreasing function shown in black. The grey rectangles all have width 1 and the rectangle has height . Interpreting the integral and series in terms of area we see that is the area between the graph and the -axis from to and that the series is the total area of all the rectangles. Due to the decreasing nature of the function , each rectangle protrudes a bit above the graph of . If we let denote the sum of the areas of all these protrusions then we have Note that is a well defined finite quantity as the sum of the areas of the protrusions constitute an increasing sequence of partial sums that is bounded above (for they would all fit inside the first rectangle without overlaps) and hence by the Monotone Convergence Theorem this series is convergent.  So if the original series and integral differ by a finite quantity then each converges if and only if the other does.    "
+},
+{
+  "id": "thm-general-term-test",
+  "level": "2",
+  "url": "sec-series-convergence-tests.html#thm-general-term-test",
+  "type": "Theorem",
+  "number": "2.3.1",
+  "title": "General Term Test.",
+  "body": "General Term Test   If a sequence has a non-zero limit (or no limit at all) then the associated series will diverge. Equivalently, by forming the contra-positive we can quote this test as: If a series converges then the associated sequence of terms converges to zero. Symbolically these two statements are               Suppose that converges and let denote the partial sum as before, i.e. as . Let be given. There exists a such that for all we have . This implies that for all we have , i.e. the sequence can be shown to be eventually arbitrarily close to zero. This is equivalent to the definition for as . So this proves the second form of the theorem.   "
+},
+{
+  "id": "sec-series-convergence-tests-4",
+  "level": "2",
+  "url": "sec-series-convergence-tests.html#sec-series-convergence-tests-4",
+  "type": "Remark",
+  "number": "2.3.2",
+  "title": "Contrapositive.",
+  "body": "Contrapositive  We note the use of the contrapositive in the statement of the General Term Test. The contrapositive of a statement is the statement . These two statements are logically equivalent , i.e. they both have the same truth value. If one is true then so is the other. If the result one is trying to prove take the form of an implication, then sometimes the contrapositive of the result may be easier to prove directly.  "
+},
+{
+  "id": "thm-geometric-series-test",
+  "level": "2",
+  "url": "sec-series-convergence-tests.html#thm-geometric-series-test",
+  "type": "Theorem",
+  "number": "2.3.3",
+  "title": "Geometric series test.",
+  "body": "Geometric series test   The geometric series converges trivially if . If then it converges if and only if , in which case     The convergent case is clear. So we assume that . If then divergence is clear as the series is just . So assume and let denote the partial sum, i.e. . Most of the terms in the difference will cancel leaving the closed form equation Then by the definition of convergence foran infinite series and the algebra of limits theorem we have If or then diverges, and hence so does the series. If then as , in which case the sum of the series is , as required.   "
+},
+{
+  "id": "fig-integral-test",
+  "level": "2",
+  "url": "sec-series-convergence-tests.html#fig-integral-test",
+  "type": "Figure",
+  "number": "2.3.4",
+  "title": "",
+  "body": " The integral test      "
+},
+{
+  "id": "thm-integral-test",
+  "level": "2",
+  "url": "sec-series-convergence-tests.html#thm-integral-test",
+  "type": "Theorem",
+  "number": "2.3.5",
+  "title": "Integral test.",
+  "body": " Integral test   Consider a series and suppose that there exists a continuous function which has positive decreasing values and that for all . If the improper integral exists and is finite, then the original series converges. If the improper integral above does not have a finite value then the original series diverges.    We sketch the main idea of the proof here based on the typical situation depicted in figure . To make the argument rigourous we should rephrase it in terms of the partial sums and partial integrals and use a careful limiting argument.  There we see the graph of decreasing function shown in black. The grey rectangles all have width 1 and the rectangle has height . Interpreting the integral and series in terms of area we see that is the area between the graph and the -axis from to and that the series is the total area of all the rectangles. Due to the decreasing nature of the function , each rectangle protrudes a bit above the graph of . If we let denote the sum of the areas of all these protrusions then we have Note that is a well defined finite quantity as the sum of the areas of the protrusions constitute an increasing sequence of partial sums that is bounded above (for they would all fit inside the first rectangle without overlaps) and hence by the Monotone Convergence Theorem this series is convergent.  So if the original series and integral differ by a finite quantity then each converges if and only if the other does.   "
 }
 ]
 
