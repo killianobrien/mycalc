@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-series-power-series" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Power Series</title>
+
+  <p>
+				Using series we can define a class of functions called <em>power series</em>. We shall look at some basic examples here and return to this topic later when we are discussing the differential calculus.
+			</p>
+
+      <definition xml:id="def-power-series">
+        <title>Power Series</title>
+        <statement>
+          <p>
+				A sequence of terms <m>\{ a_m \}_{m=1}^\infty</m> defines a <em>power series</em> function <m>A</m> by the formula <me>A(x) = \sum_{m=1}^\infty a_m x^m .</me>
+			</p>
+        </statement>
+      </definition>
+
+      <p>
+				Of course this formula for <m>A(x)</m> may only make sense for certain values of the argument <m>x</m>. For some values of <m>x</m> the series may converge but for some values it may diverge. We can investigate this matter using the ratio test.
+			</p>
+
+			<p>
+				According to the ratio test the series formula for <m>A(x)</m> will converge when <me>\lim_{m \to \infty} \left | \frac{a_{m+1} x^{m+1}}{a_m x^m} \right | &lt; 1,</me> which is equivalent, after simplifying, to <me>|x| &lt; \lim_{m \to \infty} \left | \frac{a_m}{a_{m+1}} \right |.</me>
+			</p>
+
+      <definition xml:id="def-radius-convergence">
+        <title>Radius of Convergence</title>
+        <statement>
+          <p>The quantity <m>R</m> defined by <me>R = \lim_{m \to \infty} \left | \frac{a_m}{a_{m+1}} \right | ,</me> is known as the <em>radius of convergence</em> of the series <m>\sum_{m=1}^\infty a_m x^m</m>. The series converges if <m>|x| &lt; R</m> and diverges if <m>|x| &gt; R</m>.
+			</p>
+        </statement>
+      </definition>
+
+      <p>
+				Note that the ratio test does not tell us about the convergence of the series when <m>|x| =R</m>. That will have to be determined by other methods.
+			</p>
+
+			<p>
+				An important source of power series comes from applying Taylor's theorem.
+			</p>
+
+      <theorem xml:id="thm-taylors-theorem">
+        <title>Taylor's Theorem</title>
+        <statement>
+          <p>
+            Suppose that on an interval <m>[a,x]</m> the function <m>f</m> can be differentiated <m>n+1</m> times, for some <m>n\geq 0</m>. Then there exists a number <m>c \in (a,x)</m> such that <me>f(x)=f(a) + f'(a) (x-a) + \frac{f''(a)}{2!} (x-a)^2 + \dots + \frac{f^{(n)}(a)}{n!} (x-a)^n + R_n ,</me> where <m>R_n</m> is the <em>Lagrange remainder</em> and is given by <me>R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!} (x-a)^{n+1}.</me>
+          </p>
+          <p>
+            <em>Proof omitted.</em>
+          </p>
+        </statement>
+      </theorem>
+      
+</section>

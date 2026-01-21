@@ -236,6 +236,45 @@
         </proof>
       </theorem>
       
+      <theorem xml:id="thm-ratio-test">
+        <title>Ratio Test</title>
+        <statement>
+          <p>
+            Consider the series <m>\sum_{m=1}^\infty a_m</m> of positive terms, i.e. for all <m>m</m>, <m>a_m &gt; 0</m>. Suppose that the sequence of the ratios of consectutive terms is convergent and that <me>\lim_{m \to \infty} \frac{a_{m+1}}{a_m} =L .</me> If <m>0 \leq L &lt; 1</m> then the series is convergent. If <m>L&gt;1</m> then the series is divergent. For the remaining case <m>L=1</m> we can not draw a conclusion about the series’ convergence.
+          </p>
+        </statement>
+        <proof>
+          <p>
+				The proof of the ratio test involves a combination of a limiting argument, the application of the standard comparison test and the use of the geometric series test. It's a nice example of building upon previous results in order to establish new results. 
+			</p>
 
+			<p>
+				Suppose <m>\sum a_m</m> satisfies the conditions of the theorem and that <me>\lim_{m \to \infty} \frac{a_{m+1}}{a_m} =L &lt; 1.</me> Choose a suitable <m>\epsilon</m>, say <m>\epsilon = (1-L)/2</m>. Then there exists a positive integer <m>M</m> such that for all <m>m \geq M</m> we have <m>|a_{m+1}/a_m - L|&lt; (1-L)/2</m>, i.e. <m>a_{m+1}/a_m &lt; (L+1)/2 &lt; 1</m>. Hence, for all <m>m \geq M</m> we have <me>a_{m+1} &lt; \frac{L+1}{2} a_m.</me> Repeatedly applying this inequality allows us to say that for all <m>n \geq 1</m> we have <me>a_{M+n} &lt; \left ( \frac{L+1}{2} \right )^n a_M.</me> Note that the series <m>\sum_{n=1}^\infty \left ( \frac{L+1}{2} \right )^n a_M</m> is a convergent geometric series, since <m>\frac{L+1}{2} &lt; 1</m>. So by the standard comparison test the series <m>\sum_{n=1}^\infty a_{M+n}</m> is also convergent. Therefore our original series <m>\sum_{m=1}^\infty a_m</m> has a convergent tail, and hence is convergent as required.
+			</p>
+
+			<p>
+				On the other hand is we suppose that <me>\lim_{m \to \infty} \frac{a_{m+1}}{a_m} =L &gt; 1,</me> then we follow a similar argument that this time compares a tail of our series to a divergent geometric series <m>\sum_{n=1}^\infty \left ( \frac{L+1}{2} \right )^n a_M</m>, for some <m>M</m> (remember this time <m>(L+1)/2 &gt; 1</m>). This implies that our series has a divergent tail and hence is itself divergent, as required.
+			</p>
+
+			<p>
+				In the remaining case where <me>\lim_{m \to \infty} \frac{a_{m+1}}{a_m} =1,</me> then trying the above ideas will only allow us to say that <m>\sum a_m</m> has worse behaviour than a known convergent series and better behaviour than a known divergent series. But neither of these allow us to draw a conclusion about the behaviour of <m>\sum a_m</m>.
+			</p>
+        </proof>
+      </theorem>
+      
+      <theorem xml:id="thm-root-test">
+        <title>Root Test</title>
+        <statement>
+          <p>
+            Consider the series <m>\sum_{m=1}^\infty a_m</m> of non-negative terms, i.e. for all <m>m</m>, <m>a_m \geq 0</m>. Suppose that <me>\lim_{m \to \infty} \left ( a_m \right )^{\frac{1}{m}} = L .</me> If <m>0 \leq L &lt; 1</m> then the original series is convergent, if <m>1 &lt; L \leq \infty</m> then the series diverges. For the remaining case <m>L=1</m> we can not draw a conclusion about the series' convergence.
+          </p>
+        </statement>
+        <proof>
+          <p>
+				We can prove this by comparing <m>\sum a_m</m> to a geometric series with common ratio <m>L</m>. Hence the re-appearance of the <m>L&lt;1</m> and <m>L&gt;1</m> criteria. The details are left as an exercise.
+			</p>
+        </proof>
+      </theorem>
+      
 
 </section>
