@@ -63,4 +63,74 @@
 			<p>
 				The special case where we expand a function about the point <m>a=0</m> gives rise to what is called a <em>Maclaurin series</em>.
 			</p>
+
+      <definition xml:id="def-maclaurin-series">
+        <title>Maclaurin series</title>
+        <statement>
+          <p>
+            The Taylor series expansion of a function <m>f</m> about the point <m>0</m> is called the <em>Maclaurin series</em> of <m>f</m>, <me>f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} x^n .</me>
+          </p>
+        </statement>
+      </definition>
+      <p>
+				We shall return to the topic of Taylor series after we have studied differentiation in more detail.
+			</p>
+
+			<p>
+				In table <xref ref="table-Mac" /> you will see Maclaurin series of some standard functions.
+			</p>
+
+      <table xml:id="table-Mac">
+				<title>Some standard Maclaurin series</title>
+				<tabular>
+				<row header="yes">
+					<cell halign="left">Maclarin series</cell>
+					<cell halign="right">Interval of convergence</cell>
+				</row>
+				<row class="odd">
+					<cell halign="left"></cell>
+					<cell halign="right"></cell>
+				</row>
+				<row class="even">
+					<cell halign="left"><m>e^x  = \displaystyle \sum_{k=0}^\infty \frac{x^k}{k!}</m></cell>
+					<cell halign="right"><m>(-\infty, \infty)</m></cell>
+				</row>
+				<row class="odd">
+					<cell halign="left"></cell>
+					<cell halign="right"></cell>
+				</row>
+				<row class="even">
+					<cell halign="left"><m>\sin{x}=\displaystyle\sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{(2k+1)!}</m></cell>
+					<cell halign="right"><m>(-\infty, \infty)</m></cell>
+				</row>
+				<row class="odd">
+					<cell halign="left"></cell>
+					<cell halign="right"></cell>
+				</row>
+				<row class="even">
+					<cell halign="left"><m>\cos{x}=\displaystyle\sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}</m></cell>
+					<cell halign="right"><m>(-\infty, \infty)</m></cell>
+				</row>
+				<row class="odd">
+					<cell halign="left"></cell>
+					<cell halign="right"></cell>
+				</row>
+				<row class="even">
+					<cell halign="left"><m>\frac{1}{1-x}=\displaystyle\sum_{k=0}^\infty x^k</m></cell>
+					<cell halign="right"><m>(-1,1)</m></cell>
+				</row>
+				<row class="odd">
+					<cell halign="left"></cell>
+					<cell halign="right"></cell>
+				</row>
+				<row class="even">
+					<cell halign="left"><m>\ln (1+x) =\displaystyle \sum_{k=1}^\infty \frac{(-1)^{k+1} x^k}{n}</m></cell>
+					<cell halign="right"><m>(-1,1)</m></cell>
+				</row>
+				<row class="odd">
+					<cell halign="left"></cell>
+					<cell halign="right"></cell>
+				</row>
+				</tabular>
+			</table>
 </section>

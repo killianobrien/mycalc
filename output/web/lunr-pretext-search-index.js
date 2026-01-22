@@ -511,7 +511,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "Power Series",
-  "body": " Power Series  Using series we can define a class of functions called power series . We shall look at some basic examples here and return to this topic later when we are discussing the differential calculus.   Power Series   A sequence of terms defines a power series function by the formula     Of course this formula for may only make sense for certain values of the argument . For some values of the series may converge but for some values it may diverge. We can investigate this matter using the ratio test.  According to the ratio test the series formula for will converge when which is equivalent, after simplifying, to    Radius of Convergence   The quantity defined by is known as the radius of convergence of the series . The series converges if and diverges if .    Note that the ratio test does not tell us about the convergence of the series when . That will have to be determined by other methods.  An important source of power series comes from applying Taylor's theorem.   Taylor's Theorem   Suppose that on an interval the function can be differentiated times, for some . Then there exists a number such that where is the Lagrange remainder and is given by    Proof omitted.     Taylor's theorem provides us with a way of generating power series approximations to function values. By writing for in the above equation we get an equivalent form referred to as the Taylor polynomial expansion of about the point : It is often the case that as and then we may represent the function using its Taylor series expansion about the point :   Two important things to note are that for all we have and that if then   The special case where we expand a function about the point gives rise to what is called a Maclaurin series .  "
+  "body": " Power Series  Using series we can define a class of functions called power series . We shall look at some basic examples here and return to this topic later when we are discussing the differential calculus.   Power Series   A sequence of terms defines a power series function by the formula     Of course this formula for may only make sense for certain values of the argument . For some values of the series may converge but for some values it may diverge. We can investigate this matter using the ratio test.  According to the ratio test the series formula for will converge when which is equivalent, after simplifying, to    Radius of Convergence   The quantity defined by is known as the radius of convergence of the series . The series converges if and diverges if .    Note that the ratio test does not tell us about the convergence of the series when . That will have to be determined by other methods.  An important source of power series comes from applying Taylor's theorem.   Taylor's Theorem   Suppose that on an interval the function can be differentiated times, for some . Then there exists a number such that where is the Lagrange remainder and is given by    Proof omitted.     Taylor's theorem provides us with a way of generating power series approximations to function values. By writing for in the above equation we get an equivalent form referred to as the Taylor polynomial expansion of about the point : It is often the case that as and then we may represent the function using its Taylor series expansion about the point :   Two important things to note are that for all we have and that if then   The special case where we expand a function about the point gives rise to what is called a Maclaurin series .   Maclaurin series   The Taylor series expansion of a function about the point is called the Maclaurin series of ,     We shall return to the topic of Taylor series after we have studied differentiation in more detail.  In table you will see Maclaurin series of some standard functions.   Some standard Maclaurin series    Maclarin series  Interval of convergence                                                 "
 },
 {
   "id": "def-power-series",
@@ -539,6 +539,24 @@ var ptx_lunr_docs = [
   "number": "2.4.3",
   "title": "Taylor’s Theorem.",
   "body": " Taylor's Theorem   Suppose that on an interval the function can be differentiated times, for some . Then there exists a number such that where is the Lagrange remainder and is given by    Proof omitted.    "
+},
+{
+  "id": "def-maclaurin-series",
+  "level": "2",
+  "url": "sec-series-power-series.html#def-maclaurin-series",
+  "type": "Definition",
+  "number": "2.4.4",
+  "title": "Maclaurin series.",
+  "body": " Maclaurin series   The Taylor series expansion of a function about the point is called the Maclaurin series of ,    "
+},
+{
+  "id": "table-Mac",
+  "level": "2",
+  "url": "sec-series-power-series.html#table-Mac",
+  "type": "Table",
+  "number": "2.4.5",
+  "title": "Some standard Maclaurin series",
+  "body": " Some standard Maclaurin series    Maclarin series  Interval of convergence                                                "
 }
 ]
 

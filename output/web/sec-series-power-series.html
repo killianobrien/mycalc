@@ -279,7 +279,73 @@ f(a+x) = \sum_{n=0}^\infty \frac{f^{(n)} (a)}{n!} x^n \, .
 </div>
 <div class="para" id="sec-series-power-series-12">The special case where we expand a function about the point <span class="process-math">\(a=0\)</span> gives rise to what is called a <em class="emphasis">Maclaurin series</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section 2.4: Power Series"><a href="#sec-series-power-series" title="Copy heading and permalink for Section 2.4: Power Series" aria-label="Copy heading and permalink for Section 2.4: Power Series">🔗</a></div></section></div>
+<article class="definition definition-like" id="def-maclaurin-series"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maclaurin series.</span>
+</h3>
+<div class="para logical" id="def-maclaurin-series-2-1">
+<div class="para">The Taylor series expansion of a function <span class="process-math">\(f\)</span> about the point <span class="process-math">\(0\)</span> is called the <em class="emphasis">Maclaurin series</em> of <span class="process-math">\(f\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="def-maclaurin-series-2-1-5">
+\begin{equation*}
+f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} x^n .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-maclaurin-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.4.4: Maclaurin series"><a href="#def-maclaurin-series" title="Copy heading and permalink for Definition 2.4.4: Maclaurin series" aria-label="Copy heading and permalink for Definition 2.4.4: Maclaurin series">🔗</a></div></article><div class="para" id="sec-series-power-series-14">We shall return to the topic of Taylor series after we have studied differentiation in more detail.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-series-power-series-15">In table <a href="sec-series-power-series.html#table-Mac" class="xref" data-knowl="./knowl/xref/table-Mac.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.4.5: Some standard Maclaurin series">Table 2.4.5</a> you will see Maclaurin series of some standard functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-Mac"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Some standard Maclaurin series<div class="autopermalink" data-description="Table 2.4.5: Some standard Maclaurin series"><a href="#table-Mac" title="Copy heading and permalink for Table 2.4.5: Some standard Maclaurin series" aria-label="Copy heading and permalink for Table 2.4.5: Some standard Maclaurin series">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines">Maclarin series</th>
+<th scope="col" class="r m b0 r0 l0 t0 lines">Interval of convergence</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(e^x  = \displaystyle \sum_{k=0}^\infty \frac{x^k}{k!}\)</span></td>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\((-\infty, \infty)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sin{x}=\displaystyle\sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{(2k+1)!}\)</span></td>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\((-\infty, \infty)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cos{x}=\displaystyle\sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}\)</span></td>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\((-\infty, \infty)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{1}{1-x}=\displaystyle\sum_{k=0}^\infty x^k\)</span></td>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\((-1,1)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ln (1+x) =\displaystyle \sum_{k=1}^\infty \frac{(-1)^{k+1} x^k}{n}\)</span></td>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\((-1,1)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="r m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure><div class="autopermalink" data-description="Section 2.4: Power Series"><a href="#sec-series-power-series" title="Copy heading and permalink for Section 2.4: Power Series" aria-label="Copy heading and permalink for Section 2.4: Power Series">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-series-convergence-tests.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
