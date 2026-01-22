@@ -52,4 +52,15 @@
         </statement>
       </theorem>
       
+      <p>
+				Taylor's theorem provides us with a way of generating power series approximations to function values. By writing <m>a+x</m> for <m>x</m> in the above equation we get an equivalent form referred to as the <em>Taylor polynomial expansion of <m>f</m> about the point <m>a</m></em>: <me>f(a+x)=f(a) + f'(a) x + \frac{f''(a)}{2!} x^2 + \dots + \frac{f^{(n)}(a)}{n!} x^n + R_n .</me> It is often the case that <m>R_n(x) \to 0</m> as <m>n \to \infty</m> and then we may represent the function <m>f</m> using its <em>Taylor series expansion about the point <m>a</m></em>: <me>f(a+x) = \sum_{n=0}^\infty \frac{f^{(n)} (a)}{n!} x^n \, .</me>
+			</p>
+
+			<p>
+				Two important things to note are that for all <m>x \in \mathbb{R}</m> we have <me>\lim_{n \to \infty} \frac{x^n}{n!} = 0</me> and that if <m>-1&lt;x&lt;1</m> then <me>\lim_{n \to \infty} x^n = 0 .</me>
+			</p>
+
+			<p>
+				The special case where we expand a function about the point <m>a=0</m> gives rise to what is called a <em>Maclaurin series</em>.
+			</p>
 </section>
