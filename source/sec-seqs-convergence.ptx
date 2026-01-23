@@ -148,6 +148,7 @@ or
     <p>
       <me> \lim_{n \to \infty} \frac{1}{n} = 0</me>.
     </p>
+    </statement>
     <solution>
       <p>
         As this is our first example working with the formal definition we shall provide a lot of discussion and explanation in this solution. 
@@ -185,7 +186,6 @@ or
           </p>
 
     </solution>
-  </statement>
 </example>
 
 </section>
