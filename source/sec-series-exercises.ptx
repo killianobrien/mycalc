@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-series-exercises">
+  <title>Series exercises</title>
+  <p>
+	<ol>
+				<li>
+							<p>
+								Investigate the convergence of the following series,
+							</p>
+				
+							<p><ol>
+								<li>
+											<p>
+												<me>\sum_{n=1}^\infty (2n - 1) \, = \, 1 + 3 + 5 + 7 + 9 + \dots  ,</me><!-- linebreak -->
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<me>\sum_{n=1}^\infty \dfrac{1}{2^{n-1}} \, = \, 1 + \dfrac{1}{2} +
+								\dfrac{1}{4} + \dfrac{1}{8} + \dfrac{1}{16} + \dots ,</me><!-- linebreak -->
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<me>\sum_{n=1}^\infty \dfrac{1}{n(n+1)} \, = \, \dfrac{1}{2} +
+								\dfrac{1}{6} + \dfrac{1}{12} + \frac{1}{20} + \dots.</me>
+											</p>
+								</li>
+				
+							</ol></p>
+				</li>
+
+				<li>
+							<p>
+								Using a diagram of the number line investigate the convergence of the following series, <me>\text{(a)  } \sum_{n=1}^\infty (-1)^n, \quad \text{(b)  }
+				\sum_{n=1}^\infty (-1)^n \left ( \dfrac{n+1}{n+2} \right ) .</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								The geometric series <m>\sum_{n=1}^\infty ar^{n-1}</m> has partial sums <m>S_k</m> given by <me>S_k=\sum_{n=1}^k ar^{n-1} =  \dfrac{a(1-r^k)}{1-r}.</me>
+							</p>
+				
+							<p>
+								Use this result to investigate the convergence of the series <m>\sum_{n=1}^\infty n a r^{n-1}</m>. Hint: <em>Let <m>T_k</m> denote <m>k^{th}</m> partial sum of this series. Consider the quantity <m>(1-r)T_k</m>....</em>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Recall from the lecture that the geometric series <m>\sum_{n=1}^\infty ar^{n-1}</m> has partial sums <m>S_k</m> given by <me>S_k=\sum_{n=1}^k ar^{n-1} =  \dfrac{a(1-r^k)}{1-r}.</me> Therefore the series is convergent only when <m>|r|&lt;1</m>, in which case the infinite series sums to <m>\tfrac{a}{1-r}</m>.
+							</p>
+				
+							<p>
+								For the following definitions of <m>x_n</m> determine whether the series <m>\sum_{n=1}^\infty x_n</m> converges and if so find the sum of the series.
+							</p>
+				
+							<p><ol>
+								<li>
+											<p>
+												<m>x_n = \tfrac{2}{3} \left ( \tfrac{1}{2} \right )^n \tfrac{1}{4} \left ( \tfrac{2}{3} \right )^n</m>.
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<m>x_n =\left ( \tfrac{3}{2} \right )^{2n} \tfrac{1}{2} \left ( \tfrac{2}{3} \right )^{n+1}</m>
+											</p>
+								</li>
+				
+							</ol></p>
+				</li>
+
+				<li>
+							<p>
+								Consider the series <me>\sum_{n=1}^\infty \dfrac{2}{n^2 + 2n} .</me> Show that this is a convergent series by finding the partial fraction expansion of <m>\tfrac{2}{n^2 + 2n}</m> and examining the <m>k^{th}</m> partial sum <m>S_k</m>.
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Consider the infinite decimal expansion <me>2.104104104104 \dots.</me> By expressing this as a suitable geometric series find the rational number represented by the decimal expansion.
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Determine whether the following series is convergent or divergent <me>\sum_{n=1}^\infty \frac{2n+1}{n(n+1)} .</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Determine whether the following series are convergent or divergent
+							</p>
+				
+							<p><ol>
+								<li>
+											<p>
+												<me>\sum_{n=1}^\infty \frac{2}{n!} ,</me>
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<me>\sum_{n=1}^\infty \frac{n!}{n^n},</me>
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<me>\sum_{n=1}^\infty \left ( \frac{2n-1}{3+4n} \right )^n ,</me>
+											</p>
+								</li>
+				
+								<li>
+											<p>
+												<me>\sum_{n=1}^\infty \frac{(n!)^2}{(2n)!} .</me>
+											</p>
+								</li>
+				
+							</ol></p>
+				</li>
+
+				<li>
+							<p>
+								Determine whether the following series converges or diverges: <me>\sum_{n=1}^\infty a_n , \quad \mbox{ where } a_n =\frac{2n^2 + 4}{3n^3 -2n}.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Determine whether the following series converges or diverges: <me>\sum_{n=1}^\infty b_n \mbox{ where } b_n =  \frac{2n+5}{\sqrt{n^6 +n}}.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Determine whether the following series converges or diverges: <me>\sum_{n=1}^\infty c_n  \mbox{ where } c_n =  \frac{n!}{5^{n+2}}.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Determine whether the following series converges or diverges: <me>\sum_{n=1}^\infty d_n \mbox{ where } d_n=  \frac{n^2 2^{n+5}}{2^{2n}}.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Determine whether the following series converges or diverges: <me>\sum_{n=1}^\infty e_n \mbox{ where } e_n=  \frac{\sin^2{(n)}}{n(n+3)}.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Determine whether the following series converges or diverges: <me>\sum_{n=1}^\infty f_n \mbox{ where } f_n =  \frac{\sqrt{n+1}}{n \sqrt{n+4}}.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Determine whether the following series converges or diverges: <me>\sum_{n=1}^\infty  g_n \mbox{ where } g_n =\frac{n 2^n}{n!}.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Write down the MacLaurin series (i.e. Taylor series about <m>x=0</m>) for the exponential function, <m>e^x</m>.
+							</p>
+				
+							<p>
+								Hence find the decimal expansion of <m>e</m> correct to four decimal places.
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Find the maximum error in the approximation <me>\sin{x} \approx x - \frac{x^3}{6},</me> given that <m>|x| &lt; \frac{1}{2}</m>.
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Approximate <m>\sin{\frac{\pi}{5}}</m> to four decimal places using an appropriate Taylor series.
+							</p>
+				</li>
+
+			</ol></p>
+</section>

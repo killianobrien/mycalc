@@ -15,5 +15,6 @@
   <xi:include href="sec-series-convergence.ptx" />
   <xi:include href="sec-series-convergence-tests.ptx" />
   <xi:include href="sec-series-power-series.ptx" />
+  <xi:include href="sec-series-exercises.ptx" />
 
 </chapter>

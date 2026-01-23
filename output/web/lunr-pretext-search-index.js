@@ -557,6 +557,15 @@ var ptx_lunr_docs = [
   "number": "2.4.5",
   "title": "Some standard Maclaurin series",
   "body": " Some standard Maclaurin series    Maclarin series  Interval of convergence                                                "
+},
+{
+  "id": "sec-series-exercises",
+  "level": "1",
+  "url": "sec-series-exercises.html",
+  "type": "Section",
+  "number": "2.5",
+  "title": "Series exercises",
+  "body": " Series exercises     Investigate the convergence of the following series,                     Using a diagram of the number line investigate the convergence of the following series,     The geometric series has partial sums given by   Use this result to investigate the convergence of the series . Hint: Let denote partial sum of this series. Consider the quantity ....     Recall from the lecture that the geometric series has partial sums given by Therefore the series is convergent only when , in which case the infinite series sums to .  For the following definitions of determine whether the series converges and if so find the sum of the series.     .           Consider the series Show that this is a convergent series by finding the partial fraction expansion of and examining the partial sum .    Consider the infinite decimal expansion By expressing this as a suitable geometric series find the rational number represented by the decimal expansion.    Determine whether the following series is convergent or divergent     Determine whether the following series are convergent or divergent                          Determine whether the following series converges or diverges:     Determine whether the following series converges or diverges:     Determine whether the following series converges or diverges:     Determine whether the following series converges or diverges:     Determine whether the following series converges or diverges:     Determine whether the following series converges or diverges:     Determine whether the following series converges or diverges:     Write down the MacLaurin series (i.e. Taylor series about ) for the exponential function, .  Hence find the decimal expansion of correct to four decimal places.    Find the maximum error in the approximation given that .    Approximate to four decimal places using an appropriate Taylor series.    "
 }
 ]
 
