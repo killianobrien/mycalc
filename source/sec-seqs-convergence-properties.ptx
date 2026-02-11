@@ -171,7 +171,7 @@
 				</p>
 
 				<p>
-					By convergence there exist positive integers <m>N_1</m> and <m>N_1</m> such that for all <m>n \geq N_1</m> we have <m>|a_n - a| &lt; \min\left ( \sqrt{\frac{\epsilon}{3}}, \frac{\epsilon}{3|b|} \right )</m> and for all <m>n \geq N_2</m> we have <m>|b_n - b| &lt; \min\left ( \sqrt{\frac{\epsilon}{3}}, \frac{\epsilon}{3|a|} \right )</m>. We wish to use both ineqaualties so we let <m>N = \max(N_1, N_2)</m> and now for all <m>n \geq N</m> we have <me>\begin{aligned}
+					By convergence there exist positive integers <m>N_1</m> and <m>N_2</m> such that for all <m>n \geq N_1</m> we have <m>|a_n - a| &lt; \min\left ( \sqrt{\frac{\epsilon}{3}}, \frac{\epsilon}{3|b|} \right )</m> and for all <m>n \geq N_2</m> we have <m>|b_n - b| &lt; \min\left ( \sqrt{\frac{\epsilon}{3}}, \frac{\epsilon}{3|a|} \right )</m>. We wish to use both ineqaualties so we let <m>N = \max(N_1, N_2)</m> and now for all <m>n \geq N</m> we have <me>\begin{aligned}
 |a_n b_n - ab | &amp; = | (a_n - a)(b_n - b) + b(a_n - a) + a(b_n - b)|\\
 &amp;\leq | (a_n - a)(b_n - b)| + |b||(a_n - a)| + |a||(b_n - b)|\\
 &amp;&lt; \sqrt{\frac{\epsilon}{3}}\sqrt{\frac{\epsilon}{3}}+ |b|\frac{\epsilon}{3|b|}
