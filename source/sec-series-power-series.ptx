@@ -87,47 +87,47 @@
 					<cell halign="left">Maclarin series</cell>
 					<cell halign="right">Interval of convergence</cell>
 				</row>
-				<row class="odd">
+				<row>
 					<cell halign="left"></cell>
 					<cell halign="right"></cell>
 				</row>
-				<row class="even">
+				<row>
 					<cell halign="left"><m>e^x  = \displaystyle \sum_{k=0}^\infty \frac{x^k}{k!}</m></cell>
 					<cell halign="right"><m>(-\infty, \infty)</m></cell>
 				</row>
-				<row class="odd">
+				<row>
 					<cell halign="left"></cell>
 					<cell halign="right"></cell>
 				</row>
-				<row class="even">
+				<row>
 					<cell halign="left"><m>\sin{x}=\displaystyle\sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{(2k+1)!}</m></cell>
 					<cell halign="right"><m>(-\infty, \infty)</m></cell>
 				</row>
-				<row class="odd">
+				<row>
 					<cell halign="left"></cell>
 					<cell halign="right"></cell>
 				</row>
-				<row class="even">
+				<row>
 					<cell halign="left"><m>\cos{x}=\displaystyle\sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}</m></cell>
 					<cell halign="right"><m>(-\infty, \infty)</m></cell>
 				</row>
-				<row class="odd">
+				<row>
 					<cell halign="left"></cell>
 					<cell halign="right"></cell>
 				</row>
-				<row class="even">
+				<row>
 					<cell halign="left"><m>\frac{1}{1-x}=\displaystyle\sum_{k=0}^\infty x^k</m></cell>
 					<cell halign="right"><m>(-1,1)</m></cell>
 				</row>
-				<row class="odd">
+				<row>
 					<cell halign="left"></cell>
 					<cell halign="right"></cell>
 				</row>
-				<row class="even">
+				<row>
 					<cell halign="left"><m>\ln (1+x) =\displaystyle \sum_{k=1}^\infty \frac{(-1)^{k+1} x^k}{n}</m></cell>
 					<cell halign="right"><m>(-1,1)</m></cell>
 				</row>
-				<row class="odd">
+				<row>
 					<cell halign="left"></cell>
 					<cell halign="right"></cell>
 				</row>

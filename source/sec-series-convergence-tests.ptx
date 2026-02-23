@@ -14,13 +14,13 @@
           <ul>
 				<li>
 							<p>
-								<em><me>\lim_{m \to \infty} a_m  \neq 0 \, \Rightarrow \, \sum_{m=1}^\infty a_m \text{ diverges,}</me></em>
+								<me>\lim_{m \to \infty} a_m  \neq 0 \, \Rightarrow \, \sum_{m=1}^\infty a_m \text{ diverges,}</me>
 							</p>
 				</li>
 
 				<li>
 							<p>
-								<em><me>\sum_{m=1}^\infty a_m \text{ converges} \, \Rightarrow \, \lim_{m \to \infty} a_m = 0.</me></em>
+								<me>\sum_{m=1}^\infty a_m \text{ converges} \, \Rightarrow \, \lim_{m \to \infty} a_m = 0.</me>
 							</p>
 				</li>
 
