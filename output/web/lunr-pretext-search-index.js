@@ -682,7 +682,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Real valued functions",
-  "body": " Real valued functions  hello  "
+  "body": " Real valued functions   "
 }
 ]
 
