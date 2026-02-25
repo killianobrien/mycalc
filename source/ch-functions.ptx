@@ -4,14 +4,14 @@
   <title>Functions</title>
 
   <introduction>
-
-		<p>
-      Intro comments
+    <p>
+			You will be familiar with the notion of a function in mathematics and have used them many times up to now. But in this chapter we just wish to formalise the definition of a function and introduce various properties of functions. Throughout this we wish to emphasize the treatment of functions as mathematical objects <em>in themselves</em>.
 		</p>
   </introduction>
 
   <!-- include sections -->
-  <!-- <xi:include href="sec-series-definitions.ptx" /> -->
+  <xi:include href="sec-functions-defs.ptx" />
+  <xi:include href="sec-functions-real.ptx" />
 
 
 </chapter>

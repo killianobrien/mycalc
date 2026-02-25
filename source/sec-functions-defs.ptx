@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-functions-defs" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Basic definitions and notation</title>
+  <definition xml:id="def-function">
+    <title>Function</title>
+    <statement>
+      <p>
+			A <em>function</em> <m>f</m> from a set <m>X</m> to a set <m>Y</m> is a rule which assigns elements of the set <m>Y</m> to elements of <m>X</m>. It must do this in such a way that to each element of <m>X</m> there is one and only one element of <m>Y</m> associated to it.
+		</p>
+    <p>
+			This condition is sometimes referred to as saying that functions are <em>single-valued</em>.
+		</p>
+    </statement>
+  </definition>
+
+  <definition xml:id="def-domain-codomain">
+    <title>Domain, co-domain, argument, value</title>
+    <statement>
+      <p>
+			We can write <me>f \, : \, X \to Y</me> to denote that <m>f</m> is a function from the set <m>X</m> to the set <m>Y</m>. The set <m>X</m> is called the <em>domain</em> of <m>f</m> and <m>Y</m> is called the <em>co-domain</em> of <m>f</m>. An element <m>x \in X</m> is called an <em>argument</em> of the function <m>f</m> and we use <m>f(x)</m> to denote the associated element of <m>Y</m>, called the <em>value</em> of the function <m>f</m> at the argument <m>x</m>.
+		</p>
+    <p>
+			Note that there is no requirement that <em>all</em> the elements of the co-domain occur as values of the function but there <em>is</em> a requirement that a value <m>f(x)</m> is defined for every element/argument <m>x</m> from the domain of <m>f</m>.
+		</p>
+    </statement>
+  </definition>
+  <example>
+    <statement>
+      <p>
+						The square root function <m>s: \mathbb{R}^+ \to \mathbb{R}</m> is the function from the domain <m>\mathbb{R}^+</m> of positive real numbers to the co-domain <m>\mathbb{R}</m>, defined by the formula <me>\text{ for all } x \in \mathbb{R}^+ , \, \, s(x) = \sqrt{x} .</me>
+					</p>
+    </statement>  
+  </example>
+
+  <example>
+    <statement>
+      <p>
+						The trigonometric sine function, <m>\sin: \mathbb{R} \to [-1,1]</m>. This can be defined in many ways. One way is to define <m>\sin(\theta)</m> as the <m>y</m>-coordinate of the point on the unit circle in the plane which makes an angle of <m>\theta</m> radians with the positive direction of the <m>x</m>-axis, see figure <xref ref="functions-sin" />.
+					</p>
+    </statement>
+  </example>
+
+  <figure xml:id="functions-sin">
+    <caption>A definition of <m>\sin(\theta)</m></caption>
+
+    <image source="sin.png" width="60%">
+      <shortdescription>(for accessibility)</shortdescription>
+    </image>
+  </figure>
+
+  <definition xml:id="def-functions-range">
+    <title>Range/Image</title>
+    <statement>
+      <p>
+			The <em>range</em> or <em>image</em> of a function <m>g: V \to W</m> is the subset of the co-domain <m>W</m> consisting of the values of <m>g</m>, i.e. <me>\text{im}(g) = \{ \, g(v) \, : \, v \in V \, \} .</me>
+		</p>
+    </statement>
+  </definition>
+  <p>
+			When discussing particular functions it is often the case that the domain and co-domain will not be explicitly mentioned. The domain for the function should be clear from the context, i.e. to what set of arguments is the function intended to apply. The precise description of the co-domain is a bit trickier as the choice of the co-domain is somewhat arbitrary as long as it contains the image of the function. However for some properties and operation such as <em>surjectivity</em> and <em>composition</em> some consideration will need to be given to the appropriate co-domain of the function.
+		</p>
+
+    <definition xml:id="def-functions-injective">
+      <title>Injective/One-to-one</title>
+      <statement>
+        <p>
+			A function <m>g \, : \, U \to V</m> is <em>injective</em> if and only if no two elements from the domain <m>U</m> get mapped to the same value in the co-domain <m>V</m>. This condition can be expressed formally as: <me>\forall \, u_1, u_2 \in U \, \, g(u_1) = g(u_2) \, \Rightarrow \, u_1 = u_2 .</me> A more informal, but descriptive, term for this property is to say that such a function <m>g</m> is <em>one-to-one</em>.
+		</p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-functions-surjective">
+      <statement>
+        <p>
+			A function <m>g \, : \, U \to V</m> is <em>surjective</em> if and only if every element of the domain occurs as a value of <m>g</m>. Put more formally this condition is: <me>\forall \, v \in V \, \, \exists \, u \in U \, \text{ such that } g(u)=v .</me> A more informal, but descriptive, term for this property is to say that such a function <m>g</m> is <em>onto</em>.
+		</p>
+      </statement>
+    </definition>
+    <p>
+			These last two properties can often depend on the exact choice of the domain and co-domain, as the following example shows.
+		</p>
+
+    <example>
+      <statement>
+       <p>
+			The function <m>f_1 \, : \, \left ( 0,\frac{\pi}{2} \right ) \to (0,1)</m> defined by <me>f_1(t) = \sin t ,</me> is both injective and surjective, i.e. bijective.
+		</p>
+
+		<p>
+			However the function <m>f_2 \, : \, (0,\pi) \to (0,2)</m> defined by <me>f_2 (t) = \sin t ,</me> is neither injective nor surjective. Since <m>\sin \left ( \frac{\pi}{4} \right ) = \sin \left ( \frac{3 \pi}{4}  \right ) = \frac{1}{\sqrt{2}}</m>, <m>f_2</m> is not injective and the fact that for all <m>t</m>, <m>|\sin t | \leq 1</m> means that there is no <m>t</m> for which <m>\sin t = 1.5</m>, and so <m>f_2</m> is not surjective.
+		</p>
+      </statement>
+    </example>
+
+    <definition xml:id="def-functions-bijective">
+      <statement>
+        <p>
+          A function is <em>bijective</em> if and only if it is both injective and surjective.
+        </p>
+      </statement>
+    </definition>
+</section>

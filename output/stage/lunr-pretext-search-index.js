@@ -575,6 +575,114 @@ var ptx_lunr_docs = [
   "number": "2.5",
   "title": "Series exercises",
   "body": " Series exercises     Investigate the convergence of the following series,                     Using a diagram of the number line investigate the convergence of the following series,     The geometric series has partial sums given by   Use this result to investigate the convergence of the series . Hint: Let denote partial sum of this series. Consider the quantity ....     Recall from the lecture that the geometric series has partial sums given by Therefore the series is convergent only when , in which case the infinite series sums to .  For the following definitions of determine whether the series converges and if so find the sum of the series.     .           Consider the series Show that this is a convergent series by finding the partial fraction expansion of and examining the partial sum .    Consider the infinite decimal expansion By expressing this as a suitable geometric series find the rational number represented by the decimal expansion.    Determine whether the following series is convergent or divergent     Determine whether the following series are convergent or divergent                          Determine whether the following series converges or diverges:     Determine whether the following series converges or diverges:     Determine whether the following series converges or diverges:     Determine whether the following series converges or diverges:     Determine whether the following series converges or diverges:     Determine whether the following series converges or diverges:     Determine whether the following series converges or diverges:     Write down the MacLaurin series (i.e. Taylor series about ) for the exponential function, .  Hence find the decimal expansion of correct to four decimal places.    Find the maximum error in the approximation given that .    Approximate to four decimal places using an appropriate Taylor series.    "
+},
+{
+  "id": "sec-functions-defs",
+  "level": "1",
+  "url": "sec-functions-defs.html",
+  "type": "Section",
+  "number": "3.1",
+  "title": "Basic definitions and notation",
+  "body": " Basic definitions and notation   Function   A function  from a set to a set is a rule which assigns elements of the set to elements of . It must do this in such a way that to each element of there is one and only one element of associated to it.  This condition is sometimes referred to as saying that functions are single-valued .     Domain, co-domain, argument, value   We can write to denote that is a function from the set to the set . The set is called the domain of and is called the co-domain of . An element is called an argument of the function and we use to denote the associated element of , called the value of the function at the argument .  Note that there is no requirement that all the elements of the co-domain occur as values of the function but there is a requirement that a value is defined for every element\/argument from the domain of .      The square root function is the function from the domain of positive real numbers to the co-domain , defined by the formula       The trigonometric sine function, . This can be defined in many ways. One way is to define as the -coordinate of the point on the unit circle in the plane which makes an angle of radians with the positive direction of the -axis, see figure .     A definition of   (for accessibility)     Range\/Image   The range or image of a function is the subset of the co-domain consisting of the values of , i.e.     When discussing particular functions it is often the case that the domain and co-domain will not be explicitly mentioned. The domain for the function should be clear from the context, i.e. to what set of arguments is the function intended to apply. The precise description of the co-domain is a bit trickier as the choice of the co-domain is somewhat arbitrary as long as it contains the image of the function. However for some properties and operation such as surjectivity and composition some consideration will need to be given to the appropriate co-domain of the function.   Injective\/One-to-one   A function is injective if and only if no two elements from the domain get mapped to the same value in the co-domain . This condition can be expressed formally as: A more informal, but descriptive, term for this property is to say that such a function is one-to-one .      A function is surjective if and only if every element of the domain occurs as a value of . Put more formally this condition is: A more informal, but descriptive, term for this property is to say that such a function is onto .    These last two properties can often depend on the exact choice of the domain and co-domain, as the following example shows.    The function defined by is both injective and surjective, i.e. bijective.  However the function defined by is neither injective nor surjective. Since , is not injective and the fact that for all , means that there is no for which , and so is not surjective.      A function is bijective if and only if it is both injective and surjective.    "
+},
+{
+  "id": "def-function",
+  "level": "2",
+  "url": "sec-functions-defs.html#def-function",
+  "type": "Definition",
+  "number": "3.1.1",
+  "title": "Function.",
+  "body": " Function   A function  from a set to a set is a rule which assigns elements of the set to elements of . It must do this in such a way that to each element of there is one and only one element of associated to it.  This condition is sometimes referred to as saying that functions are single-valued .   "
+},
+{
+  "id": "def-domain-codomain",
+  "level": "2",
+  "url": "sec-functions-defs.html#def-domain-codomain",
+  "type": "Definition",
+  "number": "3.1.2",
+  "title": "Domain, co-domain, argument, value.",
+  "body": " Domain, co-domain, argument, value   We can write to denote that is a function from the set to the set . The set is called the domain of and is called the co-domain of . An element is called an argument of the function and we use to denote the associated element of , called the value of the function at the argument .  Note that there is no requirement that all the elements of the co-domain occur as values of the function but there is a requirement that a value is defined for every element\/argument from the domain of .   "
+},
+{
+  "id": "sec-functions-defs-4",
+  "level": "2",
+  "url": "sec-functions-defs.html#sec-functions-defs-4",
+  "type": "Example",
+  "number": "3.1.3",
+  "title": "",
+  "body": "  The square root function is the function from the domain of positive real numbers to the co-domain , defined by the formula    "
+},
+{
+  "id": "sec-functions-defs-5",
+  "level": "2",
+  "url": "sec-functions-defs.html#sec-functions-defs-5",
+  "type": "Example",
+  "number": "3.1.4",
+  "title": "",
+  "body": "  The trigonometric sine function, . This can be defined in many ways. One way is to define as the -coordinate of the point on the unit circle in the plane which makes an angle of radians with the positive direction of the -axis, see figure .   "
+},
+{
+  "id": "functions-sin",
+  "level": "2",
+  "url": "sec-functions-defs.html#functions-sin",
+  "type": "Figure",
+  "number": "3.1.5",
+  "title": "",
+  "body": " A definition of   (for accessibility)   "
+},
+{
+  "id": "def-functions-range",
+  "level": "2",
+  "url": "sec-functions-defs.html#def-functions-range",
+  "type": "Definition",
+  "number": "3.1.6",
+  "title": "Range\/Image.",
+  "body": " Range\/Image   The range or image of a function is the subset of the co-domain consisting of the values of , i.e.    "
+},
+{
+  "id": "def-functions-injective",
+  "level": "2",
+  "url": "sec-functions-defs.html#def-functions-injective",
+  "type": "Definition",
+  "number": "3.1.7",
+  "title": "Injective\/One-to-one.",
+  "body": " Injective\/One-to-one   A function is injective if and only if no two elements from the domain get mapped to the same value in the co-domain . This condition can be expressed formally as: A more informal, but descriptive, term for this property is to say that such a function is one-to-one .   "
+},
+{
+  "id": "def-functions-surjective",
+  "level": "2",
+  "url": "sec-functions-defs.html#def-functions-surjective",
+  "type": "Definition",
+  "number": "3.1.8",
+  "title": "",
+  "body": "  A function is surjective if and only if every element of the domain occurs as a value of . Put more formally this condition is: A more informal, but descriptive, term for this property is to say that such a function is onto .   "
+},
+{
+  "id": "sec-functions-defs-12",
+  "level": "2",
+  "url": "sec-functions-defs.html#sec-functions-defs-12",
+  "type": "Example",
+  "number": "3.1.9",
+  "title": "",
+  "body": "  The function defined by is both injective and surjective, i.e. bijective.  However the function defined by is neither injective nor surjective. Since , is not injective and the fact that for all , means that there is no for which , and so is not surjective.   "
+},
+{
+  "id": "def-functions-bijective",
+  "level": "2",
+  "url": "sec-functions-defs.html#def-functions-bijective",
+  "type": "Definition",
+  "number": "3.1.10",
+  "title": "",
+  "body": "  A function is bijective if and only if it is both injective and surjective.   "
+},
+{
+  "id": "sec-functions-real",
+  "level": "1",
+  "url": "sec-functions-real.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "Real valued functions",
+  "body": " Real valued functions  hello  "
 }
 ]
 
