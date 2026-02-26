@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-functions-partials" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Rational functions and their partial fraction expansions</title>
+    <p>
+				Rational functions are those functions that are quotients of polynomial functions. So a rational function <m>r</m>, is a real-valued function of the form <me>r = \dfrac{p}{q},</me> where the functions <m>p</m> and <m>q</m> are polynomials.
+			</p>
+
+			<p>
+				The treatment of rational functions (for instance when integrating them) is often made easier by re-expressing them in terms of partial fractions. This is a technique for expressing a rational function as a sum of rational functions of a very simple type. An example of a partial fraction expansion of a rational function is: 
+        <md>
+          <mrow>\dfrac{x}{x^3 + x^2 +2x -4}  \amp  = \dfrac{x}{(x+2)^2 (x-1)}</mrow>
+          <mrow> \amp = \dfrac{-1/9}{x+2} + \dfrac{2/3}{(x+2)^2} + \dfrac{1/9}{x-1}</mrow>
+        </md>
+       the final form is called the partial fraction expansion of the original rational function. The partial fractions technique relies on the following fact about polynomials with real coefficients.
+			</p>
+      <theorem xml:id="thm-functions-polynomials">
+        <title>Polynomial factorization</title>
+        
+        
+        <statement>
+          <p>Let <m>p</m> be a polynomial with real coefficients and leading coefficient 1, i.e. <me>p(x) = x^n + a_{n-1} x^{n-1} + a_{n-2} x^{n-2} + \dots a_2 x^2 +
+a_1 x + a_0.</me> Then <m>p(x)</m> factorizes into a product of polynomial factors with real coefficients, each of which is either a linear factor of the form <m>(x-a)^m</m>, where <m>a \in \mathbb{R}</m> and <m>m \in
+\mathbb{N}</m> or a quadratic factor of the form <m>(x^2 + ax + b)^m</m>, where <m>a,b \in \mathbb{R}</m> and <m>m \in \mathbb{N}</m>. A factor <m>(x-a)^m</m> corresponds to a real root <m>a</m> of <m>p</m> of multiplicity <m>m</m> and a quadratic type factor <m>(x^2 + ax + b)^m</m> corresponds to a pair of complex conjugate roots of <m>p</m> of multiplicity <m>m</m>.
+			</p>
+        </statement>
+        <proof>
+          <p>
+            Omitted.
+          </p>
+        </proof>
+      </theorem>
+
+      <paragraphs>
+        <title>The General Method</title>
+        <p>
+					So suppose that <m>r=\tfrac{p}{q}</m> is a rational function. To find the partial fraction expansion we first factorize <m>q(x)</m> in the way described by the above theorem. For each factor of the form <m>(x^2 + ax + b)^m</m> of <m>q(x)</m> we include the terms <me>\dfrac{\alpha_1 x + \beta_1}{x^2 + ax + b} + \dfrac{\alpha_2 x + \beta_2}{(x^2 + ax +
+b)^2} + \dots + \dfrac{\alpha_m x + \beta_m}{(x^2 + ax + b)^m},</me> in the partial fraction expansion. The real numbers <m>\alpha_i, \beta_i</m> will be determined later.
+				</p>
+
+				<p>
+					For each factor of the form <m>(x-a)^m</m> of <m>q(x)</m> we include the terms <me>\dfrac{\alpha_1  }{x - a} + \dfrac{\alpha_2}{(x -a)^2} + \dots + \dfrac{\alpha_m }{(x-a)^m},</me> in the partial fraction expansion. The real numbers <m>\alpha_i</m> will be determined later.
+				</p>
+
+				<p>
+					If the degree of the numerator polynomial <m>p(x)</m> equals or exceeds the degree of the denominator polynomial <m>q(x)</m> by <m>m</m>, where <m>m
+\geq 0</m> then we include the terms <me>\lambda_0 + \lambda_1 x + \dots + \lambda_m x^m,</me> in the partial fraction expansion, the numbers <m>\lambda_i</m> to be determined.
+				</p>
+
+				<p>
+					Following these steps will give you the partial fraction expansion for <m>r(x)</m>. To determine the values of the unknown coefficients we multiply both sides of the partial fraction expansion by <m>q(x)</m> which will have the effect of removing all denominators from the expression (remember that each of the denominators of the partial fraction expansion is a factor of the polynomial <m>q(x)</m> ). This will leave us with an equation of polynomials involving the undetermined coefficients. We can determine the values of these coefficients now by equating coefficients of equal powers of <m>x</m> from both sides of the equation. (Remember that two polynomials are equal if and only if their corresponding coefficients are equal).
+				</p>
+        </paragraphs>
+        <example>
+          <statement>
+            <p>
+              An example with only simple factors in the denominator.
+              </p>
+            <p>
+              Find the partial fraction expansion of 
+              <md>
+                <mrow> \frac{3x+1}{x^3 -3x +2} </mrow>
+              </md>.
+              
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <md>
+                <mrow>\frac{3x + 1}{x^3 - 3x + 2}\amp =  \frac{3x+1}{(x-1)^2(x+2)} </mrow>
+                <mrow> \amp = \frac{\alpha_1}{x-1} + \frac{\alpha_2}{(x-1)^2} +
+					\frac{\beta}{x+2}</mrow>
+              </md>
+              Here we have factorized the denominator and formed the partial fraction expansion. To determine the partial fraction expansion we multiply both sides by <m>(x-1)^2(x+2)</m> to get
+              <md>
+                <mrow>3x + 1 \amp = \alpha_1 (x-1)(x+2) + \alpha_2(x+2) + \beta	(x-1)^2 </mrow>
+                <mrow> \amp = (\alpha_1 + \beta )x^2 + (\alpha_1 + \alpha_2 - 2\beta)x + (-2
+					\alpha_1 +2 \alpha_2 + \beta)</mrow>
+              </md>.
+               Equating coefficients from both sides of the polynomial gives us the simultaneous equations
+               <md>
+                <mrow> \alpha_1 + \beta  \amp =0 </mrow>
+                <mrow>\alpha_1 + \alpha_2 - 2\beta \amp = 3</mrow>
+                <mrow>-2 \alpha_1 +2 \alpha_2 + \beta \amp = 1</mrow>
+               </md>.
+               Solving these equations leads to the solution <me>\alpha_1 = \tfrac{5}{9} , \, \, \alpha_2 = \tfrac{4}{3} , \, \,
+					\beta=\tfrac{-5}{9} .</me> So the partial fraction expansion of our original rational function is <me>\dfrac{3x + 1}{x^3 - 3x + 2} =\dfrac{5/9}{x-1} + \dfrac{4/3}{(x-1)^2}
+					- \dfrac{5/9}{x+2}.</me>
+            </p>
+          </solution>
+        </example>
+
+        <example>
+         <statement>
+          <p>
+            An example with a quadratic type factor in the denominator. 
+          </p>
+          <p>
+            Find the partial fraction expansion of 
+            <me>\frac{5x}{x^3 - x^2 - x - 2}</me>
+          </p>
+         </statement>
+         <solution>
+          <p>
+            <md>
+              <mrow>\frac{5x}{x^3 - x^2 - x - 2} \amp =  \frac{5x}{(x^2 + x + 1)(x-2)}</mrow>
+              <mrow> \amp = \frac{\alpha_1 + \beta x}{x^2 + x + 1} + \frac{\alpha_2}{x-2}</mrow>
+            </md>
+            Multiplying across by <m>(x^2 + x + 1)(x-2)</m> gives <me>5x = (\alpha_1 + \beta x)(x-2) + \alpha_2 (x^2 + x + 1).</me> Multiplying out the right hand side and then equating coefficients of the two polynomials leads to the values <me>\alpha_1 = \tfrac{5}{7} , \, \, \beta=\tfrac{-10}{7} , \, \, \alpha_2 =
+					\tfrac{10}{7}.</me> And so the partial fraction expansion is <me>\dfrac{5x}{x^3 - x^2 - x - 2} =\dfrac{\tfrac{5}{7} - \tfrac{10}{7} x}{x^2 + x + 1} +
+					\dfrac{\tfrac{10}{7}}{x-2}.</me>
+          </p>
+         </solution>
+        </example>
+
+
+
+      
+</section>

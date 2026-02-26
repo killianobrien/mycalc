@@ -682,7 +682,169 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Real valued functions",
-  "body": " Real valued functions   "
+  "body": " Real valued functions  A lot of the time the functions we encounter in mathematics are real-valued , i.e. functions whose domain and co-domain are subsets of the real numbers .   Algebra of real-valued functions  Using the familiar operations of the real numbers we can define associated operations amongst real-valued functions. We want to stress here the consideration of functions as mathematical objects in their own right with operations defined on them.   Addition   Given two real-valued functions and with the same domain we can defined a new function , called the sum of and , on this domain using the formula      Scalar multiplication   Let be a real-valued function and . Then we can form a new function , which has the same domain as , and is defined by the formula      Multiplication   Let and be two real-valued functions with the same domain. Then we can form the new product function , on the same domain, defined by the formula      Reciprocal   Let be a real-valued function that never takes the value zero. Then we can form the new reciprocal function , on the same domain as , defined by the formula     Note that we do not like to use the notation for the reciprocal function as this is normally reserved for the inverse function of , see later.    Composition and inverse  Composing functions is the process of applying functions in sequence, one after the other. You will see it occurring in all areas of mathematics. It is a fundamental mathematical concept and we can study it even before admitting any notion of number or measurement etc. It will play an important role in our study of groups in the next chapter.   Composition    and be two functions (note that the co-domain of is also the domain of ). Then we can form a new function defined by the formula   We can refer to as  composed with  , or more informally,  after  .      Consider the real-valued functions and defined by the formulas Then we can find formulas defining the compositions as follows and     Note that the formulas for the two compositions we found in this example are different. In general, even when both compositions are defined, composition is not commutative, i.e. although in special cases they may be equal.    Consider the real-valued functions defined by the formulas Obtain formulas for each of the following compositions,     ,     ,     ,     ,     ,     .       Identity function   The identity function on the domain is the function defined by the formula   We shall speak of the identity function in different contexts without necessarily specifying the domain. The domain can always be determined from the specific context. The identity function has the property that when composed with another function, it leaves the other function unchanged, i.e.     Under certain conditions, the effect of a function can be reversed, as in the following definition.   Inverse function   Let be a function that is bijective, i.e. is injective and surjective. Then there exits a function called the inverse of , which has the property that Or in other words, and       Given a function defined by a formula it is often possible to obtain the formula for the inverse function (if it exists). Suppose that the real-valued function is defined by the formula We form the equation and adjust it so that becomes the subject of the equation, which is This now gives us the correct formula for the inverse function, , which is defined by     In terms of graphs, there is a nice relationship between the graph of a real-valued function and that of its inverse. The graph of the inverse function can be obtained by reflecting the graph of the original function in the diagonal line in the -plane defined by . This has the effect of inverting the relationship between the domain and co-domain.    Figure shows the graphs of the square function defined by and square root function defined by , along with the dotted line showing the axis of reflection .     The square function and its inverse   (for accessibility)    The next result relates the inverse of the composition of two functions to the compositions of their inverses. It should remind you of a similar result about matrix inverses.   Inverse of compositions   Suppose that and are two bijective functions. Then the composition is also bijective and      "
+},
+{
+  "id": "def-functions-addition",
+  "level": "2",
+  "url": "sec-functions-real.html#def-functions-addition",
+  "type": "Definition",
+  "number": "3.2.1",
+  "title": "Addition.",
+  "body": " Addition   Given two real-valued functions and with the same domain we can defined a new function , called the sum of and , on this domain using the formula    "
+},
+{
+  "id": "def-functions-scalar-mult",
+  "level": "2",
+  "url": "sec-functions-real.html#def-functions-scalar-mult",
+  "type": "Definition",
+  "number": "3.2.2",
+  "title": "Scalar multiplication.",
+  "body": " Scalar multiplication   Let be a real-valued function and . Then we can form a new function , which has the same domain as , and is defined by the formula    "
+},
+{
+  "id": "def-functions-multiplication",
+  "level": "2",
+  "url": "sec-functions-real.html#def-functions-multiplication",
+  "type": "Definition",
+  "number": "3.2.3",
+  "title": "Multiplication.",
+  "body": " Multiplication   Let and be two real-valued functions with the same domain. Then we can form the new product function , on the same domain, defined by the formula    "
+},
+{
+  "id": "def-functions-reciprocal",
+  "level": "2",
+  "url": "sec-functions-real.html#def-functions-reciprocal",
+  "type": "Definition",
+  "number": "3.2.4",
+  "title": "Reciprocal.",
+  "body": " Reciprocal   Let be a real-valued function that never takes the value zero. Then we can form the new reciprocal function , on the same domain as , defined by the formula    "
+},
+{
+  "id": "def-functions-composition",
+  "level": "2",
+  "url": "sec-functions-real.html#def-functions-composition",
+  "type": "Definition",
+  "number": "3.2.5",
+  "title": "Composition.",
+  "body": " Composition    and be two functions (note that the co-domain of is also the domain of ). Then we can form a new function defined by the formula   We can refer to as  composed with  , or more informally,  after  .   "
+},
+{
+  "id": "sec-functions-real-4-4",
+  "level": "2",
+  "url": "sec-functions-real.html#sec-functions-real-4-4",
+  "type": "Example",
+  "number": "3.2.6",
+  "title": "",
+  "body": "  Consider the real-valued functions and defined by the formulas Then we can find formulas defining the compositions as follows and    "
+},
+{
+  "id": "sec-functions-real-4-6",
+  "level": "2",
+  "url": "sec-functions-real.html#sec-functions-real-4-6",
+  "type": "Example",
+  "number": "3.2.7",
+  "title": "",
+  "body": "  Consider the real-valued functions defined by the formulas Obtain formulas for each of the following compositions,     ,     ,     ,     ,     ,     .     "
+},
+{
+  "id": "def-functions-identity",
+  "level": "2",
+  "url": "sec-functions-real.html#def-functions-identity",
+  "type": "Definition",
+  "number": "3.2.8",
+  "title": "Identity function.",
+  "body": " Identity function   The identity function on the domain is the function defined by the formula   We shall speak of the identity function in different contexts without necessarily specifying the domain. The domain can always be determined from the specific context. The identity function has the property that when composed with another function, it leaves the other function unchanged, i.e.    "
+},
+{
+  "id": "def-functions-inverse",
+  "level": "2",
+  "url": "sec-functions-real.html#def-functions-inverse",
+  "type": "Definition",
+  "number": "3.2.9",
+  "title": "Inverse function.",
+  "body": " Inverse function   Let be a function that is bijective, i.e. is injective and surjective. Then there exits a function called the inverse of , which has the property that Or in other words, and    "
+},
+{
+  "id": "sec-functions-real-4-10",
+  "level": "2",
+  "url": "sec-functions-real.html#sec-functions-real-4-10",
+  "type": "Example",
+  "number": "3.2.10",
+  "title": "",
+  "body": "  Given a function defined by a formula it is often possible to obtain the formula for the inverse function (if it exists). Suppose that the real-valued function is defined by the formula We form the equation and adjust it so that becomes the subject of the equation, which is This now gives us the correct formula for the inverse function, , which is defined by    "
+},
+{
+  "id": "sec-functions-real-4-12",
+  "level": "2",
+  "url": "sec-functions-real.html#sec-functions-real-4-12",
+  "type": "Example",
+  "number": "3.2.11",
+  "title": "",
+  "body": "  Figure shows the graphs of the square function defined by and square root function defined by , along with the dotted line showing the axis of reflection .   "
+},
+{
+  "id": "functions-inverse",
+  "level": "2",
+  "url": "sec-functions-real.html#functions-inverse",
+  "type": "Figure",
+  "number": "3.2.12",
+  "title": "",
+  "body": " The square function and its inverse   (for accessibility)   "
+},
+{
+  "id": "thm-functions-inverse-of-composition",
+  "level": "2",
+  "url": "sec-functions-real.html#thm-functions-inverse-of-composition",
+  "type": "Theorem",
+  "number": "3.2.13",
+  "title": "Inverse of compositions.",
+  "body": " Inverse of compositions   Suppose that and are two bijective functions. Then the composition is also bijective and    "
+},
+{
+  "id": "sec-functions-partials",
+  "level": "1",
+  "url": "sec-functions-partials.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "Rational functions and their partial fraction expansions",
+  "body": " Rational functions and their partial fraction expansions  Rational functions are those functions that are quotients of polynomial functions. So a rational function , is a real-valued function of the form where the functions and are polynomials.  The treatment of rational functions (for instance when integrating them) is often made easier by re-expressing them in terms of partial fractions. This is a technique for expressing a rational function as a sum of rational functions of a very simple type. An example of a partial fraction expansion of a rational function is: the final form is called the partial fraction expansion of the original rational function. The partial fractions technique relies on the following fact about polynomials with real coefficients.   Polynomial factorization   Let be a polynomial with real coefficients and leading coefficient 1, i.e. Then factorizes into a product of polynomial factors with real coefficients, each of which is either a linear factor of the form , where and or a quadratic factor of the form , where and . A factor corresponds to a real root of of multiplicity and a quadratic type factor corresponds to a pair of complex conjugate roots of of multiplicity .    Omitted.     The General Method  So suppose that is a rational function. To find the partial fraction expansion we first factorize in the way described by the above theorem. For each factor of the form of we include the terms in the partial fraction expansion. The real numbers will be determined later.  For each factor of the form of we include the terms in the partial fraction expansion. The real numbers will be determined later.  If the degree of the numerator polynomial equals or exceeds the degree of the denominator polynomial by , where then we include the terms in the partial fraction expansion, the numbers to be determined.  Following these steps will give you the partial fraction expansion for . To determine the values of the unknown coefficients we multiply both sides of the partial fraction expansion by which will have the effect of removing all denominators from the expression (remember that each of the denominators of the partial fraction expansion is a factor of the polynomial ). This will leave us with an equation of polynomials involving the undetermined coefficients. We can determine the values of these coefficients now by equating coefficients of equal powers of from both sides of the equation. (Remember that two polynomials are equal if and only if their corresponding coefficients are equal).     An example with only simple factors in the denominator.  Find the partial fraction expansion of .     Here we have factorized the denominator and formed the partial fraction expansion. To determine the partial fraction expansion we multiply both sides by to get . Equating coefficients from both sides of the polynomial gives us the simultaneous equations . Solving these equations leads to the solution So the partial fraction expansion of our original rational function is       An example with a quadratic type factor in the denominator.  Find the partial fraction expansion of      Multiplying across by gives Multiplying out the right hand side and then equating coefficients of the two polynomials leads to the values And so the partial fraction expansion is     "
+},
+{
+  "id": "thm-functions-polynomials",
+  "level": "2",
+  "url": "sec-functions-partials.html#thm-functions-polynomials",
+  "type": "Theorem",
+  "number": "3.3.1",
+  "title": "Polynomial factorization.",
+  "body": " Polynomial factorization   Let be a polynomial with real coefficients and leading coefficient 1, i.e. Then factorizes into a product of polynomial factors with real coefficients, each of which is either a linear factor of the form , where and or a quadratic factor of the form , where and . A factor corresponds to a real root of of multiplicity and a quadratic type factor corresponds to a pair of complex conjugate roots of of multiplicity .    Omitted.   "
+},
+{
+  "id": "sec-functions-partials-6",
+  "level": "2",
+  "url": "sec-functions-partials.html#sec-functions-partials-6",
+  "type": "Example",
+  "number": "3.3.2",
+  "title": "",
+  "body": "  An example with only simple factors in the denominator.  Find the partial fraction expansion of .     Here we have factorized the denominator and formed the partial fraction expansion. To determine the partial fraction expansion we multiply both sides by to get . Equating coefficients from both sides of the polynomial gives us the simultaneous equations . Solving these equations leads to the solution So the partial fraction expansion of our original rational function is    "
+},
+{
+  "id": "sec-functions-partials-7",
+  "level": "2",
+  "url": "sec-functions-partials.html#sec-functions-partials-7",
+  "type": "Example",
+  "number": "3.3.3",
+  "title": "",
+  "body": "  An example with a quadratic type factor in the denominator.  Find the partial fraction expansion of      Multiplying across by gives Multiplying out the right hand side and then equating coefficients of the two polynomials leads to the values And so the partial fraction expansion is    "
+},
+{
+  "id": "sec-functions-exercises",
+  "level": "1",
+  "url": "sec-functions-exercises.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Exercises",
+  "body": " Exercises    Consider the functions defined by , and . Give a defining formula for the following functions                     Let , , Exp and One denote the functions defined by , , and . Consider the functions and defined by Express and as suitable compositions of combinations of the functions , and Exp.    Consider the function defined by the following formulae: What are appropriate domains and co-domains for these functions? Find formulae for their inverses and state the domains and co-domains of these new functions.    Let the functions be defined by Find the formula for the function , stating its domain and co-domain.    Let the functions and be defined by Find the definitions of the functions and and confirm that in this case.    Obtain partial fraction expansions of the following rational functions                     "
 }
 ]
 

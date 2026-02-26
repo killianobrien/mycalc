@@ -12,6 +12,9 @@
   <!-- include sections -->
   <xi:include href="sec-functions-defs.ptx" />
   <xi:include href="sec-functions-real.ptx" />
+  <xi:include href="sec-functions-partials.ptx" />
+  <xi:include href="sec-functions-exercises.ptx" />
+  
 
 
 </chapter>

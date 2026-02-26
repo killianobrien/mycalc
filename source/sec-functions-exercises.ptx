@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-functions-exercises" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Exercises</title>
+   <p><ol>
+					<li>
+									<p>
+										Consider the functions <m>u,v,w</m> defined by <m>u(x)=x+1</m>, <m>v(x)=x^2 + 1</m> and <m>w(x)=\sin{x}</m>. Give a defining formula for the following functions
+									</p>
+					
+									<p><ol>
+										<li>
+														<p>
+															<m>u \circ v</m>
+														</p>
+										</li>
+					
+										<li>
+														<p>
+															<m>v \circ w</m>
+														</p>
+										</li>
+					
+										<li>
+														<p>
+															<m>v \circ u \circ w</m>
+														</p>
+										</li>
+					
+									</ol></p>
+					</li>
+
+					<li>
+									<p>
+										Let <m>S</m>, <m>R</m>, Exp and One denote the functions defined by <m>S(x)=x^2</m>, <m>R(x)=\sqrt{x}</m>, <m>\text{Exp}(x)=e^x</m> and <m>\text{One}(x)=1</m>. Consider the functions <m>f</m> and <m>g</m> defined by <me>f(x) = \left( 3 e^{2x^2} \right )^{\frac{1}{2}} \text{ and }
+					g(x) = 2e^{\left ( 1 + \sqrt{x} \right )^2}.</me> Express <m>f</m> and <m>g</m> as suitable compositions of combinations of the functions <m>S</m>, <m>R</m> and Exp.
+									</p>
+					</li>
+
+					<li>
+									<p>
+										Consider the function <m>f, g, h</m> defined by the following formulae: <me>f(x) = 3x +1 , \quad g(x) = \frac{x}{x-3} , \quad h(x)=\frac{x+1}{x-1} .</me> What are appropriate domains and co-domains for these functions? Find formulae for their inverses and state the domains and co-domains of these new functions.
+									</p>
+					</li>
+
+					<li>
+									<p>
+										Let the functions <m>\lambda \, : \, \mathbb{R} \to (-1, \infty)</m> be defined by <me>\lambda (t) = e^{\frac{t}{2}} - 1 .</me> Find the formula for the function <m>\lambda^{-1}</m>, stating its domain and co-domain.
+									</p>
+					</li>
+
+					<li>
+									<p>
+										Let the functions <m>\phi \, : \, (0, \infty) \to (-1, \infty)</m> and <m>\psi \, : \, \mathbb{R} \to (0, \infty)</m> be defined by <me>\phi(x) = x^2 - 1 , \quad \psi(x) = e^{2x} .</me> Find the definitions of the functions <m>\phi \circ \psi</m> and <m>(\phi \circ \psi)^{-1}</m> and confirm that <me>(\phi \circ \psi)^{-1} = \psi^{-1} \circ \phi^{-1}</me> in this case.
+									</p>
+					</li>
+
+					<li>
+									<p>
+										Obtain partial fraction expansions of the following rational functions
+									</p>
+					
+									<p><ol>
+										<li>
+														<p>
+															<me>\frac{2s+2}{s^2 - 2s -8} ,</me>
+														</p>
+										</li>
+					
+										<li>
+														<p>
+															<me>\frac{s^2 + s-3}{s^2 + s} ,</me>
+														</p>
+										</li>
+					
+										<li>
+														<p>
+															<me>\frac{s^2+3}{s^3-5 s^2+s-5}.</me>
+														</p>
+										</li>
+					
+									</ol></p>
+					</li>
+
+				</ol></p>
+
+</section>

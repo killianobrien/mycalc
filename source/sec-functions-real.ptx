@@ -2,5 +2,213 @@
 
 <section xml:id="sec-functions-real" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Real valued functions</title>
-  <p></p>
+    <p>
+			A lot of the time the functions we encounter in mathematics are <em>real-valued</em>, i.e. functions whose domain and co-domain are subsets of the real numbers <m>\mathbb{R}</m>.
+		</p>
+    <paragraphs>
+      <title>Algebra of real-valued functions</title>
+    <p>
+			Using the familiar operations of the real numbers we can define associated operations amongst real-valued functions. We want to stress here the consideration of functions as mathematical objects in their own right with operations defined on them.
+		</p>
+
+    <definition xml:id="def-functions-addition">
+      <title>Addition</title>
+       
+      <statement>
+        <p>
+					Given two real-valued functions <m>f</m> and <m>g</m> with the same domain we can defined a new function <m>f+g</m>, called the <em>sum</em> of <m>f</m> and <m>g</m>, on this domain using the formula <me>\left ( f + g \right ) (x) = f(x) + g(x) .</me>
+				</p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-functions-scalar-mult">
+      <title>Scalar multiplication</title>
+      <statement>
+        <p>
+					Let <m>f</m> be a real-valued function and <m>\lambda \in \mathbb{R}</m>. Then we can form a new function <m>\lambda f</m>, which has the same domain as <m>f</m>, and is defined by the formula <me>\left ( \lambda f \right ) (x) = \lambda \left ( f(x) \right ).</me>
+				</p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-functions-multiplication">
+      <title>Multiplication</title>
+      <statement>
+        <p>
+					Let <m>f</m> and <m>g</m> be two real-valued functions with the same domain. Then we can form the new <em>product</em> function <m>fg</m>, on the same domain, defined by the formula <me>\left ( fg \right ) (x) = f(x) g(x).</me>
+				</p>
+      </statement>
+    </definition>
+
+      <definition xml:id="def-functions-reciprocal">
+        <title>Reciprocal</title>
+        
+        
+        <statement>
+          <p>
+					Let <m>f</m> be a real-valued function that never takes the value zero. Then we can form the new <em>reciprocal</em> function <m>\frac{1}{f}</m>, on the same domain as <m>f</m>, defined by the formula <me>\left ( \frac{1}{f} \right ) (x) = \frac{1}{f(x)}.</me>
+				</p>
+        </statement>
+      </definition>
+
+				<p>
+					Note that we do not like to use the notation <m>f^{-1}</m> for the reciprocal function as this is normally reserved for the <em>inverse</em> function of <m>f</m>, see later.
+				</p>
+        </paragraphs>
+
+        <paragraphs>
+          <title>Composition and inverse</title>
+          <p>
+				Composing functions is the process of applying functions in sequence, one after the other. You will see it occurring in all areas of mathematics. It is a fundamental mathematical concept and we can study it even before admitting any notion of number or measurement etc. It will play an important role in our study of groups in the next chapter.
+			</p>
+
+      <definition xml:id="def-functions-composition">
+        <title>Composition</title>
+        
+        
+        <statement>
+          <p>
+				 <m>f:X \to Y</m> and <m>g:Y \to Z</m> be two functions (note that the co-domain of <m>f</m> is also the domain of <m>g</m>). Then we can form a new function <me>g \circ f \, : \, X \to Z ,</me> defined by the formula <me>\left ( g \circ f \right ) (x) = g(f(x)) .</me>
+			</p><!--</div attr= class="defn">-->
+
+			<p>
+				We can refer to <m>g \circ f</m> as <m>g</m> <em>composed with</em> <m>f</m>, or more informally, <m>g</m> <em>after</em> <m>f</m>.
+			</p>
+        </statement>
+      </definition>
+
+      <example>
+        <statement>
+          <p>
+				Consider the real-valued functions <m>f</m> and <m>g</m> defined by the formulas <me>f(x) = x^2 - 3 \text{ and } g(x)=2x+3 .</me> Then we can find formulas defining the compositions as follows <me>\left ( f \circ g \right )(x) = f(g(x)) = \left ( 2x+3 \right)^2 -3 = 4x^2 +12x +6,</me> and <me>\left ( g \circ f \right )(x) = g(f(x)) = 2 \left (x^2 - 3 \right ) + 3 = 2x^2 - 3.</me>
+			</p>
+      </statement>
+      </example>
+			<p>
+				Note that the formulas for the two compositions we found in this example are different. In general, even when both compositions are defined, composition is not commutative, i.e. <me>f \circ g \neq g \circ f ,</me> although in special cases they may be equal.
+			</p>
+
+      <example>
+        
+      <statement>
+        <p>
+				Consider the real-valued functions <m>g,h,r</m> defined by the formulas <me>g(x) = 2x - 7, \quad h(x)=x^2 -1 \text{ and } r(x) = e^{2x} .</me> Obtain formulas for each of the following compositions,
+			</p>
+      <p><ol>
+				<li>
+							<p>
+								<m>g \circ h</m>,
+							</p>
+				</li>
+
+				<li>
+							<p>
+								<m>h \circ r</m>,
+							</p>
+				</li>
+
+				<li>
+							<p>
+								<m>g \circ h \circ r</m>,
+							</p>
+				</li>
+
+				<li>
+							<p>
+								<m>g \circ g</m>,
+							</p>
+				</li>
+
+				<li>
+							<p>
+								<m>g \circ  g \circ g</m>,
+							</p>
+				</li>
+
+				<li>
+							<p>
+								<m>r \circ r</m>.
+							</p>
+				</li>
+
+			</ol></p>
+      </statement>
+      </example>
+
+      <definition xml:id="def-functions-identity">
+        <title>Identity function</title>
+        
+        
+        <statement>
+          <p>
+				The identity function <m>\text{id}</m> on the domain <m>X</m> is the function <me>\text{id} \, : \, X \to X ,</me> defined by the formula <me>\forall x \in X \quad \text{id}(x)=x.</me>
+			</p>
+
+      <p>
+				We shall speak of <em>the</em> identity function in different contexts without necessarily specifying the domain. The domain can always be determined from the specific context. The identity function has the property that when composed with another function, it leaves the other function unchanged, i.e. <me>f \circ \text{id} = \text{id} \circ f = f.</me>
+			</p>
+        </statement>
+      </definition>
+
+      <p>
+				Under certain conditions, the effect of a function can be reversed, as in the following definition.
+			</p>
+
+      <definition xml:id="def-functions-inverse">
+        <title>Inverse function</title>
+        
+        
+        <statement>
+          <p>
+				Let <m>f:X \to Y</m> be a function that is bijective, i.e. is injective and surjective. Then there exits a function <me>f^{-1} \, : \, Y \to X,</me> called the <em>inverse of <m>f</m></em>, which has the property that <me>f^{-1} \circ f = f \circ f^{-1} = \text{id}.</me> Or in other words, <me>\forall x \in X \quad f^{-1} ( f(x)) = x ,</me> and <me>\forall y \in Y \quad f(f^{-1}(y)) = y .</me>
+			</p>
+        </statement>
+      </definition>
+
+      <example>
+        <statement>
+          <p>
+				Given a function defined by a formula it is often possible to obtain the formula for the inverse function (if it exists). Suppose that the real-valued function <m>f</m> is defined by the formula <me>f(x) = 2x - 5.</me> We form the equation <m>y = 2x-5</m> and adjust it so that <m>x</m> becomes the subject of the equation, which is <me>x=\frac{y+5}{2}.</me> This now gives us the correct formula for the inverse function, <m>f^{-1}</m>, which is defined by <me>f^{-1} (y) = \frac{y+5}{2} .</me>
+			</p>
+        </statement>
+      </example>
+
+      <p>
+				In terms of graphs, there is a nice relationship between the graph of a real-valued function and that of its inverse. The graph of the inverse function can be obtained by reflecting the graph of the original function in the diagonal line in the <m>xy</m>-plane defined by <m>y=x</m>. This has the effect of inverting the relationship between the domain and co-domain.
+			</p>
+
+      <example>
+        <statement>
+          <p>
+				Figure <xref ref="functions-inverse" /> shows the graphs of the square function <m>s: \mathbb{R}^+ \to \mathbb{R}^+</m> defined by <m>s(x)=x^2</m> and square root function <m>r:\mathbb{R}^+ \to \mathbb{R}^+</m> defined by <m>r(x)=\sqrt{x}</m>, along with the dotted line showing the axis of reflection <m>y=x</m>.
+			</p>
+        </statement>
+      </example>
+
+       <figure xml:id="functions-inverse">
+    <caption>The square function and its inverse</caption>
+
+    <image source="inverse.png" width="60%">
+      <shortdescription>(for accessibility)</shortdescription>
+    </image>
+  </figure>
+
+  <p>
+				The next result relates the inverse of the composition of two functions to the compositions of their inverses. It should remind you of a similar result about matrix inverses.
+			</p>
+
+      <theorem xml:id="thm-functions-inverse-of-composition">
+        <title>Inverse of compositions</title>
+        
+        
+        <statement>
+          <p>
+				Suppose that <m>f: X \to Y</m> and <m>g:Y \to Z</m> are two bijective functions. Then the composition <m>g \circ f</m> is also bijective and <me>\left ( g \circ f \right )^{-1} = f^{-1} \circ g^{-1} .</me>
+			</p>
+        </statement>
+      </theorem>
+      
+
+        </paragraphs>
+
+
 </section>

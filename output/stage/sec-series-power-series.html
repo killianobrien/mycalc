@@ -19,7 +19,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -183,131 +182,133 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-defs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Basic definitions and notation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-real.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Real valued functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-partials.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Rational functions and their partial fraction expansions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-series-power-series"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.4</span><span class="space"> </span><span class="title">Power Series</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Power Series</span>
 </h2>
-<div class="para" id="sec-series-power-series-2">Using series we can define a class of functions called <em class="emphasis">power series</em>. We shall look at some basic examples here and return to this topic later when we are discussing the differential calculus.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-series-power-series-2">Using series we can define a class of functions called <em class="emphasis">power series</em>. We shall look at some basic examples here and return to this topic later when we are discussing the differential calculus.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-power-series"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Power Series.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Power Series.</span>
 </h3>
 <div class="para logical" id="def-power-series-2-1">
 <div class="para">A sequence of terms <span class="process-math">\(\{ a_m \}_{m=1}^\infty\)</span> defines a <em class="emphasis">power series</em> function <span class="process-math">\(A\)</span> by the formula</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-power-series-2-1-4">
 \begin{equation*}
 A(x) = \sum_{m=1}^\infty a_m x^m .
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-power-series-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-power-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.4.1: Power Series"><a href="#def-power-series" title="Copy heading and permalink for Definition 2.4.1: Power Series">🔗</a></div></article><div class="para" id="sec-series-power-series-4">Of course this formula for <span class="process-math">\(A(x)\)</span> may only make sense for certain values of the argument <span class="process-math">\(x\text{.}\)</span> For some values of <span class="process-math">\(x\)</span> the series may converge but for some values it may diverge. We can investigate this matter using the ratio test.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.4.1: Power Series"><a href="#def-power-series" title="Copy heading and permalink for Definition 2.4.1: Power Series" aria-label="Copy heading and permalink for Definition 2.4.1: Power Series">🔗</a></div></article><div class="para" id="sec-series-power-series-4">Of course this formula for <span class="process-math">\(A(x)\)</span> may only make sense for certain values of the argument <span class="process-math">\(x\text{.}\)</span> For some values of <span class="process-math">\(x\)</span> the series may converge but for some values it may diverge. We can investigate this matter using the ratio test.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="sec-series-power-series-5">
 <div class="para">According to the ratio test the series formula for <span class="process-math">\(A(x)\)</span> will converge when</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-series-power-series-5-2">
 \begin{equation*}
 \lim_{m \to \infty} \left | \frac{a_{m+1} x^{m+1}}{a_m x^m} \right | &lt; 1,
 \end{equation*}
 </div>
 <div class="para">which is equivalent, after simplifying, to</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-series-power-series-5-3">
 \begin{equation*}
 |x| &lt; \lim_{m \to \infty} \left | \frac{a_m}{a_{m+1}} \right |.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-radius-convergence"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Radius of Convergence.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Radius of Convergence.</span>
 </h3>
 <div class="para logical" id="def-radius-convergence-2-1">
 <div class="para">The quantity <span class="process-math">\(R\)</span> defined by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-radius-convergence-2-1-2">
 \begin{equation*}
 R = \lim_{m \to \infty} \left | \frac{a_m}{a_{m+1}} \right | ,
 \end{equation*}
 </div>
 <div class="para">is known as the <em class="emphasis">radius of convergence</em> of the series <span class="process-math">\(\sum_{m=1}^\infty a_m x^m\text{.}\)</span> The series converges if <span class="process-math">\(|x| &lt; R\)</span> and diverges if <span class="process-math">\(|x| &gt; R\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-radius-convergence-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-radius-convergence-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.4.2: Radius of Convergence"><a href="#def-radius-convergence" title="Copy heading and permalink for Definition 2.4.2: Radius of Convergence">🔗</a></div></article><div class="para" id="sec-series-power-series-7">Note that the ratio test does not tell us about the convergence of the series when <span class="process-math">\(|x| =R\text{.}\)</span> That will have to be determined by other methods.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.4.2: Radius of Convergence"><a href="#def-radius-convergence" title="Copy heading and permalink for Definition 2.4.2: Radius of Convergence" aria-label="Copy heading and permalink for Definition 2.4.2: Radius of Convergence">🔗</a></div></article><div class="para" id="sec-series-power-series-7">Note that the ratio test does not tell us about the convergence of the series when <span class="process-math">\(|x| =R\text{.}\)</span> That will have to be determined by other methods.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-series-power-series-8">An important source of power series comes from applying Taylor’s theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-series-power-series-8">An important source of power series comes from applying Taylor’s theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-taylors-theorem"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor’s Theorem.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Taylor’s Theorem.</span>
 </h3>
 <div class="para logical" id="thm-taylors-theorem-2-1">
 <div class="para">Suppose that on an interval <span class="process-math">\([a,x]\)</span> the function <span class="process-math">\(f\)</span> can be differentiated <span class="process-math">\(n+1\)</span> times, for some <span class="process-math">\(n\geq 0\text{.}\)</span> Then there exists a number <span class="process-math">\(c \in (a,x)\)</span> such that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-taylors-theorem-2-1-6">
 \begin{equation*}
 f(x)=f(a) + f'(a) (x-a) + \frac{f''(a)}{2!} (x-a)^2 + \dots + \frac{f^{(n)}(a)}{n!} (x-a)^n + R_n ,
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(R_n\)</span> is the <em class="emphasis">Lagrange remainder</em> and is given by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-taylors-theorem-2-1-9">
 \begin{equation*}
 R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!} (x-a)^{n+1}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-taylors-theorem-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-taylors-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="thm-taylors-theorem-2-2">
-<em class="emphasis">Proof omitted.</em><div class="autopermalink" data-description="Paragraph"><a href="#thm-taylors-theorem-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<em class="emphasis">Proof omitted.</em><div class="autopermalink" data-description="Paragraph"><a href="#thm-taylors-theorem-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.4.3: Taylor’s Theorem"><a href="#thm-taylors-theorem" title="Copy heading and permalink for Theorem 2.4.3: Taylor’s Theorem">🔗</a></div></article><div class="para logical" id="sec-series-power-series-10">
+<div class="autopermalink" data-description="Theorem 2.4.3: Taylor’s Theorem"><a href="#thm-taylors-theorem" title="Copy heading and permalink for Theorem 2.4.3: Taylor’s Theorem" aria-label="Copy heading and permalink for Theorem 2.4.3: Taylor’s Theorem">🔗</a></div></article><div class="para logical" id="sec-series-power-series-10">
 <div class="para">Taylor’s theorem provides us with a way of generating power series approximations to function values. By writing <span class="process-math">\(a+x\)</span> for <span class="process-math">\(x\)</span> in the above equation we get an equivalent form referred to as the <em class="emphasis">Taylor polynomial expansion of <span class="process-math">\(f\)</span> about the point <span class="process-math">\(a\)</span></em>:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-series-power-series-10-4">
 \begin{equation*}
 f(a+x)=f(a) + f'(a) x + \frac{f''(a)}{2!} x^2 + \dots + \frac{f^{(n)}(a)}{n!} x^n + R_n .
 \end{equation*}
 </div>
 <div class="para">It is often the case that <span class="process-math">\(R_n(x) \to 0\)</span> as <span class="process-math">\(n \to \infty\)</span> and then we may represent the function <span class="process-math">\(f\)</span> using its <em class="emphasis">Taylor series expansion about the point <span class="process-math">\(a\)</span></em>:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-series-power-series-10-9">
 \begin{equation*}
 f(a+x) = \sum_{n=0}^\infty \frac{f^{(n)} (a)}{n!} x^n \, .
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-10" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="sec-series-power-series-11">
 <div class="para">Two important things to note are that for all <span class="process-math">\(x \in \mathbb{R}\)</span> we have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-series-power-series-11-2">
 \begin{equation*}
 \lim_{n \to \infty} \frac{x^n}{n!} = 0
 \end{equation*}
 </div>
 <div class="para">and that if <span class="process-math">\(-1&lt;x&lt;1\)</span> then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-series-power-series-11-4">
 \begin{equation*}
 \lim_{n \to \infty} x^n = 0 .
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-series-power-series-12">The special case where we expand a function about the point <span class="process-math">\(a=0\)</span> gives rise to what is called a <em class="emphasis">Maclaurin series</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-12" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-series-power-series-12">The special case where we expand a function about the point <span class="process-math">\(a=0\)</span> gives rise to what is called a <em class="emphasis">Maclaurin series</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-maclaurin-series"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Maclaurin series.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maclaurin series.</span>
 </h3>
 <div class="para logical" id="def-maclaurin-series-2-1">
 <div class="para">The Taylor series expansion of a function <span class="process-math">\(f\)</span> about the point <span class="process-math">\(0\)</span> is called the <em class="emphasis">Maclaurin series</em> of <span class="process-math">\(f\text{,}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-maclaurin-series-2-1-5">
 \begin{equation*}
 f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} x^n .
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-maclaurin-series-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-maclaurin-series-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.4.4: Maclaurin series"><a href="#def-maclaurin-series" title="Copy heading and permalink for Definition 2.4.4: Maclaurin series">🔗</a></div></article><div class="para" id="sec-series-power-series-14">We shall return to the topic of Taylor series after we have studied differentiation in more detail.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-14" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.4.4: Maclaurin series"><a href="#def-maclaurin-series" title="Copy heading and permalink for Definition 2.4.4: Maclaurin series" aria-label="Copy heading and permalink for Definition 2.4.4: Maclaurin series">🔗</a></div></article><div class="para" id="sec-series-power-series-14">We shall return to the topic of Taylor series after we have studied differentiation in more detail.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-series-power-series-15">In table <a href="sec-series-power-series.html#table-Mac" class="xref" data-knowl="./knowl/xref/table-Mac.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.4.5: Some standard Maclaurin series">Table 2.4.5</a> you will see Maclaurin series of some standard functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-15" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-series-power-series-15">In table <a href="sec-series-power-series.html#table-Mac" class="xref" data-knowl="./knowl/xref/table-Mac.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.4.5: Some standard Maclaurin series">Table 2.4.5</a> you will see Maclaurin series of some standard functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="table table-like" id="table-Mac"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.5<span class="period">.</span></span><span class="space"> </span>Some standard Maclaurin series<div class="autopermalink" data-description="Table 2.4.5: Some standard Maclaurin series"><a href="#table-Mac" title="Copy heading and permalink for Table 2.4.5: Some standard Maclaurin series">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="table-Mac"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Some standard Maclaurin series<div class="autopermalink" data-description="Table 2.4.5: Some standard Maclaurin series"><a href="#table-Mac" title="Copy heading and permalink for Table 2.4.5: Some standard Maclaurin series" aria-label="Copy heading and permalink for Table 2.4.5: Some standard Maclaurin series">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b0 r0 l0 t0 lines">Maclarin series</th>
 <th scope="col" class="r m b0 r0 l0 t0 lines">Interval of convergence</th>
@@ -356,7 +357,7 @@ f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} x^n .
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="r m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></figure><div class="autopermalink" data-description="Section 2.4: Power Series"><a href="#sec-series-power-series" title="Copy heading and permalink for Section 2.4: Power Series">🔗</a></div></section></div>
+</table></div></figure><div class="autopermalink" data-description="Section 2.4: Power Series"><a href="#sec-series-power-series" title="Copy heading and permalink for Section 2.4: Power Series" aria-label="Copy heading and permalink for Section 2.4: Power Series">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-series-convergence-tests.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-series-exercises.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
