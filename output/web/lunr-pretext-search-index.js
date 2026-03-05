@@ -845,6 +845,168 @@ var ptx_lunr_docs = [
   "number": "3.4",
   "title": "Exercises",
   "body": " Exercises    Consider the functions defined by , and . Give a defining formula for the following functions                     Let , , Exp and One denote the functions defined by , , and . Consider the functions and defined by Express and as suitable compositions of combinations of the functions , and Exp.    Consider the function defined by the following formulae: What are appropriate domains and co-domains for these functions? Find formulae for their inverses and state the domains and co-domains of these new functions.    Let the functions be defined by Find the formula for the function , stating its domain and co-domain.    Let the functions and be defined by Find the definitions of the functions and and confirm that in this case.    Obtain partial fraction expansions of the following rational functions                     "
+},
+{
+  "id": "sec-diff-function-limits",
+  "level": "1",
+  "url": "sec-diff-function-limits.html",
+  "type": "Section",
+  "number": "4.1",
+  "title": "Limiting values of functions",
+  "body": " Limiting values of functions  We have met the concept of a limit in the context of sequences and series. The concept is also useful when discussing real-valued functions. Let and be two real numbers. Informally we say that the function tends to the limit as tends to if the value gets closer and closer to as gets closer and closer to . We can represent this symbolically as which we read as the limit, as tends to , of is equal to . Alternatively we can write which we read as tends to as tends to .  Notice that this description makes no reference to the actual value (if any) of the function at . The concept of limit only refers to the behaviour of as it approaches some limiting point .   Discontinuous behaviour of a function at .   (for accessibility)    This definition is not sufficiently rigorous though. For instance, as the diagram in figure illustrates, a function may have different limits depending on the direction from which approaches .  If this situation arises then we can refer separately to the two different limits as follows. The limit of as tends to from the left is written as and the limit of as tends to from the right is written as   Although it is not an element of the real numbers we can admit the concept of infinity ( ) into this definition as it will allow us to describe the behavior of functions in the following way. If a function grows without bound as approaches then we can write For example and If the values of a function approach some limit as the argument gets larger and larger then we could write For example and    The function .   (for accessibility)    These limiting values of the function can be appreciated from its graph shown in figure .  To calculate and work with limiting values of functions we can use the standard techniques that we introduced when dealing with limits of sequences and series. We have the following theorem   Algebra of limits for function values   Let and suppose that and , then . For the last quotient case we would need the additional assumption that and that is non-zero in some interval around .    Of particular use is l’Hopital’s rule. This is used to evaluate the limit, , of a quotient of functions and . Sometimes these limits can not be evaluated because it works out to some indeterminant form, i.e . In these cases we can differentiate both functions and then look at the limit of the resulting quotient. If this new limit exists then the rule says that it is equal to the original limit.   l'Hopital's rule   If or then providing the limit exists where and are the derivatives of and .    It may be necessary to apply l'Hopital's rule a number of times (i.e. taking second or third derivatives etc) in order to convert the original indeterminate limit into a determinate one.   The following examples illustrate the use of these techniques.                                   "
+},
+{
+  "id": "diff-discon",
+  "level": "2",
+  "url": "sec-diff-function-limits.html#diff-discon",
+  "type": "Figure",
+  "number": "4.1.1",
+  "title": "",
+  "body": " Discontinuous behaviour of a function at .   (for accessibility)   "
+},
+{
+  "id": "diff-one-over-x",
+  "level": "2",
+  "url": "sec-diff-function-limits.html#diff-one-over-x",
+  "type": "Figure",
+  "number": "4.1.2",
+  "title": "",
+  "body": " The function .   (for accessibility)   "
+},
+{
+  "id": "thm-diff-algebra",
+  "level": "2",
+  "url": "sec-diff-function-limits.html#thm-diff-algebra",
+  "type": "Theorem",
+  "number": "4.1.3",
+  "title": "Algebra of limits for function values.",
+  "body": " Algebra of limits for function values   Let and suppose that and , then . For the last quotient case we would need the additional assumption that and that is non-zero in some interval around .   "
+},
+{
+  "id": "thm-diff-lhopital",
+  "level": "2",
+  "url": "sec-diff-function-limits.html#thm-diff-lhopital",
+  "type": "Theorem",
+  "number": "4.1.4",
+  "title": "l’Hopital’s rule.",
+  "body": " l'Hopital's rule   If or then providing the limit exists where and are the derivatives of and .   "
+},
+{
+  "id": "sec-diff-function-limits-15",
+  "level": "2",
+  "url": "sec-diff-function-limits.html#sec-diff-function-limits-15",
+  "type": "Example",
+  "number": "4.1.5",
+  "title": "",
+  "body": " The following examples illustrate the use of these techniques.                                  "
+},
+{
+  "id": "sec-diff-continuity",
+  "level": "1",
+  "url": "sec-diff-continuity.html",
+  "type": "Section",
+  "number": "4.2",
+  "title": "Continuity",
+  "body": " Continuity  In the previous section we made the point that the limiting value, , of the function does not depend on the actual value, , of at the limiting point . However it is an important feature (continuity) of a function when the limiting value actually equals the value at the limiting point. We give the following informal definition for continuity.   Continuity   The function is continuous at the point if     If is continuous at all points of its domain then we say that is a continuous function . A function that is not continuous is called non-continuous .  If this definition is not satisfied at a point then we say that the function has a discontinuity at .  Functions can be discontinuous in a number of different ways. For instance the left and right hand limits may differ at a point as we saw earlier. Another type of discontinuity is the rapidly oscillating behaviour near of the function seen in figure .   The graph of nearr .   (for accessibility)    Note that the plotting program struggles to represent the behavior accurately at here. The point is that the limit does not exist so even if the function were to be given a definition at it could never be continuous there.  The continuity property is preserved by the usual operations on functions, as described in the following theorems.   Continuity of sums, products and quotients   Suppose that functions and are both continuous at a point , then for any the linear combination function is also continuous at . Also the product function will be continuous at as well as the quotient function provided that is non-zero in some surrounding interval of .     Continuity of composition   Suppose that and are two functions whose domains and co-domains are such that the composition function can be defined. If is continuous at a point and is continuous at the point then the composition function is continuous at .    The definition of continuity (and limiting values of functions) that we have given do lack rigor in that they rely on the notion of getting closer and closer to .....  which we have not given a complete description of. A fully detailed rigorous treatment of continuity is the subject of mathematical analysis and is not possible within the scope of this unit. However we can give a taste of it by looking at the formal definition of continuity and how it is used to prove one of the cases of the above theorem.   Formal definition of continuity   The function is continuous at the point if and only if for all there exists such that if then . In formal symbolic terms this becomes: is continuous at if and only if the following statement holds      is useful for picturing the role of the variables and in the definition of continuity.   Illustrating the parameters in the formal definition.   (for accessibility)    Using this definition we can give rigorous proofs of the continuity theorems above. You will see a lot of similarity in the arguments here and the proofs of the similar properties of convergence of sequences. Those previous arguments are adapted to the new context and where -arguments take the place of the -arguments.  Proof of  First we prove that continuity is preserved by linear combinations. We assume additionally that . Let be given. There exists such that for all we have , and for all we have .  Let and then for all we have Therefore the definition is satisfied and the linear combination is continuous at as required.  Next we prove that continuity is preserved by products. Let be given. By continuity there exist such that for all we have and we have .  Letting and then for all we have Therefore the definition is satisfied and the product is continuous at as required.  The proof that quotients preserve continuity is again similar to the case for convergence of sequences. The details are left as an exercise for the reader.    Proof of   Proof. The conditions of the theorem are illustrated in figure . There we see illustrated three copies of the real number line with the action of the functions from left to right with going first and then applied to the result of .   The composition function .   The composition function    Let be given. As is continuous at there exists a radius such that for all we have . But since is continuous at there exists a radius such that for all we have .  Combining these two gives us the required result, namely that for all we have , i.e. the composition is continuous at .    Importance of continuity  Mathematicians sometimes talk of a concept like continuity as describing the well-behaved nature of certain functions . So a well-behaved function is one that has nice reasonable properties, properties usually enjoyed by the real physical properties of the processes that we are using the functions to model for instance. A badly-behaved function might be one that has no discernable reasonable properties or interpretation, such as some kind of random association of real numbers to other real numbers (though such things and their properties might still be of great mathematical interest!).  The concept of continuity generalizes to functions between lots of other kinds of mathematical space, such as say functions from , where are positive integers. These are functions between different dimensional Euclidean geometric Euclidean spaces. Or perhaps functions between different Riemannian manifolds. A Riemannian manifold generalization of Euclidean space, i.e. a space which has a different kind of curved geometry rather than the flat geometry of Euclidean spaces. We can even study the concept of continuity for functions, and distance like measures, on spaces that have no kind of immediate intuitive geometric interpretation for us. Such topics are explored in the subject areas of general topology and metric spaces .  An example of continuity embodying the notion of well-behaved function we can consider the Intermediate Value Theorem which is illustrated in figure .   The Intermediate Value Theorem.   The intermediate value theorem     Intermediate Value Theorem   Let be a function defined on and continuous at all points in the closed interval . Suppose that . Then for any number between and , there exists a number such that .    The proof of this theorem makes use of the completeness or least upper-bound property of the real numbers and can be viewed as an embodiment of that property   "
+},
+{
+  "id": "def-diff-continuity",
+  "level": "2",
+  "url": "sec-diff-continuity.html#def-diff-continuity",
+  "type": "Definition",
+  "number": "4.2.1",
+  "title": "Continuity.",
+  "body": " Continuity   The function is continuous at the point if    "
+},
+{
+  "id": "diff-sin1overx",
+  "level": "2",
+  "url": "sec-diff-continuity.html#diff-sin1overx",
+  "type": "Figure",
+  "number": "4.2.2",
+  "title": "",
+  "body": " The graph of nearr .   (for accessibility)   "
+},
+{
+  "id": "thm-diff-cont-algebra",
+  "level": "2",
+  "url": "sec-diff-continuity.html#thm-diff-cont-algebra",
+  "type": "Theorem",
+  "number": "4.2.3",
+  "title": "Continuity of sums, products and quotients.",
+  "body": " Continuity of sums, products and quotients   Suppose that functions and are both continuous at a point , then for any the linear combination function is also continuous at . Also the product function will be continuous at as well as the quotient function provided that is non-zero in some surrounding interval of .   "
+},
+{
+  "id": "thm-diff-cont-comp",
+  "level": "2",
+  "url": "sec-diff-continuity.html#thm-diff-cont-comp",
+  "type": "Theorem",
+  "number": "4.2.4",
+  "title": "Continuity of composition.",
+  "body": " Continuity of composition   Suppose that and are two functions whose domains and co-domains are such that the composition function can be defined. If is continuous at a point and is continuous at the point then the composition function is continuous at .   "
+},
+{
+  "id": "def-diff-cont-formal",
+  "level": "2",
+  "url": "sec-diff-continuity.html#def-diff-cont-formal",
+  "type": "Definition",
+  "number": "4.2.5",
+  "title": "Formal definition of continuity.",
+  "body": " Formal definition of continuity   The function is continuous at the point if and only if for all there exists such that if then . In formal symbolic terms this becomes: is continuous at if and only if the following statement holds    "
+},
+{
+  "id": "formal-cont",
+  "level": "2",
+  "url": "sec-diff-continuity.html#formal-cont",
+  "type": "Figure",
+  "number": "4.2.6",
+  "title": "",
+  "body": " Illustrating the parameters in the formal definition.   (for accessibility)   "
+},
+{
+  "id": "sec-diff-continuity-17",
+  "level": "2",
+  "url": "sec-diff-continuity.html#sec-diff-continuity-17",
+  "type": "Proof",
+  "number": "4.2.1",
+  "title": "Proof of Theorem 4.2.3.",
+  "body": "Proof of  First we prove that continuity is preserved by linear combinations. We assume additionally that . Let be given. There exists such that for all we have , and for all we have .  Let and then for all we have Therefore the definition is satisfied and the linear combination is continuous at as required.  Next we prove that continuity is preserved by products. Let be given. By continuity there exist such that for all we have and we have .  Letting and then for all we have Therefore the definition is satisfied and the product is continuous at as required.  The proof that quotients preserve continuity is again similar to the case for convergence of sequences. The details are left as an exercise for the reader.  "
+},
+{
+  "id": "sec-diff-continuity-18",
+  "level": "2",
+  "url": "sec-diff-continuity.html#sec-diff-continuity-18",
+  "type": "Proof",
+  "number": "4.2.2",
+  "title": "Proof of Theorem 4.2.4.",
+  "body": " Proof of   Proof. The conditions of the theorem are illustrated in figure . There we see illustrated three copies of the real number line with the action of the functions from left to right with going first and then applied to the result of .   The composition function .   The composition function    Let be given. As is continuous at there exists a radius such that for all we have . But since is continuous at there exists a radius such that for all we have .  Combining these two gives us the required result, namely that for all we have , i.e. the composition is continuous at .  "
+},
+{
+  "id": "intervalthm",
+  "level": "2",
+  "url": "sec-diff-continuity.html#intervalthm",
+  "type": "Figure",
+  "number": "4.2.8",
+  "title": "",
+  "body": " The Intermediate Value Theorem.   The intermediate value theorem   "
+},
+{
+  "id": "thm-intervalthm",
+  "level": "2",
+  "url": "sec-diff-continuity.html#thm-intervalthm",
+  "type": "Theorem",
+  "number": "4.2.9",
+  "title": "Intermediate Value Theorem.",
+  "body": " Intermediate Value Theorem   Let be a function defined on and continuous at all points in the closed interval . Suppose that . Then for any number between and , there exists a number such that .   "
+},
+{
+  "id": "sec-diff-derivative",
+  "level": "1",
+  "url": "sec-diff-derivative.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "The derivative",
+  "body": " The derivative  The derivative of a function is a quantity that measures the instantaneous rate of change of a function. It is defined using the notion of the limiting value of a certain quotient involving the function under consideration. This definition is motivated and explained by the following diagrams.  "
 }
 ]
 

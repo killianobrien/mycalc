@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-diff" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Differentiation</title>
+
+  <introduction>
+
+		<p>
+				In this chapter we shall be studying functions whose co-domain is the set of real numbers <m>\mathbb{R}</m>. Usually the domain will be <m>\mathbb{R}</m> as well although not always, as for instance with the function <m>y = \frac{1}{x}</m> which has domain <m>\mathbb{R} \backslash \{ 0 \}</m>. So we will not normally spell out the domain and co-domain of the functions we talk about. In any particular case the domain can be figured out by considering where the formula defining the function makes sense.
+			</p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-diff-function-limits.ptx" />
+  <xi:include href="sec-diff-continuity.ptx" />
+  <xi:include href="sec-diff-derivative.ptx" />
+
+
+</chapter>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-diff-function-limits" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Limiting values of functions</title>
+ <p>
+				We have met the concept of a limit in the context of sequences and series. The concept is also useful when discussing real-valued functions. Let <m>a</m> and <m>l</m> be two real numbers. Informally we say that the function <m>f</m> tends to the limit <m>l</m> as <m>x</m> tends to <m>a</m> if the value <m>f(x)</m> gets closer and closer to <m>l</m> as <m>x</m> gets closer and closer to <m>a</m>. We can represent this symbolically as <me>\lim_{x \to a} f(x) = l ,</me> which we read as <em><sq>the limit, as <m>x</m> tends to <m>a</m>, of <m>f(x)</m> is equal to <m>l</m></sq></em>. Alternatively we can write <me>f(x) \to l \text{ as } x \to a,</me> which we read as <em><sq><m>f(x)</m> tends to <m>l</m> as <m>x</m> tends to <m>a</m></sq></em>.
+			</p>
+
+			<p>
+				Notice that this description makes no reference to the actual value (if any) of the function <m>f</m> at <m>a</m>. The concept of limit only refers to the behaviour of <m>f</m> as it <em>approaches</em> some limiting point <m>a</m>.
+			</p>
+
+        <figure xml:id="diff-discon">
+    <caption>Discontinuous behaviour of a function at <m>x=1</m>.</caption>
+
+    <image source="discon.png" width="60%">
+      <shortdescription>(for accessibility)</shortdescription>
+    </image>
+  </figure>
+			<p>
+				This definition is not sufficiently rigorous though. For instance, as the diagram in figure <xref ref="diff-discon" /> illustrates, a function may have different limits depending on the direction from which <m>x</m> approaches <m>a</m>.
+			</p>
+
+
+
+			<p>
+				If this situation arises then we can refer separately to the two different limits as follows. The limit of <m>f</m> as <m>x</m> tends to <m>a</m> from the left is written as <me>\lim_{x \to a^-} f(x),</me> and the limit of <m>f</m> as <m>x</m> tends to <m>a</m> from the right is written as <me>\lim_{x \to a^+} f(x).</me>
+			</p>
+
+			<p>
+				Although it is <em>not</em> an element of the real numbers <m>\mathbb{R}</m> we can admit the concept of infinity (<m>\infty</m>) into this definition as it will allow us to describe the behavior of functions in the following way. If a function <m>f</m> grows without bound as <m>x</m> approaches <m>a</m> then we can write <me>\lim_{x \to a} f(x) = \infty.</me> For example <me>\lim_{x \to 0^-} \frac{1}{x} = -\infty,</me> and <me>\lim_{x \to 0^+} \frac{1}{x} = \infty,</me> If the values of a function <m>f</m> approach some limit <m>l</m> as the argument <m>x</m> gets larger and larger then we could write <me>\lim_{x \to \infty} f(x) = l.</me> For example <me>\lim_{x \to +\infty} \frac{1}{x} = 0,</me> and <me>\lim_{x \to -\infty} \frac{1}{x} = 0.</me>
+			</p>
+
+      <figure xml:id="diff-one-over-x">
+    <caption>The function <m>g(x)=1/x</m>.</caption>
+
+    <image source="one-over-x.png" width="70%">
+      <shortdescription>(for accessibility)</shortdescription>
+    </image>
+  </figure>
+
+			<p>
+				These limiting values of the function <m>y=\frac{1}{x}</m> can be appreciated from its graph shown in figure <xref ref="diff-one-over-x" />.
+			</p>
+
+
+
+			<p>
+				To calculate and work with limiting values of functions we can use the standard techniques that we introduced when dealing with limits of sequences and series. We have the following theorem
+			</p>
+
+      <theorem xml:id="thm-diff-algebra">
+        <title>Algebra of limits for function values</title>
+        <statement>
+          <p>
+			    Let <m>l,m \in \mathbb{R}</m> and suppose that <m>\lim_{x \to a} f(x) = l</m> and <m>\lim_{x \to a} g(x) = m</m>, then <me>\begin{aligned}
+\lim_{x \to a} (\alpha f(x) + \beta g(x)) &amp;= \alpha l + \beta m , \\
+\lim_{x \to a} \left ( f(x)g(x) \right )&amp;= lm , \\
+\lim_{x \to a} \frac{f(x)}{g(x)} &amp;= \frac{l}{m}
+\end{aligned}</me>.
+For the last quotient case we would need the additional assumption that <m>m \neq 0</m> and that <m>g(x)</m> is non-zero in some interval around <m>a</m>.
+			</p>
+        </statement>
+      </theorem>
+
+      <p>
+				Of particular use is l’Hopital’s rule. This is used to evaluate the limit, <m>\lim_{x \to a} \frac{f(x)}{g(x)}</m>, of a quotient of functions <m>f</m> and <m>g</m>. Sometimes these limits can not be evaluated because it works out to some indeterminant form, i.e <m>\frac{0}{0}, \frac{\infty}{\infty}</m>. In these cases we can differentiate both functions and then look at the limit of the resulting quotient. If this new limit exists then the rule says that it is equal to the original limit.
+			</p>
+
+      <theorem xml:id="thm-diff-lhopital">
+        <title>l'Hopital's rule</title>
+        
+        
+        <statement>
+          <p>
+				If <m>\lim_{x \to a} f(x) = \lim_{x \to a} g(x) = 0</m> or <m>\lim_{x \to a} f(x) = \lim_{x \to a} g(x) = \infty</m> then providing the limit exists <me>\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} ,</me> where <m>f'</m> and <m>g'</m> are the derivatives of <m>f</m> and <m>g</m>.
+			</p>
+        </statement>
+      </theorem>
+      
+      <p>
+				It may be necessary to apply l'Hopital's rule a number of times (i.e. taking second or third derivatives etc) in order to convert the original indeterminate limit into a determinate one.
+			</p>
+
+      <example>
+        <p>
+          The following examples illustrate the use of these techniques.
+        </p>
+        <p><ol>
+				<li>
+							<p>
+								<me>\lim_{x \to \infty} \frac{3x + 1}{2x} = \lim_{x \to \infty} \frac{3 + \frac{1}{x}}{2} = \frac{3}{2}.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								<me>\lim_{x \to 0} \frac{\sin{x}}{x} = \lim_{x \to 0} \frac{\cos{x}}{1}=1.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								<me>\lim_{x \to \infty} \frac{x +1}{x} = \lim_{x \to \infty} \frac{1 + \frac{1}{x}}{1} = 1.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								<me>\lim_{x \to 0} \frac{\sin{2x}}{3x} = \lim_{x \to 0} \frac{2\cos{2x}}{3} = \frac{2}{3}.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								<me>\lim_{x \to 0} \frac{e^x - e^{-x}}{x} = \lim_{x \to 0} \frac{e^x + e^{-x}}{1} = 2.</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								<me>\lim_{x \to 0} \frac{\sin{x} - x}{x^3} = \lim_{x \to 0} \frac{\cos{x} - 1}{3x^2} = \lim_{x \to 0} \frac{-\sin{x}}{6x} = \lim_{x \to 0} \frac{-\cos{x}}{6} = \frac{-1}{6}.</me>
+							</p>
+				</li>
+
+			</ol></p>
+      </example>
+      
+</section>

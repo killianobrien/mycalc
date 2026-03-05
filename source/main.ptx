@@ -17,6 +17,7 @@
     <xi:include href="./ch-seqs.ptx" />
     <xi:include href="./ch-series.ptx" />
     <xi:include href="./ch-functions.ptx" />
+    <xi:include href="./ch-diff.ptx" />
     <!-- Include backmatter -->
     <!-- <xi:include href="./backmatter.ptx" /> -->
 
