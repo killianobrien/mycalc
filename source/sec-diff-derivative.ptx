@@ -5,5 +5,106 @@
 <p>
 				The derivative of a function is a quantity that measures the instantaneous rate of change of a function. It is defined using the notion of the limiting value of a certain quotient involving the function under consideration. This definition is motivated and explained by the following diagrams.
 			</p>
+			<figure xml:id="diff1">
+				<caption>Towards the definition of the derivative.</caption>
+			<image source="diff1.png" width="60%">
+				<shortdescription></shortdescription>
+				
+			</image>
+			</figure>
+			<p>
+				As depicted in <xref ref="diff1"/>, change in value of a function <m>f</m> is measured by the gradient of the line joining two points on the graph of <m>f</m>. <me>\text{gradient} = \tan{\theta} = \frac{\text{opposite}}{\text{adjacent}} = \frac{ f(x) - f(a)}{x-a}</me>
+			</p>
 
+			<figure xml:id="diff2">
+				<caption>Towards the definition of the derivative.</caption>
+			<image source="diff2.png" width="60%">
+				<shortdescription></shortdescription>
+				
+			</image>
+			</figure>
+			<p>
+				As <m>x \to a</m> the gradient describes the rate of change of <m>f</m> at the point <m>x=a</m> more accurately, <xref ref="diff2"/>
+			</p>
+
+			<figure xml:id="diff3">
+				<caption>Towards the definition of the derivative.</caption>
+			<image source="diff3.png" width="60%">
+				<shortdescription></shortdescription>
+				
+			</image>
+			</figure>
+			<p>
+				As depicted in <xref ref="diff3"/>, in the limit as <m>x \to a</m> the gradient line approaches the <em>tangent line</em> to the graph of <m>f</m> at the point <m>x=a</m>. The tangent line to a point on the graph is a line that, in a small neighborhood of the point, only intersects the graph at that point. The slope of the tangent line is the same as the slope of the graph at that point.
+			</p>
+
+			<theorem xml:id="thm-differentiable">
+				<title>Differentiable</title>
+				
+				
+				<statement>
+					<p>
+				A function <m>f</m> is <em>differentiable</em> at <m>x=a</m> if <m>f</m> is continuous at <m>x=a</m> and the following limit exists <me>\lim_{x \to a} \frac{f(x)-f(a)}{x-a} .</me>
+			</p>
+				</statement>
+			</theorem>
+
+			<p>
+				If <m>f</m> is differentiable at <m>x=a</m> then the value of the limit above is called the <em>derivative of <m>f</m> at <m>x=a</m></em> and can be written symbolically as <me>f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a} ,</me> or <me>\left. \frac{df}{dx} \right |_{x=a} = \lim_{x \to a} \frac{f(x)-f(a)}{x-a} .</me>
+			</p>
+
+			<example>
+				<p>
+				Consider the functions <m>f</m> and <m>g</m> defined by <m>f(x)=kx</m> and <m>g(x)=kx^2</m> where <m>k</m> is some constant. Find the derivatives of <m>f</m> and <m>g</m> at <m>x=a</m> from first principles. (<sq><em>from first principles</em></sq> means working with the above definition of the derivative in terms of limits) <me>\begin{aligned}
+\left. \frac{df}{dx} \right |_{x=a} &amp;= \lim_{x \to a} \frac{f(x)-f(a)}{x-a} \\
+&amp;= \lim_{x \to a} \frac{kx - ka}{x-a} \\
+&amp;= \lim_{x \to a} \frac{k(x-a)}{x-a} = k.
+\end{aligned}</me> The function <m>g</m> can be handled in a similar way. <me>\begin{aligned}
+\left. \frac{dg}{dx} \right |_{x=a} &amp;= \lim_{x \to a} \frac{g(x)-g(a)}{x-a} \\
+&amp;= \lim_{x \to a} \frac{kx^2 - ka^2}{x-a} \\
+&amp;= \lim_{x \to a} \frac{k(x^2-a^2)}{x-a} \\
+&amp;= \lim_{x \to a} \frac{k(x-a)(x+a)}{x-a} = 2ka.
+\end{aligned}</me>
+			</p>
+			</example>
+
+			<p>
+				As is usually the case for us, a function <m>f</m> will be defined by a single formula in a variable <m>x</m> say and so the derivative of <m>f</m> at all points in its domain can be worked out in one go to give a formula in <m>x</m> which defines the <em>derivative</em> function of <m>f</m>. So given a function <m>f</m> we can speak of its derivative (function) <m>\frac{df}{dx}</m> which when evaluated at a point <m>x=a</m> give the <em>derivative of <m>f</m> at <m>x=a</m></em> as defined by our earlier definition.
+			</p>
+
+			<paragraphs>
+				<title>Higher order derivatives</title>
+				<p>
+					Once a function <m>f</m> has been differentiated to give the derivative <m>\frac{df}{dx}</m> it can be differentiated again to give higher derivatives <me>\frac{d^2f}{dx^2} = \frac{d}{dx} \left ( \frac{df}{dx} \right ),</me> <me>\frac{d^3f}{dx^3} = \frac{d}{dx} \left ( \frac{d^2f}{dx^2} \right ), \text{ etc....}</me>
+				</p>
+			</paragraphs>
+
+			<paragraphs>
+				<title>Standard derivatives</title>
+<p>
+						Consider the tables in <xref ref="table01"/> and <xref ref="table02"/>, showing the derivatives of some standard functions, along with a summary of properties of the derivative. These tables are taken from the Formula Handbook that you will have available in your summer exam.
+					</p>
+
+					<p>
+						We can find derivatives of more complex functions which are built out of standard functions by using these known derivatives along with some properties of the derivative, which we discuss in the rest of this chapter.
+					</p>
+			</paragraphs>
+
+
+			<figure xml:id="table01">
+				<caption>Derivatives of some standard functions</caption>
+				<image source="calctable01.png" width="100%">
+					<shortdescription></shortdescription>
+					
+				</image>
+			</figure>
+
+			<figure xml:id="table02">
+				<caption>Derivatives of some standard functions</caption>
+				<image source="calctable02.png" width="100%">
+					<shortdescription></shortdescription>
+					
+				</image>
+			</figure>
+			
 </section>

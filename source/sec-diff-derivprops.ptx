@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-diff-derivprops" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Properties of the derivative</title>
+
+  <theorem xml:id="thm-diff-linear">
+	<title>Linearity</title>
+	
+	
+	<statement>
+		<p>
+				Consider the linear combination <m>f = \alpha g + \beta h</m> of functions <m>g</m> and <m>h</m>, where <m>\alpha, \beta \in \mathbb{R}</m>. The derivative of <m>f</m> satisfies <me>\frac{df}{dx} = \alpha \frac{dg}{dx} + \beta \frac{dh}{dx} .</me>
+			</p>
+	</statement>
+  </theorem>
+  
+			
+</section>

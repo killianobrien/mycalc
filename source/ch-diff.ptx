@@ -14,6 +14,7 @@
   <xi:include href="sec-diff-function-limits.ptx" />
   <xi:include href="sec-diff-continuity.ptx" />
   <xi:include href="sec-diff-derivative.ptx" />
+  <xi:include href="sec-diff-derivprops.ptx" />
 
 
 </chapter>

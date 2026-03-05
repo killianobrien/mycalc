@@ -1006,7 +1006,88 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "The derivative",
-  "body": " The derivative  The derivative of a function is a quantity that measures the instantaneous rate of change of a function. It is defined using the notion of the limiting value of a certain quotient involving the function under consideration. This definition is motivated and explained by the following diagrams.  "
+  "body": " The derivative  The derivative of a function is a quantity that measures the instantaneous rate of change of a function. It is defined using the notion of the limiting value of a certain quotient involving the function under consideration. This definition is motivated and explained by the following diagrams.   Towards the definition of the derivative.      As depicted in , change in value of a function is measured by the gradient of the line joining two points on the graph of .    Towards the definition of the derivative.      As the gradient describes the rate of change of at the point more accurately,    Towards the definition of the derivative.      As depicted in , in the limit as the gradient line approaches the tangent line to the graph of at the point . The tangent line to a point on the graph is a line that, in a small neighborhood of the point, only intersects the graph at that point. The slope of the tangent line is the same as the slope of the graph at that point.   Differentiable   A function is differentiable at if is continuous at and the following limit exists     If is differentiable at then the value of the limit above is called the derivative of at and can be written symbolically as or    Consider the functions and defined by and where is some constant. Find the derivatives of and at from first principles. ( from first principles means working with the above definition of the derivative in terms of limits) The function can be handled in a similar way.    As is usually the case for us, a function will be defined by a single formula in a variable say and so the derivative of at all points in its domain can be worked out in one go to give a formula in which defines the derivative function of . So given a function we can speak of its derivative (function) which when evaluated at a point give the derivative of at as defined by our earlier definition.   Higher order derivatives  Once a function has been differentiated to give the derivative it can be differentiated again to give higher derivatives      Standard derivatives  Consider the tables in and , showing the derivatives of some standard functions, along with a summary of properties of the derivative. These tables are taken from the Formula Handbook that you will have available in your summer exam.  We can find derivatives of more complex functions which are built out of standard functions by using these known derivatives along with some properties of the derivative, which we discuss in the rest of this chapter.    Derivatives of some standard functions       Derivatives of some standard functions      "
+},
+{
+  "id": "diff1",
+  "level": "2",
+  "url": "sec-diff-derivative.html#diff1",
+  "type": "Figure",
+  "number": "4.3.1",
+  "title": "",
+  "body": " Towards the definition of the derivative.     "
+},
+{
+  "id": "diff2",
+  "level": "2",
+  "url": "sec-diff-derivative.html#diff2",
+  "type": "Figure",
+  "number": "4.3.2",
+  "title": "",
+  "body": " Towards the definition of the derivative.     "
+},
+{
+  "id": "diff3",
+  "level": "2",
+  "url": "sec-diff-derivative.html#diff3",
+  "type": "Figure",
+  "number": "4.3.3",
+  "title": "",
+  "body": " Towards the definition of the derivative.     "
+},
+{
+  "id": "thm-differentiable",
+  "level": "2",
+  "url": "sec-diff-derivative.html#thm-differentiable",
+  "type": "Theorem",
+  "number": "4.3.4",
+  "title": "Differentiable.",
+  "body": " Differentiable   A function is differentiable at if is continuous at and the following limit exists    "
+},
+{
+  "id": "sec-diff-derivative-11",
+  "level": "2",
+  "url": "sec-diff-derivative.html#sec-diff-derivative-11",
+  "type": "Example",
+  "number": "4.3.5",
+  "title": "",
+  "body": " Consider the functions and defined by and where is some constant. Find the derivatives of and at from first principles. ( from first principles means working with the above definition of the derivative in terms of limits) The function can be handled in a similar way.   "
+},
+{
+  "id": "table01",
+  "level": "2",
+  "url": "sec-diff-derivative.html#table01",
+  "type": "Figure",
+  "number": "4.3.6",
+  "title": "",
+  "body": " Derivatives of some standard functions     "
+},
+{
+  "id": "table02",
+  "level": "2",
+  "url": "sec-diff-derivative.html#table02",
+  "type": "Figure",
+  "number": "4.3.7",
+  "title": "",
+  "body": " Derivatives of some standard functions     "
+},
+{
+  "id": "sec-diff-derivprops",
+  "level": "1",
+  "url": "sec-diff-derivprops.html",
+  "type": "Section",
+  "number": "4.4",
+  "title": "Properties of the derivative",
+  "body": " Properties of the derivative   Linearity   Consider the linear combination of functions and , where . The derivative of satisfies     "
+},
+{
+  "id": "thm-diff-linear",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#thm-diff-linear",
+  "type": "Theorem",
+  "number": "4.4.1",
+  "title": "Linearity.",
+  "body": " Linearity   Consider the linear combination of functions and , where . The derivative of satisfies    "
 }
 ]
 
