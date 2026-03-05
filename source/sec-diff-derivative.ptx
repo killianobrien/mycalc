@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-diff-derivative" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The derivative</title>
+<p>
+				The derivative of a function is a quantity that measures the instantaneous rate of change of a function. It is defined using the notion of the limiting value of a certain quotient involving the function under consideration. This definition is motivated and explained by the following diagrams.
+			</p>
+
+</section>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-diff-continuity" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Continuity</title>
+ <p>
+				In the previous section we made the point that the limiting value, <m>\lim_{x \to a} f(x)</m>, of the function <m>f</m> does not depend on the actual value, <m>f(a)</m>, of <m>f</m> at the limiting point <m>a</m>. However it is an important feature (continuity) of a function when the limiting value actually equals the value at the limiting point. We give the following informal definition for continuity.
+			</p>
+
+<definition xml:id="def-diff-continuity">
+	<title>Continuity</title>
+	<statement>
+		<p>
+				The function <m>f: \mathbb{R} \to \mathbb{R}</m> is <em>continuous</em> at the point <m>x=a</m> if <me>\lim_{x \to a} f(x) = f(a).</me>
+			</p>
+	</statement>
+</definition>
+<p>
+				If <m>f</m> is continuous at <em>all</em> points of its domain then we say that <m>f</m> is a <em>continuous function</em>. A function that is not continuous is called <em>non-continuous</em>.
+			</p>
+
+			<p>
+				If this definition is not satisfied at a point <m>x=a</m> then we say that the function <m>f</m> has a <em>discontinuity</em> at <m>x=a</m>.
+			</p>
+
+			<p>
+				Functions can be discontinuous in a number of different ways. For instance the left and right hand limits may differ at a point as we saw earlier. Another type of discontinuity is the rapidly oscillating behaviour near <m>x=0</m> of the function <m>y= \sin{(\frac{1}{x})}</m> seen in figure <xref ref="diff-sin1overx" />.
+			</p>
+
+			<figure xml:id="diff-sin1overx">
+    <caption>The graph of <m>\sin(1/x)</m> nearr <m>x=0</m>.</caption>
+
+    <image source="sin1overx.png" width="60%">
+      <shortdescription>(for accessibility)</shortdescription>
+    </image>
+  </figure>
+  <p>
+				Note that the plotting program struggles to represent the behavior accurately at <m>x=0</m> here. The point is that the limit <m>\lim_{x \to 0} \sin{(\frac{1}{x})}</m> does not exist so even if the function were to be given a definition at <m>x=0</m> it could never be continuous there.
+			</p>
+
+			<p>
+				The continuity property is preserved by the usual operations on functions, as described in the following theorems.
+			</p>
+	
+	<theorem xml:id="thm-diff-cont-algebra">
+		<title>Continuity of sums, products and quotients</title>
+		
+		
+		<statement>
+			<p>
+				Suppose that functions <m>f</m> and <m>g</m> are both continuous at a point <m>x=a</m>, then for any <m>\alpha, \beta \in \mathbb{R}</m> the linear combination function <m>\alpha f + \beta g</m> is also continuous at <m>x=a</m>. Also the product function <m>fg</m> will be continuous at <m>x=a</m> as well as the quotient function <m>\frac{f}{g}</m> provided that <m>g</m> is non-zero in some surrounding interval of <m>x=a</m>.
+			</p>
+		</statement>
+	</theorem>
+
+	<theorem xml:id="thm-diff-cont-comp">
+		<title>Continuity of composition</title>
+		
+		
+		<statement>
+			<p>
+				Suppose that <m>f</m> and <m>g</m> are two functions whose domains and co-domains are such that the composition function <m>g \circ f</m> can be defined. If <m>f</m> is continuous at a point <m>x=a</m> and <m>g</m> is continuous at the point <m>x=f(a)</m> then the composition function <m>g \circ f</m> is continuous at <m>x=a</m>.
+			</p>
+		</statement>
+	</theorem>
+
+	<p>
+				The definition of continuity (and limiting values of functions) that we have given do lack rigor in that they rely on the notion of <sq><em>getting closer and closer to .....</em> </sq> which we have not given a complete description of. A fully detailed rigorous treatment of continuity is the subject of <em>mathematical analysis</em> and is not possible within the scope of this unit. However we can give a taste of it by looking at the formal definition of continuity and how it is used to prove one of the cases of the above theorem.
+	</p>
+
+	<definition xml:id="def-diff-cont-formal">
+		<title>Formal definition of continuity</title>
+		
+		
+		<statement>
+			<p>
+				 The function <m>f:\mathbb{R} \to \mathbb{R}</m> is <em>continuous</em> at the point <m>x=a</m> if and only if for all <m>\epsilon &gt; 0</m> there exists <m>\delta &gt; 0</m> such that if <m>|x-a| &lt; \delta</m> then <m>|f(x)-f(a)|&lt; \epsilon</m>. In formal symbolic terms this becomes: <m>f</m> is continuous at <m>a</m> if and only if the following statement holds <me>\forall \, \epsilon &gt; 0 \, \, \exists \, \delta &gt; 0 \, \, |x-a|&lt; \delta \Rightarrow |f(x)-f(a)|&lt;\epsilon .</me>
+			</p>
+		</statement>
+	</definition>
+	
+	<p>
+				<xref ref="formal-cont"/>is useful for picturing the role of the variables <m>\epsilon</m> and <m>\delta</m> in the definition of continuity.
+			</p>
+<figure xml:id="formal-cont">
+    <caption>Illustrating the parameters in the formal definition.</caption>
+
+    <image source="formal-cont.png" width="60%">
+      <shortdescription>(for accessibility)</shortdescription>
+    </image>
+  </figure>
+
+<p>
+				Using this definition we can give rigorous proofs of the continuity theorems above. You will see a lot of similarity in the arguments here and the proofs of the similar properties of convergence of sequences. Those previous arguments are adapted to the new context and where <m>\delta</m>-arguments take the place of the <m>N</m>-arguments.
+			</p>
+
+	<proof><title>Proof of <xref ref="thm-diff-cont-algebra"/></title>
+	<p>
+				First we prove that continuity is preserved by linear combinations. We assume additionally that <m>\alpha, \beta \neq 0</m>. Let <m>\epsilon&gt;0</m> be given. There exists <m>\delta_1, \delta_2 &gt; 0</m> such that for all <m>|x-a|&lt;\delta_1</m> we have <m>|f(x) - f(a)|&lt;\epsilon/(2|\alpha|)</m>, and for all <m>x - a|&lt;\delta_2</m> we have <m>|g(x)-g(a)|&lt;\epsilon/(2|\beta|)</m>.
+			</p>
+
+			<p>
+				Let <m>\delta = \min(\delta_1, \delta_2)</m> and then for all <m>|x-a|&lt;\delta</m> we have <me>\begin{aligned}
+|\left ( \alpha f + \beta g \right )(x) - \left ( \alpha f + \beta g \right )(a)|
+&amp;\leq |\alpha||f(x) - f(a)| + |\beta||g(x) - g(a)|\\
+&amp;&lt; |\alpha|\epsilon/(2|\alpha|) +  |\beta|\epsilon/(2|\beta|)\\
+&amp;= \epsilon .
+\end{aligned}</me> Therefore the definition is satisfied and the linear combination <m>\alpha f + \beta g</m> is continuous at <m>x=a</m> as required.
+			</p>
+
+			<p>
+				Next we prove that continuity is preserved by products. Let <m>\epsilon &gt;0</m> be given. By continuity there exist <m>\delta_1, \delta_2 &gt; 0</m> such that for all <m>|x-a|&lt;\delta_1</m> we have <m>|f(x)-f(a)| &lt; \min\left (\sqrt{\epsilon}/\sqrt{3}, \epsilon/(3|g(a)|)\right )</m> and <m>|x-a|&lt;\delta_2</m> we have <m>|g(x)-g(a)| &lt; \min\left (\sqrt{\epsilon}/\sqrt{3}, \epsilon/(3|f(a)|)\right )</m>.
+			</p>
+
+			<p>
+				Letting <m>\delta = \min(\delta_1, \delta_2)</m> and then for all <m>|x-a|&lt;\delta</m> we have <me>\begin{aligned}
+&amp;|\left ( fg \right )(x) - \left ( fg\right )(a)|\\
+&amp;\leq |f(x) - f(a)||g(x) - g(a)| + |g(a)||f(x) - f(a)| + |f(a)||g(x) - g(a)|\\
+&amp;&lt; \sqrt{\frac{\epsilon}{3}}\sqrt{\frac{\epsilon}{3}} + |g(a)|\frac{\epsilon}{3|g(a)|} + |f(a)|\frac{\epsilon}{3|f(a)|}  \\
+&amp;= \epsilon .
+\end{aligned}</me> Therefore the definition is satisfied and the product <m>fg</m> is continuous at <m>x=a</m> as required.
+			</p>
+
+			<p>
+				The proof that quotients preserve continuity is again similar to the case for convergence of sequences. The details are left as an exercise for the reader.
+			</p>
+	</proof>
+
+	<proof>
+		<title>Proof of <xref ref="thm-diff-cont-comp"/></title>
+		
+		<p>
+				<em>Proof.</em> The conditions of the theorem are illustrated in figure <xref ref="composition-proof" />. There we see illustrated three copies of the real number line with the action of the functions from left to right with <m>f</m> going first and then <m>g</m> applied to the result of <m>f</m>.
+			</p>
+		<figure xml:id="composition-proof">
+			<caption>The composition function <m>g \circ f</m>.</caption>
+			<image source="composition-proof.png" width="60%">
+				<shortdescription>The composition function <m>g \circ f</m></shortdescription>	
+			</image>
+		</figure>
+
+
+			<p>
+				Let <m>\epsilon_0 &gt; 0</m> be given. As <m>g</m> is continuous at <m>f(a)</m> there exists a radius <m>\epsilon_1</m> such that for all <m>|y - f(a)|&lt;\epsilon_1</m> we have <m>|g(y) - g(f(a))|&lt;\epsilon_0</m>. But since <m>f</m> is continuous at <m>a</m> there exists a radius <m>\epsilon_2</m> such that for all <m>|x-a|&lt;\epsilon_2</m> we have <m>|f(x) - f(a)|&lt;\epsilon_1</m>.
+			</p>
+
+			<p>
+				Combining these two gives us the required result, namely that for all <m>|x-a|&lt;\epsilon_2</m> we have <m>|g(f(x)) - g(f(a))|&lt;\epsilon_0</m>, i.e. the composition <m>g\circ f</m> is continuous at <m>x=a</m>.
+			</p>
+
+	</proof>
+
+	<paragraphs>
+		<title>Importance of continuity</title>
+		<p>
+					Mathematicians sometimes talk of a concept like continuity as describing the <em>well-behaved</em> nature of certain functions <m>\mathbb{R} \to \mathbb{R}</m>. So a well-behaved function is one that has nice reasonable properties, properties usually enjoyed by the real physical properties of the processes that we are using the functions to model for instance. A badly-behaved function <m>\mathbb{R} \to \mathbb{R}</m> might be one that has no discernable reasonable properties or interpretation, such as some kind of random association of real numbers to other real numbers (though such things and their properties might still be of great mathematical interest!).
+				</p>
+
+				<p>
+					The concept of continuity generalizes to functions between lots of other kinds of mathematical space, such as say functions from <m>\mathbb{R}^n \to \mathbb{R}^m</m>, where <m>n,m</m> are positive integers. These are functions between different dimensional Euclidean geometric Euclidean spaces. Or perhaps functions between different Riemannian manifolds. A Riemannian manifold generalization of Euclidean space, i.e. a space which has a different kind of <em>curved</em> geometry rather than the <em>flat</em> geometry of Euclidean spaces. We can even study the concept of continuity for functions, and distance like measures, on spaces that have no kind of immediate intuitive geometric interpretation for us. Such topics are explored in the subject areas of <em>general topology</em> and <em>metric spaces</em>.
+				</p>
+
+				<p>
+					An example of continuity embodying the notion of <em>well-behaved</em> function we can consider the Intermediate Value Theorem which is illustrated in figure <xref ref="intervalthm" />.
+				</p>
+
+		<figure xml:id="intervalthm">
+			<caption>The Intermediate Value Theorem.</caption>
+			<image source="intervalthm.png" width="60%">
+				<shortdescription>The intermediate value theorem</shortdescription>	
+			</image>
+		</figure>
+
+
+
+
+				<theorem xml:id="thm-intervalthm">
+					<title>Intermediate Value Theorem</title>
+					
+					
+					<statement>
+						<p>
+					Let <m>f</m> be a function defined on and continuous at all points in the closed interval <m>[a,b]</m>. Suppose that <m>f(a) \neq f(b)</m>. Then for any number <m>C</m> between <m>f(a)</m> and <m>f(b)</m>, there exists a number <m>c \in [a,b]</m> such that <m>f(c)=C</m>.
+				</p>
+					</statement>
+				</theorem>
+				<p>
+					The proof of this theorem makes use of the completeness or least upper-bound property of the real numbers and can be viewed as an embodiment of that property
+				</p>
+				
+		
+	</paragraphs>
+</section>
