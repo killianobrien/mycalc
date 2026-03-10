@@ -1078,7 +1078,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.4",
   "title": "Properties of the derivative",
-  "body": " Properties of the derivative   Linearity   Consider the linear combination of functions and , where . The derivative of satisfies     "
+  "body": " Properties of the derivative   Linearity   Consider the linear combination of functions and , where . The derivative of satisfies     This is a straightforward application of properties of the limiting process for functions. Suppose that and are both differentiable at a point . The above equations demonstrate the linearity of the derivative.     Product rule   Consider the function which is a product of the two functions and . The derivative of satisfies     Suppose that and are both differentiable at a point . This is the required result.        Find the derivative of . This is the product of the two functions whose derivatives are and so the required derivative is     Find the derivative of ....     Linear approximations and associated errors  Before moving on to consider other properties of differentiation we introduce another viewpoint on the derivative that will be needed for future proof arguments. Consider again the definition of the derivative of a function at a point in its domain. We reformulate this slightly by writing as and having the limiting process be as , as follows This suggests the existence of a function that measures the discrepancy between and the relative change quotient , defined as follows and this new function has the important convergence property We can now rearrange the definition of to give the interesting expression This equation shows the linear approximation , , to the value, of the function at a point close to , with the associated error term  . The linear approximation is the linear function (i.e. line) that best approximates the function in the region around the point . Not only does the error-term approach zero as (as we would expect) but the error term divided by , i.e. , converges to 0 as .   The linear approximation to at .      Picturing these various quantities with the aid of figure may help. It’s important to appreciate how the linear approximation gives the equation of the tangent line to the graph of at in the form of , where .  This allows us to interpret the above to give an alternative definition of the derivative as follows:   The derivative   The derivative, , is the unique number that provides the linear approximation for the value with the property that the error term has the convergence property that as .    This view of the derivative will allow us to give a rigorous proof of the chain rule. But it is also a useful to have such slightly different views of the same concept. This notion of linear approximations (and other higher-order approximations) and the behaviour of their associated error terms is important in the subject of numerical analysis .   "
 },
 {
   "id": "thm-diff-linear",
@@ -1087,7 +1087,43 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "4.4.1",
   "title": "Linearity.",
-  "body": " Linearity   Consider the linear combination of functions and , where . The derivative of satisfies    "
+  "body": " Linearity   Consider the linear combination of functions and , where . The derivative of satisfies     This is a straightforward application of properties of the limiting process for functions. Suppose that and are both differentiable at a point . The above equations demonstrate the linearity of the derivative.   "
+},
+{
+  "id": "thm-diff-product",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#thm-diff-product",
+  "type": "Theorem",
+  "number": "4.4.2",
+  "title": "Product rule.",
+  "body": " Product rule   Consider the function which is a product of the two functions and . The derivative of satisfies     Suppose that and are both differentiable at a point . This is the required result.   "
+},
+{
+  "id": "sec-diff-derivprops-4",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#sec-diff-derivprops-4",
+  "type": "Example",
+  "number": "4.4.3",
+  "title": "",
+  "body": " "
+},
+{
+  "id": "diff-lin-approx",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#diff-lin-approx",
+  "type": "Figure",
+  "number": "4.4.4",
+  "title": "",
+  "body": " The linear approximation to at .     "
+},
+{
+  "id": "def-deriv-lin-approx",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#def-deriv-lin-approx",
+  "type": "Definition",
+  "number": "4.4.5",
+  "title": "The derivative.",
+  "body": " The derivative   The derivative, , is the unique number that provides the linear approximation for the value with the property that the error term has the convergence property that as .   "
 }
 ]
 

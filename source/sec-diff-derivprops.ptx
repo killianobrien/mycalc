@@ -12,7 +12,94 @@
 				Consider the linear combination <m>f = \alpha g + \beta h</m> of functions <m>g</m> and <m>h</m>, where <m>\alpha, \beta \in \mathbb{R}</m>. The derivative of <m>f</m> satisfies <me>\frac{df}{dx} = \alpha \frac{dg}{dx} + \beta \frac{dh}{dx} .</me>
 			</p>
 	</statement>
-  </theorem>
+	<proof>
+		<p>
+				This is a straightforward application of properties of the limiting process for functions. Suppose that <m>g</m> and <m>h</m> are both differentiable at a point <m>x=a</m>. <me>\begin{aligned}
+\alpha g'(a) + \beta h'(a)
+&amp;=\alpha \lim_{x \to a} \frac{g(x)-g(a)}{x-a}
++\beta \lim_{x \to a} \frac{h(x)-h(a)}{x-a}, \text{ by defn.}\\
+&amp;= \lim_{x \to a} \left ( \alpha \frac{g(x)-g(a)}{x-a} + \beta \frac{h(x) - h(a)}{x-a} \right ), \text{ by algebra of limits}\\
+&amp; = \lim_{x \to a} \left ( \frac{(\alpha g+ \beta h)(x) - (\alpha g + \beta h)(a)}{x-a}\right ), \text{ rearranging fractions}\\
+&amp;= (\alpha g + \beta h)'(a), \text{ by definition}
+\end{aligned}</me> The above equations demonstrate the linearity of the derivative.
+			</p>
+	</proof>
+</theorem>
+
+<theorem xml:id="thm-diff-product">
+	<title>Product rule</title>
+	<statement>
+		<p>Consider the function <m>f=gh</m> which is a product of the two functions <m>g</m> and <m>h</m>. The derivative of <m>f</m> satisfies <me>\frac{df}{dx} = g \frac{dh}{dx} + h \frac{dg}{dx} .</me>
+			</p>
+	</statement>
+	<proof>
+		<p>Suppose that <m>g</m> and <m>h</m> are both differentiable at a point <m>x=a</m>. <me>\begin{aligned}
+f'(a) &amp; = \lim_{x \to a} \frac{g(x)h(x) - g(a)h(a)}{x-a}, \text{def. of derivative and $f$}\\ \\
+&amp;= \lim_{x \to a} \frac{g(x) (h(x) - h(a)) + h(a)(g(x)-g(a))}{x-a}, \text{preparatory manipulation}\\
+&amp;=\left (\lim_{x \to a} g(x) \right )
+\left ( \lim_{x \to a} \frac{h(x) - h(a)}{x-a} \right )
++ h(a) \left ( \lim_{x \to a} \frac{g(x) - g(a)}{x-a} \right ), \text{alg. of limits}\\
+&amp;= g(a)h'(a) + h(a)g'(a), \text{known derivs.}\\
+\end{aligned}</me> This is the required result.
+</p>
+	</proof>
+</theorem>
+<example>
+	
+</example>
+<p><ol>
+				<li>
+							<p>
+								Find the derivative of <m>y = (x^2 - 1) \sin{x}</m>. This is the product of the two functions <me>u(x) = x^2 -1 \text{  and  } v(x)= \sin{x},</me> whose derivatives are <me>\frac{du}{dx} = 2x \text{ and } \frac{dv}{dx} = \cos{x},</me> and so the required derivative is <me>\begin{aligned}
+				\frac{dy}{dx} &amp;= u \frac{dv}{dx} + v \frac{du}{dx} \\
+				&amp;= (x^2 - 1) \cos{x} + 2x \sin{x}.
+				\end{aligned}</me>
+							</p>
+				</li>
+
+				<li>
+							<p>
+								Find the derivative of <m>y=xe^x</m>....
+							</p>
+				</li>
+
+			</ol></p>
+
+			<paragraphs>
+				<title>Linear approximations and associated errors</title>
+				
+				<p>
+					Before moving on to consider other properties of differentiation we introduce another viewpoint on the derivative that will be needed for future proof arguments. Consider again the definition of the derivative of a function <m>f</m> at a point <m>a</m> in its domain. <me>f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x-a}.</me> We reformulate this slightly by writing <m>x</m> as <m>x = a+k</m> and having the limiting process be as <m>k \to 0</m>, as follows <me>f'(a) = \lim_{k \to 0} \frac{f(a+k) - f(a)}{k}.</me> This suggests the existence of a function <m>\epsilon</m> that measures the discrepancy between <m>f'(a)</m> and the relative change quotient <m>(f(a+k) - f(a))/k</m>, defined as follows <me>\epsilon(k) = \frac{f(a+k) - f(a)}{k} - f'(a),</me> and this new function <m>\epsilon</m> has the important convergence property <me>\lim_{k \to 0} \epsilon(k) = 0.</me> We can now rearrange the definition of <m>\epsilon</m> to give the interesting expression <me>f(a+k) = f(a) + f'(a) k + k \, \epsilon(k).</me> This equation shows the <em>linear approximation</em>, <m>f(a) + k f'(a)</m>, to the value, <m>f(a+k)</m> of the function at a point close to <m>a</m>, with the associated <em>error term</em> <m>k \epsilon(k)</m>. The linear approximation is the linear function (i.e. line) that best approximates the function in the region around the point <m>x=a</m>. Not only does the error-term approach zero as <m>k \to 0</m> (as we would expect) but the error term divided by <m>k</m>, i.e. <m>\epsilon(k)</m>, converges to 0 as <m>k \to 0</m>.
+				</p>
+				<figure xml:id="diff-lin-approx">
+				<caption>The linear approximation to <m>f(x)</m> at <m>x=a</m>.</caption>
+			<image source="lin-approx.png" width="60%">
+				<shortdescription></shortdescription>
+				
+			</image>
+			</figure>
+				<p>
+					Picturing these various quantities with the aid of figure <xref ref="diff-lin-approx" /> may help. It’s important to appreciate how the linear approximation gives the equation of the tangent line to the graph of <m>f(x)</m> at <m>x=a</m> in the form of <m>y(k) = f(a) + k f'(a)</m>, where <m>k = x-a</m>.
+				</p>
+
+				<p>
+					This allows us to interpret the above to give an alternative definition of the derivative as follows:
+				</p>
+
+				<definition xml:id="def-deriv-lin-approx">
+					<title>The derivative</title>
+					
+					
+					<statement>
+						<p>The derivative, <m>f'(a)</m>, is the unique number that provides the linear approximation <m>f(a) + f'(a) k</m> for the value <m>f(a+k)</m> with the property that the error term <m>k \epsilon(k)</m> has the convergence property that <m>\epsilon(k) \to 0</m> as <m>k \to 0</m>.
+				</p>
+					</statement>
+				</definition>
+
+				<p>
+					This view of the derivative will allow us to give a rigorous proof of the chain rule. But it is also a useful to have such slightly different views of the same concept. This notion of linear approximations (and other higher-order approximations) and the behaviour of their associated error terms is important in the subject of <em>numerical analysis</em>.
+				</p>
+			</paragraphs>
   
 			
 </section>
