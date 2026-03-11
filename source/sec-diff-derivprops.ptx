@@ -100,6 +100,109 @@ f'(a) &amp; = \lim_{x \to a} \frac{g(x)h(x) - g(a)h(a)}{x-a}, \text{def. of deri
 					This view of the derivative will allow us to give a rigorous proof of the chain rule. But it is also a useful to have such slightly different views of the same concept. This notion of linear approximations (and other higher-order approximations) and the behaviour of their associated error terms is important in the subject of <em>numerical analysis</em>.
 				</p>
 			</paragraphs>
-  
+
+			<theorem xml:id="thm-diff-chain">
+				<title>Chain rule</title>
+				
+				
+				<statement>
+					<p>
+					Consider the composition <m>y=f \circ g</m> of two functions <m>f</m> and <m>g</m>. Let <m>u=g(x)</m> so that <m>y=f(u)</m>. Then the derivative of <m>y</m> satisfies <me>\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx},</me> or in the alternative notation, at a point <m>x=a</m> we have <me>y'(a) = f'(g(a))g'(a).</me>
+				</p>
+				</statement>
+				<proof>
+					<p>
+					<em>Proof.</em> We suppose that the function <m>g</m> is differentiable at the point <m>a</m> and that <m>f</m> is differentiable at the point <m>g(a)</m>. In the linear approximations view this means we have derivative quantities <m>g'(a)</m> and <m>f'(g(a))</m> and error functions <m>\epsilon</m> and <m>\mu</m> satisfying <me>\begin{aligned}
+g(a+k) &amp;= g(a) + k g'(a) + k \epsilon(k) \\
+f(g(a) + l) &amp;= f(g(a)) + l f'(g(a)) + l \mu(l),
+\end{aligned}</me> with convergence properties <m>\epsilon(k) \to 0</m> as <m>k \to 0</m> and <m>\mu(l) \to 0</m> as <m>l \to 0</m>.
+				</p>
+
+				<p>
+					Our task now is to prove the chain rule according to definition <xref ref="def-deriv-lin-approx" />, i.e. to examine the quantity <m>y(a+k)</m> and discover the linear approximation to it, showing that the derivative <m>y'(a)</m> has the form described by the chain rule and that the error term has the necessary convergence property. <me>\begin{aligned}
+y(a+k) &amp;= f(g(a+k)), \text{ \small{defn. of composition}}\\
+&amp;= f\big (g(a) + k g'(a) + k \epsilon(k) \big ), \text{ \small{from above for $g(a+k)$}}\\
+&amp;= f(g(a)) + l f'(g(a)) + l \mu (l), \text{ \small{from above with $l=k g'(a) + k \epsilon(k)$}}\\
+&amp;= f(g(a)) + k \big ( g'(a) f'(g(a)) \big ) + \lambda(k),
+\end{aligned}</me> where the error term <m>\lambda(k)</m> is defined by <me>\lambda(k) = k \epsilon(k) f'(g(a)) + \big [ k g'(a) + k \epsilon(k) \big ] \mu (k g'(a) + k \epsilon(k)).</me> So we have established the required form for <m>y(a+k)</m> which shows the expected derivative <m>y'(a)</m> as asserted by the chain rule. To complete the proof we have just to prove that <m>\lambda(k) / k \to 0</m> as <m>k \to 0</m>. This can be seen by considering the equation <me>\frac{\lambda(k)}{k} = \epsilon(k) f'(g(a)) + \big [g'(a) + \epsilon(k) \big ] \mu (k g'(a) + k \epsilon(k)).</me> We can prove that <m>\lambda(k) / k \to 0</m> by applying the algebra of limits theorem to the above, noting that <m>k g'(a) + k \epsilon(k) \to 0</m> as <m>k \to 0</m>.
+				</p>
+				</proof>
+			</theorem>
+
+			<example>
+				<p><ol>
+					<li>
+									<p>
+										Differentiate <m>y=(x^2 -1)^5</m>.
+									</p>
+					
+									<p>
+										Let <m>u = x^2 -1</m> so that <m>y=u^5</m>. Then <m>\frac{du}{dx} = 2x</m> and <m>\frac{dy}{du} = 5u^4</m> and so <me>\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx} = 5u^4 2x = 5(x^2 - 1)^4 2x = 10x (x^2 -1)^4.</me>
+									</p>
+					</li>
+
+					<li>
+									<p>
+										Differentiate <m>y= \sin{(2x^2 - x)}</m>.
+									</p>
+					
+									<p>
+										Let <m>u=2x^2 - x</m> so that <m>y=\sin{u}</m>. Then <m>\frac{du}{dx} = 4x - 1</m> and <m>\frac{dy}{du} = \cos{u}</m> and so <me>\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx} = \cos{(u)} (4x -1) = (4x-1) \cos{(2x^2 - x)}.</me>
+									</p>
+					</li>
+
+				</ol></p>
+			</example>
+			<p>
+					To complete the collection of basic properties of the derivative we need to know how to differentiate functions that are defined as quotients of other functions, i.e. how the derivative of the qutient depends on the derivatives of the numerator and denominator of the quotient. This is provided by the well-known quotient rule.
+				</p>
+	<theorem xml:id="thm-diff-quotient">
+		<title>Quotient rule</title>
+		<statement>
+			<p>If <m>y</m> is the quotient of two functions <m>y=\frac{u}{v}</m> then <me>\frac{dy}{dx} = \frac{v \frac{du}{dx} - u \frac{dv}{dx}}{v^2}.</me> Or in the alternative notation <me>y'(a) = \frac{v(a)u'(a) - u(a)v'(a)}{v(a)^2}.</me>
+				</p>
+		</statement>
+	</theorem>
+	<p>
+					The details of the proof of the quotient rule are left as an exercise. One way to prove it is to make use of the chain rule and product rule properties that we have already established together with the following lemma.
+				</p>
+	
+	<lemma xml:id="lem-diff-recip">
+		<title>Derivative of the reciprocal</title>
+		<statement>
+			<p>Consider the reciprocal function <m>r</m> defined on the non-zero reals, <m>\mathbb{R} \backslash \{0\}</m>, by <m>r(x) = 1/x</m>. The derivative of <m>r</m> at a point <m>a \neq 0</m> is given by <me>r'(a) = \frac{-1}{a^2}.</me>
+				</p>
+		</statement>
+
+	</lemma>
+
+	<example>
+		<p>
+				These examples illustrate the use of the quotient rule.
+				</p>
+
+				<p><ol>
+					<li>
+									<p>
+										Differentiate <m>y = \frac{x^2 - 1}{\sin{x}}</m>.
+									</p>
+					
+									<p>
+										Let <m>u=x^2 -1</m> and <m>v= \sin{x}</m> then <m>\frac{du}{dx}= 2x</m> and <m>\frac{dv}{dx} = \cos{x}</m>. Then <me>\frac{dy}{dx} = \frac{v \frac{du}{dx} - u \frac{dv}{dx}}{v^2} = \frac{2x \sin{x} - (x^2 -1)\cos{x}}{\sin^2 x}.</me>
+									</p>
+					</li>
+
+					<li>
+									<p>
+										Differentiate <m>y=\frac{2x-1}{3x^2 + x}</m>.
+									</p>
+					
+									<p>
+										Let <m>u=2x -1</m> and <m>v= 3x^2 +x</m> then <m>\frac{du}{dx}= 2</m> and <m>\frac{dv}{dx} = 6x+1</m>. Then <me>\frac{dy}{dx} = \frac{v \frac{du}{dx} - u \frac{dv}{dx}}{v^2} = \frac{2(3x^2 +x) - (2x-1)(6x+1)}{(3x^2+x)^2} = \frac{-6x^2 + 6x + 1}{(3x^2 + x)^2}.</me>
+									</p>
+					</li>
+
+				</ol></p>
+	</example>
 			
 </section>

@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -118,15 +119,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.15';
+eBookConfig.runestone_version = '7.11.18';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.529fd9398bfbd03e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/prefix-runtime.1d92cd109bc12c4d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.74f6fa0c85f09c79.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -186,280 +187,289 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-diff.html" class="internal"><span class="codenumber">4</span> <span class="title">Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-function-limits.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Limiting values of functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-continuity.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivative.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivprops.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Properties of the derivative</span></a></div></li>
+</ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-functions-real"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Real valued functions</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Real valued functions</span>
 </h2>
-<div class="para" id="sec-functions-real-2">A lot of the time the functions we encounter in mathematics are <em class="emphasis">real-valued</em>, i.e. functions whose domain and co-domain are subsets of the real numbers <span class="process-math">\(\mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-functions-real-2">A lot of the time the functions we encounter in mathematics are <em class="emphasis">real-valued</em>, i.e. functions whose domain and co-domain are subsets of the real numbers <span class="process-math">\(\mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <section class="paragraphs" id="sec-functions-real-3"><h3 class="heading"><span class="title">Algebra of real-valued functions.</span></h3>
-<div class="para" id="sec-functions-real-3-2">Using the familiar operations of the real numbers we can define associated operations amongst real-valued functions. We want to stress here the consideration of functions as mathematical objects in their own right with operations defined on them.<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-functions-real-3-2">Using the familiar operations of the real numbers we can define associated operations amongst real-valued functions. We want to stress here the consideration of functions as mathematical objects in their own right with operations defined on them.<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-functions-addition"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Addition.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Addition.</span>
 </h4>
 <div class="para logical" id="def-functions-addition-2-1">
 <div class="para">Given two real-valued functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> with the same domain we can defined a new function <span class="process-math">\(f+g\text{,}\)</span> called the <em class="emphasis">sum</em> of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\text{,}\)</span> on this domain using the formula</div>
-<div class="displaymath process-math" id="def-functions-addition-2-1-7">
+<div class="displaymath process-math">
 \begin{equation*}
 \left ( f + g \right ) (x) = f(x) + g(x) .
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-addition-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-addition-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.2.1: Addition"><a href="#def-functions-addition" title="Copy heading and permalink for Definition 3.2.1: Addition" aria-label="Copy heading and permalink for Definition 3.2.1: Addition">🔗</a></div></article><article class="definition definition-like" id="def-functions-scalar-mult"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Scalar multiplication.</span>
+<div class="autopermalink" data-description="Definition 3.2.1: Addition"><a href="#def-functions-addition" title="Copy heading and permalink for Definition 3.2.1: Addition">🔗</a></div></article><article class="definition definition-like" id="def-functions-scalar-mult"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Scalar multiplication.</span>
 </h4>
 <div class="para logical" id="def-functions-scalar-mult-2-1">
 <div class="para">Let <span class="process-math">\(f\)</span> be a real-valued function and <span class="process-math">\(\lambda \in \mathbb{R}\text{.}\)</span> Then we can form a new function <span class="process-math">\(\lambda f\text{,}\)</span> which has the same domain as <span class="process-math">\(f\text{,}\)</span> and is defined by the formula</div>
-<div class="displaymath process-math" id="def-functions-scalar-mult-2-1-5">
+<div class="displaymath process-math">
 \begin{equation*}
 \left ( \lambda f \right ) (x) = \lambda \left ( f(x) \right ).
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-scalar-mult-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-scalar-mult-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.2.2: Scalar multiplication"><a href="#def-functions-scalar-mult" title="Copy heading and permalink for Definition 3.2.2: Scalar multiplication" aria-label="Copy heading and permalink for Definition 3.2.2: Scalar multiplication">🔗</a></div></article><article class="definition definition-like" id="def-functions-multiplication"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiplication.</span>
+<div class="autopermalink" data-description="Definition 3.2.2: Scalar multiplication"><a href="#def-functions-scalar-mult" title="Copy heading and permalink for Definition 3.2.2: Scalar multiplication">🔗</a></div></article><article class="definition definition-like" id="def-functions-multiplication"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplication.</span>
 </h4>
 <div class="para logical" id="def-functions-multiplication-2-1">
 <div class="para">Let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be two real-valued functions with the same domain. Then we can form the new <em class="emphasis">product</em> function <span class="process-math">\(fg\text{,}\)</span> on the same domain, defined by the formula</div>
-<div class="displaymath process-math" id="def-functions-multiplication-2-1-5">
+<div class="displaymath process-math">
 \begin{equation*}
 \left ( fg \right ) (x) = f(x) g(x).
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-multiplication-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-multiplication-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.2.3: Multiplication"><a href="#def-functions-multiplication" title="Copy heading and permalink for Definition 3.2.3: Multiplication" aria-label="Copy heading and permalink for Definition 3.2.3: Multiplication">🔗</a></div></article><article class="definition definition-like" id="def-functions-reciprocal"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reciprocal.</span>
+<div class="autopermalink" data-description="Definition 3.2.3: Multiplication"><a href="#def-functions-multiplication" title="Copy heading and permalink for Definition 3.2.3: Multiplication">🔗</a></div></article><article class="definition definition-like" id="def-functions-reciprocal"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Reciprocal.</span>
 </h4>
 <div class="para logical" id="def-functions-reciprocal-2-1">
 <div class="para">Let <span class="process-math">\(f\)</span> be a real-valued function that never takes the value zero. Then we can form the new <em class="emphasis">reciprocal</em> function <span class="process-math">\(\frac{1}{f}\text{,}\)</span> on the same domain as <span class="process-math">\(f\text{,}\)</span> defined by the formula</div>
-<div class="displaymath process-math" id="def-functions-reciprocal-2-1-5">
+<div class="displaymath process-math">
 \begin{equation*}
 \left ( \frac{1}{f} \right ) (x) = \frac{1}{f(x)}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-reciprocal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-reciprocal-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.2.4: Reciprocal"><a href="#def-functions-reciprocal" title="Copy heading and permalink for Definition 3.2.4: Reciprocal" aria-label="Copy heading and permalink for Definition 3.2.4: Reciprocal">🔗</a></div></article><div class="para" id="sec-functions-real-3-7">Note that we do not like to use the notation <span class="process-math">\(f^{-1}\)</span> for the reciprocal function as this is normally reserved for the <em class="emphasis">inverse</em> function of <span class="process-math">\(f\text{,}\)</span> see later.<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 3.2.4: Reciprocal"><a href="#def-functions-reciprocal" title="Copy heading and permalink for Definition 3.2.4: Reciprocal">🔗</a></div></article><div class="para" id="sec-functions-real-3-7">Note that we do not like to use the notation <span class="process-math">\(f^{-1}\)</span> for the reciprocal function as this is normally reserved for the <em class="emphasis">inverse</em> function of <span class="process-math">\(f\text{,}\)</span> see later.<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-3-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraphs: Algebra of real-valued functions"><a href="#sec-functions-real-3" title="Copy heading and permalink for Paragraphs: Algebra of real-valued functions" aria-label="Copy heading and permalink for Paragraphs: Algebra of real-valued functions">🔗</a></div></section><section class="paragraphs" id="sec-functions-real-4"><h3 class="heading"><span class="title">Composition and inverse.</span></h3>
-<div class="para" id="sec-functions-real-4-2">Composing functions is the process of applying functions in sequence, one after the other. You will see it occurring in all areas of mathematics. It is a fundamental mathematical concept and we can study it even before admitting any notion of number or measurement etc. It will play an important role in our study of groups in the next chapter.<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraphs: Algebra of real-valued functions"><a href="#sec-functions-real-3" title="Copy heading and permalink for Paragraphs: Algebra of real-valued functions">🔗</a></div></section><section class="paragraphs" id="sec-functions-real-4"><h3 class="heading"><span class="title">Composition and inverse.</span></h3>
+<div class="para" id="sec-functions-real-4-2">Composing functions is the process of applying functions in sequence, one after the other. You will see it occurring in all areas of mathematics. It is a fundamental mathematical concept and we can study it even before admitting any notion of number or measurement etc. It will play an important role in our study of groups in the next chapter.<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-functions-composition"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Composition.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Composition.</span>
 </h4>
 <div class="para logical" id="def-functions-composition-2-1">
 <div class="para">
 <span class="process-math">\(f:X \to Y\)</span> and <span class="process-math">\(g:Y \to Z\)</span> be two functions (note that the co-domain of <span class="process-math">\(f\)</span> is also the domain of <span class="process-math">\(g\)</span>). Then we can form a new function</div>
-<div class="displaymath process-math" id="def-functions-composition-2-1-5">
+<div class="displaymath process-math">
 \begin{equation*}
 g \circ f \, : \, X \to Z ,
 \end{equation*}
 </div>
 <div class="para">defined by the formula</div>
-<div class="displaymath process-math" id="def-functions-composition-2-1-6">
+<div class="displaymath process-math">
 \begin{equation*}
 \left ( g \circ f \right ) (x) = g(f(x)) .
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-composition-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="def-functions-composition-2-2">We can refer to <span class="process-math">\(g \circ f\)</span> as <span class="process-math">\(g\)</span> <em class="emphasis">composed with</em> <span class="process-math">\(f\text{,}\)</span> or more informally, <span class="process-math">\(g\)</span> <em class="emphasis">after</em> <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-functions-composition-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-composition-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="def-functions-composition-2-2">We can refer to <span class="process-math">\(g \circ f\)</span> as <span class="process-math">\(g\)</span> <em class="emphasis">composed with</em> <span class="process-math">\(f\text{,}\)</span> or more informally, <span class="process-math">\(g\)</span> <em class="emphasis">after</em> <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-functions-composition-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.2.5: Composition"><a href="#def-functions-composition" title="Copy heading and permalink for Definition 3.2.5: Composition" aria-label="Copy heading and permalink for Definition 3.2.5: Composition">🔗</a></div></article><article class="example example-like" id="sec-functions-real-4-4"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Definition 3.2.5: Composition"><a href="#def-functions-composition" title="Copy heading and permalink for Definition 3.2.5: Composition">🔗</a></div></article><article class="example example-like" id="sec-functions-real-4-4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="sec-functions-real-4-4-1-1">
 <div class="para">Consider the real-valued functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> defined by the formulas</div>
-<div class="displaymath process-math" id="sec-functions-real-4-4-1-1-3">
+<div class="displaymath process-math">
 \begin{equation*}
 f(x) = x^2 - 3 \text{ and } g(x)=2x+3 .
 \end{equation*}
 </div>
 <div class="para">Then we can find formulas defining the compositions as follows</div>
-<div class="displaymath process-math" id="sec-functions-real-4-4-1-1-4">
+<div class="displaymath process-math">
 \begin{equation*}
 \left ( f \circ g \right )(x) = f(g(x)) = \left ( 2x+3 \right)^2 -3 = 4x^2 +12x +6,
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math" id="sec-functions-real-4-4-1-1-5">
+<div class="displaymath process-math">
 \begin{equation*}
 \left ( g \circ f \right )(x) = g(f(x)) = 2 \left (x^2 - 3 \right ) + 3 = 2x^2 - 3.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-4-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.2.6"><a href="#sec-functions-real-4-4" title="Copy heading and permalink for Example 3.2.6" aria-label="Copy heading and permalink for Example 3.2.6">🔗</a></div></article><div class="para logical" id="sec-functions-real-4-5">
+<div class="autopermalink" data-description="Example 3.2.6"><a href="#sec-functions-real-4-4" title="Copy heading and permalink for Example 3.2.6">🔗</a></div></article><div class="para logical" id="sec-functions-real-4-5">
 <div class="para">Note that the formulas for the two compositions we found in this example are different. In general, even when both compositions are defined, composition is not commutative, i.e.</div>
-<div class="displaymath process-math" id="sec-functions-real-4-5-1">
+<div class="displaymath process-math">
 \begin{equation*}
 f \circ g \neq g \circ f ,
 \end{equation*}
 </div>
 <div class="para">although in special cases they may be equal.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="sec-functions-real-4-6"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="sec-functions-real-4-6-1-1">
 <div class="para">Consider the real-valued functions <span class="process-math">\(g,h,r\)</span> defined by the formulas</div>
-<div class="displaymath process-math" id="sec-functions-real-4-6-1-1-2">
+<div class="displaymath process-math">
 \begin{equation*}
 g(x) = 2x - 7, \quad h(x)=x^2 -1 \text{ and } r(x) = e^{2x} .
 \end{equation*}
 </div>
 <div class="para">Obtain formulas for each of the following compositions,</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="sec-functions-real-4-6-1-2">
 <ol class="decimal" id="sec-functions-real-4-6-1-2-1">
 <li id="sec-functions-real-4-6-1-2-1-1">
 <div class="para" id="sec-functions-real-4-6-1-2-1-1-1">
-<span class="process-math">\(g \circ h\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(g \circ h\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#sec-functions-real-4-6-1-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-functions-real-4-6-1-2-1-1" title="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="sec-functions-real-4-6-1-2-1-2">
 <div class="para" id="sec-functions-real-4-6-1-2-1-2-1">
-<span class="process-math">\(h \circ r\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(h \circ r\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#sec-functions-real-4-6-1-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec-functions-real-4-6-1-2-1-2" title="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 <li id="sec-functions-real-4-6-1-2-1-3">
 <div class="para" id="sec-functions-real-4-6-1-2-1-3-1">
-<span class="process-math">\(g \circ h \circ r\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(g \circ h \circ r\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#sec-functions-real-4-6-1-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec-functions-real-4-6-1-2-1-3" title="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 <li id="sec-functions-real-4-6-1-2-1-4">
 <div class="para" id="sec-functions-real-4-6-1-2-1-4-1">
-<span class="process-math">\(g \circ g\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(g \circ g\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2-1-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 4"><a href="#sec-functions-real-4-6-1-2-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec-functions-real-4-6-1-2-1-4" title="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
 <li id="sec-functions-real-4-6-1-2-1-5">
 <div class="para" id="sec-functions-real-4-6-1-2-1-5-1">
-<span class="process-math">\(g \circ  g \circ g\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(g \circ  g \circ g\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2-1-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 5"><a href="#sec-functions-real-4-6-1-2-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+<div class="autopermalink" data-description="Item 5"><a href="#sec-functions-real-4-6-1-2-1-5" title="Copy heading and permalink for Item 5">🔗</a></div>
 </li>
 <li id="sec-functions-real-4-6-1-2-1-6">
 <div class="para" id="sec-functions-real-4-6-1-2-1-6-1">
-<span class="process-math">\(r \circ r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(r \circ r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2-1-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 6"><a href="#sec-functions-real-4-6-1-2-1-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+<div class="autopermalink" data-description="Item 6"><a href="#sec-functions-real-4-6-1-2-1-6" title="Copy heading and permalink for Item 6">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-6-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.2.7"><a href="#sec-functions-real-4-6" title="Copy heading and permalink for Example 3.2.7" aria-label="Copy heading and permalink for Example 3.2.7">🔗</a></div></article><article class="definition definition-like" id="def-functions-identity"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Identity function.</span>
+<div class="autopermalink" data-description="Example 3.2.7"><a href="#sec-functions-real-4-6" title="Copy heading and permalink for Example 3.2.7">🔗</a></div></article><article class="definition definition-like" id="def-functions-identity"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Identity function.</span>
 </h4>
 <div class="para logical" id="def-functions-identity-2-1">
 <div class="para">The identity function <span class="process-math">\(\text{id}\)</span> on the domain <span class="process-math">\(X\)</span> is the function</div>
-<div class="displaymath process-math" id="def-functions-identity-2-1-3">
+<div class="displaymath process-math">
 \begin{equation*}
 \text{id} \, : \, X \to X ,
 \end{equation*}
 </div>
 <div class="para">defined by the formula</div>
-<div class="displaymath process-math" id="def-functions-identity-2-1-4">
+<div class="displaymath process-math">
 \begin{equation*}
 \forall x \in X \quad \text{id}(x)=x.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-identity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-identity-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="def-functions-identity-2-2">
 <div class="para">We shall speak of <em class="emphasis">the</em> identity function in different contexts without necessarily specifying the domain. The domain can always be determined from the specific context. The identity function has the property that when composed with another function, it leaves the other function unchanged, i.e.</div>
-<div class="displaymath process-math" id="def-functions-identity-2-2-2">
+<div class="displaymath process-math">
 \begin{equation*}
 f \circ \text{id} = \text{id} \circ f = f.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-identity-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-identity-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.2.8: Identity function"><a href="#def-functions-identity" title="Copy heading and permalink for Definition 3.2.8: Identity function" aria-label="Copy heading and permalink for Definition 3.2.8: Identity function">🔗</a></div></article><div class="para" id="sec-functions-real-4-8">Under certain conditions, the effect of a function can be reversed, as in the following definition.<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 3.2.8: Identity function"><a href="#def-functions-identity" title="Copy heading and permalink for Definition 3.2.8: Identity function">🔗</a></div></article><div class="para" id="sec-functions-real-4-8">Under certain conditions, the effect of a function can be reversed, as in the following definition.<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-functions-inverse"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inverse function.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse function.</span>
 </h4>
 <div class="para logical" id="def-functions-inverse-2-1">
 <div class="para">Let <span class="process-math">\(f:X \to Y\)</span> be a function that is bijective, i.e. is injective and surjective. Then there exits a function</div>
-<div class="displaymath process-math" id="def-functions-inverse-2-1-2">
+<div class="displaymath process-math">
 \begin{equation*}
 f^{-1} \, : \, Y \to X,
 \end{equation*}
 </div>
 <div class="para">called the <em class="emphasis">inverse of <span class="process-math">\(f\)</span></em>, which has the property that</div>
-<div class="displaymath process-math" id="def-functions-inverse-2-1-4">
+<div class="displaymath process-math">
 \begin{equation*}
 f^{-1} \circ f = f \circ f^{-1} = \text{id}.
 \end{equation*}
 </div>
 <div class="para">Or in other words,</div>
-<div class="displaymath process-math" id="def-functions-inverse-2-1-5">
+<div class="displaymath process-math">
 \begin{equation*}
 \forall x \in X \quad f^{-1} ( f(x)) = x ,
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math" id="def-functions-inverse-2-1-6">
+<div class="displaymath process-math">
 \begin{equation*}
 \forall y \in Y \quad f(f^{-1}(y)) = y .
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-inverse-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-functions-inverse-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.2.9: Inverse function"><a href="#def-functions-inverse" title="Copy heading and permalink for Definition 3.2.9: Inverse function" aria-label="Copy heading and permalink for Definition 3.2.9: Inverse function">🔗</a></div></article><article class="example example-like" id="sec-functions-real-4-10"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Definition 3.2.9: Inverse function"><a href="#def-functions-inverse" title="Copy heading and permalink for Definition 3.2.9: Inverse function">🔗</a></div></article><article class="example example-like" id="sec-functions-real-4-10"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="sec-functions-real-4-10-1-1">
 <div class="para">Given a function defined by a formula it is often possible to obtain the formula for the inverse function (if it exists). Suppose that the real-valued function <span class="process-math">\(f\)</span> is defined by the formula</div>
-<div class="displaymath process-math" id="sec-functions-real-4-10-1-1-2">
+<div class="displaymath process-math">
 \begin{equation*}
 f(x) = 2x - 5.
 \end{equation*}
 </div>
 <div class="para">We form the equation <span class="process-math">\(y = 2x-5\)</span> and adjust it so that <span class="process-math">\(x\)</span> becomes the subject of the equation, which is</div>
-<div class="displaymath process-math" id="sec-functions-real-4-10-1-1-5">
+<div class="displaymath process-math">
 \begin{equation*}
 x=\frac{y+5}{2}.
 \end{equation*}
 </div>
 <div class="para">This now gives us the correct formula for the inverse function, <span class="process-math">\(f^{-1}\text{,}\)</span> which is defined by</div>
-<div class="displaymath process-math" id="sec-functions-real-4-10-1-1-7">
+<div class="displaymath process-math">
 \begin{equation*}
 f^{-1} (y) = \frac{y+5}{2} .
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-10-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.2.10"><a href="#sec-functions-real-4-10" title="Copy heading and permalink for Example 3.2.10" aria-label="Copy heading and permalink for Example 3.2.10">🔗</a></div></article><div class="para" id="sec-functions-real-4-11">In terms of graphs, there is a nice relationship between the graph of a real-valued function and that of its inverse. The graph of the inverse function can be obtained by reflecting the graph of the original function in the diagonal line in the <span class="process-math">\(xy\)</span>-plane defined by <span class="process-math">\(y=x\text{.}\)</span> This has the effect of inverting the relationship between the domain and co-domain.<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.2.10"><a href="#sec-functions-real-4-10" title="Copy heading and permalink for Example 3.2.10">🔗</a></div></article><div class="para" id="sec-functions-real-4-11">In terms of graphs, there is a nice relationship between the graph of a real-valued function and that of its inverse. The graph of the inverse function can be obtained by reflecting the graph of the original function in the diagonal line in the <span class="process-math">\(xy\)</span>-plane defined by <span class="process-math">\(y=x\text{.}\)</span> This has the effect of inverting the relationship between the domain and co-domain.<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="sec-functions-real-4-12"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span>
 </h4>
-<div class="para" id="sec-functions-real-4-12-1-1">Figure <a href="sec-functions-real.html#functions-inverse" class="xref" data-knowl="./knowl/xref/functions-inverse.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.12">Figure 3.2.12</a> shows the graphs of the square function <span class="process-math">\(s: \mathbb{R}^+ \to \mathbb{R}^+\)</span> defined by <span class="process-math">\(s(x)=x^2\)</span> and square root function <span class="process-math">\(r:\mathbb{R}^+ \to \mathbb{R}^+\)</span> defined by <span class="process-math">\(r(x)=\sqrt{x}\text{,}\)</span> along with the dotted line showing the axis of reflection <span class="process-math">\(y=x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-functions-real-4-12-1-1">Figure <a href="sec-functions-real.html#functions-inverse" class="xref" data-knowl="./knowl/xref/functions-inverse.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.12">Figure 3.2.12</a> shows the graphs of the square function <span class="process-math">\(s: \mathbb{R}^+ \to \mathbb{R}^+\)</span> defined by <span class="process-math">\(s(x)=x^2\)</span> and square root function <span class="process-math">\(r:\mathbb{R}^+ \to \mathbb{R}^+\)</span> defined by <span class="process-math">\(r(x)=\sqrt{x}\text{,}\)</span> along with the dotted line showing the axis of reflection <span class="process-math">\(y=x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-12-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.2.11"><a href="#sec-functions-real-4-12" title="Copy heading and permalink for Example 3.2.11" aria-label="Copy heading and permalink for Example 3.2.11">🔗</a></div></article><figure class="figure figure-like" id="functions-inverse"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/inverse.png" class="contained" alt="(for accessibility)"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The square function and its inverse<div class="autopermalink" data-description="Figure 3.2.12"><a href="#functions-inverse" title="Copy heading and permalink for Figure 3.2.12" aria-label="Copy heading and permalink for Figure 3.2.12">🔗</a></div></figcaption></figure><div class="para" id="sec-functions-real-4-14">The next result relates the inverse of the composition of two functions to the compositions of their inverses. It should remind you of a similar result about matrix inverses.<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.2.11"><a href="#sec-functions-real-4-12" title="Copy heading and permalink for Example 3.2.11">🔗</a></div></article><figure class="figure figure-like" id="functions-inverse"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/inverse.png" class="contained" alt="(for accessibility)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.12<span class="period">.</span></span><span class="space"> </span>The square function and its inverse<div class="autopermalink" data-description="Figure 3.2.12"><a href="#functions-inverse" title="Copy heading and permalink for Figure 3.2.12">🔗</a></div></figcaption></figure><div class="para" id="sec-functions-real-4-14">The next result relates the inverse of the composition of two functions to the compositions of their inverses. It should remind you of a similar result about matrix inverses.<div class="autopermalink" data-description="Paragraph"><a href="#sec-functions-real-4-14" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-functions-inverse-of-composition"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inverse of compositions.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse of compositions.</span>
 </h4>
 <div class="para logical" id="thm-functions-inverse-of-composition-2-1">
 <div class="para">Suppose that <span class="process-math">\(f: X \to Y\)</span> and <span class="process-math">\(g:Y \to Z\)</span> are two bijective functions. Then the composition <span class="process-math">\(g \circ f\)</span> is also bijective and</div>
-<div class="displaymath process-math" id="thm-functions-inverse-of-composition-2-1-4">
+<div class="displaymath process-math">
 \begin{equation*}
 \left ( g \circ f \right )^{-1} = f^{-1} \circ g^{-1} .
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-functions-inverse-of-composition-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-functions-inverse-of-composition-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.2.13: Inverse of compositions"><a href="#thm-functions-inverse-of-composition" title="Copy heading and permalink for Theorem 3.2.13: Inverse of compositions" aria-label="Copy heading and permalink for Theorem 3.2.13: Inverse of compositions">🔗</a></div></article><div class="autopermalink" data-description="Paragraphs: Composition and inverse"><a href="#sec-functions-real-4" title="Copy heading and permalink for Paragraphs: Composition and inverse" aria-label="Copy heading and permalink for Paragraphs: Composition and inverse">🔗</a></div></section><div class="autopermalink" data-description="Section 3.2: Real valued functions"><a href="#sec-functions-real" title="Copy heading and permalink for Section 3.2: Real valued functions" aria-label="Copy heading and permalink for Section 3.2: Real valued functions">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Theorem 3.2.13: Inverse of compositions"><a href="#thm-functions-inverse-of-composition" title="Copy heading and permalink for Theorem 3.2.13: Inverse of compositions">🔗</a></div></article><div class="autopermalink" data-description="Paragraphs: Composition and inverse"><a href="#sec-functions-real-4" title="Copy heading and permalink for Paragraphs: Composition and inverse">🔗</a></div></section><div class="autopermalink" data-description="Section 3.2: Real valued functions"><a href="#sec-functions-real" title="Copy heading and permalink for Section 3.2: Real valued functions">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-functions-defs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-functions-partials.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
