@@ -46,7 +46,7 @@ f'(a) &amp; = \lim_{x \to a} \frac{g(x)h(x) - g(a)h(a)}{x-a}, \text{def. of deri
 </theorem>
 <example>
 	
-</example>
+
 <p><ol>
 				<li>
 							<p>
@@ -64,7 +64,7 @@ f'(a) &amp; = \lim_{x \to a} \frac{g(x)h(x) - g(a)h(a)}{x-a}, \text{def. of deri
 				</li>
 
 			</ol></p>
-
+</example>
 			<paragraphs>
 				<title>Linear approximations and associated errors</title>
 				
