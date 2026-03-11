@@ -845,6 +845,330 @@ var ptx_lunr_docs = [
   "number": "3.4",
   "title": "Exercises",
   "body": " Exercises    Consider the functions defined by , and . Give a defining formula for the following functions                     Let , , Exp and One denote the functions defined by , , and . Consider the functions and defined by Express and as suitable compositions of combinations of the functions , and Exp.    Consider the function defined by the following formulae: What are appropriate domains and co-domains for these functions? Find formulae for their inverses and state the domains and co-domains of these new functions.    Let the functions be defined by Find the formula for the function , stating its domain and co-domain.    Let the functions and be defined by Find the definitions of the functions and and confirm that in this case.    Obtain partial fraction expansions of the following rational functions                     "
+},
+{
+  "id": "sec-diff-function-limits",
+  "level": "1",
+  "url": "sec-diff-function-limits.html",
+  "type": "Section",
+  "number": "4.1",
+  "title": "Limiting values of functions",
+  "body": " Limiting values of functions  We have met the concept of a limit in the context of sequences and series. The concept is also useful when discussing real-valued functions. Let and be two real numbers. Informally we say that the function tends to the limit as tends to if the value gets closer and closer to as gets closer and closer to . We can represent this symbolically as which we read as the limit, as tends to , of is equal to . Alternatively we can write which we read as tends to as tends to .  Notice that this description makes no reference to the actual value (if any) of the function at . The concept of limit only refers to the behaviour of as it approaches some limiting point .   Discontinuous behaviour of a function at .   (for accessibility)    This definition is not sufficiently rigorous though. For instance, as the diagram in figure illustrates, a function may have different limits depending on the direction from which approaches .  If this situation arises then we can refer separately to the two different limits as follows. The limit of as tends to from the left is written as and the limit of as tends to from the right is written as   Although it is not an element of the real numbers we can admit the concept of infinity ( ) into this definition as it will allow us to describe the behavior of functions in the following way. If a function grows without bound as approaches then we can write For example and If the values of a function approach some limit as the argument gets larger and larger then we could write For example and    The function .   (for accessibility)    These limiting values of the function can be appreciated from its graph shown in figure .  To calculate and work with limiting values of functions we can use the standard techniques that we introduced when dealing with limits of sequences and series. We have the following theorem   Algebra of limits for function values   Let and suppose that and , then . For the last quotient case we would need the additional assumption that and that is non-zero in some interval around .    Of particular use is l’Hopital’s rule. This is used to evaluate the limit, , of a quotient of functions and . Sometimes these limits can not be evaluated because it works out to some indeterminant form, i.e . In these cases we can differentiate both functions and then look at the limit of the resulting quotient. If this new limit exists then the rule says that it is equal to the original limit.   l'Hopital's rule   If or then providing the limit exists where and are the derivatives of and .    It may be necessary to apply l'Hopital's rule a number of times (i.e. taking second or third derivatives etc) in order to convert the original indeterminate limit into a determinate one.   The following examples illustrate the use of these techniques.                                   "
+},
+{
+  "id": "diff-discon",
+  "level": "2",
+  "url": "sec-diff-function-limits.html#diff-discon",
+  "type": "Figure",
+  "number": "4.1.1",
+  "title": "",
+  "body": " Discontinuous behaviour of a function at .   (for accessibility)   "
+},
+{
+  "id": "diff-one-over-x",
+  "level": "2",
+  "url": "sec-diff-function-limits.html#diff-one-over-x",
+  "type": "Figure",
+  "number": "4.1.2",
+  "title": "",
+  "body": " The function .   (for accessibility)   "
+},
+{
+  "id": "thm-diff-algebra",
+  "level": "2",
+  "url": "sec-diff-function-limits.html#thm-diff-algebra",
+  "type": "Theorem",
+  "number": "4.1.3",
+  "title": "Algebra of limits for function values.",
+  "body": " Algebra of limits for function values   Let and suppose that and , then . For the last quotient case we would need the additional assumption that and that is non-zero in some interval around .   "
+},
+{
+  "id": "thm-diff-lhopital",
+  "level": "2",
+  "url": "sec-diff-function-limits.html#thm-diff-lhopital",
+  "type": "Theorem",
+  "number": "4.1.4",
+  "title": "l’Hopital’s rule.",
+  "body": " l'Hopital's rule   If or then providing the limit exists where and are the derivatives of and .   "
+},
+{
+  "id": "sec-diff-function-limits-15",
+  "level": "2",
+  "url": "sec-diff-function-limits.html#sec-diff-function-limits-15",
+  "type": "Example",
+  "number": "4.1.5",
+  "title": "",
+  "body": " The following examples illustrate the use of these techniques.                                  "
+},
+{
+  "id": "sec-diff-continuity",
+  "level": "1",
+  "url": "sec-diff-continuity.html",
+  "type": "Section",
+  "number": "4.2",
+  "title": "Continuity",
+  "body": " Continuity  In the previous section we made the point that the limiting value, , of the function does not depend on the actual value, , of at the limiting point . However it is an important feature (continuity) of a function when the limiting value actually equals the value at the limiting point. We give the following informal definition for continuity.   Continuity   The function is continuous at the point if     If is continuous at all points of its domain then we say that is a continuous function . A function that is not continuous is called non-continuous .  If this definition is not satisfied at a point then we say that the function has a discontinuity at .  Functions can be discontinuous in a number of different ways. For instance the left and right hand limits may differ at a point as we saw earlier. Another type of discontinuity is the rapidly oscillating behaviour near of the function seen in figure .   The graph of nearr .   (for accessibility)    Note that the plotting program struggles to represent the behavior accurately at here. The point is that the limit does not exist so even if the function were to be given a definition at it could never be continuous there.  The continuity property is preserved by the usual operations on functions, as described in the following theorems.   Continuity of sums, products and quotients   Suppose that functions and are both continuous at a point , then for any the linear combination function is also continuous at . Also the product function will be continuous at as well as the quotient function provided that is non-zero in some surrounding interval of .     Continuity of composition   Suppose that and are two functions whose domains and co-domains are such that the composition function can be defined. If is continuous at a point and is continuous at the point then the composition function is continuous at .    The definition of continuity (and limiting values of functions) that we have given do lack rigor in that they rely on the notion of getting closer and closer to .....  which we have not given a complete description of. A fully detailed rigorous treatment of continuity is the subject of mathematical analysis and is not possible within the scope of this unit. However we can give a taste of it by looking at the formal definition of continuity and how it is used to prove one of the cases of the above theorem.   Formal definition of continuity   The function is continuous at the point if and only if for all there exists such that if then . In formal symbolic terms this becomes: is continuous at if and only if the following statement holds      is useful for picturing the role of the variables and in the definition of continuity.   Illustrating the parameters in the formal definition.   (for accessibility)    Using this definition we can give rigorous proofs of the continuity theorems above. You will see a lot of similarity in the arguments here and the proofs of the similar properties of convergence of sequences. Those previous arguments are adapted to the new context and where -arguments take the place of the -arguments.  Proof of  First we prove that continuity is preserved by linear combinations. We assume additionally that . Let be given. There exists such that for all we have , and for all we have .  Let and then for all we have Therefore the definition is satisfied and the linear combination is continuous at as required.  Next we prove that continuity is preserved by products. Let be given. By continuity there exist such that for all we have and we have .  Letting and then for all we have Therefore the definition is satisfied and the product is continuous at as required.  The proof that quotients preserve continuity is again similar to the case for convergence of sequences. The details are left as an exercise for the reader.    Proof of   Proof. The conditions of the theorem are illustrated in figure . There we see illustrated three copies of the real number line with the action of the functions from left to right with going first and then applied to the result of .   The composition function .   The composition function    Let be given. As is continuous at there exists a radius such that for all we have . But since is continuous at there exists a radius such that for all we have .  Combining these two gives us the required result, namely that for all we have , i.e. the composition is continuous at .    Importance of continuity  Mathematicians sometimes talk of a concept like continuity as describing the well-behaved nature of certain functions . So a well-behaved function is one that has nice reasonable properties, properties usually enjoyed by the real physical properties of the processes that we are using the functions to model for instance. A badly-behaved function might be one that has no discernable reasonable properties or interpretation, such as some kind of random association of real numbers to other real numbers (though such things and their properties might still be of great mathematical interest!).  The concept of continuity generalizes to functions between lots of other kinds of mathematical space, such as say functions from , where are positive integers. These are functions between different dimensional Euclidean geometric Euclidean spaces. Or perhaps functions between different Riemannian manifolds. A Riemannian manifold generalization of Euclidean space, i.e. a space which has a different kind of curved geometry rather than the flat geometry of Euclidean spaces. We can even study the concept of continuity for functions, and distance like measures, on spaces that have no kind of immediate intuitive geometric interpretation for us. Such topics are explored in the subject areas of general topology and metric spaces .  An example of continuity embodying the notion of well-behaved function we can consider the Intermediate Value Theorem which is illustrated in figure .   The Intermediate Value Theorem.   The intermediate value theorem     Intermediate Value Theorem   Let be a function defined on and continuous at all points in the closed interval . Suppose that . Then for any number between and , there exists a number such that .    The proof of this theorem makes use of the completeness or least upper-bound property of the real numbers and can be viewed as an embodiment of that property   "
+},
+{
+  "id": "def-diff-continuity",
+  "level": "2",
+  "url": "sec-diff-continuity.html#def-diff-continuity",
+  "type": "Definition",
+  "number": "4.2.1",
+  "title": "Continuity.",
+  "body": " Continuity   The function is continuous at the point if    "
+},
+{
+  "id": "diff-sin1overx",
+  "level": "2",
+  "url": "sec-diff-continuity.html#diff-sin1overx",
+  "type": "Figure",
+  "number": "4.2.2",
+  "title": "",
+  "body": " The graph of nearr .   (for accessibility)   "
+},
+{
+  "id": "thm-diff-cont-algebra",
+  "level": "2",
+  "url": "sec-diff-continuity.html#thm-diff-cont-algebra",
+  "type": "Theorem",
+  "number": "4.2.3",
+  "title": "Continuity of sums, products and quotients.",
+  "body": " Continuity of sums, products and quotients   Suppose that functions and are both continuous at a point , then for any the linear combination function is also continuous at . Also the product function will be continuous at as well as the quotient function provided that is non-zero in some surrounding interval of .   "
+},
+{
+  "id": "thm-diff-cont-comp",
+  "level": "2",
+  "url": "sec-diff-continuity.html#thm-diff-cont-comp",
+  "type": "Theorem",
+  "number": "4.2.4",
+  "title": "Continuity of composition.",
+  "body": " Continuity of composition   Suppose that and are two functions whose domains and co-domains are such that the composition function can be defined. If is continuous at a point and is continuous at the point then the composition function is continuous at .   "
+},
+{
+  "id": "def-diff-cont-formal",
+  "level": "2",
+  "url": "sec-diff-continuity.html#def-diff-cont-formal",
+  "type": "Definition",
+  "number": "4.2.5",
+  "title": "Formal definition of continuity.",
+  "body": " Formal definition of continuity   The function is continuous at the point if and only if for all there exists such that if then . In formal symbolic terms this becomes: is continuous at if and only if the following statement holds    "
+},
+{
+  "id": "formal-cont",
+  "level": "2",
+  "url": "sec-diff-continuity.html#formal-cont",
+  "type": "Figure",
+  "number": "4.2.6",
+  "title": "",
+  "body": " Illustrating the parameters in the formal definition.   (for accessibility)   "
+},
+{
+  "id": "sec-diff-continuity-17",
+  "level": "2",
+  "url": "sec-diff-continuity.html#sec-diff-continuity-17",
+  "type": "Proof",
+  "number": "4.2.1",
+  "title": "Proof of Theorem 4.2.3.",
+  "body": "Proof of  First we prove that continuity is preserved by linear combinations. We assume additionally that . Let be given. There exists such that for all we have , and for all we have .  Let and then for all we have Therefore the definition is satisfied and the linear combination is continuous at as required.  Next we prove that continuity is preserved by products. Let be given. By continuity there exist such that for all we have and we have .  Letting and then for all we have Therefore the definition is satisfied and the product is continuous at as required.  The proof that quotients preserve continuity is again similar to the case for convergence of sequences. The details are left as an exercise for the reader.  "
+},
+{
+  "id": "sec-diff-continuity-18",
+  "level": "2",
+  "url": "sec-diff-continuity.html#sec-diff-continuity-18",
+  "type": "Proof",
+  "number": "4.2.2",
+  "title": "Proof of Theorem 4.2.4.",
+  "body": " Proof of   Proof. The conditions of the theorem are illustrated in figure . There we see illustrated three copies of the real number line with the action of the functions from left to right with going first and then applied to the result of .   The composition function .   The composition function    Let be given. As is continuous at there exists a radius such that for all we have . But since is continuous at there exists a radius such that for all we have .  Combining these two gives us the required result, namely that for all we have , i.e. the composition is continuous at .  "
+},
+{
+  "id": "intervalthm",
+  "level": "2",
+  "url": "sec-diff-continuity.html#intervalthm",
+  "type": "Figure",
+  "number": "4.2.8",
+  "title": "",
+  "body": " The Intermediate Value Theorem.   The intermediate value theorem   "
+},
+{
+  "id": "thm-intervalthm",
+  "level": "2",
+  "url": "sec-diff-continuity.html#thm-intervalthm",
+  "type": "Theorem",
+  "number": "4.2.9",
+  "title": "Intermediate Value Theorem.",
+  "body": " Intermediate Value Theorem   Let be a function defined on and continuous at all points in the closed interval . Suppose that . Then for any number between and , there exists a number such that .   "
+},
+{
+  "id": "sec-diff-derivative",
+  "level": "1",
+  "url": "sec-diff-derivative.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "The derivative",
+  "body": " The derivative  The derivative of a function is a quantity that measures the instantaneous rate of change of a function. It is defined using the notion of the limiting value of a certain quotient involving the function under consideration. This definition is motivated and explained by the following diagrams.   Towards the definition of the derivative.      As depicted in , change in value of a function is measured by the gradient of the line joining two points on the graph of .    Towards the definition of the derivative.      As the gradient describes the rate of change of at the point more accurately,    Towards the definition of the derivative.      As depicted in , in the limit as the gradient line approaches the tangent line to the graph of at the point . The tangent line to a point on the graph is a line that, in a small neighborhood of the point, only intersects the graph at that point. The slope of the tangent line is the same as the slope of the graph at that point.   Differentiable   A function is differentiable at if is continuous at and the following limit exists     If is differentiable at then the value of the limit above is called the derivative of at and can be written symbolically as or    Consider the functions and defined by and where is some constant. Find the derivatives of and at from first principles. ( from first principles means working with the above definition of the derivative in terms of limits) The function can be handled in a similar way.    As is usually the case for us, a function will be defined by a single formula in a variable say and so the derivative of at all points in its domain can be worked out in one go to give a formula in which defines the derivative function of . So given a function we can speak of its derivative (function) which when evaluated at a point give the derivative of at as defined by our earlier definition.   Higher order derivatives  Once a function has been differentiated to give the derivative it can be differentiated again to give higher derivatives      Standard derivatives  Consider the tables in and , showing the derivatives of some standard functions, along with a summary of properties of the derivative. These tables are taken from the Formula Handbook that you will have available in your summer exam.  We can find derivatives of more complex functions which are built out of standard functions by using these known derivatives along with some properties of the derivative, which we discuss in the rest of this chapter.    Derivatives of some standard functions       Derivatives of some standard functions      "
+},
+{
+  "id": "diff1",
+  "level": "2",
+  "url": "sec-diff-derivative.html#diff1",
+  "type": "Figure",
+  "number": "4.3.1",
+  "title": "",
+  "body": " Towards the definition of the derivative.     "
+},
+{
+  "id": "diff2",
+  "level": "2",
+  "url": "sec-diff-derivative.html#diff2",
+  "type": "Figure",
+  "number": "4.3.2",
+  "title": "",
+  "body": " Towards the definition of the derivative.     "
+},
+{
+  "id": "diff3",
+  "level": "2",
+  "url": "sec-diff-derivative.html#diff3",
+  "type": "Figure",
+  "number": "4.3.3",
+  "title": "",
+  "body": " Towards the definition of the derivative.     "
+},
+{
+  "id": "thm-differentiable",
+  "level": "2",
+  "url": "sec-diff-derivative.html#thm-differentiable",
+  "type": "Theorem",
+  "number": "4.3.4",
+  "title": "Differentiable.",
+  "body": " Differentiable   A function is differentiable at if is continuous at and the following limit exists    "
+},
+{
+  "id": "sec-diff-derivative-11",
+  "level": "2",
+  "url": "sec-diff-derivative.html#sec-diff-derivative-11",
+  "type": "Example",
+  "number": "4.3.5",
+  "title": "",
+  "body": " Consider the functions and defined by and where is some constant. Find the derivatives of and at from first principles. ( from first principles means working with the above definition of the derivative in terms of limits) The function can be handled in a similar way.   "
+},
+{
+  "id": "table01",
+  "level": "2",
+  "url": "sec-diff-derivative.html#table01",
+  "type": "Figure",
+  "number": "4.3.6",
+  "title": "",
+  "body": " Derivatives of some standard functions     "
+},
+{
+  "id": "table02",
+  "level": "2",
+  "url": "sec-diff-derivative.html#table02",
+  "type": "Figure",
+  "number": "4.3.7",
+  "title": "",
+  "body": " Derivatives of some standard functions     "
+},
+{
+  "id": "sec-diff-derivprops",
+  "level": "1",
+  "url": "sec-diff-derivprops.html",
+  "type": "Section",
+  "number": "4.4",
+  "title": "Properties of the derivative",
+  "body": " Properties of the derivative   Linearity   Consider the linear combination of functions and , where . The derivative of satisfies     This is a straightforward application of properties of the limiting process for functions. Suppose that and are both differentiable at a point . The above equations demonstrate the linearity of the derivative.     Product rule   Consider the function which is a product of the two functions and . The derivative of satisfies     Suppose that and are both differentiable at a point . This is the required result.        Find the derivative of . This is the product of the two functions whose derivatives are and so the required derivative is     Find the derivative of ....     Linear approximations and associated errors  Before moving on to consider other properties of differentiation we introduce another viewpoint on the derivative that will be needed for future proof arguments. Consider again the definition of the derivative of a function at a point in its domain. We reformulate this slightly by writing as and having the limiting process be as , as follows This suggests the existence of a function that measures the discrepancy between and the relative change quotient , defined as follows and this new function has the important convergence property We can now rearrange the definition of to give the interesting expression This equation shows the linear approximation , , to the value, of the function at a point close to , with the associated error term  . The linear approximation is the linear function (i.e. line) that best approximates the function in the region around the point . Not only does the error-term approach zero as (as we would expect) but the error term divided by , i.e. , converges to 0 as .   The linear approximation to at .      Picturing these various quantities with the aid of figure may help. It’s important to appreciate how the linear approximation gives the equation of the tangent line to the graph of at in the form of , where .  This allows us to interpret the above to give an alternative definition of the derivative as follows:   The derivative   The derivative, , is the unique number that provides the linear approximation for the value with the property that the error term has the convergence property that as .    This view of the derivative will allow us to give a rigorous proof of the chain rule. But it is also a useful to have such slightly different views of the same concept. This notion of linear approximations (and other higher-order approximations) and the behaviour of their associated error terms is important in the subject of numerical analysis .    Chain rule   Consider the composition of two functions and . Let so that . Then the derivative of satisfies or in the alternative notation, at a point we have      Proof. We suppose that the function is differentiable at the point and that is differentiable at the point . In the linear approximations view this means we have derivative quantities and and error functions and satisfying with convergence properties as and as .  Our task now is to prove the chain rule according to definition , i.e. to examine the quantity and discover the linear approximation to it, showing that the derivative has the form described by the chain rule and that the error term has the necessary convergence property. where the error term is defined by So we have established the required form for which shows the expected derivative as asserted by the chain rule. To complete the proof we have just to prove that as . This can be seen by considering the equation We can prove that by applying the algebra of limits theorem to the above, noting that as .       Differentiate .  Let so that . Then and and so     Differentiate .  Let so that . Then and and so      To complete the collection of basic properties of the derivative we need to know how to differentiate functions that are defined as quotients of other functions, i.e. how the derivative of the qutient depends on the derivatives of the numerator and denominator of the quotient. This is provided by the well-known quotient rule.   Quotient rule   If is the quotient of two functions then Or in the alternative notation     The details of the proof of the quotient rule are left as an exercise. One way to prove it is to make use of the chain rule and product rule properties that we have already established together with the following lemma.   Derivative of the reciprocal   Consider the reciprocal function defined on the non-zero reals, , by . The derivative of at a point is given by      These examples illustrate the use of the quotient rule.    Differentiate .  Let and then and . Then     Differentiate .  Let and then and . Then      "
+},
+{
+  "id": "thm-diff-linear",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#thm-diff-linear",
+  "type": "Theorem",
+  "number": "4.4.1",
+  "title": "Linearity.",
+  "body": " Linearity   Consider the linear combination of functions and , where . The derivative of satisfies     This is a straightforward application of properties of the limiting process for functions. Suppose that and are both differentiable at a point . The above equations demonstrate the linearity of the derivative.   "
+},
+{
+  "id": "thm-diff-product",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#thm-diff-product",
+  "type": "Theorem",
+  "number": "4.4.2",
+  "title": "Product rule.",
+  "body": " Product rule   Consider the function which is a product of the two functions and . The derivative of satisfies     Suppose that and are both differentiable at a point . This is the required result.   "
+},
+{
+  "id": "sec-diff-derivprops-4",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#sec-diff-derivprops-4",
+  "type": "Example",
+  "number": "4.4.3",
+  "title": "",
+  "body": " "
+},
+{
+  "id": "diff-lin-approx",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#diff-lin-approx",
+  "type": "Figure",
+  "number": "4.4.4",
+  "title": "",
+  "body": " The linear approximation to at .     "
+},
+{
+  "id": "def-deriv-lin-approx",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#def-deriv-lin-approx",
+  "type": "Definition",
+  "number": "4.4.5",
+  "title": "The derivative.",
+  "body": " The derivative   The derivative, , is the unique number that provides the linear approximation for the value with the property that the error term has the convergence property that as .   "
+},
+{
+  "id": "thm-diff-chain",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#thm-diff-chain",
+  "type": "Theorem",
+  "number": "4.4.6",
+  "title": "Chain rule.",
+  "body": " Chain rule   Consider the composition of two functions and . Let so that . Then the derivative of satisfies or in the alternative notation, at a point we have      Proof. We suppose that the function is differentiable at the point and that is differentiable at the point . In the linear approximations view this means we have derivative quantities and and error functions and satisfying with convergence properties as and as .  Our task now is to prove the chain rule according to definition , i.e. to examine the quantity and discover the linear approximation to it, showing that the derivative has the form described by the chain rule and that the error term has the necessary convergence property. where the error term is defined by So we have established the required form for which shows the expected derivative as asserted by the chain rule. To complete the proof we have just to prove that as . This can be seen by considering the equation We can prove that by applying the algebra of limits theorem to the above, noting that as .   "
+},
+{
+  "id": "sec-diff-derivprops-8",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#sec-diff-derivprops-8",
+  "type": "Example",
+  "number": "4.4.7",
+  "title": "",
+  "body": "   Differentiate .  Let so that . Then and and so     Differentiate .  Let so that . Then and and so     "
+},
+{
+  "id": "thm-diff-quotient",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#thm-diff-quotient",
+  "type": "Theorem",
+  "number": "4.4.8",
+  "title": "Quotient rule.",
+  "body": " Quotient rule   If is the quotient of two functions then Or in the alternative notation    "
+},
+{
+  "id": "lem-diff-recip",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#lem-diff-recip",
+  "type": "Lemma",
+  "number": "4.4.9",
+  "title": "Derivative of the reciprocal.",
+  "body": " Derivative of the reciprocal   Consider the reciprocal function defined on the non-zero reals, , by . The derivative of at a point is given by    "
+},
+{
+  "id": "sec-diff-derivprops-13",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#sec-diff-derivprops-13",
+  "type": "Example",
+  "number": "4.4.10",
+  "title": "",
+  "body": " These examples illustrate the use of the quotient rule.    Differentiate .  Let and then and . Then     Differentiate .  Let and then and . Then     "
 }
 ]
 

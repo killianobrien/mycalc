@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Continuity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus">
+<meta property="book:author" content="Killian O'Brien">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.18';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.1d92cd109bc12c4d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.74f6fa0c85f09c79.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="mycalc.html"><span class="title">Calculus</span> <span class="subtitle">Sequences, series, differentiation and integration</span></a></h1>
+<p class="byline">Killian O’Brien</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-diff-function-limits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-diff.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-diff-derivative.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-seqs.html" class="internal"><span class="codenumber">1</span> <span class="title">Sequences</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Initial definitions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence-properties.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Convergence properties</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-exercises.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Sequence exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-series.html" class="internal"><span class="codenumber">2</span> <span class="title">Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-definitions.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Basic definitions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence-tests.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence tests</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-power-series.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-exercises.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Series exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-functions.html" class="internal"><span class="codenumber">3</span> <span class="title">Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-defs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Basic definitions and notation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-real.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Real valued functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-partials.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Rational functions and their partial fraction expansions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-diff.html" class="internal"><span class="codenumber">4</span> <span class="title">Differentiation</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-function-limits.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Limiting values of functions</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-diff-continuity.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivative.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivprops.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Properties of the derivative</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-diff-continuity"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.2</span><span class="space"> </span><span class="title">Continuity</span>
+</h2>
+<div class="para" id="sec-diff-continuity-2">In the previous section we made the point that the limiting value, <span class="process-math">\(\lim_{x \to a} f(x)\text{,}\)</span> of the function <span class="process-math">\(f\)</span> does not depend on the actual value, <span class="process-math">\(f(a)\text{,}\)</span> of <span class="process-math">\(f\)</span> at the limiting point <span class="process-math">\(a\text{.}\)</span> However it is an important feature (continuity) of a function when the limiting value actually equals the value at the limiting point. We give the following informal definition for continuity.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-diff-continuity"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity.</span>
+</h3>
+<div class="para logical" id="def-diff-continuity-2-1">
+<div class="para">The function <span class="process-math">\(f: \mathbb{R} \to \mathbb{R}\)</span> is <em class="emphasis">continuous</em> at the point <span class="process-math">\(x=a\)</span> if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x \to a} f(x) = f(a).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-diff-continuity-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 4.2.1: Continuity"><a href="#def-diff-continuity" title="Copy heading and permalink for Definition 4.2.1: Continuity">🔗</a></div></article><div class="para" id="sec-diff-continuity-4">If <span class="process-math">\(f\)</span> is continuous at <em class="emphasis">all</em> points of its domain then we say that <span class="process-math">\(f\)</span> is a <em class="emphasis">continuous function</em>. A function that is not continuous is called <em class="emphasis">non-continuous</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-diff-continuity-5">If this definition is not satisfied at a point <span class="process-math">\(x=a\)</span> then we say that the function <span class="process-math">\(f\)</span> has a <em class="emphasis">discontinuity</em> at <span class="process-math">\(x=a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-diff-continuity-6">Functions can be discontinuous in a number of different ways. For instance the left and right hand limits may differ at a point as we saw earlier. Another type of discontinuity is the rapidly oscillating behaviour near <span class="process-math">\(x=0\)</span> of the function <span class="process-math">\(y= \sin{(\frac{1}{x})}\)</span> seen in figure <a href="sec-diff-continuity.html#diff-sin1overx" class="xref" data-knowl="./knowl/xref/diff-sin1overx.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.2">Figure 4.2.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="diff-sin1overx"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/sin1overx.png" class="contained" alt="(for accessibility)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.2<span class="period">.</span></span><span class="space"> </span>The graph of <span class="process-math">\(\sin(1/x)\)</span> nearr <span class="process-math">\(x=0\text{.}\)</span><div class="autopermalink" data-description="Figure 4.2.2"><a href="#diff-sin1overx" title="Copy heading and permalink for Figure 4.2.2">🔗</a></div></figcaption></figure><div class="para" id="sec-diff-continuity-8">Note that the plotting program struggles to represent the behavior accurately at <span class="process-math">\(x=0\)</span> here. The point is that the limit <span class="process-math">\(\lim_{x \to 0} \sin{(\frac{1}{x})}\)</span> does not exist so even if the function were to be given a definition at <span class="process-math">\(x=0\)</span> it could never be continuous there.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-diff-continuity-9">The continuity property is preserved by the usual operations on functions, as described in the following theorems.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-diff-cont-algebra"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity of sums, products and quotients.</span>
+</h3>
+<div class="para" id="thm-diff-cont-algebra-2-1">Suppose that functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are both continuous at a point <span class="process-math">\(x=a\text{,}\)</span> then for any <span class="process-math">\(\alpha, \beta \in \mathbb{R}\)</span> the linear combination function <span class="process-math">\(\alpha f + \beta g\)</span> is also continuous at <span class="process-math">\(x=a\text{.}\)</span> Also the product function <span class="process-math">\(fg\)</span> will be continuous at <span class="process-math">\(x=a\)</span> as well as the quotient function <span class="process-math">\(\frac{f}{g}\)</span> provided that <span class="process-math">\(g\)</span> is non-zero in some surrounding interval of <span class="process-math">\(x=a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-diff-cont-algebra-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.2.3: Continuity of sums, products and quotients"><a href="#thm-diff-cont-algebra" title="Copy heading and permalink for Theorem 4.2.3: Continuity of sums, products and quotients">🔗</a></div></article><article class="theorem theorem-like" id="thm-diff-cont-comp"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity of composition.</span>
+</h3>
+<div class="para" id="thm-diff-cont-comp-2-1">Suppose that <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are two functions whose domains and co-domains are such that the composition function <span class="process-math">\(g \circ f\)</span> can be defined. If <span class="process-math">\(f\)</span> is continuous at a point <span class="process-math">\(x=a\)</span> and <span class="process-math">\(g\)</span> is continuous at the point <span class="process-math">\(x=f(a)\)</span> then the composition function <span class="process-math">\(g \circ f\)</span> is continuous at <span class="process-math">\(x=a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-diff-cont-comp-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.2.4: Continuity of composition"><a href="#thm-diff-cont-comp" title="Copy heading and permalink for Theorem 4.2.4: Continuity of composition">🔗</a></div></article><div class="para" id="sec-diff-continuity-12">The definition of continuity (and limiting values of functions) that we have given do lack rigor in that they rely on the notion of ‘<em class="emphasis">getting closer and closer to .....</em>’ which we have not given a complete description of. A fully detailed rigorous treatment of continuity is the subject of <em class="emphasis">mathematical analysis</em> and is not possible within the scope of this unit. However we can give a taste of it by looking at the formal definition of continuity and how it is used to prove one of the cases of the above theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-12" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-diff-cont-formal"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Formal definition of continuity.</span>
+</h3>
+<div class="para logical" id="def-diff-cont-formal-2-1">
+<div class="para">The function <span class="process-math">\(f:\mathbb{R} \to \mathbb{R}\)</span> is <em class="emphasis">continuous</em> at the point <span class="process-math">\(x=a\)</span> if and only if for all <span class="process-math">\(\epsilon &gt; 0\)</span> there exists <span class="process-math">\(\delta &gt; 0\)</span> such that if <span class="process-math">\(|x-a| &lt; \delta\)</span> then <span class="process-math">\(|f(x)-f(a)|&lt; \epsilon\text{.}\)</span> In formal symbolic terms this becomes: <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\)</span> if and only if the following statement holds</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall \, \epsilon &gt; 0 \, \, \exists \, \delta &gt; 0 \, \, |x-a|&lt; \delta \Rightarrow |f(x)-f(a)|&lt;\epsilon .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-diff-cont-formal-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 4.2.5: Formal definition of continuity"><a href="#def-diff-cont-formal" title="Copy heading and permalink for Definition 4.2.5: Formal definition of continuity">🔗</a></div></article><div class="para" id="sec-diff-continuity-14">
+<a href="sec-diff-continuity.html#formal-cont" class="xref" data-knowl="./knowl/xref/formal-cont.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.6">Figure 4.2.6</a>is useful for picturing the role of the variables <span class="process-math">\(\epsilon\)</span> and <span class="process-math">\(\delta\)</span> in the definition of continuity.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-14" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="formal-cont"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/formal-cont.png" class="contained" alt="(for accessibility)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.6<span class="period">.</span></span><span class="space"> </span>Illustrating the parameters in the formal definition.<div class="autopermalink" data-description="Figure 4.2.6"><a href="#formal-cont" title="Copy heading and permalink for Figure 4.2.6">🔗</a></div></figcaption></figure><div class="para" id="sec-diff-continuity-16">Using this definition we can give rigorous proofs of the continuity theorems above. You will see a lot of similarity in the arguments here and the proofs of the similar properties of convergence of sequences. Those previous arguments are adapted to the new context and where <span class="process-math">\(\delta\)</span>-arguments take the place of the <span class="process-math">\(N\)</span>-arguments.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-16" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-diff-continuity-17" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Proof of Theorem 4.2.3.</span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec-diff-continuity-17-2">First we prove that continuity is preserved by linear combinations. We assume additionally that <span class="process-math">\(\alpha, \beta \neq 0\text{.}\)</span> Let <span class="process-math">\(\epsilon&gt;0\)</span> be given. There exists <span class="process-math">\(\delta_1, \delta_2 &gt; 0\)</span> such that for all <span class="process-math">\(|x-a|&lt;\delta_1\)</span> we have <span class="process-math">\(|f(x) - f(a)|&lt;\epsilon/(2|\alpha|)\text{,}\)</span> and for all <span class="process-math">\(x - a|&lt;\delta_2\)</span> we have <span class="process-math">\(|g(x)-g(a)|&lt;\epsilon/(2|\beta|)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-17-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-diff-continuity-17-3">
+<div class="para">Let <span class="process-math">\(\delta = \min(\delta_1, \delta_2)\)</span> and then for all <span class="process-math">\(|x-a|&lt;\delta\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+|\left ( \alpha f + \beta g \right )(x) - \left ( \alpha f + \beta g \right )(a)|
+&amp;\leq |\alpha||f(x) - f(a)| + |\beta||g(x) - g(a)|\\
+&amp;&lt; |\alpha|\epsilon/(2|\alpha|) +  |\beta|\epsilon/(2|\beta|)\\
+&amp;= \epsilon .
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Therefore the definition is satisfied and the linear combination <span class="process-math">\(\alpha f + \beta g\)</span> is continuous at <span class="process-math">\(x=a\)</span> as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-17-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-diff-continuity-17-4">Next we prove that continuity is preserved by products. Let <span class="process-math">\(\epsilon &gt;0\)</span> be given. By continuity there exist <span class="process-math">\(\delta_1, \delta_2 &gt; 0\)</span> such that for all <span class="process-math">\(|x-a|&lt;\delta_1\)</span> we have <span class="process-math">\(|f(x)-f(a)| &lt; \min\left (\sqrt{\epsilon}/\sqrt{3}, \epsilon/(3|g(a)|)\right )\)</span> and <span class="process-math">\(|x-a|&lt;\delta_2\)</span> we have <span class="process-math">\(|g(x)-g(a)| &lt; \min\left (\sqrt{\epsilon}/\sqrt{3}, \epsilon/(3|f(a)|)\right )\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-17-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-diff-continuity-17-5">
+<div class="para">Letting <span class="process-math">\(\delta = \min(\delta_1, \delta_2)\)</span> and then for all <span class="process-math">\(|x-a|&lt;\delta\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+&amp;|\left ( fg \right )(x) - \left ( fg\right )(a)|\\
+&amp;\leq |f(x) - f(a)||g(x) - g(a)| + |g(a)||f(x) - f(a)| + |f(a)||g(x) - g(a)|\\
+&amp;&lt; \sqrt{\frac{\epsilon}{3}}\sqrt{\frac{\epsilon}{3}} + |g(a)|\frac{\epsilon}{3|g(a)|} + |f(a)|\frac{\epsilon}{3|f(a)|}  \\
+&amp;= \epsilon .
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Therefore the definition is satisfied and the product <span class="process-math">\(fg\)</span> is continuous at <span class="process-math">\(x=a\)</span> as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-17-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-diff-continuity-17-6">The proof that quotients preserve continuity is again similar to the case for convergence of sequences. The details are left as an exercise for the reader.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-17-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.2.1: Proof of Theorem 4.2.3"><a href="#sec-diff-continuity-17" title="Copy heading and permalink for Proof 4.2.1: Proof of Theorem 4.2.3">🔗</a></div></article></details><details id="sec-diff-continuity-18" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Proof of Theorem 4.2.4.</span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec-diff-continuity-18-2">
+<em class="emphasis">Proof.</em> The conditions of the theorem are illustrated in figure <a href="sec-diff-continuity.html#composition-proof" class="xref" data-knowl="./knowl/xref/composition-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.7">Figure 4.2.7</a>. There we see illustrated three copies of the real number line with the action of the functions from left to right with <span class="process-math">\(f\)</span> going first and then <span class="process-math">\(g\)</span> applied to the result of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-18-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="composition-proof"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/composition-proof.png" class="contained" alt="The composition function \(g \circ f\)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.7<span class="period">.</span></span><span class="space"> </span>The composition function <span class="process-math">\(g \circ f\text{.}\)</span><div class="autopermalink" data-description="Figure 4.2.7"><a href="#composition-proof" title="Copy heading and permalink for Figure 4.2.7">🔗</a></div></figcaption></figure><div class="para" id="sec-diff-continuity-18-4">Let <span class="process-math">\(\epsilon_0 &gt; 0\)</span> be given. As <span class="process-math">\(g\)</span> is continuous at <span class="process-math">\(f(a)\)</span> there exists a radius <span class="process-math">\(\epsilon_1\)</span> such that for all <span class="process-math">\(|y - f(a)|&lt;\epsilon_1\)</span> we have <span class="process-math">\(|g(y) - g(f(a))|&lt;\epsilon_0\text{.}\)</span> But since <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\)</span> there exists a radius <span class="process-math">\(\epsilon_2\)</span> such that for all <span class="process-math">\(|x-a|&lt;\epsilon_2\)</span> we have <span class="process-math">\(|f(x) - f(a)|&lt;\epsilon_1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-18-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-diff-continuity-18-5">Combining these two gives us the required result, namely that for all <span class="process-math">\(|x-a|&lt;\epsilon_2\)</span> we have <span class="process-math">\(|g(f(x)) - g(f(a))|&lt;\epsilon_0\text{,}\)</span> i.e. the composition <span class="process-math">\(g\circ f\)</span> is continuous at <span class="process-math">\(x=a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-18-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.2.2: Proof of Theorem 4.2.4"><a href="#sec-diff-continuity-18" title="Copy heading and permalink for Proof 4.2.2: Proof of Theorem 4.2.4">🔗</a></div></article></details><section class="paragraphs" id="sec-diff-continuity-19"><h3 class="heading"><span class="title">Importance of continuity.</span></h3>
+<div class="para" id="sec-diff-continuity-19-2">Mathematicians sometimes talk of a concept like continuity as describing the <em class="emphasis">well-behaved</em> nature of certain functions <span class="process-math">\(\mathbb{R} \to \mathbb{R}\text{.}\)</span> So a well-behaved function is one that has nice reasonable properties, properties usually enjoyed by the real physical properties of the processes that we are using the functions to model for instance. A badly-behaved function <span class="process-math">\(\mathbb{R} \to \mathbb{R}\)</span> might be one that has no discernable reasonable properties or interpretation, such as some kind of random association of real numbers to other real numbers (though such things and their properties might still be of great mathematical interest!).<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-19-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-diff-continuity-19-3">The concept of continuity generalizes to functions between lots of other kinds of mathematical space, such as say functions from <span class="process-math">\(\mathbb{R}^n \to \mathbb{R}^m\text{,}\)</span> where <span class="process-math">\(n,m\)</span> are positive integers. These are functions between different dimensional Euclidean geometric Euclidean spaces. Or perhaps functions between different Riemannian manifolds. A Riemannian manifold generalization of Euclidean space, i.e. a space which has a different kind of <em class="emphasis">curved</em> geometry rather than the <em class="emphasis">flat</em> geometry of Euclidean spaces. We can even study the concept of continuity for functions, and distance like measures, on spaces that have no kind of immediate intuitive geometric interpretation for us. Such topics are explored in the subject areas of <em class="emphasis">general topology</em> and <em class="emphasis">metric spaces</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-19-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-diff-continuity-19-4">An example of continuity embodying the notion of <em class="emphasis">well-behaved</em> function we can consider the Intermediate Value Theorem which is illustrated in figure <a href="sec-diff-continuity.html#intervalthm" class="xref" data-knowl="./knowl/xref/intervalthm.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.2.8">Figure 4.2.8</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-19-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="intervalthm"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/intervalthm.png" class="contained" alt="The intermediate value theorem"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.8<span class="period">.</span></span><span class="space"> </span>The Intermediate Value Theorem.<div class="autopermalink" data-description="Figure 4.2.8"><a href="#intervalthm" title="Copy heading and permalink for Figure 4.2.8">🔗</a></div></figcaption></figure><article class="theorem theorem-like" id="thm-intervalthm"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Intermediate Value Theorem.</span>
+</h4>
+<div class="para" id="thm-intervalthm-2-1">Let <span class="process-math">\(f\)</span> be a function defined on and continuous at all points in the closed interval <span class="process-math">\([a,b]\text{.}\)</span> Suppose that <span class="process-math">\(f(a) \neq f(b)\text{.}\)</span> Then for any number <span class="process-math">\(C\)</span> between <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{,}\)</span> there exists a number <span class="process-math">\(c \in [a,b]\)</span> such that <span class="process-math">\(f(c)=C\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-intervalthm-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.2.9: Intermediate Value Theorem"><a href="#thm-intervalthm" title="Copy heading and permalink for Theorem 4.2.9: Intermediate Value Theorem">🔗</a></div></article><div class="para" id="sec-diff-continuity-19-7">The proof of this theorem makes use of the completeness or least upper-bound property of the real numbers and can be viewed as an embodiment of that property<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-continuity-19-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Importance of continuity"><a href="#sec-diff-continuity-19" title="Copy heading and permalink for Paragraphs: Importance of continuity">🔗</a></div></section><div class="autopermalink" data-description="Section 4.2: Continuity"><a href="#sec-diff-continuity" title="Copy heading and permalink for Section 4.2: Continuity">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-diff-function-limits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-diff-derivative.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
