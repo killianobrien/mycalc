@@ -1078,7 +1078,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.4",
   "title": "Properties of the derivative",
-  "body": " Properties of the derivative   Linearity   Consider the linear combination of functions and , where . The derivative of satisfies     This is a straightforward application of properties of the limiting process for functions. Suppose that and are both differentiable at a point . The above equations demonstrate the linearity of the derivative.     Product rule   Consider the function which is a product of the two functions and . The derivative of satisfies     Suppose that and are both differentiable at a point . This is the required result.        Find the derivative of . This is the product of the two functions whose derivatives are and so the required derivative is     Find the derivative of ....     Linear approximations and associated errors  Before moving on to consider other properties of differentiation we introduce another viewpoint on the derivative that will be needed for future proof arguments. Consider again the definition of the derivative of a function at a point in its domain. We reformulate this slightly by writing as and having the limiting process be as , as follows This suggests the existence of a function that measures the discrepancy between and the relative change quotient , defined as follows and this new function has the important convergence property We can now rearrange the definition of to give the interesting expression This equation shows the linear approximation , , to the value, of the function at a point close to , with the associated error term  . The linear approximation is the linear function (i.e. line) that best approximates the function in the region around the point . Not only does the error-term approach zero as (as we would expect) but the error term divided by , i.e. , converges to 0 as .   The linear approximation to at .      Picturing these various quantities with the aid of figure may help. It’s important to appreciate how the linear approximation gives the equation of the tangent line to the graph of at in the form of , where .  This allows us to interpret the above to give an alternative definition of the derivative as follows:   The derivative   The derivative, , is the unique number that provides the linear approximation for the value with the property that the error term has the convergence property that as .    This view of the derivative will allow us to give a rigorous proof of the chain rule. But it is also a useful to have such slightly different views of the same concept. This notion of linear approximations (and other higher-order approximations) and the behaviour of their associated error terms is important in the subject of numerical analysis .    Chain rule   Consider the composition of two functions and . Let so that . Then the derivative of satisfies or in the alternative notation, at a point we have      Proof. We suppose that the function is differentiable at the point and that is differentiable at the point . In the linear approximations view this means we have derivative quantities and and error functions and satisfying with convergence properties as and as .  Our task now is to prove the chain rule according to definition , i.e. to examine the quantity and discover the linear approximation to it, showing that the derivative has the form described by the chain rule and that the error term has the necessary convergence property. where the error term is defined by So we have established the required form for which shows the expected derivative as asserted by the chain rule. To complete the proof we have just to prove that as . This can be seen by considering the equation We can prove that by applying the algebra of limits theorem to the above, noting that as .       Differentiate .  Let so that . Then and and so     Differentiate .  Let so that . Then and and so      To complete the collection of basic properties of the derivative we need to know how to differentiate functions that are defined as quotients of other functions, i.e. how the derivative of the qutient depends on the derivatives of the numerator and denominator of the quotient. This is provided by the well-known quotient rule.   Quotient rule   If is the quotient of two functions then Or in the alternative notation     The details of the proof of the quotient rule are left as an exercise. One way to prove it is to make use of the chain rule and product rule properties that we have already established together with the following lemma.   Derivative of the reciprocal   Consider the reciprocal function defined on the non-zero reals, , by . The derivative of at a point is given by      These examples illustrate the use of the quotient rule.    Differentiate .  Let and then and . Then     Differentiate .  Let and then and . Then      "
+  "body": " Properties of the derivative   Linearity   Consider the linear combination of functions and , where . The derivative of satisfies     This is a straightforward application of properties of the limiting process for functions. Suppose that and are both differentiable at a point . The above equations demonstrate the linearity of the derivative.     Product rule   Consider the function which is a product of the two functions and . The derivative of satisfies     Suppose that and are both differentiable at a point . This is the required result.       Find the derivative of . This is the product of the two functions whose derivatives are and so the required derivative is     Find the derivative of ....      Linear approximations and associated errors  Before moving on to consider other properties of differentiation we introduce another viewpoint on the derivative that will be needed for future proof arguments. Consider again the definition of the derivative of a function at a point in its domain. We reformulate this slightly by writing as and having the limiting process be as , as follows This suggests the existence of a function that measures the discrepancy between and the relative change quotient , defined as follows and this new function has the important convergence property We can now rearrange the definition of to give the interesting expression This equation shows the linear approximation , , to the value, of the function at a point close to , with the associated error term  . The linear approximation is the linear function (i.e. line) that best approximates the function in the region around the point . Not only does the error-term approach zero as (as we would expect) but the error term divided by , i.e. , converges to 0 as .   The linear approximation to at .      Picturing these various quantities with the aid of figure may help. It’s important to appreciate how the linear approximation gives the equation of the tangent line to the graph of at in the form of , where .  This allows us to interpret the above to give an alternative definition of the derivative as follows:   The derivative   The derivative, , is the unique number that provides the linear approximation for the value with the property that the error term has the convergence property that as .    This view of the derivative will allow us to give a rigorous proof of the chain rule. But it is also a useful to have such slightly different views of the same concept. This notion of linear approximations (and other higher-order approximations) and the behaviour of their associated error terms is important in the subject of numerical analysis .    Chain rule   Consider the composition of two functions and . Let so that . Then the derivative of satisfies or in the alternative notation, at a point we have      Proof. We suppose that the function is differentiable at the point and that is differentiable at the point . In the linear approximations view this means we have derivative quantities and and error functions and satisfying with convergence properties as and as .  Our task now is to prove the chain rule according to definition , i.e. to examine the quantity and discover the linear approximation to it, showing that the derivative has the form described by the chain rule and that the error term has the necessary convergence property. where the error term is defined by So we have established the required form for which shows the expected derivative as asserted by the chain rule. To complete the proof we have just to prove that as . This can be seen by considering the equation We can prove that by applying the algebra of limits theorem to the above, noting that as .       Differentiate .  Let so that . Then and and so     Differentiate .  Let so that . Then and and so      To complete the collection of basic properties of the derivative we need to know how to differentiate functions that are defined as quotients of other functions, i.e. how the derivative of the qutient depends on the derivatives of the numerator and denominator of the quotient. This is provided by the well-known quotient rule.   Quotient rule   If is the quotient of two functions then Or in the alternative notation     The details of the proof of the quotient rule are left as an exercise. One way to prove it is to make use of the chain rule and product rule properties that we have already established together with the following lemma.   Derivative of the reciprocal   Consider the reciprocal function defined on the non-zero reals, , by . The derivative of at a point is given by      These examples illustrate the use of the quotient rule.    Differentiate .  Let and then and . Then     Differentiate .  Let and then and . Then       Derivatives of inverse functions  There is a nice relationship between the derivative of a function and its inverse which we can appreciate from the diagram below. Shown below is the graph of the function and also the graph of the inverse function . These two graphs are related by a reflection in the line given by .   A function and its inverse.      This leads to the following relationship for the derivative of a function and its inverse     Parametric differentiation  Curves that are not graphs of functions can often be specified by a pair of equations which describe how the coordinates of a point on the curve relate to a variable . These equations are called the parametric equations for the curve and the variable is called the parameter . As the value of changes the point traces out the curve.  We can still talk of the tangent lines to these curves and using the chain rule we can work out the derivative for a parametric curve. We think of as being a function of , as well as being a function of , . Applying the chain rule in the former case gives and so which using the inverse function rule we can also write as   By carefully applying the chain and inverse function rule again we can show that      Consider the parametric curve , as shown in figure .   The parametric curve defined by , , for      Applying the parametric differentiation principle we have     If a parametric curve is described by and determine and in terms of .   and        Implicit differentiation  Suppose that a variable is a function of , i.e. , but that we are not given this functional relationship directly in the form of a formula for in terms of , but rather the function is described indirectly or implicitly by an equation involving and , such as We can use the rules (chain, product , etc) developed so far to find an expression for the derivative in such cases. When the equation describing the relationship between and is non-trivial we would expect the resulting expression for to depend on the the value of the function as well as on the variable .   Find for the function defined implicitly by the equation   We proceed by differentiating both sides of the equation with respect to and carefully using the chain rule and product rule.      Logarithmic differentiation  This refers to the technique we use to differentiate a function say where the variable appears in the power position in the formula for .    Differentiate .  To begin with we take the logarithm of both sides of the defining equation and then use the technique of implicit differentiation.    "
 },
 {
   "id": "thm-diff-linear",
@@ -1105,7 +1105,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "4.4.3",
   "title": "",
-  "body": " "
+  "body": "   Find the derivative of . This is the product of the two functions whose derivatives are and so the required derivative is     Find the derivative of ....    "
 },
 {
   "id": "diff-lin-approx",
@@ -1135,9 +1135,9 @@ var ptx_lunr_docs = [
   "body": " Chain rule   Consider the composition of two functions and . Let so that . Then the derivative of satisfies or in the alternative notation, at a point we have      Proof. We suppose that the function is differentiable at the point and that is differentiable at the point . In the linear approximations view this means we have derivative quantities and and error functions and satisfying with convergence properties as and as .  Our task now is to prove the chain rule according to definition , i.e. to examine the quantity and discover the linear approximation to it, showing that the derivative has the form described by the chain rule and that the error term has the necessary convergence property. where the error term is defined by So we have established the required form for which shows the expected derivative as asserted by the chain rule. To complete the proof we have just to prove that as . This can be seen by considering the equation We can prove that by applying the algebra of limits theorem to the above, noting that as .   "
 },
 {
-  "id": "sec-diff-derivprops-8",
+  "id": "sec-diff-derivprops-7",
   "level": "2",
-  "url": "sec-diff-derivprops.html#sec-diff-derivprops-8",
+  "url": "sec-diff-derivprops.html#sec-diff-derivprops-7",
   "type": "Example",
   "number": "4.4.7",
   "title": "",
@@ -1162,13 +1162,49 @@ var ptx_lunr_docs = [
   "body": " Derivative of the reciprocal   Consider the reciprocal function defined on the non-zero reals, , by . The derivative of at a point is given by    "
 },
 {
-  "id": "sec-diff-derivprops-13",
+  "id": "sec-diff-derivprops-12",
   "level": "2",
-  "url": "sec-diff-derivprops.html#sec-diff-derivprops-13",
+  "url": "sec-diff-derivprops.html#sec-diff-derivprops-12",
   "type": "Example",
   "number": "4.4.10",
   "title": "",
   "body": " These examples illustrate the use of the quotient rule.    Differentiate .  Let and then and . Then     Differentiate .  Let and then and . Then     "
+},
+{
+  "id": "diff-inv",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#diff-inv",
+  "type": "Figure",
+  "number": "4.4.11",
+  "title": "",
+  "body": " A function and its inverse.     "
+},
+{
+  "id": "sec-diff-derivprops-14-5",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#sec-diff-derivprops-14-5",
+  "type": "Example",
+  "number": "4.4.12",
+  "title": "",
+  "body": "   Consider the parametric curve , as shown in figure .   The parametric curve defined by , , for      Applying the parametric differentiation principle we have     If a parametric curve is described by and determine and in terms of .   and     "
+},
+{
+  "id": "sec-diff-derivprops-15-3",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#sec-diff-derivprops-15-3",
+  "type": "Example",
+  "number": "4.4.14",
+  "title": "",
+  "body": " Find for the function defined implicitly by the equation   We proceed by differentiating both sides of the equation with respect to and carefully using the chain rule and product rule.   "
+},
+{
+  "id": "sec-diff-derivprops-17",
+  "level": "2",
+  "url": "sec-diff-derivprops.html#sec-diff-derivprops-17",
+  "type": "Example",
+  "number": "4.4.15",
+  "title": "",
+  "body": " Differentiate .  To begin with we take the logarithm of both sides of the defining equation and then use the technique of implicit differentiation.   "
 }
 ]
 
