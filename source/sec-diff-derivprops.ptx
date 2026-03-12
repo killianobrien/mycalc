@@ -120,9 +120,9 @@ f(g(a) + l) &amp;= f(g(a)) + l f'(g(a)) + l \mu(l),
 
 				<p>
 					Our task now is to prove the chain rule according to definition <xref ref="def-deriv-lin-approx" />, i.e. to examine the quantity <m>y(a+k)</m> and discover the linear approximation to it, showing that the derivative <m>y'(a)</m> has the form described by the chain rule and that the error term has the necessary convergence property. <me>\begin{aligned}
-y(a+k) &amp;= f(g(a+k)), \text{ \small{defn. of composition}}\\
-&amp;= f\big (g(a) + k g'(a) + k \epsilon(k) \big ), \text{ \small{from above for $g(a+k)$}}\\
-&amp;= f(g(a)) + l f'(g(a)) + l \mu (l), \text{ \small{from above with $l=k g'(a) + k \epsilon(k)$}}\\
+y(a+k) &amp;= f(g(a+k)), \text{defn. of composition}\\
+&amp;= f\big (g(a) + k g'(a) + k \epsilon(k) \big ), \text{from above for $g(a+k)$}\\
+&amp;= f(g(a)) + l f'(g(a)) + l \mu (l), \text{ from above with $l=k g'(a) + k \epsilon(k)$}\\
 &amp;= f(g(a)) + k \big ( g'(a) f'(g(a)) \big ) + \lambda(k),
 \end{aligned}</me> where the error term <m>\lambda(k)</m> is defined by <me>\lambda(k) = k \epsilon(k) f'(g(a)) + \big [ k g'(a) + k \epsilon(k) \big ] \mu (k g'(a) + k \epsilon(k)).</me> So we have established the required form for <m>y(a+k)</m> which shows the expected derivative <m>y'(a)</m> as asserted by the chain rule. To complete the proof we have just to prove that <m>\lambda(k) / k \to 0</m> as <m>k \to 0</m>. This can be seen by considering the equation <me>\frac{\lambda(k)}{k} = \epsilon(k) f'(g(a)) + \big [g'(a) + \epsilon(k) \big ] \mu (k g'(a) + k \epsilon(k)).</me> We can prove that <m>\lambda(k) / k \to 0</m> by applying the algebra of limits theorem to the above, noting that <m>k g'(a) + k \epsilon(k) \to 0</m> as <m>k \to 0</m>.
 				</p>
@@ -204,5 +204,110 @@ y(a+k) &amp;= f(g(a+k)), \text{ \small{defn. of composition}}\\
 
 				</ol></p>
 	</example>
+
+<paragraphs>
+	<title>Derivatives of inverse functions</title>
+	<p>
+					There is a nice relationship between the derivative of a function and its inverse which we can appreciate from the diagram below. Shown below is the graph of the function <m>y=f(x)</m> and also the graph of the inverse function <m>x=g(y)</m>. These two graphs are related by a reflection in the line given by <m>y=x</m>.
+				</p>
+	<figure xml:id="diff-inv">
+				<caption>A function and its inverse.</caption>
+			<image source="diff-inv.png" width="60%">
+				<shortdescription></shortdescription>
+				
+			</image>
+			</figure>
+<p>
+					This leads to the following relationship for the derivative of a function and its inverse <me>\frac{dx}{dy} = \frac{1}{\frac{dy}{dx}}.</me>
+				</p>
+</paragraphs>
+
+<paragraphs>
+	<title>Parametric differentiation</title>
+<p>
+					Curves that are not graphs of functions can often be specified by a pair of equations <me>x = x(t) , \, y = y(t),</me> which describe how the coordinates <m>(x,y)</m> of a point on the curve relate to a variable <m>t</m>. These equations are called the <em>parametric</em> equations for the curve and the variable <m>t</m> is called the <em>parameter</em>. As the value of <m>t</m> changes the point <m>(x(t), y(t))</m> traces out the curve.
+				</p>
+
+<p>
+					We can still talk of the tangent lines to these curves and using the chain rule we can work out the derivative <m>\frac{dy}{dx}</m> for a parametric curve. We think of <m>y</m> as being a function of <m>x</m>, <m>y=y(x)</m> as well as being a function of <m>t</m>, <m>y=y(t)</m>. Applying the chain rule in the former case gives <me>\frac{dy}{dt} = \frac{dy}{dx} \frac{dx}{dt},</me> and so <me>\frac{dy}{dx} = \frac{dy}{dt} \frac{1}{\frac{dx}{dt}},</me> which using the inverse function rule we can also write as <me>\frac{dy}{dx} = \frac{dy}{dt} \frac{dt}{dx}.</me>
+				</p>
+	<p>
+					By carefully applying the chain and inverse function rule again we can show that <me>\frac{d^2y}{dx^2} = \frac{d}{dx} \left ( \frac{dy}{dx} \right ) = \frac{d}{dt} \left ( \frac{dy}{dx} \right ) \frac{1}{\frac{dx}{dt}}.</me>
+				</p>
+
+	<example>
+		<p><ol>
+					<li>
+						<p>
+										Consider the parametric curve <me>x=\cos{t} - \cos{(2t)} , \, \, y=\sin{t} - \sin{(2t)} , \, \, t \in [-\pi,\pi]</me>, as shown in figure <xref ref="diff-param2" />.
+									</p>
+		<figure xml:id="diff-param2">
+				<caption>The parametric curve defined by <m>x=\cos{t} - \cos{(2t)}</m>, <m>y=\sin{t} - \sin{(2t)}</m>, for <m>t \in [-\pi,\pi]</m></caption>
+			<image source="diff-param2.png" width="60%">
+				<shortdescription></shortdescription>
+				
+			</image>
+			</figure>
+									<p>
+										Applying the parametric differentiation principle we have <me>\frac{dy}{dx} = \frac{dy}{dt} \frac{1}{\frac{dx}{dt}} = \frac{\cos{t} - 2 \cos{(2t)}}{-\sin{t} + 2 \sin{(2t)}} .</me>
+									</p>
+					</li>
+
+					<li>
+									<p>
+										If a parametric curve is described by <m>x=te^t</m> and <m>y=e^t</m> determine <m>\frac{dy}{dx}</m> and <m>\frac{d^2 y}{dx^2}</m> in terms of <m>t</m>.
+									</p>
+					
+									<p>
+										<me>\frac{dy}{dx} = \frac{dy}{dt} \frac{1}{\frac{dx}{dt}} = \frac{e^t}{te^t + e^t} = \frac{1}{t+1},</me> and <me>\frac{d^2y}{dx^2} = \frac{d}{dt} \left ( \frac{dy}{dx} \right ) \frac{1}{\frac{dx}{dt}} = \frac{-1}{(t+1)^2} \frac{1}{te^t + e^t} = \frac{-1}{e^t(t+1)^3}.</me>
+									</p>
+					</li>
+
+				</ol></p>
+	</example>
+</paragraphs>
+<paragraphs>
+	<title>Implicit differentiation</title>
+	<p>
+		Suppose that a variable <m>y</m> is a function of <m>x</m>, i.e. <m>y=y(x)</m>, but that we are not given this functional relationship <em>directly</em> in the form of a formula for <m>y</m> in terms of <m>x</m>, but rather the function is described <em>indirectly</em> or <em>implicitly</em> by an equation involving <m>y</m> and <m>x</m>, such as <me>x^2 + y^2 = 1, \text{ or } x^2 - y^2 = 1, \text{ or } \sin{(xy)}=1 .</me> We can use the rules (chain, product , etc) developed so far to find an expression for the derivative <m>\frac{dy}{dx}</m> in such cases. When the equation describing the relationship between <m>y</m> and <m>x</m> is non-trivial we would expect the resulting expression for <m>\frac{dy}{dx}</m> to depend on the the value of the function <m>y</m> as well as on the variable <m>x</m>.
+	</p>
+	<example>
+		<p>
+		Find <m>\frac{dy}{dx}</m> for the function <m>y=y(x)</m> defined implicitly by the equation <me>x^2 + 2y^2 - xy + 2x =4.</me>
+				</p>
+
+				<p>
+					We proceed by differentiating both sides of the equation with respect to <m>x</m> and carefully using the chain rule and product rule. <me>\begin{aligned}
+&amp; x^2 + 2y^2 - xy + 2x =4 \\
+\Rightarrow &amp; \frac{d}{dx} (x^2 + 2y^2 - xy + 2x) = \frac{d}{dx} (4) \\
+\Rightarrow &amp; 2x + 4y \frac{dy}{dx} -x\frac{dy}{dx} - y + 2 = 0 \\
+\Rightarrow &amp; \frac{dy}{dx} ( 4y - x) = y - 2 - 2x \\
+\Rightarrow &amp; \frac{dy}{dx} = \frac{y - 2 - 2x}{4y-x}.
+\end{aligned}</me>
+				</p>
+	</example>
+</paragraphs>
+<paragraphs>
+	<title>Logarithmic differentiation</title>
+	<p>
+		This refers to the technique we use to differentiate a function <m>y=y(x)</m> say where the variable <m>x</m> appears in the power position in the formula for <m>y</m>.
+	</p>
+</paragraphs>
+<example>
+<p>
+	Differentiate <m>y=x^x</m>.
+				</p>
+
+				<p>
+					To begin with we take the logarithm of both sides of the defining equation and then use the technique of implicit differentiation. <me>\begin{aligned}
+&amp; y= x^x \\
+\Rightarrow &amp; \ln{y} = \ln{(x^x)} \\
+\Rightarrow &amp; \ln{y} = x \ln{x} \\
+\Rightarrow &amp; \frac{d}{dx} ( \ln{y})=\frac{d}{dx} (x \ln{x}) \\
+\Rightarrow &amp; \frac{1}{y} \frac{dy}{dx} = x \frac{1}{x} + \ln{x} = 1 + \ln{x} \\
+\Rightarrow &amp; \frac{dy}{dx} = y(1+\ln{x}) = x^x (1 + \ln{x})
+\end{aligned}</me>
+				</p>
+</example>
 			
 </section>
