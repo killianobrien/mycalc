@@ -1205,6 +1205,78 @@ var ptx_lunr_docs = [
   "number": "4.4.15",
   "title": "",
   "body": " Differentiate .  To begin with we take the logarithm of both sides of the defining equation and then use the technique of implicit differentiation.   "
+},
+{
+  "id": "sec-diff-optimization",
+  "level": "1",
+  "url": "sec-diff-optimization.html",
+  "type": "Section",
+  "number": "4.5",
+  "title": "Optimization",
+  "body": " Optimization   Stationary point \/ critical point   A stationary point (or critical point ) of a function is a point on the graph where the tangent to the graph has slope zero. That is, a stationary point is a solution to the equation , or .    Stationary points of functions of one variable can be of three types: a local maximum, local minimum or inflection point. See the diagrams in figures , and for illustrations of these different types.   A local minimum.       A local maximum.       A point of inflection.      Maximums and minimums are also sometimes called turning points of the function.   Classification of stationary points using derivatives  As we said a stationary point of the function is a point satisfying or in the alternative notation . The point is a    a maximum if or equivalently ,     a minimum if or equivalently ,     a point of inflection if either or ,       These examples illustrate the finding and classifying of stationary points.    Determine the turning points of the function .  The turning points are found by solving the equation This has solutions Using the second derivative test to determine the type of each turning point we see that and so and So we conclude that is a local minimum turning point and a local maximum turning point of the function .    Classify the stationary points of the function .  The equation has solutions and . Now for points close to 0 we have and therefore is a point of inflection. Check the second derivative to see that is a local minimum of the original function.     "
+},
+{
+  "id": "def-diff-stationary",
+  "level": "2",
+  "url": "sec-diff-optimization.html#def-diff-stationary",
+  "type": "Definition",
+  "number": "4.5.1",
+  "title": "Stationary point \/ critical point.",
+  "body": " Stationary point \/ critical point   A stationary point (or critical point ) of a function is a point on the graph where the tangent to the graph has slope zero. That is, a stationary point is a solution to the equation , or .   "
+},
+{
+  "id": "diff-local_min",
+  "level": "2",
+  "url": "sec-diff-optimization.html#diff-local_min",
+  "type": "Figure",
+  "number": "4.5.2",
+  "title": "",
+  "body": " A local minimum.     "
+},
+{
+  "id": "diff-local_max",
+  "level": "2",
+  "url": "sec-diff-optimization.html#diff-local_max",
+  "type": "Figure",
+  "number": "4.5.3",
+  "title": "",
+  "body": " A local maximum.     "
+},
+{
+  "id": "diff-inflection",
+  "level": "2",
+  "url": "sec-diff-optimization.html#diff-inflection",
+  "type": "Figure",
+  "number": "4.5.4",
+  "title": "",
+  "body": " A point of inflection.     "
+},
+{
+  "id": "sec-diff-optimization-8-3",
+  "level": "2",
+  "url": "sec-diff-optimization.html#sec-diff-optimization-8-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "maximum minimum point of inflection "
+},
+{
+  "id": "sec-diff-optimization-9",
+  "level": "2",
+  "url": "sec-diff-optimization.html#sec-diff-optimization-9",
+  "type": "Example",
+  "number": "4.5.5",
+  "title": "",
+  "body": " These examples illustrate the finding and classifying of stationary points.    Determine the turning points of the function .  The turning points are found by solving the equation This has solutions Using the second derivative test to determine the type of each turning point we see that and so and So we conclude that is a local minimum turning point and a local maximum turning point of the function .    Classify the stationary points of the function .  The equation has solutions and . Now for points close to 0 we have and therefore is a point of inflection. Check the second derivative to see that is a local minimum of the original function.    "
+},
+{
+  "id": "sec-diff-exercises",
+  "level": "1",
+  "url": "sec-diff-exercises.html",
+  "type": "Section",
+  "number": "4.6",
+  "title": "Exercises",
+  "body": " Exercises    Decide if the following limits exist and if so evaluate them.                                                   Using the formal definition of continuity prove that if two functions and are both continuous at the point then so is the function .    Prove from first principles that .    Find for each of the following functions                                    Find the gradients of the following implicitly defined functions at the points indicated     at the point      at the point       Given that     and      and      and for     determine and in terms of for each parametric curve. Sketch these curves using MATLAB.    Find where .    Find where and are functions of .    Suppose that an athletics field consists of a rectangle with semi-circular. Determine the maximum possible area of the rectangular part of the field if the running track around the perimeter of the whole field is to have a length of exactly 400m.         Determine the dimensions of a cylindrical food tin of volume 330ml that has minimum surface area.    Of all the rectangles having a particular area, which one has the smallest perimeter?    Of all the rectangles having a particular perimeter, which one has the greatest area?    A box with a square base and no top is to have a volume of 3 . Find the dimensions of the box which uses the least amount of material in its construction.    Suppose that a rectangle has two corners lying on the -axis and the other two lying on the parabola . Find such a rectangle with maximal area.    What is the largest rectangle one can inscribe in a circle? That is, find the rectangle of largest area that can fit inside the circle of radius .    Consider a river that is 0.5 miles wide and runs in a straight line for the purposes of this problem. A pipeline is to be laid across this river and run to a point 3 miles downstream on the opposite bank. Laying pipe under the water is expensive, in fact more expensive per mile than laying pipe on dry land. How should the pipeline be lain across the river in order to minimize the total cost.    "
 }
 ]
 

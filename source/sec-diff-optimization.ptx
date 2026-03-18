@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-diff-optimization" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Optimization</title>
+<definition xml:id="def-diff-stationary">
+	<title>Stationary point / critical point</title>
+	
+	
+	<statement>
+		<p>
+		A <em>stationary point</em> (or <em>critical point</em>) of a function <m>f(x)</m> is a point on the graph <m>y=f(x)</m> where the tangent to the graph has slope zero. That is, a stationary point is a solution <m>a</m> to the equation <me>\frac{dy}{dx} = 0 </me>, or 
+		<me>f'(x) = 0</me>.	
+		</p>
+	</statement>
+</definition>
+
+<p>
+	Stationary points of functions of one variable can be of three types: a local maximum, local minimum or inflection point. See the diagrams in figures <xref ref="diff-local_min" />, <xref ref="diff-local_max" /> and <xref ref="diff-inflection" /> for illustrations of these different types.
+</p>
+ 
+<figure xml:id="diff-local_min">
+				<caption>A local minimum.</caption>
+			<image source="local_min.png" width="60%">
+				<shortdescription></shortdescription>
+				
+			</image>
+</figure>
+
+<figure xml:id="diff-local_max">
+				<caption>A local maximum.</caption>
+			<image source="local_max.png" width="60%">
+				<shortdescription></shortdescription>
+				
+			</image>
+</figure>
+
+<figure xml:id="diff-inflection">
+				<caption>A point of inflection.</caption>
+			<image source="inflection.png" width="60%">
+				<shortdescription></shortdescription>
+				
+			</image>
+</figure>
+<p>
+	Maximums and minimums are also sometimes called <em>turning points</em> of the function.
+</p>
+
+<paragraphs>
+	<title>Classification of stationary points using derivatives</title>
+<p>
+As we said a stationary point <m>x=a</m> of the function <m>y=f(x)</m> is a point satisfying <me>\left. \frac{dy}{dx} \right |_{x=a} = 0,</me> or in the alternative notation <me>f'(a) = 0</me>. The point <m>x=a</m> is a
+</p>
+<p><ul>
+					<li>
+									<p>
+										a <term>maximum</term> if <me>\left. \frac{dy}{dx} \right |_{x &lt; a} &gt; 0 \text{ and }
+					\left. \frac{dy}{dx} \right |_{x &gt; a} &lt; 0,</me> or equivalently , <me>\left. \frac{d^2y}{dx^2} \right |_{x=a} &lt; 0.</me>
+									</p>
+					</li>
+
+					<li>
+									<p>
+										a <term>minimum</term> if <me>\left. \frac{dy}{dx} \right |_{x &lt; a} &lt; 0 \text{ and }
+					\left. \frac{dy}{dx} \right |_{x &gt; a} &gt; 0,</me> or equivalently , <me>\left. \frac{d^2y}{dx^2} \right |_{x=a} &gt; 0.</me>
+									</p>
+					</li>
+
+					<li>
+									<p>
+										a <term>point of inflection</term> if either <me>\left. \frac{dy}{dx} \right |_{x &lt; a} &lt; 0 \text{ and } \left. \frac{dy}{dx} \right |_{x &gt; a} &lt; 0 ,</me> or , <me>\left. \frac{dy}{dx} \right |_{x &lt; a} &gt; 0 \text{ and } \left. \frac{dy}{dx} \right |_{x &gt; a} &gt; 0 .</me>
+									</p>
+					</li>
+
+				</ul></p>
+
+</paragraphs>
+	
+<example>
+	<p>
+		These examples illustrate the finding and classifying of stationary points.
+	</p>
+	<p><ol>
+					<li>
+									<p>
+										Determine the turning points of the function <m>y=x^3 - x</m>.
+									</p>
+					
+									<p>
+										The turning points are found by solving the equation <me>\frac{dy}{dx} = 3x^2 - 1 =0.</me> This has solutions <me>x_1 = + \sqrt{\frac{1}{3}} \text{ and } x_2 = - \sqrt{\frac{1}{3}} .</me> Using the second derivative test to determine the type of each turning point we see that <me>\frac{d^2 y}{dx^2} = 6x ,</me> and so <me>\left. \frac{d^2 y}{dx^2} \right |_{x=x_1} = 6x_1 \approx 3.462 &gt; 0</me> and <me>\left. \frac{d^2 y}{dx^2} \right |_{x=x_2} = 6x_2 \approx -3.462 &lt; 0.</me> So we conclude that <m>x_1</m> is a local minimum turning point and <m>x_2</m> a local maximum turning point of the function <m>y=x^3 - x</m>.
+									</p>
+					</li>
+
+					<li>
+									<p>
+										Classify the stationary points of the function <m>y=3x^4 - 4x^3</m>.
+									</p>
+					
+									<p>
+										The equation <me>\frac{dy}{dx} = 12x^2 (x-1) =0</me> has solutions <m>x_1=0</m> and <m>x_2=1</m>. Now for points close to 0 we have <me>\left. \frac{dy}{dx} \right |_{x &lt; 0} &lt; 0 \text{ and } \left. \frac{dy}{dx} \right |_{x &gt; 0} &lt; 0</me> and therefore <m>x_1</m> is a point of inflection. Check the second derivative <m>\left. \frac{d^2y}{dx^2} \right |_{x=x_2}</m> to see that <m>x_2</m> is a local minimum of the original function.
+									</p>
+					</li>
+
+				</ol></p>
+</example>
+</section>

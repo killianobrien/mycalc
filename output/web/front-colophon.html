@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -118,15 +119,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.18';
+eBookConfig.runestone_version = '7.11.19';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.1d92cd109bc12c4d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.74f6fa0c85f09c79.css">
+<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -193,19 +194,21 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-continuity.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Continuity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivative.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The derivative</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivprops.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Properties of the derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-optimization.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Optimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-exercises.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="colophon" id="front-colophon"><h2 class="heading hide-type">
-<span class="type">Colophon</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Colophon</span>
+<span class="type">Colophon</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Colophon</span>
 </h2>
 <div class="credit">
-<b class="title">Website</b> <a class="external" href="https://www.mmu.ac.uk/science-engineering/staff/computing-maths/staff/profile/dr-killian-obrien" target="_blank">Killian on <code class="code-inline tex2jax_ignore">mmu.ac.uk</code></a>
+<b class="title">Website</b> <a class="external" href="https://www.mmu.ac.uk/science-engineering/staff/computing-maths/staff/profile/dr-killian-obrien" target="_blank">Killian on <code class="code-inline tex2jax_ignore">mmu.ac.uk</code></a><details class="ptx-footnote" aria-live="polite" id="frontmatter-1-3-2"><summary class="ptx-footnote__number" title="Footnote 0.0.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="frontmatter-1-3-2"><code class="code-inline tex2jax_ignore">www.mmu.ac.uk/science-engineering/staff/computing-maths/staff/profile/dr-killian-obrien</code></div></details>
 </div>
 <div class="para copyright">©2026 Killian O’Brien</div>
-<div class="para license">This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <a class="external" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CreativeCommons.org</a>
+<div class="para license">This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <a class="external" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CreativeCommons.org</a><details class="ptx-footnote" aria-live="polite" id="frontmatter-1-4-3-2"><summary class="ptx-footnote__number" title="Footnote 0.0.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="frontmatter-1-4-3-2"><code class="code-inline tex2jax_ignore">creativecommons.org/licenses/by-sa/4.0</code></div></details>
 </div>
-<div class="autopermalink" data-description="Colophon"><a href="#front-colophon" title="Copy heading and permalink for Colophon" aria-label="Copy heading and permalink for Colophon">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Colophon"><a href="#front-colophon" title="Copy heading and permalink for Colophon">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="frontmatter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-seqs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
