@@ -119,15 +119,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = 'dev';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.bundle.js"></script><script src="_static/prefix-runtime-libs.bundle.js"></script><script src="_static/prefix-runestone.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-runtime-libs.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -159,51 +159,57 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-seqs.html" class="internal"><span class="codenumber">1</span> <span class="title">Sequences</span></a></div>
+<div class="toc-title-box"><a href="ch-chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Chapter Title</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-name.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Section Title</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-seqs.html" class="internal"><span class="codenumber">3</span> <span class="title">Sequences</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Initial definitions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Convergence</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence-properties.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Convergence properties</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-exercises.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Sequence exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Initial definitions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence-properties.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Convergence properties</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-exercises.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Sequence exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-series.html" class="internal"><span class="codenumber">2</span> <span class="title">Series</span></a></div>
+<div class="toc-title-box"><a href="ch-series.html" class="internal"><span class="codenumber">4</span> <span class="title">Series</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-definitions.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Basic definitions</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-series-convergence.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Convergence</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence-tests.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence tests</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-power-series.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Power Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-exercises.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Series exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-definitions.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Basic definitions</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-series-convergence.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence-tests.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Convergence tests</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-power-series.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-exercises.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Series exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-functions.html" class="internal"><span class="codenumber">3</span> <span class="title">Functions</span></a></div>
+<div class="toc-title-box"><a href="ch-functions.html" class="internal"><span class="codenumber">5</span> <span class="title">Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-defs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Basic definitions and notation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-real.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Real valued functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-partials.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Rational functions and their partial fraction expansions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-defs.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Basic definitions and notation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-real.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Real valued functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-partials.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Rational functions and their partial fraction expansions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-diff.html" class="internal"><span class="codenumber">4</span> <span class="title">Differentiation</span></a></div>
+<div class="toc-title-box"><a href="ch-diff.html" class="internal"><span class="codenumber">6</span> <span class="title">Differentiation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-function-limits.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Limiting values of functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-continuity.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Continuity</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivative.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The derivative</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivprops.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Properties of the derivative</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-optimization.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Optimization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-exercises.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-function-limits.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Limiting values of functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-continuity.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivative.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivprops.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Properties of the derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-optimization.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Optimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-exercises.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-series-convergence"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Convergence</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.2</span><span class="space"> </span><span class="title">Convergence</span>
 </h2>
 <article class="definition definition-like" id="def-series-convergence"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Convergence for series.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Convergence for series.</span>
 </h3>
 <div class="para logical" id="def-series-convergence-2-1">
 <div class="para">The series <span class="process-math">\(\sum_{n=1}^\infty x_n\)</span> converges to the limit (or sum) <span class="process-math">\(L\)</span> if the sequence of its partial sums, <span class="process-math">\(\{ S_k \}_{k=1}^\infty\text{,}\)</span> is a convergent sequence and</div>
@@ -221,10 +227,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Paragraph"><a href="#def-series-convergence-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="def-series-convergence-2-2">A series is divergent if the sequence of its partial sums is a divergent sequence.<div class="autopermalink" data-description="Paragraph"><a href="#def-series-convergence-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.2.1: Convergence for series"><a href="#def-series-convergence" title="Copy heading and permalink for Definition 2.2.1: Convergence for series">🔗</a></div></article><div class="para" id="sec-series-convergence-3">It is not hard to think of examples of divergent series.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 4.2.1: Convergence for series"><a href="#def-series-convergence" title="Copy heading and permalink for Definition 4.2.1: Convergence for series">🔗</a></div></article><div class="para" id="sec-series-convergence-3">It is not hard to think of examples of divergent series.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="sec-series-convergence-4"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">A divergent series.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">A divergent series.</span>
 </h3>
 <div class="para logical" id="sec-series-convergence-4-2-1">
 <div class="para">Consider the series</div>
@@ -233,13 +239,13 @@ eBookConfig.enable_chatcodes =  false;
 \sum_{m=1}^\infty m .
 \end{equation*}
 </div>
-<div class="para">This series is clearly divergent as the partial sums are increasing without any upper bound, and so cannot form a convergent sequence (see theorem <a href="sec-seqs-convergence-properties.html#thm-seq-convergent-bounded" class="xref" data-knowl="./knowl/xref/thm-seq-convergent-bounded.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.4.4: Convergent implies bounded">Theorem 1.4.4</a>).</div>
+<div class="para">This series is clearly divergent as the partial sums are increasing without any upper bound, and so cannot form a convergent sequence (see theorem <a href="sec-seqs-convergence-properties.html#thm-seq-convergent-bounded" class="xref" data-knowl="./knowl/xref/thm-seq-convergent-bounded.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.4.4: Convergent implies bounded">Theorem 3.4.4</a>).</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-4-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 2.2.2: A divergent series"><a href="#sec-series-convergence-4" title="Copy heading and permalink for Example 2.2.2: A divergent series">🔗</a></div></article><div class="para" id="sec-series-convergence-5">However it is not so obvious that convergent series exist (beyond the trivial example of a series where the terms are all zero after some point).<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 4.2.2: A divergent series"><a href="#sec-series-convergence-4" title="Copy heading and permalink for Example 4.2.2: A divergent series">🔗</a></div></article><div class="para" id="sec-series-convergence-5">However it is not so obvious that convergent series exist (beyond the trivial example of a series where the terms are all zero after some point).<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="sec-series-convergence-6"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">A convergent series.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">A convergent series.</span>
 </h3>
 <div class="para logical" id="sec-series-convergence-6-2-1">
 <div class="para">Consider the series</div>
@@ -251,10 +257,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">The convergence of this series can be appreciated when we interpret the terms as measuring the size of step taken along a line. We see that the partial sums of the series get closer and closer to 1, but never go beyond 1. Indeed the series does converge to 1. This can be proved using the partial sum formula for a geometric series and making use of the algebra of sequences theorem.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-6-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 2.2.3: A convergent series"><a href="#sec-series-convergence-6" title="Copy heading and permalink for Example 2.2.3: A convergent series">🔗</a></div></article><div class="para" id="sec-series-convergence-7">This example shows that it is possible to have an infinite number of terms and yet for them still to sum to a finite value. This happens because the terms are getting smaller and smaller, the terms themselves are converging to zero, when viewed as sequence. However this type of behaviour does not guarantee convergence for a series, as the next example shows.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 4.2.3: A convergent series"><a href="#sec-series-convergence-6" title="Copy heading and permalink for Example 4.2.3: A convergent series">🔗</a></div></article><div class="para" id="sec-series-convergence-7">This example shows that it is possible to have an infinite number of terms and yet for them still to sum to a finite value. This happens because the terms are getting smaller and smaller, the terms themselves are converging to zero, when viewed as sequence. However this type of behaviour does not guarantee convergence for a series, as the next example shows.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="sec-series-convergence-8"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">The harmonic series.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">The harmonic series.</span>
 </h3>
 <div class="para logical" id="sec-series-convergence-8-2-1">
 <div class="para">Consider the series</div>
@@ -266,23 +272,23 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">The terms of this series are indeed converging to zero, but yet the series does not converge. It increases without any upper bound, albeit very slowly. This fact can be proved with the aid of a grouping argument.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-8-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 2.2.4: The harmonic series"><a href="#sec-series-convergence-8" title="Copy heading and permalink for Example 2.2.4: The harmonic series">🔗</a></div></article><div class="para" id="sec-series-convergence-9">For series that contain a mixture of positive and negative terms it is helpful to be able to refer to the convergence of the related series of absolute values.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 4.2.4: The harmonic series"><a href="#sec-series-convergence-8" title="Copy heading and permalink for Example 4.2.4: The harmonic series">🔗</a></div></article><div class="para" id="sec-series-convergence-9">For series that contain a mixture of positive and negative terms it is helpful to be able to refer to the convergence of the related series of absolute values.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-series-absolute-convergence"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Absolute convergence.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Absolute convergence.</span>
 </h3>
 <div class="para" id="def-series-absolute-convergence-2-1">A series <span class="process-math">\(\sum_{m=1}^\infty a_m\)</span> is absolutely convergent if the series of absolute values, <span class="process-math">\(\sum _{m=1}^\infty \left | a_m \right |\text{,}\)</span> is a convergent series. If the series <span class="process-math">\(\sum_{m=1}^\infty a_m\)</span> is convergent but the series of absolute values, <span class="process-math">\(\sum _{m=1}^\infty \left | a_m \right |\text{,}\)</span> is divergent, then the original series is said to be conditionally convergent.<div class="autopermalink" data-description="Paragraph"><a href="#def-series-absolute-convergence-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.2.5: Absolute convergence"><a href="#def-series-absolute-convergence" title="Copy heading and permalink for Definition 2.2.5: Absolute convergence">🔗</a></div></article><div class="para" id="sec-series-convergence-11">The importance of conditional convergence is given by the following result which we shall quote without proof.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 4.2.5: Absolute convergence"><a href="#def-series-absolute-convergence" title="Copy heading and permalink for Definition 4.2.5: Absolute convergence">🔗</a></div></article><div class="para" id="sec-series-convergence-11">The importance of conditional convergence is given by the following result which we shall quote without proof.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-series-absolute-convergence"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
 </h3>
 <div class="para" id="thm-series-absolute-convergence-1-1">If a series is absolutely convergent then it is convergent. Moreover, the terms of an absolutely convergent series can be rearranged in any way and the resulting series will still converge to the same sum. However if a series is conditionally convergent then rearranging its terms can yield a series which sums to a different value.<div class="autopermalink" data-description="Paragraph"><a href="#thm-series-absolute-convergence-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.2.6"><a href="#thm-series-absolute-convergence" title="Copy heading and permalink for Theorem 2.2.6">🔗</a></div></article><details id="thm-series-absolute-convergence-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-series-absolute-convergence-2-1">Omitted.<div class="autopermalink" data-description="Paragraph"><a href="#thm-series-absolute-convergence-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 4.2.6"><a href="#thm-series-absolute-convergence" title="Copy heading and permalink for Theorem 4.2.6">🔗</a></div></article><details id="thm-series-absolute-convergence-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-series-absolute-convergence-2-1">Omitted.<div class="autopermalink" data-description="Paragraph"><a href="#thm-series-absolute-convergence-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.2.6.1"><a href="#thm-series-absolute-convergence-2" title="Copy heading and permalink for Proof 2.2.6.1">🔗</a></div></article></details><section class="paragraphs" id="sec-series-convergence-13"><h3 class="heading"><span class="title">Tails.</span></h3>
+<div class="autopermalink" data-description="Proof 4.2.6.1"><a href="#thm-series-absolute-convergence-2" title="Copy heading and permalink for Proof 4.2.6.1">🔗</a></div></article></details><section class="paragraphs" id="sec-series-convergence-13"><h3 class="heading"><span class="title">Tails.</span></h3>
 <div class="para logical" id="sec-series-convergence-13-2">
 <div class="para">For an infinite series</div>
 <div class="displaymath process-math">
@@ -300,7 +306,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="sec-series-convergence-13-5">Both of these arguments extend to any finite collection of terms. By a <em class="emphasis">tail</em> of the series <span class="process-math">\(\sum_{m=1}^\infty a_m\)</span> we mean any series of the form <span class="process-math">\(\sum_{m=M}^\infty a_m\text{,}\)</span> for some positive integer <span class="process-math">\(M\text{,}\)</span> i.e. the original series less some finite collection of initial terms. If we can prove that some tail of the series is convergent, then so will the original series be convergent. Similarly, if we can show that some tail of the series is divergent, then so will the original series be divergent. These ideas occur in some of the proofs of the series convergence tests later in the chapter.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-13-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Paragraphs: Tails"><a href="#sec-series-convergence-13" title="Copy heading and permalink for Paragraphs: Tails">🔗</a></div></section><article class="theorem theorem-like" id="thm-series-lin-combs"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Linear combinations of series.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Linear combinations of series.</span>
 </h3>
 <div class="para logical" id="thm-series-lin-combs-2-1">
 <div class="para">Suppose that we have two convergent series <span class="process-math">\(\sum_{m=1}^\infty  a_m\)</span> and <span class="process-math">\(\sum_{m=1}^\infty b_m\)</span> such that</div>
@@ -323,7 +329,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-series-lin-combs-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.2.7: Linear combinations of series"><a href="#thm-series-lin-combs" title="Copy heading and permalink for Theorem 2.2.7: Linear combinations of series">🔗</a></div></article><details id="thm-series-lin-combs-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-series-lin-combs-3-1">This can be proved using the linearity property for convergence of sequences. We do not need to descend to <span class="process-math">\(\epsilon, N\)</span> arguments but just use the definition for series convergence in terms of the partial sums.<div class="autopermalink" data-description="Paragraph"><a href="#thm-series-lin-combs-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 4.2.7: Linear combinations of series"><a href="#thm-series-lin-combs" title="Copy heading and permalink for Theorem 4.2.7: Linear combinations of series">🔗</a></div></article><details id="thm-series-lin-combs-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-series-lin-combs-3-1">This can be proved using the linearity property for convergence of sequences. We do not need to descend to <span class="process-math">\(\epsilon, N\)</span> arguments but just use the definition for series convergence in terms of the partial sums.<div class="autopermalink" data-description="Paragraph"><a href="#thm-series-lin-combs-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="thm-series-lin-combs-3-2">
 <div class="para">Letting <span class="process-math">\(A_k\)</span> and <span class="process-math">\(B_k\)</span> denote the partial sums, i.e. <span class="process-math">\(A_k = \sum_{n=1}^k a_n\)</span> and <span class="process-math">\(B_k = \sum_{n=1}^k b_n\)</span> we make the following deductions.</div>
@@ -340,12 +346,12 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-series-lin-combs-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.2.7.1"><a href="#thm-series-lin-combs-3" title="Copy heading and permalink for Proof 2.2.7.1">🔗</a></div></article></details><article class="question example-like" id="sec-series-convergence-15"><h3 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span>
+<div class="autopermalink" data-description="Proof 4.2.7.1"><a href="#thm-series-lin-combs-3" title="Copy heading and permalink for Proof 4.2.7.1">🔗</a></div></article></details><article class="question example-like" id="sec-series-convergence-15"><h3 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">4.2.8</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-series-convergence-15-1">Why was the presentation reversed here? In that we started with the claimed limit <span class="process-math">\(\alpha A + \beta B\)</span> and worked our way towards <span class="process-math">\(\sum_{n=1}^\infty \left ( \alpha a_n + \beta b_n \right )\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-series-convergence-15-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Question 2.2.8"><a href="#sec-series-convergence-15" title="Copy heading and permalink for Question 2.2.8">🔗</a></div></article><div class="autopermalink" data-description="Section 2.2: Convergence"><a href="#sec-series-convergence" title="Copy heading and permalink for Section 2.2: Convergence">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Question 4.2.8"><a href="#sec-series-convergence-15" title="Copy heading and permalink for Question 4.2.8">🔗</a></div></article><div class="autopermalink" data-description="Section 4.2: Convergence"><a href="#sec-series-convergence" title="Copy heading and permalink for Section 4.2: Convergence">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-series-definitions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-series-convergence-tests.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
