@@ -119,15 +119,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = 'dev';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.bundle.js"></script><script src="_static/prefix-runtime-libs.bundle.js"></script><script src="_static/prefix-runestone.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-runtime-libs.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -159,51 +159,57 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-seqs.html" class="internal"><span class="codenumber">1</span> <span class="title">Sequences</span></a></div>
+<div class="toc-title-box"><a href="ch-chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Chapter Title</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-name.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Section Title</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-seqs.html" class="internal"><span class="codenumber">3</span> <span class="title">Sequences</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Initial definitions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Convergence</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence-properties.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Convergence properties</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-exercises.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Sequence exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Initial definitions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence-properties.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Convergence properties</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-exercises.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Sequence exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-series.html" class="internal"><span class="codenumber">2</span> <span class="title">Series</span></a></div>
+<div class="toc-title-box"><a href="ch-series.html" class="internal"><span class="codenumber">4</span> <span class="title">Series</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-definitions.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Basic definitions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Convergence</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence-tests.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence tests</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-power-series.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Power Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-exercises.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Series exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-definitions.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Basic definitions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence-tests.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Convergence tests</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-power-series.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-exercises.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Series exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-functions.html" class="internal"><span class="codenumber">3</span> <span class="title">Functions</span></a></div>
+<div class="toc-title-box"><a href="ch-functions.html" class="internal"><span class="codenumber">5</span> <span class="title">Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-defs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Basic definitions and notation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-real.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Real valued functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-partials.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Rational functions and their partial fraction expansions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-defs.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Basic definitions and notation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-real.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Real valued functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-partials.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Rational functions and their partial fraction expansions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-diff.html" class="internal"><span class="codenumber">4</span> <span class="title">Differentiation</span></a></div>
+<div class="toc-title-box"><a href="ch-diff.html" class="internal"><span class="codenumber">6</span> <span class="title">Differentiation</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-function-limits.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Limiting values of functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-continuity.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Continuity</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivative.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The derivative</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-diff-derivprops.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Properties of the derivative</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-optimization.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Optimization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-exercises.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-function-limits.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Limiting values of functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-continuity.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivative.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The derivative</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-diff-derivprops.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Properties of the derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-optimization.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Optimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-exercises.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-diff-derivprops"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.4</span><span class="space"> </span><span class="title">Properties of the derivative</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">6.4</span><span class="space"> </span><span class="title">Properties of the derivative</span>
 </h2>
 <article class="theorem theorem-like" id="thm-diff-linear"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Linearity.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Linearity.</span>
 </h3>
 <div class="para logical" id="thm-diff-linear-2-1">
 <div class="para">Consider the linear combination <span class="process-math">\(f = \alpha g + \beta h\)</span> of functions <span class="process-math">\(g\)</span> and <span class="process-math">\(h\text{,}\)</span> where <span class="process-math">\(\alpha, \beta \in \mathbb{R}\text{.}\)</span> The derivative of <span class="process-math">\(f\)</span> satisfies</div>
@@ -214,7 +220,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-diff-linear-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 4.4.1: Linearity"><a href="#thm-diff-linear" title="Copy heading and permalink for Theorem 4.4.1: Linearity">🔗</a></div></article><details id="thm-diff-linear-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-diff-linear-3-1">
+<div class="autopermalink" data-description="Theorem 6.4.1: Linearity"><a href="#thm-diff-linear" title="Copy heading and permalink for Theorem 6.4.1: Linearity">🔗</a></div></article><details id="thm-diff-linear-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-diff-linear-3-1">
 <div class="para">This is a straightforward application of properties of the limiting process for functions. Suppose that <span class="process-math">\(g\)</span> and <span class="process-math">\(h\)</span> are both differentiable at a point <span class="process-math">\(x=a\text{.}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -232,8 +238,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">The above equations demonstrate the linearity of the derivative.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-diff-linear-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 4.4.1.1"><a href="#thm-diff-linear-3" title="Copy heading and permalink for Proof 4.4.1.1">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-diff-product"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Product rule.</span>
+<div class="autopermalink" data-description="Proof 6.4.1.1"><a href="#thm-diff-linear-3" title="Copy heading and permalink for Proof 6.4.1.1">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-diff-product"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Product rule.</span>
 </h3>
 <div class="para logical" id="thm-diff-product-2-1">
 <div class="para">Consider the function <span class="process-math">\(f=gh\)</span> which is a product of the two functions <span class="process-math">\(g\)</span> and <span class="process-math">\(h\text{.}\)</span> The derivative of <span class="process-math">\(f\)</span> satisfies</div>
@@ -244,7 +250,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-diff-product-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 4.4.2: Product rule"><a href="#thm-diff-product" title="Copy heading and permalink for Theorem 4.4.2: Product rule">🔗</a></div></article><details id="thm-diff-product-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-diff-product-3-1">
+<div class="autopermalink" data-description="Theorem 6.4.2: Product rule"><a href="#thm-diff-product" title="Copy heading and permalink for Theorem 6.4.2: Product rule">🔗</a></div></article><details id="thm-diff-product-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-diff-product-3-1">
 <div class="para">Suppose that <span class="process-math">\(g\)</span> and <span class="process-math">\(h\)</span> are both differentiable at a point <span class="process-math">\(x=a\text{.}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -262,8 +268,8 @@ f'(a) &amp; = \lim_{x \to a} \frac{g(x)h(x) - g(a)h(a)}{x-a}, \text{def. of deri
 <div class="para">This is the required result.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-diff-product-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 4.4.2.1"><a href="#thm-diff-product-3" title="Copy heading and permalink for Proof 4.4.2.1">🔗</a></div></article></details><article class="example example-like" id="sec-diff-derivprops-4"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.3</span><span class="period">.</span>
+<div class="autopermalink" data-description="Proof 6.4.2.1"><a href="#thm-diff-product-3" title="Copy heading and permalink for Proof 6.4.2.1">🔗</a></div></article></details><article class="example example-like" id="sec-diff-derivprops-4"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.4.3</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="sec-diff-derivprops-4-1">
 <ol class="decimal" id="sec-diff-derivprops-4-1-1">
@@ -302,7 +308,7 @@ u(x) = x^2 -1 \text{  and  } v(x)= \sin{x},
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.4.3"><a href="#sec-diff-derivprops-4" title="Copy heading and permalink for Example 4.4.3">🔗</a></div></article><section class="paragraphs" id="sec-diff-derivprops-5"><h3 class="heading"><span class="title">Linear approximations and associated errors.</span></h3>
+<div class="autopermalink" data-description="Example 6.4.3"><a href="#sec-diff-derivprops-4" title="Copy heading and permalink for Example 6.4.3">🔗</a></div></article><section class="paragraphs" id="sec-diff-derivprops-5"><h3 class="heading"><span class="title">Linear approximations and associated errors.</span></h3>
 <div class="para logical" id="sec-diff-derivprops-5-2">
 <div class="para">Before moving on to consider other properties of differentiation we introduce another viewpoint on the derivative that will be needed for future proof arguments. Consider again the definition of the derivative of a function <span class="process-math">\(f\)</span> at a point <span class="process-math">\(a\)</span> in its domain.</div>
 <div class="displaymath process-math">
@@ -339,19 +345,19 @@ f(a+k) = f(a) + f'(a) k + k \, \epsilon(k).
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-5-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="diff-lin-approx"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/lin-approx.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.4<span class="period">.</span></span><span class="space"> </span>The linear approximation to <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=a\text{.}\)</span><div class="autopermalink" data-description="Figure 4.4.4"><a href="#diff-lin-approx" title="Copy heading and permalink for Figure 4.4.4">🔗</a></div></figcaption></figure><div class="para" id="sec-diff-derivprops-5-4">Picturing these various quantities with the aid of figure <a href="sec-diff-derivprops.html#diff-lin-approx" class="xref" data-knowl="./knowl/xref/diff-lin-approx.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.4.4">Figure 4.4.4</a> may help. It’s important to appreciate how the linear approximation gives the equation of the tangent line to the graph of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=a\)</span> in the form of <span class="process-math">\(y(k) = f(a) + k f'(a)\text{,}\)</span> where <span class="process-math">\(k = x-a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-5-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.4.4<span class="period">.</span></span><span class="space"> </span>The linear approximation to <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=a\text{.}\)</span><div class="autopermalink" data-description="Figure 6.4.4"><a href="#diff-lin-approx" title="Copy heading and permalink for Figure 6.4.4">🔗</a></div></figcaption></figure><div class="para" id="sec-diff-derivprops-5-4">Picturing these various quantities with the aid of figure <a href="sec-diff-derivprops.html#diff-lin-approx" class="xref" data-knowl="./knowl/xref/diff-lin-approx.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.4.4">Figure 6.4.4</a> may help. It’s important to appreciate how the linear approximation gives the equation of the tangent line to the graph of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=a\)</span> in the form of <span class="process-math">\(y(k) = f(a) + k f'(a)\text{,}\)</span> where <span class="process-math">\(k = x-a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-5-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-diff-derivprops-5-5">This allows us to interpret the above to give an alternative definition of the derivative as follows:<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-5-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-deriv-lin-approx"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">The derivative.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">The derivative.</span>
 </h4>
 <div class="para" id="def-deriv-lin-approx-2-1">The derivative, <span class="process-math">\(f'(a)\text{,}\)</span> is the unique number that provides the linear approximation <span class="process-math">\(f(a) + f'(a) k\)</span> for the value <span class="process-math">\(f(a+k)\)</span> with the property that the error term <span class="process-math">\(k \epsilon(k)\)</span> has the convergence property that <span class="process-math">\(\epsilon(k) \to 0\)</span> as <span class="process-math">\(k \to 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-deriv-lin-approx-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 4.4.5: The derivative"><a href="#def-deriv-lin-approx" title="Copy heading and permalink for Definition 4.4.5: The derivative">🔗</a></div></article><div class="para" id="sec-diff-derivprops-5-7">This view of the derivative will allow us to give a rigorous proof of the chain rule. But it is also a useful to have such slightly different views of the same concept. This notion of linear approximations (and other higher-order approximations) and the behaviour of their associated error terms is important in the subject of <em class="emphasis">numerical analysis</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-5-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 6.4.5: The derivative"><a href="#def-deriv-lin-approx" title="Copy heading and permalink for Definition 6.4.5: The derivative">🔗</a></div></article><div class="para" id="sec-diff-derivprops-5-7">This view of the derivative will allow us to give a rigorous proof of the chain rule. But it is also a useful to have such slightly different views of the same concept. This notion of linear approximations (and other higher-order approximations) and the behaviour of their associated error terms is important in the subject of <em class="emphasis">numerical analysis</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-5-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Paragraphs: Linear approximations and associated errors"><a href="#sec-diff-derivprops-5" title="Copy heading and permalink for Paragraphs: Linear approximations and associated errors">🔗</a></div></section><article class="theorem theorem-like" id="thm-diff-chain"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Chain rule.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Chain rule.</span>
 </h3>
 <div class="para logical" id="thm-diff-chain-2-1">
 <div class="para">Consider the composition <span class="process-math">\(y=f \circ g\)</span> of two functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\text{.}\)</span> Let <span class="process-math">\(u=g(x)\)</span> so that <span class="process-math">\(y=f(u)\text{.}\)</span> Then the derivative of <span class="process-math">\(y\)</span> satisfies</div>
@@ -368,7 +374,7 @@ y'(a) = f'(g(a))g'(a).
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-diff-chain-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 4.4.6: Chain rule"><a href="#thm-diff-chain" title="Copy heading and permalink for Theorem 4.4.6: Chain rule">🔗</a></div></article><details id="thm-diff-chain-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-diff-chain-3-1">
+<div class="autopermalink" data-description="Theorem 6.4.6: Chain rule"><a href="#thm-diff-chain" title="Copy heading and permalink for Theorem 6.4.6: Chain rule">🔗</a></div></article><details id="thm-diff-chain-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-diff-chain-3-1">
 <div class="para">
 <em class="emphasis">Proof.</em> We suppose that the function <span class="process-math">\(g\)</span> is differentiable at the point <span class="process-math">\(a\)</span> and that <span class="process-math">\(f\)</span> is differentiable at the point <span class="process-math">\(g(a)\text{.}\)</span> In the linear approximations view this means we have derivative quantities <span class="process-math">\(g'(a)\)</span> and <span class="process-math">\(f'(g(a))\)</span> and error functions <span class="process-math">\(\epsilon\)</span> and <span class="process-math">\(\mu\)</span> satisfying</div>
 <div class="displaymath process-math">
@@ -384,7 +390,7 @@ f(g(a) + l) &amp;= f(g(a)) + l f'(g(a)) + l \mu(l),
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-diff-chain-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="thm-diff-chain-3-2">
-<div class="para">Our task now is to prove the chain rule according to definition <a href="sec-diff-derivprops.html#def-deriv-lin-approx" class="xref" data-knowl="./knowl/xref/def-deriv-lin-approx.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.4.5: The derivative">Definition 4.4.5</a>, i.e. to examine the quantity <span class="process-math">\(y(a+k)\)</span> and discover the linear approximation to it, showing that the derivative <span class="process-math">\(y'(a)\)</span> has the form described by the chain rule and that the error term has the necessary convergence property.</div>
+<div class="para">Our task now is to prove the chain rule according to definition <a href="sec-diff-derivprops.html#def-deriv-lin-approx" class="xref" data-knowl="./knowl/xref/def-deriv-lin-approx.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.4.5: The derivative">Definition 6.4.5</a>, i.e. to examine the quantity <span class="process-math">\(y(a+k)\)</span> and discover the linear approximation to it, showing that the derivative <span class="process-math">\(y'(a)\)</span> has the form described by the chain rule and that the error term has the necessary convergence property.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-deriv-lin-approx.html">
 \begin{equation*}
 \begin{aligned}
@@ -411,8 +417,8 @@ y(a+k) &amp;= f(g(a+k)), \text{defn. of composition}\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-diff-chain-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 4.4.6.1"><a href="#thm-diff-chain-3" title="Copy heading and permalink for Proof 4.4.6.1">🔗</a></div></article></details><article class="example example-like" id="sec-diff-derivprops-7"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.7</span><span class="period">.</span>
+<div class="autopermalink" data-description="Proof 6.4.6.1"><a href="#thm-diff-chain-3" title="Copy heading and permalink for Proof 6.4.6.1">🔗</a></div></article></details><article class="example example-like" id="sec-diff-derivprops-7"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.4.7</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="sec-diff-derivprops-7-1">
 <ol class="decimal" id="sec-diff-derivprops-7-1-1">
@@ -447,10 +453,10 @@ y(a+k) &amp;= f(g(a+k)), \text{defn. of composition}\\
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-7-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.4.7"><a href="#sec-diff-derivprops-7" title="Copy heading and permalink for Example 4.4.7">🔗</a></div></article><div class="para" id="sec-diff-derivprops-8">To complete the collection of basic properties of the derivative we need to know how to differentiate functions that are defined as quotients of other functions, i.e. how the derivative of the qutient depends on the derivatives of the numerator and denominator of the quotient. This is provided by the well-known quotient rule.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 6.4.7"><a href="#sec-diff-derivprops-7" title="Copy heading and permalink for Example 6.4.7">🔗</a></div></article><div class="para" id="sec-diff-derivprops-8">To complete the collection of basic properties of the derivative we need to know how to differentiate functions that are defined as quotients of other functions, i.e. how the derivative of the qutient depends on the derivatives of the numerator and denominator of the quotient. This is provided by the well-known quotient rule.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-diff-quotient"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient rule.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient rule.</span>
 </h3>
 <div class="para logical" id="thm-diff-quotient-2-1">
 <div class="para">If <span class="process-math">\(y\)</span> is the quotient of two functions <span class="process-math">\(y=\frac{u}{v}\)</span> then</div>
@@ -467,10 +473,10 @@ y'(a) = \frac{v(a)u'(a) - u(a)v'(a)}{v(a)^2}.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-diff-quotient-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 4.4.8: Quotient rule"><a href="#thm-diff-quotient" title="Copy heading and permalink for Theorem 4.4.8: Quotient rule">🔗</a></div></article><div class="para" id="sec-diff-derivprops-10">The details of the proof of the quotient rule are left as an exercise. One way to prove it is to make use of the chain rule and product rule properties that we have already established together with the following lemma.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-10" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 6.4.8: Quotient rule"><a href="#thm-diff-quotient" title="Copy heading and permalink for Theorem 6.4.8: Quotient rule">🔗</a></div></article><div class="para" id="sec-diff-derivprops-10">The details of the proof of the quotient rule are left as an exercise. One way to prove it is to make use of the chain rule and product rule properties that we have already established together with the following lemma.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-10" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="lemma theorem-like" id="lem-diff-recip"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of the reciprocal.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">6.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of the reciprocal.</span>
 </h3>
 <div class="para logical" id="lem-diff-recip-2-1">
 <div class="para">Consider the reciprocal function <span class="process-math">\(r\)</span> defined on the non-zero reals, <span class="process-math">\(\mathbb{R} \backslash \{0\}\text{,}\)</span> by <span class="process-math">\(r(x) = 1/x\text{.}\)</span> The derivative of <span class="process-math">\(r\)</span> at a point <span class="process-math">\(a \neq 0\)</span> is given by</div>
@@ -481,8 +487,8 @@ r'(a) = \frac{-1}{a^2}.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#lem-diff-recip-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 4.4.9: Derivative of the reciprocal"><a href="#lem-diff-recip" title="Copy heading and permalink for Lemma 4.4.9: Derivative of the reciprocal">🔗</a></div></article><article class="example example-like" id="sec-diff-derivprops-12"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.10</span><span class="period">.</span>
+<div class="autopermalink" data-description="Lemma 6.4.9: Derivative of the reciprocal"><a href="#lem-diff-recip" title="Copy heading and permalink for Lemma 6.4.9: Derivative of the reciprocal">🔗</a></div></article><article class="example example-like" id="sec-diff-derivprops-12"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.4.10</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-diff-derivprops-12-1">These examples illustrate the use of the quotient rule.<div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-12-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -519,11 +525,11 @@ r'(a) = \frac{-1}{a^2}.
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-12-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.4.10"><a href="#sec-diff-derivprops-12" title="Copy heading and permalink for Example 4.4.10">🔗</a></div></article><section class="paragraphs" id="sec-diff-derivprops-13"><h3 class="heading"><span class="title">Derivatives of inverse functions.</span></h3>
+<div class="autopermalink" data-description="Example 6.4.10"><a href="#sec-diff-derivprops-12" title="Copy heading and permalink for Example 6.4.10">🔗</a></div></article><section class="paragraphs" id="sec-diff-derivprops-13"><h3 class="heading"><span class="title">Derivatives of inverse functions.</span></h3>
 <div class="para" id="sec-diff-derivprops-13-2">There is a nice relationship between the derivative of a function and its inverse which we can appreciate from the diagram below. Shown below is the graph of the function <span class="process-math">\(y=f(x)\)</span> and also the graph of the inverse function <span class="process-math">\(x=g(y)\text{.}\)</span> These two graphs are related by a reflection in the line given by <span class="process-math">\(y=x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-13-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="diff-inv"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/diff-inv.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.11<span class="period">.</span></span><span class="space"> </span>A function and its inverse.<div class="autopermalink" data-description="Figure 4.4.11"><a href="#diff-inv" title="Copy heading and permalink for Figure 4.4.11">🔗</a></div></figcaption></figure><div class="para logical" id="sec-diff-derivprops-13-4">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.4.11<span class="period">.</span></span><span class="space"> </span>A function and its inverse.<div class="autopermalink" data-description="Figure 6.4.11"><a href="#diff-inv" title="Copy heading and permalink for Figure 6.4.11">🔗</a></div></figcaption></figure><div class="para logical" id="sec-diff-derivprops-13-4">
 <div class="para">This leads to the following relationship for the derivative of a function and its inverse</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -574,7 +580,7 @@ x = x(t) , \, y = y(t),
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-14-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="sec-diff-derivprops-14-5"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.12</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.4.12</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="sec-diff-derivprops-14-5-1">
 <ol class="decimal" id="sec-diff-derivprops-14-5-1-1">
@@ -586,11 +592,11 @@ x = x(t) , \, y = y(t),
 x=\cos{t} - \cos{(2t)} , \, \, y=\sin{t} - \sin{(2t)} , \, \, t \in [-\pi,\pi]\text{,}
 \end{equation*}
 </div>
-<div class="para">as shown in figure <a href="sec-diff-derivprops.html#diff-param2" class="xref" data-knowl="./knowl/xref/diff-param2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.4.13">Figure 4.4.13</a>.</div>
+<div class="para">as shown in figure <a href="sec-diff-derivprops.html#diff-param2" class="xref" data-knowl="./knowl/xref/diff-param2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.4.13">Figure 6.4.13</a>.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-14-5-1-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="diff-param2"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/diff-param2.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.13<span class="period">.</span></span><span class="space"> </span>The parametric curve defined by <span class="process-math">\(x=\cos{t} - \cos{(2t)}\text{,}\)</span> <span class="process-math">\(y=\sin{t} - \sin{(2t)}\text{,}\)</span> for <span class="process-math">\(t \in [-\pi,\pi]\)</span><div class="autopermalink" data-description="Figure 4.4.13"><a href="#diff-param2" title="Copy heading and permalink for Figure 4.4.13">🔗</a></div></figcaption></figure><div class="para logical" id="sec-diff-derivprops-14-5-1-1-1-3">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.4.13<span class="period">.</span></span><span class="space"> </span>The parametric curve defined by <span class="process-math">\(x=\cos{t} - \cos{(2t)}\text{,}\)</span> <span class="process-math">\(y=\sin{t} - \sin{(2t)}\text{,}\)</span> for <span class="process-math">\(t \in [-\pi,\pi]\)</span><div class="autopermalink" data-description="Figure 6.4.13"><a href="#diff-param2" title="Copy heading and permalink for Figure 6.4.13">🔗</a></div></figcaption></figure><div class="para logical" id="sec-diff-derivprops-14-5-1-1-1-3">
 <div class="para">Applying the parametric differentiation principle we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -623,7 +629,7 @@ x=\cos{t} - \cos{(2t)} , \, \, y=\sin{t} - \sin{(2t)} , \, \, t \in [-\pi,\pi]\t
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-14-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.4.12"><a href="#sec-diff-derivprops-14-5" title="Copy heading and permalink for Example 4.4.12">🔗</a></div></article><div class="autopermalink" data-description="Paragraphs: Parametric differentiation"><a href="#sec-diff-derivprops-14" title="Copy heading and permalink for Paragraphs: Parametric differentiation">🔗</a></div></section><section class="paragraphs" id="sec-diff-derivprops-15"><h3 class="heading"><span class="title">Implicit differentiation.</span></h3>
+<div class="autopermalink" data-description="Example 6.4.12"><a href="#sec-diff-derivprops-14-5" title="Copy heading and permalink for Example 6.4.12">🔗</a></div></article><div class="autopermalink" data-description="Paragraphs: Parametric differentiation"><a href="#sec-diff-derivprops-14" title="Copy heading and permalink for Paragraphs: Parametric differentiation">🔗</a></div></section><section class="paragraphs" id="sec-diff-derivprops-15"><h3 class="heading"><span class="title">Implicit differentiation.</span></h3>
 <div class="para logical" id="sec-diff-derivprops-15-2">
 <div class="para">Suppose that a variable <span class="process-math">\(y\)</span> is a function of <span class="process-math">\(x\text{,}\)</span> i.e. <span class="process-math">\(y=y(x)\text{,}\)</span> but that we are not given this functional relationship <em class="emphasis">directly</em> in the form of a formula for <span class="process-math">\(y\)</span> in terms of <span class="process-math">\(x\text{,}\)</span> but rather the function is described <em class="emphasis">indirectly</em> or <em class="emphasis">implicitly</em> by an equation involving <span class="process-math">\(y\)</span> and <span class="process-math">\(x\text{,}\)</span> such as</div>
 <div class="displaymath process-math">
@@ -636,7 +642,7 @@ x^2 + y^2 = 1, \text{ or } x^2 - y^2 = 1, \text{ or } \sin{(xy)}=1 .
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-15-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="sec-diff-derivprops-15-3"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.14</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.4.14</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="sec-diff-derivprops-15-3-1">
 <div class="para">Find <span class="process-math">\(\frac{dy}{dx}\)</span> for the function <span class="process-math">\(y=y(x)\)</span> defined implicitly by the equation</div>
@@ -662,11 +668,11 @@ x^2 + 2y^2 - xy + 2x =4.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-15-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.4.14"><a href="#sec-diff-derivprops-15-3" title="Copy heading and permalink for Example 4.4.14">🔗</a></div></article><div class="autopermalink" data-description="Paragraphs: Implicit differentiation"><a href="#sec-diff-derivprops-15" title="Copy heading and permalink for Paragraphs: Implicit differentiation">🔗</a></div></section><section class="paragraphs" id="sec-diff-derivprops-16"><h3 class="heading"><span class="title">Logarithmic differentiation.</span></h3>
+<div class="autopermalink" data-description="Example 6.4.14"><a href="#sec-diff-derivprops-15-3" title="Copy heading and permalink for Example 6.4.14">🔗</a></div></article><div class="autopermalink" data-description="Paragraphs: Implicit differentiation"><a href="#sec-diff-derivprops-15" title="Copy heading and permalink for Paragraphs: Implicit differentiation">🔗</a></div></section><section class="paragraphs" id="sec-diff-derivprops-16"><h3 class="heading"><span class="title">Logarithmic differentiation.</span></h3>
 <div class="para" id="sec-diff-derivprops-16-2">This refers to the technique we use to differentiate a function <span class="process-math">\(y=y(x)\)</span> say where the variable <span class="process-math">\(x\)</span> appears in the power position in the formula for <span class="process-math">\(y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-16-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Paragraphs: Logarithmic differentiation"><a href="#sec-diff-derivprops-16" title="Copy heading and permalink for Paragraphs: Logarithmic differentiation">🔗</a></div></section><article class="example example-like" id="sec-diff-derivprops-17"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.15</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.4.15</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-diff-derivprops-17-1">Differentiate <span class="process-math">\(y=x^x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-17-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -686,7 +692,7 @@ x^2 + 2y^2 - xy + 2x =4.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-diff-derivprops-17-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.4.15"><a href="#sec-diff-derivprops-17" title="Copy heading and permalink for Example 4.4.15">🔗</a></div></article><div class="autopermalink" data-description="Section 4.4: Properties of the derivative"><a href="#sec-diff-derivprops" title="Copy heading and permalink for Section 4.4: Properties of the derivative">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 6.4.15"><a href="#sec-diff-derivprops-17" title="Copy heading and permalink for Example 6.4.15">🔗</a></div></article><div class="autopermalink" data-description="Section 6.4: Properties of the derivative"><a href="#sec-diff-derivprops" title="Copy heading and permalink for Section 6.4: Properties of the derivative">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-diff-derivative.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-diff-optimization.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

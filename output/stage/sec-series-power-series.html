@@ -119,15 +119,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = 'dev';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.bundle.js"></script><script src="_static/prefix-runtime-libs.bundle.js"></script><script src="_static/prefix-runestone.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-runtime-libs.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -159,53 +159,59 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-seqs.html" class="internal"><span class="codenumber">1</span> <span class="title">Sequences</span></a></div>
+<div class="toc-title-box"><a href="ch-chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Chapter Title</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-name.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Section Title</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-seqs.html" class="internal"><span class="codenumber">3</span> <span class="title">Sequences</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Initial definitions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Convergence</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence-properties.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Convergence properties</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-exercises.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Sequence exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Initial definitions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence-properties.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Convergence properties</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-exercises.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Sequence exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-series.html" class="internal"><span class="codenumber">2</span> <span class="title">Series</span></a></div>
+<div class="toc-title-box"><a href="ch-series.html" class="internal"><span class="codenumber">4</span> <span class="title">Series</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-definitions.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Basic definitions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Convergence</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence-tests.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence tests</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-series-power-series.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Power Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-exercises.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Series exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-definitions.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Basic definitions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence-tests.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Convergence tests</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-series-power-series.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-exercises.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Series exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-functions.html" class="internal"><span class="codenumber">3</span> <span class="title">Functions</span></a></div>
+<div class="toc-title-box"><a href="ch-functions.html" class="internal"><span class="codenumber">5</span> <span class="title">Functions</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-defs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Basic definitions and notation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-real.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Real valued functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-partials.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Rational functions and their partial fraction expansions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-defs.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Basic definitions and notation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-real.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Real valued functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-partials.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Rational functions and their partial fraction expansions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-diff.html" class="internal"><span class="codenumber">4</span> <span class="title">Differentiation</span></a></div>
+<div class="toc-title-box"><a href="ch-diff.html" class="internal"><span class="codenumber">6</span> <span class="title">Differentiation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-function-limits.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Limiting values of functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-continuity.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Continuity</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivative.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The derivative</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivprops.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Properties of the derivative</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-optimization.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Optimization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-exercises.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-function-limits.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Limiting values of functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-continuity.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivative.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivprops.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Properties of the derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-optimization.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Optimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-exercises.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-series-power-series"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.4</span><span class="space"> </span><span class="title">Power Series</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.4</span><span class="space"> </span><span class="title">Power Series</span>
 </h2>
 <div class="para" id="sec-series-power-series-2">Using series we can define a class of functions called <em class="emphasis">power series</em>. We shall look at some basic examples here and return to this topic later when we are discussing the differential calculus.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-power-series"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Power Series.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Power Series.</span>
 </h3>
 <div class="para logical" id="def-power-series-2-1">
 <div class="para">A sequence of terms <span class="process-math">\(\{ a_m \}_{m=1}^\infty\)</span> defines a <em class="emphasis">power series</em> function <span class="process-math">\(A\)</span> by the formula</div>
@@ -216,7 +222,7 @@ A(x) = \sum_{m=1}^\infty a_m x^m .
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-power-series-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.4.1: Power Series"><a href="#def-power-series" title="Copy heading and permalink for Definition 2.4.1: Power Series">🔗</a></div></article><div class="para" id="sec-series-power-series-4">Of course this formula for <span class="process-math">\(A(x)\)</span> may only make sense for certain values of the argument <span class="process-math">\(x\text{.}\)</span> For some values of <span class="process-math">\(x\)</span> the series may converge but for some values it may diverge. We can investigate this matter using the ratio test.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 4.4.1: Power Series"><a href="#def-power-series" title="Copy heading and permalink for Definition 4.4.1: Power Series">🔗</a></div></article><div class="para" id="sec-series-power-series-4">Of course this formula for <span class="process-math">\(A(x)\)</span> may only make sense for certain values of the argument <span class="process-math">\(x\text{.}\)</span> For some values of <span class="process-math">\(x\)</span> the series may converge but for some values it may diverge. We can investigate this matter using the ratio test.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="sec-series-power-series-5">
 <div class="para">According to the ratio test the series formula for <span class="process-math">\(A(x)\)</span> will converge when</div>
@@ -234,7 +240,7 @@ A(x) = \sum_{m=1}^\infty a_m x^m .
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-radius-convergence"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Radius of Convergence.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Radius of Convergence.</span>
 </h3>
 <div class="para logical" id="def-radius-convergence-2-1">
 <div class="para">The quantity <span class="process-math">\(R\)</span> defined by</div>
@@ -247,12 +253,12 @@ R = \lim_{m \to \infty} \left | \frac{a_m}{a_{m+1}} \right | ,
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-radius-convergence-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.4.2: Radius of Convergence"><a href="#def-radius-convergence" title="Copy heading and permalink for Definition 2.4.2: Radius of Convergence">🔗</a></div></article><div class="para" id="sec-series-power-series-7">Note that the ratio test does not tell us about the convergence of the series when <span class="process-math">\(|x| =R\text{.}\)</span> That will have to be determined by other methods.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 4.4.2: Radius of Convergence"><a href="#def-radius-convergence" title="Copy heading and permalink for Definition 4.4.2: Radius of Convergence">🔗</a></div></article><div class="para" id="sec-series-power-series-7">Note that the ratio test does not tell us about the convergence of the series when <span class="process-math">\(|x| =R\text{.}\)</span> That will have to be determined by other methods.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-series-power-series-8">An important source of power series comes from applying Taylor’s theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-taylors-theorem"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor’s Theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor’s Theorem.</span>
 </h3>
 <div class="para logical" id="thm-taylors-theorem-2-1">
 <div class="para">Suppose that on an interval <span class="process-math">\([a,x]\)</span> the function <span class="process-math">\(f\)</span> can be differentiated <span class="process-math">\(n+1\)</span> times, for some <span class="process-math">\(n\geq 0\text{.}\)</span> Then there exists a number <span class="process-math">\(c \in (a,x)\)</span> such that</div>
@@ -271,7 +277,7 @@ R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!} (x-a)^{n+1}.
 </div> <div class="para" id="thm-taylors-theorem-2-2">
 <em class="emphasis">Proof omitted.</em><div class="autopermalink" data-description="Paragraph"><a href="#thm-taylors-theorem-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.4.3: Taylor’s Theorem"><a href="#thm-taylors-theorem" title="Copy heading and permalink for Theorem 2.4.3: Taylor’s Theorem">🔗</a></div></article><div class="para logical" id="sec-series-power-series-10">
+<div class="autopermalink" data-description="Theorem 4.4.3: Taylor’s Theorem"><a href="#thm-taylors-theorem" title="Copy heading and permalink for Theorem 4.4.3: Taylor’s Theorem">🔗</a></div></article><div class="para logical" id="sec-series-power-series-10">
 <div class="para">Taylor’s theorem provides us with a way of generating power series approximations to function values. By writing <span class="process-math">\(a+x\)</span> for <span class="process-math">\(x\)</span> in the above equation we get an equivalent form referred to as the <em class="emphasis">Taylor polynomial expansion of <span class="process-math">\(f\)</span> about the point <span class="process-math">\(a\)</span></em>:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -304,7 +310,7 @@ f(a+x) = \sum_{n=0}^\infty \frac{f^{(n)} (a)}{n!} x^n \, .
 <div class="para" id="sec-series-power-series-12">The special case where we expand a function about the point <span class="process-math">\(a=0\)</span> gives rise to what is called a <em class="emphasis">Maclaurin series</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-12" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-maclaurin-series"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Maclaurin series.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Maclaurin series.</span>
 </h3>
 <div class="para logical" id="def-maclaurin-series-2-1">
 <div class="para">The Taylor series expansion of a function <span class="process-math">\(f\)</span> about the point <span class="process-math">\(0\)</span> is called the <em class="emphasis">Maclaurin series</em> of <span class="process-math">\(f\text{,}\)</span>
@@ -316,11 +322,11 @@ f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} x^n .
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-maclaurin-series-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.4.4: Maclaurin series"><a href="#def-maclaurin-series" title="Copy heading and permalink for Definition 2.4.4: Maclaurin series">🔗</a></div></article><div class="para" id="sec-series-power-series-14">We shall return to the topic of Taylor series after we have studied differentiation in more detail.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-14" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 4.4.4: Maclaurin series"><a href="#def-maclaurin-series" title="Copy heading and permalink for Definition 4.4.4: Maclaurin series">🔗</a></div></article><div class="para" id="sec-series-power-series-14">We shall return to the topic of Taylor series after we have studied differentiation in more detail.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-14" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-series-power-series-15">In table <a href="sec-series-power-series.html#table-Mac" class="xref" data-knowl="./knowl/xref/table-Mac.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.4.5: Some standard Maclaurin series">Table 2.4.5</a> you will see Maclaurin series of some standard functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-15" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-series-power-series-15">In table <a href="sec-series-power-series.html#table-Mac" class="xref" data-knowl="./knowl/xref/table-Mac.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 4.4.5: Some standard Maclaurin series">Table 4.4.5</a> you will see Maclaurin series of some standard functions.<div class="autopermalink" data-description="Paragraph"><a href="#sec-series-power-series-15" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="table table-like" id="table-Mac"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.5<span class="period">.</span></span><span class="space"> </span>Some standard Maclaurin series<div class="autopermalink" data-description="Table 2.4.5: Some standard Maclaurin series"><a href="#table-Mac" title="Copy heading and permalink for Table 2.4.5: Some standard Maclaurin series">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="table-Mac"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.4.5<span class="period">.</span></span><span class="space"> </span>Some standard Maclaurin series<div class="autopermalink" data-description="Table 4.4.5: Some standard Maclaurin series"><a href="#table-Mac" title="Copy heading and permalink for Table 4.4.5: Some standard Maclaurin series">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="l m b0 r0 l0 t0 lines">Maclarin series</th>
 <th scope="col" class="r m b0 r0 l0 t0 lines">Interval of convergence</th>
@@ -369,7 +375,7 @@ f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} x^n .
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="r m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></figure><div class="autopermalink" data-description="Section 2.4: Power Series"><a href="#sec-series-power-series" title="Copy heading and permalink for Section 2.4: Power Series">🔗</a></div></section></div>
+</table></div></figure><div class="autopermalink" data-description="Section 4.4: Power Series"><a href="#sec-series-power-series" title="Copy heading and permalink for Section 4.4: Power Series">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-series-convergence-tests.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-series-exercises.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
