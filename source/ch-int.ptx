@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-int" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Integration</title>
+
+  <introduction>
+
+		<p>
+				In this chapter we will be introducing the definite and indefinite integration.
+			</p>
+  </introduction>
+
+  <section xml:id="sec-int-intro">
+  <title>Introduction</title>
+    <p>In this module we shall be initially discussing two different concepts that go under the banner of <em>integration</em>. Initially they will seem unrelated, but then they will be unified through the important result of <xref ref="thm-FTC"/>, <em>The Fundamental Theorem of Calculus</em>.
+    </p>
+
+    <p>
+      The first concept is integration as the process of <em>anti-differentiation</em>, i.e. an inverse operation that undoes the effect of differentiation in a way. For example, consider the function <m>f(x) = x^2</m> which has derivative <m>f'(x) = 2x</m>. We will want to say that an anti-derivative of a function <m>2x</m> is the function <m>x^2</m>.
+    </p>
+
+    <p>The second conecpt is integration as the process of <em>summing up</em> or recording the total accumulated value of a function across some interval or sub-domain of the real numbers. This will give the <em>area beneath the curve</em> of a function and will be known as the <em>definite integral</em> of the function over that interval.</p>
+    
+    <p>
+      These two concepts will be later unified and shown to be initimately connected through <xref ref="thm-FTC"/>, <em>The Fundamental Theorem of Calculus</em>. 
+    </p>
+    </section>
+    <section xml:id="sec-int-anti">
+      <title>The anti-derivative</title>
+      
+      <definition xml:id="def-antideriv">
+        <title>Anti-derivative</title>
+        <statement>
+          <p>
+            An anti-derivative of a function a function <m>f(x)</m> is any function <m>F(x)</m> that satisfies 
+            <me>\frac{d}{dx} F(x) = f(x) \text{ or } F'(x) = f(x).</me>
+          </p>
+          <p>
+            We can use the notation <m>\int F(x) \, dx</m> to denote such a function, calling it an <em>indefinite integral</em> of <m>f(x)</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <example>
+        <p>
+          The function <m>F(x) = x^2</m> is an anti-derivative for the function <m>f(x) = x</m>. And so is the function <m>G(x) = x^2 + 5</m>, in fact, so is any function <m>H(x) = x^2 + C</m>, where <m>C</m> is any real constant. 
+          </p>
+      </example>
+
+      <theorem xml:id="thm-int-antidivs">
+        <statement>
+          <p>
+            Suppose that <m>F,G</m> are two anti-derivatives of a function <m>f(x)</m> on <m>\mathbb{R}</m>, then <m>F</m> and <m>G</m> differ by a constant, i.e. there exists <m>C \in \mathbb{R}</m> such that 
+            <me>\text{ for all } x \in \mathbb{R} \quad G(x) = F(x) + C.</me>
+          </p>
+        </statement>
+      </theorem>
+      <p>
+        This relationship between different anti-derivatives of the same function is depicted in <xref ref="fig-antiderivs"/>.
+      </p>
+<figure xml:id="fig-antiderivs">
+  <caption>Two anti-derivatives of the same function.</caption>
+  <image source="anti-derivs.png" width="80%">
+    <shortdescription>Two anti-derivatives of the same function.</shortdescription>
+  </image>
+</figure>
+<p>Using this concept of anti-differentiation we can gather together some key properties that it will satisfy, along with some anti-derivatives of common functions. 
+</p>
+<p>
+  <md>
+            <mrow>\amp\frac{d}{dx}{cf(x)}=c\cdot f'(x)\amp\amp\int c\cdot f(x)\,dx= c\cdot \int f(x)\,dx</mrow>
+            <mrow>\amp\frac{d}{dx}{f(x)\pm g(x)} = f'(x)\pm g'(x)\amp\amp \int \big(f(x)\pm g(x)\big)\,dx =\int f(x)\,dx\pm \int g(x)\,dx</mrow>
+            <mrow>\amp\frac{d}{dx}{C} = 0\amp\amp \int 0\,dx = C</mrow>
+            <mrow>\amp\frac{d}{dx}{x} = 1\amp\amp \int 1\,dx = \int dx = x+C</mrow>
+            <mrow>\amp\frac{d}{dx}{x^n} = n\cdot x^{n-1}\amp\amp \int x^n\,dx =\frac{1}{n+1}x^{n+1}+ C\quad(n\neq -1)</mrow>
+            <mrow>\amp\frac{d}{dx}{\sin(x)} = \cos(x)\amp\amp \int \cos(x) \,dx = \sin(x) +C</mrow>
+            <mrow>\amp\frac{d}{dx}{\cos(x)} = -\sin(x)\amp\amp \int \sin(x) \,dx = -\cos(x) +C</mrow>
+            <mrow>\amp\frac{d}{dx}{\tan(x)} = \sec^2(x)\amp\amp \int \sec^2(x) \,dx = \tan(x) +C</mrow>
+            <mrow>\amp\frac{d}{dx}{\csc(x)} = -\csc(x) \cot(x)\amp\amp \int \csc(x) \cot(x) \,dx = -\csc(x) +C</mrow>
+            <mrow>\amp\frac{d}{dx}{\sec(x)} = \sec(x) \tan(x)\amp\amp \int \sec(x) \tan(x) \,dx = \sec(x) +C</mrow>
+            <mrow>\amp\frac{d}{dx}{\cot(x)} = -\csc^2(x)\amp\amp \int \csc^2(x) \,dx = -\cot(x) +C</mrow>
+            <mrow>\amp\frac{d}{dx}{e^ x} = e^x\amp\amp \int e^x\,dx = e^x+C</mrow>
+            <mrow>\amp\frac{d}{dx}{a^x} = \ln(a) \cdot a^x\amp\amp \int a^x\,dx = \frac{1}{\ln(a) }\cdot a^x+C</mrow>
+            <mrow>\amp\frac{d}{dx}{\ln(x)} = \frac1 x,\ x \gt 0\amp\amp \int \frac{1}x\,dx = \ln | x | +C</mrow>
+          </md>
+</p>
+
+<p>We will return to indefinite integration after we have the concept of the definite integral. 
+  </p>
+
+  </section>
+
+  <section xml:id="sec-defint">
+    <title>The definite integral</title>
+    
+  </section>
+
+
+
+
+    <section xml:id="sec-FTC">
+      <title>The Fundamental Theorem of Calculus</title>
+      <theorem xml:id="thm-FTC">
+				<title>The Fundamental Theorem of Calculus</title>
+				
+				
+				<statement>
+					<p>
+				The statement.
+			</p>
+				</statement>
+			</theorem>
+      </section>
+</chapter>
