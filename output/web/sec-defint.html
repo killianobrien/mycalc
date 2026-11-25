@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -62,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -79,7 +80,7 @@ window.MathJax = {
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus">
 <meta property="book:author" content="Killian O'Brien">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -110,7 +111,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.bundle.js"></script><script src="_static/prefix-runtime-libs.bundle.js"></script><script src="_static/prefix-runestone.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-runtime-libs.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -147,7 +148,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-int-anti.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The anti-derivative</span></a></div></li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-defint.html" class="internal"><span class="codenumber">1.3</span> <span class="title">The definite integral</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defint.html#subsec-defint-motiv" class="internal"><span class="codenumber">1.3.1</span> <span class="title">A motivating example</span></a></div></li></ul>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defint.html#subsec-defint-motiv" class="internal"><span class="codenumber">1.3.1</span> <span class="title">A motivating example</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defint.html#subsec-defint-riemann" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Definite integral and Riemann integration</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-FTC.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The Fundamental Theorem of Calculus</span></a></div></li>
 </ul>
@@ -155,28 +159,53 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-defint"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The definite integral</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">The definite integral</span>
 </h2>
 <section class="subsection" id="subsec-defint-motiv"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A motivating example</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="space"> </span><span class="title">A motivating example</span>
 </h3>
 <div class="para logical" id="subsec-defint-motiv-2">
 <div class="para">Consider an object travelling with constant velocity <span class="process-math">\(t_1\text{,}\)</span> and ending at<span class="process-math">\(t_2\text{.}\)</span> Then the displacement, <span class="process-math">\(s\text{,}\)</span> (the total distance travelled) of the object will be given by</div>
-<div class="displaymath process-math" id="subsec-defint-motiv-2-4">
+<div class="displaymath process-math">
 \begin{equation*}
 s = u(t_2 - t_1).
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-defint-motiv-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-defint-motiv-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-defint-motiv-3">
-<em class="emphasis">Key idea:</em> products like this can often be conceived geometrically as areas as in <a href="sec-defint.html#fig-rect" class="xref" data-knowl="./knowl/xref/fig-rect.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.3.1">Figure 1.3.1</a>. The total displacement can be thought of as the accumulated velocity over the time period, or the continuos summation of all the velocity over the time period.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-defint-motiv-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<em class="emphasis">Key idea:</em> products like this can often be conceived geometrically as areas as in <a href="sec-defint.html#fig-rect" class="xref" data-knowl="./knowl/xref/fig-rect.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.3.1">Figure 1.3.1</a>. The total displacement can be thought of as the accumulated velocity over the time period, or the continuos summation of all the velocity over the time period.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-defint-motiv-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-rect"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/rect.png" class="contained" alt="The rectangular displacement area."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The displacement <span class="process-math">\(s\text{.}\)</span><div class="autopermalink" data-description="Figure 1.3.1"><a href="#fig-rect" title="Copy heading and permalink for Figure 1.3.1" aria-label="Copy heading and permalink for Figure 1.3.1">🔗</a></div></figcaption></figure><div class="para" id="subsec-defint-motiv-5">Then we can extend this concept to situations with changing velocity. The displacement will still correspond to the accumulated area, i.e. the area between the velocity curve <span class="process-math">\(u(t)\)</span> and the <span class="process-math">\(t\)</span> axis. However regions where the velocity becomes negative, i.e. turns in the opposite direction, will have to be counted as a negative contribution to the area/displacement. This is depicted in figure FIGURE where the positive areas are shaded yellow and the ngative areas shaded red.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-defint-motiv-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.1<span class="period">.</span></span><span class="space"> </span>The displacement <span class="process-math">\(s\text{.}\)</span><div class="autopermalink" data-description="Figure 1.3.1"><a href="#fig-rect" title="Copy heading and permalink for Figure 1.3.1">🔗</a></div></figcaption></figure><div class="para" id="subsec-defint-motiv-5">Then we can extend this concept to situations with changing velocity. The displacement will still correspond to the accumulated area, i.e. the area between the velocity curve <span class="process-math">\(u(t)\)</span> and the <span class="process-math">\(t\)</span> axis. However regions where the velocity becomes negative, i.e. turns in the opposite direction, will have to be counted as a negative contribution to the area/displacement. This is depicted in figure FIGURE where the positive areas are shaded yellow and the ngative areas shaded red.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-defint-motiv-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-undulating"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/undulating.png" class="contained" alt="Displacement as area with postive and negative contributions."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The displacement <span class="process-math">\(s\text{.}\)</span><div class="autopermalink" data-description="Figure 1.3.2"><a href="#fig-undulating" title="Copy heading and permalink for Figure 1.3.2" aria-label="Copy heading and permalink for Figure 1.3.2">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Subsection 1.3.1: A motivating example"><a href="#subsec-defint-motiv" title="Copy heading and permalink for Subsection 1.3.1: A motivating example" aria-label="Copy heading and permalink for Subsection 1.3.1: A motivating example">🔗</a></div></section><div class="autopermalink" data-description="Section 1.3: The definite integral"><a href="#sec-defint" title="Copy heading and permalink for Section 1.3: The definite integral" aria-label="Copy heading and permalink for Section 1.3: The definite integral">🔗</a></div></section></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.2<span class="period">.</span></span><span class="space"> </span>The displacement <span class="process-math">\(s\text{.}\)</span><div class="autopermalink" data-description="Figure 1.3.2"><a href="#fig-undulating" title="Copy heading and permalink for Figure 1.3.2">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Subsection 1.3.1: A motivating example"><a href="#subsec-defint-motiv" title="Copy heading and permalink for Subsection 1.3.1: A motivating example">🔗</a></div></section><section class="subsection" id="subsec-defint-riemann"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="space"> </span><span class="title">Definite integral and Riemann integration</span>
+</h3>
+<article class="definition definition-like" id="def-defint-defint"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="def-defint-defint-1-1">
+<div class="para">Let <span class="process-math">\(a \lt b\text{.}\)</span> For a continuous function <span class="process-math">\(f(x)\)</span> defined on a closed interval <span class="process-math">\([a,b]\)</span> of the real numbers, the <em class="emphasis">definite integral of <span class="process-math">\(f\)</span> over the interval <span class="process-math">\([a,b]\)</span></em> is defined to be the total signed area lying between the graph of the function <span class="process-math">\(f\)</span> and the <span class="process-math">\(x\)</span>-axis. That is, regions where <span class="process-math">\(f(x)\)</span> is positive will contribute positively to the toal area, and regions where <span class="process-math">\(f(x)\)</span> is negative will contribute negatively to the total area. The following notation is used for this definite integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b \, f(x) \, dx.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-defint-defint-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.3.3"><a href="#def-defint-defint" title="Copy heading and permalink for Definition 1.3.3">🔗</a></div></article><div class="para" id="subsec-defint-riemann-3">We are now faced with a general problem. Given a variable function <span class="process-math">\(f(x)\text{,}\)</span> how do we actually compute the definite integral <span class="process-math">\(\int_a^b f(x) \, dx\text{?}\)</span> For certain nice functions we might be able to use known geometric results for the areas of rectangles, triangles, circles etc, to evaluate such integrals. But that does not cover most functions. For instance, what is the definite integral of the function <span class="process-math">\(x^2\)</span> for instance? Thankfully we have a systematic way of defining the definite integral via a limit of a sequence of approximations to the total signed area underneath the graph. This method is known as the <em class="emphasis">Riemann integral</em>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-defint-riemann-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="paragraphs" id="subsec-defint-riemann-4"><h4 class="heading"><span class="title">Key idea:.</span></h4>
+<div class="para" id="subsec-defint-riemann-4-2">The key idea behind Riemann inegration is to construct an approximation for the definite integral <span class="process-math">\(\int_a^b f(x) \, dx\)</span> consisting of a collection of rectangles that span the interval <span class="process-math">\([a,b]\)</span> and whose heights come up to meet the graph of the function. See <a href="sec-defint.html#fig-riemann" class="xref" data-knowl="./knowl/xref/fig-riemann.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.3.4">Figure 1.3.4</a> for a sketch of such a situation.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-defint-riemann-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-riemann"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/riemann.png" class="contained" alt="Rectangles approximating the definite integral"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.4<span class="period">.</span></span><span class="space"> </span>Rectangles approximating the definite integral.<div class="autopermalink" data-description="Figure 1.3.4"><a href="#fig-riemann" title="Copy heading and permalink for Figure 1.3.4">🔗</a></div></figcaption></figure><div class="para" id="subsec-defint-riemann-4-4">In the figure we can see how the sum of the areas of the rectangles is an approximation to the area underneath the curve, i.e. to the definite integral. However it is not exact as due to the fluctuating value of the function <span class="process-math">\(f(x)\)</span> there are places where the rectangles poke out above the function (shaded green) and places where the rectangles fail to cover all the space beneath the curve (shaded red). However if we allowed outselves to use more and thinnner rectangles, then these over and under estimations would be reduced. And perhaps if we took the limit as the number of rectangles tended to <span class="process-math">\(\infty\)</span> and their widths tended to <span class="process-math">\(0\)</span> then, in the limit, we may capture the value of the definite integral exactly.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-defint-riemann-4-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-defint-riemann-4-5">This is the idea behind Riemann integration.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-defint-riemann-4-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Key idea:"><a href="#subsec-defint-riemann-4" title="Copy heading and permalink for Paragraphs: Key idea:">🔗</a></div></section><div class="autopermalink" data-description="Subsection 1.3.2: Definite integral and Riemann integration"><a href="#subsec-defint-riemann" title="Copy heading and permalink for Subsection 1.3.2: Definite integral and Riemann integration">🔗</a></div></section><div class="autopermalink" data-description="Section 1.3: The definite integral"><a href="#sec-defint" title="Copy heading and permalink for Section 1.3: The definite integral">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-int-anti.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-FTC.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -62,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -79,7 +80,7 @@ window.MathJax = {
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus">
 <meta property="book:author" content="Killian O'Brien">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -110,7 +111,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.bundle.js"></script><script src="_static/prefix-runtime-libs.bundle.js"></script><script src="_static/prefix-runestone.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-runtime-libs.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -147,7 +148,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-int-anti.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The anti-derivative</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-defint.html" class="internal"><span class="codenumber">1.3</span> <span class="title">The definite integral</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defint.html#subsec-defint-motiv" class="internal"><span class="codenumber">1.3.1</span> <span class="title">A motivating example</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defint.html#subsec-defint-motiv" class="internal"><span class="codenumber">1.3.1</span> <span class="title">A motivating example</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defint.html#subsec-defint-riemann" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Definite integral and Riemann integration</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-FTC.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The Fundamental Theorem of Calculus</span></a></div></li>
 </ul>
@@ -155,17 +159,17 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-int-intro"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Introduction</span>
 </h2>
-<div class="para" id="sec-int-intro-2">In this module we shall be initially discussing two different concepts that go under the banner of <em class="emphasis">integration</em>. Initially they will seem unrelated, but then they will be unified through the important result of <a href="sec-FTC.html#thm-FTC" class="xref" data-knowl="./knowl/xref/thm-FTC.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.4.1: The Fundamental Theorem of Calculus">Theorem 1.4.1</a>, <em class="emphasis">The Fundamental Theorem of Calculus</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-int-intro-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-int-intro-2">In this module we shall be initially discussing two different concepts that go under the banner of <em class="emphasis">integration</em>. Initially they will seem unrelated, but then they will be unified through the important result of <a href="sec-FTC.html#thm-FTC" class="xref" data-knowl="./knowl/xref/thm-FTC.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.4.1: The Fundamental Theorem of Calculus">Theorem 1.4.1</a>, <em class="emphasis">The Fundamental Theorem of Calculus</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-int-intro-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-int-intro-3">The first concept is integration as the process of <em class="emphasis">anti-differentiation</em>, i.e. an inverse operation that undoes the effect of differentiation in a way. For example, consider the function <span class="process-math">\(f(x) = x^2\)</span> which has derivative <span class="process-math">\(f'(x) = 2x\text{.}\)</span> We will want to say that an anti-derivative of a function <span class="process-math">\(2x\)</span> is the function <span class="process-math">\(x^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-int-intro-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-int-intro-3">The first concept is integration as the process of <em class="emphasis">anti-differentiation</em>, i.e. an inverse operation that undoes the effect of differentiation in a way. For example, consider the function <span class="process-math">\(f(x) = x^2\)</span> which has derivative <span class="process-math">\(f'(x) = 2x\text{.}\)</span> We will want to say that an anti-derivative of a function <span class="process-math">\(2x\)</span> is the function <span class="process-math">\(x^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-int-intro-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-int-intro-4">The second conecpt is integration as the process of <em class="emphasis">summing up</em> or recording the total accumulated value of a function across some interval or sub-domain of the real numbers. This will give the <em class="emphasis">area beneath the curve</em> of a function and will be known as the <em class="emphasis">definite integral</em> of the function over that interval.<div class="autopermalink" data-description="Paragraph"><a href="#sec-int-intro-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-int-intro-4">The second conecpt is integration as the process of <em class="emphasis">summing up</em> or recording the total accumulated value of a function across some interval or sub-domain of the real numbers. This will give the <em class="emphasis">area beneath the curve</em> of a function and will be known as the <em class="emphasis">definite integral</em> of the function over that interval.<div class="autopermalink" data-description="Paragraph"><a href="#sec-int-intro-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-int-intro-5">These two concepts will be later unified and shown to be initimately connected through <a href="sec-FTC.html#thm-FTC" class="xref" data-knowl="./knowl/xref/thm-FTC.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.4.1: The Fundamental Theorem of Calculus">Theorem 1.4.1</a>, <em class="emphasis">The Fundamental Theorem of Calculus</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-int-intro-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-int-intro-5">These two concepts will be later unified and shown to be initimately connected through <a href="sec-FTC.html#thm-FTC" class="xref" data-knowl="./knowl/xref/thm-FTC.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.4.1: The Fundamental Theorem of Calculus">Theorem 1.4.1</a>, <em class="emphasis">The Fundamental Theorem of Calculus</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-int-intro-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section 1.1: Introduction"><a href="#sec-int-intro" title="Copy heading and permalink for Section 1.1: Introduction" aria-label="Copy heading and permalink for Section 1.1: Introduction">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Section 1.1: Introduction"><a href="#sec-int-intro" title="Copy heading and permalink for Section 1.1: Introduction">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch-int.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-int-anti.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

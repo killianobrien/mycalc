@@ -116,7 +116,49 @@
     <shortdescription>Displacement as area with postive and negative contributions.</shortdescription>
   </image>
 </figure>
-      
+      </subsection>
+
+      <subsection xml:id="subsec-defint-riemann">
+        <title>Definite integral and Riemann integration</title>
+        <definition xml:id="def-defint-defint">
+          <statement>
+            <p>
+              Let <m>a \lt b</m>. For a continuous function <m>f(x)</m> defined on a closed interval <m>[a,b]</m> of the real numbers, the <em>definite integral of <m>f</m> over the interval <m>[a,b]</m></em> is defined to be the total signed area lying between the graph of the function <m>f</m> and the <m>x</m>-axis. That is, regions where <m>f(x)</m> is positive will contribute positively to the toal area, and regions where <m>f(x)</m> is negative will contribute negatively to the total area. The following notation is used for this definite integral 
+              <me> \int_a^b \, f(x) \, dx.</me>
+            </p>
+          </statement>
+        </definition>     
+        
+        <p>We are now faced with a general problem. Given a variable function <m>f(x)</m>, how do we actually compute the definite integral <m>\int_a^b f(x) \, dx</m>?
+        For certain nice functions we might be able to use known geometric results for the areas of rectangles, triangles, circles etc, to evaluate such integrals. But that does not cover most functions. For instance, what is the definite integral of the function <m>x^2</m> for instance? Thankfully we have a systematic way of defining the definite integral via a limit of a sequence of approximations to the total signed area underneath the graph. This method is known as the <em>Riemann integral</em>.</p>
+
+        <paragraphs>
+          <title>Key idea:</title>
+          <p>The key idea behind Riemann inegration is to construct an approximation for the definite integral <m>\int_a^b f(x) \, dx</m> consisting of a collection of rectangles that span the interval <m>[a,b]</m> and whose heights come up to meet the graph of the function. See <xref ref="fig-riemann"/> for a sketch of such a situation.</p>
+            <figure xml:id="fig-riemann">
+  <caption>Rectangles approximating the definite integral.</caption>
+  <image source="riemann.png" width="80%">
+    <shortdescription>Rectangles approximating the definite integral</shortdescription>
+  </image>
+</figure>
+        <p>
+          In the figure we can see how the sum of the areas of the rectangles is an approximation to the area underneath the curve, i.e. to the definite integral. However it is not exact as due to the fluctuating value of the function <m>f(x)</m> there are places where the rectangles poke out above the function (shaded green) and places where the rectangles fail to cover all the space beneath the curve (shaded red). However if we allowed outselves to use more and thinnner rectangles, then these over and under estimations would be reduced. And perhaps if we took the limit as the number of rectangles tended to <m>\infty</m> and their widths tended to <m>0</m> then, in the limit, we may capture the value of the definite integral exactly. 
+        </p>
+        <p>
+          This is the idea behind Riemann integration. 
+        </p>
+        </paragraphs>
+
+        <definition xml:id="def-defint-riemannint">
+          <title>Riemann integral</title>
+          <statement>
+            <p>
+            Let <m>a \lt b</m>
+            </p>
+          </statement>
+        </definition>
+
+        
       </subsection>
   </section>
 

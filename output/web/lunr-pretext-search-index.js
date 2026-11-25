@@ -70,7 +70,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "The definite integral",
-  "body": " The definite integral   A motivating example  Consider an object travelling with constant velocity , and ending at . Then the displacement, , (the total distance travelled) of the object will be given by  Key idea: products like this can often be conceived geometrically as areas as in . The total displacement can be thought of as the accumulated velocity over the time period, or the continuos summation of all the velocity over the time period.   The displacement .   The rectangular displacement area.    Then we can extend this concept to situations with changing velocity. The displacement will still correspond to the accumulated area, i.e. the area between the velocity curve and the axis. However regions where the velocity becomes negative, i.e. turns in the opposite direction, will have to be counted as a negative contribution to the area\/displacement. This is depicted in figure FIGURE where the positive areas are shaded yellow and the ngative areas shaded red.   The displacement .   Displacement as area with postive and negative contributions.     "
+  "body": " The definite integral   A motivating example  Consider an object travelling with constant velocity , and ending at . Then the displacement, , (the total distance travelled) of the object will be given by  Key idea: products like this can often be conceived geometrically as areas as in . The total displacement can be thought of as the accumulated velocity over the time period, or the continuos summation of all the velocity over the time period.   The displacement .   The rectangular displacement area.    Then we can extend this concept to situations with changing velocity. The displacement will still correspond to the accumulated area, i.e. the area between the velocity curve and the axis. However regions where the velocity becomes negative, i.e. turns in the opposite direction, will have to be counted as a negative contribution to the area\/displacement. This is depicted in figure FIGURE where the positive areas are shaded yellow and the ngative areas shaded red.   The displacement .   Displacement as area with postive and negative contributions.      Definite integral and Riemann integration    Let . For a continuous function defined on a closed interval of the real numbers, the definite integral of over the interval is defined to be the total signed area lying between the graph of the function and the -axis. That is, regions where is positive will contribute positively to the toal area, and regions where is negative will contribute negatively to the total area. The following notation is used for this definite integral     We are now faced with a general problem. Given a variable function , how do we actually compute the definite integral ? For certain nice functions we might be able to use known geometric results for the areas of rectangles, triangles, circles etc, to evaluate such integrals. But that does not cover most functions. For instance, what is the definite integral of the function for instance? Thankfully we have a systematic way of defining the definite integral via a limit of a sequence of approximations to the total signed area underneath the graph. This method is known as the Riemann integral .   Key idea:  The key idea behind Riemann inegration is to construct an approximation for the definite integral consisting of a collection of rectangles that span the interval and whose heights come up to meet the graph of the function. See for a sketch of such a situation.   Rectangles approximating the definite integral.   Rectangles approximating the definite integral    In the figure we can see how the sum of the areas of the rectangles is an approximation to the area underneath the curve, i.e. to the definite integral. However it is not exact as due to the fluctuating value of the function there are places where the rectangles poke out above the function (shaded green) and places where the rectangles fail to cover all the space beneath the curve (shaded red). However if we allowed outselves to use more and thinnner rectangles, then these over and under estimations would be reduced. And perhaps if we took the limit as the number of rectangles tended to and their widths tended to then, in the limit, we may capture the value of the definite integral exactly.  This is the idea behind Riemann integration.    "
 },
 {
   "id": "fig-rect",
@@ -89,6 +89,24 @@ var ptx_lunr_docs = [
   "number": "1.3.2",
   "title": "",
   "body": " The displacement .   Displacement as area with postive and negative contributions.   "
+},
+{
+  "id": "def-defint-defint",
+  "level": "2",
+  "url": "sec-defint.html#def-defint-defint",
+  "type": "Definition",
+  "number": "1.3.3",
+  "title": "",
+  "body": "  Let . For a continuous function defined on a closed interval of the real numbers, the definite integral of over the interval is defined to be the total signed area lying between the graph of the function and the -axis. That is, regions where is positive will contribute positively to the toal area, and regions where is negative will contribute negatively to the total area. The following notation is used for this definite integral    "
+},
+{
+  "id": "fig-riemann",
+  "level": "2",
+  "url": "sec-defint.html#fig-riemann",
+  "type": "Figure",
+  "number": "1.3.4",
+  "title": "",
+  "body": " Rectangles approximating the definite integral.   Rectangles approximating the definite integral   "
 },
 {
   "id": "sec-FTC",

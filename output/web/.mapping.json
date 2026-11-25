@@ -1,1 +1,1 @@
-{"source/main.ptx": ["mycalc", "frontmatter", "front-colophon", "ch-int", "sec-int-intro", "sec-int-anti", "sec-defint", "sec-FTC", "backmatter"]}
+{"source/main.ptx": ["mycalc"], "source/frontmatter.ptx": ["frontmatter", "front-colophon"], "source/ch-int.ptx": ["ch-int", "sec-int-intro", "sec-int-anti", "sec-defint", "sec-FTC"], "source/backmatter.ptx": ["backmatter"]}
