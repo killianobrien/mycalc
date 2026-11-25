@@ -19,7 +19,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -80,7 +79,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -97,7 +96,7 @@ window.MathJax = {
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus">
 <meta property="book:author" content="Killian O'Brien">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -128,7 +127,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.bundle.js"></script><script src="_static/prefix-runtime-libs.bundle.js"></script><script src="_static/prefix-runestone.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-runtime-libs.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -158,63 +157,73 @@ eBookConfig.enable_chatcodes =  false;
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Chapter Title</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-name.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Section Title</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">2</span> <span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-seqs.html" class="internal"><span class="codenumber">3</span> <span class="title">Sequences</span></a></div>
+<div class="toc-title-box"><a href="ch-seqs.html" class="internal"><span class="codenumber">2</span> <span class="title">Sequences</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Initial definitions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Convergence</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence-properties.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Convergence properties</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-exercises.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Sequence exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-defs.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Initial definitions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-mono.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Monotonic and bounded sequences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-convergence-properties.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Convergence properties</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-seqs-exercises.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Sequence exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-series.html" class="internal"><span class="codenumber">4</span> <span class="title">Series</span></a></div>
+<div class="toc-title-box"><a href="ch-series.html" class="internal"><span class="codenumber">3</span> <span class="title">Series</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-definitions.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Basic definitions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Convergence</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence-tests.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Convergence tests</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-power-series.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Power Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-exercises.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Series exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-definitions.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Basic definitions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Convergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-convergence-tests.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Convergence tests</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-power-series.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-series-exercises.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Series exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-functions.html" class="internal"><span class="codenumber">5</span> <span class="title">Functions</span></a></div>
+<div class="toc-title-box"><a href="ch-functions.html" class="internal"><span class="codenumber">4</span> <span class="title">Functions</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-defs.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Basic definitions and notation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-real.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Real valued functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-partials.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Rational functions and their partial fraction expansions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-defs.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Basic definitions and notation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-real.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Real valued functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-partials.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Rational functions and their partial fraction expansions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-diff.html" class="internal"><span class="codenumber">6</span> <span class="title">Differentiation</span></a></div>
+<div class="toc-title-box"><a href="ch-diff.html" class="internal"><span class="codenumber">5</span> <span class="title">Differentiation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-function-limits.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Limiting values of functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-continuity.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Continuity</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivative.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The derivative</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivprops.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Properties of the derivative</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-optimization.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Optimization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-exercises.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-function-limits.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Limiting values of functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-continuity.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivative.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-derivprops.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Properties of the derivative</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-optimization.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Optimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diff-exercises.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-int.html" class="internal"><span class="codenumber">6</span> <span class="title">Integration</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-int-intro.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-int-anti.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The anti-derivative</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-defint.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The definite integral</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defint.html#subsec-defint-motiv" class="internal"><span class="codenumber">6.3.1</span> <span class="title">A motivating example</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-defint.html#subsec-defint-riemann" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Definite integral and Riemann integration</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-functions"><h2 class="heading">
-<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">5</span><span class="space"> </span><span class="title">Functions</span>
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Functions</span>
 </h2>
-<section class="introduction" id="ch-functions-2"><div class="para" id="ch-functions-2-1">You will be familiar with the notion of a function in mathematics and have used them many times up to now. But in this chapter we just wish to formalise the definition of a function and introduce various properties of functions. Throughout this we wish to emphasize the treatment of functions as mathematical objects <em class="emphasis">in themselves</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ch-functions-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="ch-functions-2"><div class="para" id="ch-functions-2-1">You will be familiar with the notion of a function in mathematics and have used them many times up to now. But in this chapter we just wish to formalise the definition of a function and introduce various properties of functions. Throughout this we wish to emphasize the treatment of functions as mathematical objects <em class="emphasis">in themselves</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ch-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><nav class="summary-links"><ul>
-<li><a href="sec-functions-defs.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Basic definitions and notation</span></a></li>
-<li><a href="sec-functions-real.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Real valued functions</span></a></li>
-<li><a href="sec-functions-partials.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Rational functions and their partial fraction expansions</span></a></li>
-<li><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></li>
-</ul></nav></section></div>
+<li><a href="sec-functions-defs.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Basic definitions and notation</span></a></li>
+<li><a href="sec-functions-real.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Real valued functions</span></a></li>
+<li><a href="sec-functions-partials.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Rational functions and their partial fraction expansions</span></a></li>
+<li><a href="sec-functions-exercises.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></li>
+</ul></nav><div class="autopermalink" data-description="Chapter 4: Functions"><a href="#ch-functions" title="Copy heading and permalink for Chapter 4: Functions" aria-label="Copy heading and permalink for Chapter 4: Functions">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-series-exercises.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-functions-defs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

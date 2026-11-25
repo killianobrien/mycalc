@@ -12,7 +12,7 @@
 
   <section xml:id="sec-int-intro">
   <title>Introduction</title>
-    <p>In this module we shall be initially discussing two different concepts that go under the banner of <em>integration</em>. Initially they will seem unrelated, but then they will be unified through the important result of <xref ref="thm-FTC"/>, <em>The Fundamental Theorem of Calculus</em>.
+    <p>In this module we shall be initially discussing two different concepts that go under the banner of <em>integration</em>. Initially they will seem unrelated, but then they will be unified through the important result of, <em>The Fundamental Theorem of Calculus</em>.
     </p>
 
     <p>
@@ -22,7 +22,7 @@
     <p>The second conecpt is integration as the process of <em>summing up</em> or recording the total accumulated value of a function across some interval or sub-domain of the real numbers. This will give the <em>area beneath the curve</em> of a function and will be known as the <em>definite integral</em> of the function over that interval.</p>
     
     <p>
-      These two concepts will be later unified and shown to be initimately connected through <xref ref="thm-FTC"/>, <em>The Fundamental Theorem of Calculus</em>. 
+      These two concepts will be later unified and shown to be intimately connected through <em>The Fundamental Theorem of Calculus</em>. 
     </p>
     </section>
     <section xml:id="sec-int-anti">
@@ -145,18 +145,125 @@
           In the figure we can see how the sum of the areas of the rectangles is an approximation to the area underneath the curve, i.e. to the definite integral. However it is not exact as due to the fluctuating value of the function <m>f(x)</m> there are places where the rectangles poke out above the function (shaded green) and places where the rectangles fail to cover all the space beneath the curve (shaded red). However if we allowed outselves to use more and thinnner rectangles, then these over and under estimations would be reduced. And perhaps if we took the limit as the number of rectangles tended to <m>\infty</m> and their widths tended to <m>0</m> then, in the limit, we may capture the value of the definite integral exactly. 
         </p>
         <p>
-          This is the idea behind Riemann integration. 
+          This is the idea behind Riemann integration. With the following definitions we set up the necessary notation and terminology to be able to formally define the Riemann integral.
         </p>
         </paragraphs>
 
+        <definition xml:id="def-defint-partition">
+          <statement>
+            <p>
+              Let <m>a \lt b</m>. A <em>partition</em> of an interval <m>[a,b]</m> is a finite sequence of numbers <m>x_0, x_1, x_2, \dots , x_n</m>, with <m>x_0 = a, x_n = b</m> and for all <m>0 \leq i \lt n</m>, <m>x_i \lt x_{i+1}</m>.
+            </p>
+            <p>
+              So a partition divides the interval up into <m>n</m> sub-intervals <m>[x_i, x_{i+1}]</m>.
+            </p>
+          </statement>
+        </definition>
         <definition xml:id="def-defint-riemannint">
           <title>Riemann integral</title>
           <statement>
             <p>
-            Let <m>a \lt b</m>
+              <ul>
+                <li>
+                  <p>
+                    Let <m>a \lt b</m>, and let <m>x_0, x_1, x_2, \dots , x_n</m> be a partition of the interval <m>[a,b]</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Let <m>\Delta x_{i-1} = x_i - x_{i-1}</m> denote the length of the <m>i^{th}</m> sub-interval.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Let <m>x_i^*</m> denote a representative point from the <m>i^{th}</m> sub-interval, i.e. <m>x_{i-1} \leq x_i^* \leq x_i</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Let <m>\Delta x = \max \left ( \{ \Delta x_{i-1} \, \mid \, i=1, \dots , n \} \right )</m> be the maximum width of the sub-intervals.
+                  </p>
+                </li>
+              </ul>  
             </p>
+            <p>
+              The <em>Riemann integral</em> definition of the definite integral is then 
+            </p>
+            <me>\int_a^b f(x) \, dx 
+              = \lim\limits_{\substack{n \to \infty \\ \Delta x \to 0}} 
+              \left ( \sum_{i=1}^{n} f(x_i^*) \Delta x_{i-1}    \right ).
+            </me>
           </statement>
         </definition>
+        <p>
+          It pays to take the time to study this definition and appreciate how it is the limit of the sum of the areas of rectangles underneath the curve, the limit being taken as both the number of rectangles tends to infinity and the maximum width of those rectangles tends to zero.
+        </p>
+
+        <p>
+          This is a very important definition and will allow use both 
+          <ul>
+            <li>
+              <p>
+                compute the definite integrals of various functions,
+              </p>
+            </li>
+            <li>
+              <p>
+                prove results about the definite integral concept itself, such as the Fundamental Theorem of Calculus. 
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          When computing Riemann integrals of polynomials we will often need to make use of various summation formulae for consecutive powers of integers, such as
+        <ul>
+          <li>
+            <p>
+              <m>\sum_{j=1}^n j = \frac{n(n+1)}{2},</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\sum_{j=1}^n j^2 = \frac{n(n+1)(2n+1)}{6},</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\sum_{j=1}^n j^3 = \frac{n^2(n+1)^2}{4}.</m>
+            </p>
+          </li>
+        </ul>
+        </p>
+        
+        <example>
+          <statement>
+            <p>
+              Let <m>a \gt 0</m>. Use the Riemann integral to compute the definite integral, <m>I</m>,
+            </p>
+            <me>
+              I = \int_0^a x^2 \, dx .
+              </me>
+          </statement>
+          <solution>
+            <p>
+              See lecture.
+            </p>
+          </solution>
+        </example>
+
+        <example>
+          <statement>
+            <p>
+              Use the Riemann integral to compute the definite integral <m>J</m>,
+            <me>J = \int_{-1}^5 x^3 \, dx.</me>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              See lecture.
+            </p>
+          </solution>
+        </example>
 
         
       </subsection>
@@ -165,7 +272,7 @@
 
 
 
-    <section xml:id="sec-FTC">
+    <!-- <section xml:id="sec-FTC">
       <title>The Fundamental Theorem of Calculus</title>
       <theorem xml:id="thm-FTC">
 				<title>The Fundamental Theorem of Calculus</title>
@@ -177,5 +284,5 @@
 			</p>
 				</statement>
 			</theorem>
-      </section>
+      </section> -->
 </chapter>
