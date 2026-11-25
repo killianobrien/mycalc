@@ -93,6 +93,21 @@
   <section xml:id="sec-defint">
     <title>The definite integral</title>
     
+    <subsection xml:id="subsec-defint-motiv">
+      <title>A motivating example</title>
+      <p>Consider an object travelling with constant velocity <m>t_1</m>, and ending at<m>t_2</m>. Then the displacement, <m>s</m>, (the total distance travelled) of the object will be given by 
+      <me>s = u(t_2 - t_1).</me></p>
+
+      <p><em>Key idea:</em> products like this can often be conceived geometrically as areas as in <xref ref="fig-rect"/>.</p>
+      
+      <figure xml:id="fig-rect">
+  <caption>The displacement <m>s</m>.</caption>
+  <image source="rect.png" width="80%">
+    <shortdescription>The rectangular displacement area.</shortdescription>
+  </image>
+</figure>
+      
+      </subsection>
   </section>
 
 

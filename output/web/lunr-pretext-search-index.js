@@ -70,7 +70,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "The definite integral",
-  "body": " The definite integral  "
+  "body": " The definite integral   A motivating example  Consider an object travelling with constant velocity , and ending at . Then the displacement, , (the total distance travelled) of the object will be given by  Key idea: products like this can often be conceived geometrically as areas as in .   The displacement .   The rectangular displacement area.     "
+},
+{
+  "id": "fig-rect",
+  "level": "2",
+  "url": "sec-defint.html#fig-rect",
+  "type": "Figure",
+  "number": "1.3.1",
+  "title": "",
+  "body": " The displacement .   The rectangular displacement area.   "
 },
 {
   "id": "sec-FTC",
