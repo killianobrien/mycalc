@@ -70,7 +70,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "The definite integral",
-  "body": " The definite integral   A motivating example  Consider an object travelling with constant velocity , and ending at . Then the displacement, , (the total distance travelled) of the object will be given by  Key idea: products like this can often be conceived geometrically as areas as in .   The displacement .   The rectangular displacement area.     "
+  "body": " The definite integral   A motivating example  Consider an object travelling with constant velocity , and ending at . Then the displacement, , (the total distance travelled) of the object will be given by  Key idea: products like this can often be conceived geometrically as areas as in . The total displacement can be thought of as the accumulated velocity over the time period, or the continuos summation of all the velocity over the time period.   The displacement .   The rectangular displacement area.    Then we can extend this concept to situations with changing velocity. The displacement will still correspond to the accumulated area, i.e. the area between the velocity curve and the axis. However regions where the velocity becomes negative, i.e. turns in the opposite direction, will have to be counted as a negative contribution to the area\/displacement. This is depicted in figure FIGURE where the positive areas are shaded yellow and the ngative areas shaded red.   The displacement .   Displacement as area with postive and negative contributions.     "
 },
 {
   "id": "fig-rect",
@@ -80,6 +80,15 @@ var ptx_lunr_docs = [
   "number": "1.3.1",
   "title": "",
   "body": " The displacement .   The rectangular displacement area.   "
+},
+{
+  "id": "fig-undulating",
+  "level": "2",
+  "url": "sec-defint.html#fig-undulating",
+  "type": "Figure",
+  "number": "1.3.2",
+  "title": "",
+  "body": " The displacement .   Displacement as area with postive and negative contributions.   "
 },
 {
   "id": "sec-FTC",
