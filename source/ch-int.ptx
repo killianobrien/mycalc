@@ -19,7 +19,7 @@
       The first concept is integration as the process of <em>anti-differentiation</em>, i.e. an inverse operation that undoes the effect of differentiation in a way. For example, consider the function <m>f(x) = x^2</m> which has derivative <m>f'(x) = 2x</m>. We will want to say that an anti-derivative of a function <m>2x</m> is the function <m>x^2</m>.
     </p>
 
-    <p>The second conecpt is integration as the process of <em>summing up</em> or recording the total accumulated value of a function across some interval or sub-domain of the real numbers. This will give the <em>area beneath the curve</em> of a function and will be known as the <em>definite integral</em> of the function over that interval.</p>
+    <p>The second concept is integration as the process of <em>summing up</em> or recording the total accumulated value of a function across some interval or sub-domain of the real numbers. This will give the <em>area beneath the curve</em> of a function and will be known as the <em>definite integral</em> of the function over that interval.</p>
     
     <p>
       These two concepts will be later unified and shown to be intimately connected through <em>The Fundamental Theorem of Calculus</em>. 
@@ -95,7 +95,7 @@
     
     <subsection xml:id="subsec-defint-motiv">
       <title>A motivating example</title>
-      <p>Consider an object travelling with constant velocity <m>t_1</m>, and ending at<m>t_2</m>. Then the displacement, <m>s</m>, (the total distance travelled) of the object will be given by 
+      <p>Consider an object travelling with constant velocity <m>u</m>, starting at <m>t_1</m>, and ending at<m>t_2</m>. Then the displacement, <m>s</m>, (the total distance travelled) of the object will be given by 
       <me>s = u(t_2 - t_1).</me></p>
 
       <p><em>Key idea:</em> products like this can often be conceived geometrically as areas as in <xref ref="fig-rect"/>. The total displacement can be thought of as the accumulated velocity over the time period, or the continuos summation of all the velocity over the time period.</p>
