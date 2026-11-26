@@ -43,7 +43,7 @@
 
       <example>
         <p>
-          The function <m>F(x) = x^2</m> is an anti-derivative for the function <m>f(x) = x</m>. And so is the function <m>G(x) = x^2 + 5</m>, in fact, so is any function <m>H(x) = x^2 + C</m>, where <m>C</m> is any real constant. 
+          The function <m>F(x) = x^2</m> is an anti-derivative for the function <m>f(x) = 2x</m>. And so is the function <m>G(x) = x^2 + 5</m>, in fact, so is any function <m>H(x) = x^2 + C</m>, where <m>C</m> is any real constant. 
           </p>
       </example>
 
